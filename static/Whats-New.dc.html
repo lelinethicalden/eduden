@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #FAF8F2; font-family: 'Figtree', system-ui, sans-serif; color: #141414; }
+a { color: #141414; text-decoration: none; }
+a:hover { color: #B98E00; }
+</style>
+</helmet>
+<dc-import name="Header" active="What's New" hint-size="100%,72px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="Updates hero" style="background:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,84px) 24px 40px">
+    <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#B98E00;margin-bottom:12px">What's New</div>
+    <h1 style="margin:0;font-size:clamp(34px,4.8vw,58px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;max-width:700px">Fresh batches, workshops &amp; updates.</h1>
+  </div>
+</section>
+
+<section data-screen-label="Featured update" style="background:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:0 24px 40px">
+    <div style="background:#141414;color:#FAF8F2;border-radius:26px;padding:clamp(30px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:36px;align-items:center;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-90px;right:-70px;width:300px;height:300px;border-radius:50%;background:radial-gradient(closest-side,rgba(253,200,4,0.25),transparent)"></div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="background:#FDC804;color:#141414;font-size:12px;font-weight:800;padding:6px 14px;border-radius:999px">Featured</span>
+          <span style="background:rgba(255,255,255,0.1);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px">New Batch · Aug 2026</span>
+        </div>
+        <h2 style="margin:0;font-size:clamp(24px,3.2vw,38px);font-weight:900;letter-spacing:-0.02em;line-height:1.1">Ethical Hacking August cohort — enrollment now open.</h2>
+        <p style="margin:0;font-size:15.5px;line-height:1.65;color:#B8B5AD;max-width:520px">45 days, hands-on labs, weekend classroom sessions at the Kolkata center. Limited seats for the hybrid batch — early enrollees get the 20% launch discount.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="Enroll.dc.html" style="background:#FDC804;color:#141414;font-weight:800;font-size:15px;padding:14px 26px;border-radius:999px" style-hover="background:#FBBF07;color:#141414">Register Now</a>
+          <a href="Course-Detail.dc.html" style="border:1.5px solid rgba(255,255,255,0.3);color:#FAF8F2;font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px" style-hover="border-color:#FDC804;color:#FDC804">Course Details</a>
+        </div>
+      </div>
+      <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:18px"><div style="font-size:24px;font-weight:900;color:#FDC804">Aug 10</div><div style="font-size:12.5px;color:#8E8B84;font-weight:600;margin-top:4px">Batch starts</div></div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:18px"><div style="font-size:24px;font-weight:900;color:#FDC804">40</div><div style="font-size:12.5px;color:#8E8B84;font-weight:600;margin-top:4px">Seats only</div></div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:18px"><div style="font-size:24px;font-weight:900;color:#FDC804">20%</div><div style="font-size:12.5px;color:#8E8B84;font-weight:600;margin-top:4px">Early discount</div></div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:18px"><div style="font-size:24px;font-weight:900;color:#FDC804">Hybrid</div><div style="font-size:12.5px;color:#8E8B84;font-weight:600;margin-top:4px">Online + Kolkata</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Updates grid" style="background:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:0 24px clamp(64px,8vw,96px)">
+    <div style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+        <button onClick="{{ f.select }}" style="border:1.5px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};font-family:inherit;font-size:13.5px;font-weight:700;padding:9px 17px;border-radius:999px;cursor:pointer" style-hover="border-color:#FDC804">{{ f.name }}</button>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+        <div style="background:#fff;border:1.5px solid rgba(20,20,20,0.07);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px" style-hover="border-color:#FDC804;transform:translateY(-3px)">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:12px;font-weight:800;background:{{ p.tagBg }};color:{{ p.tagColor }};padding:5px 12px;border-radius:999px">{{ p.tag }}</span>
+            <span style="font-size:12.5px;font-weight:600;color:#8E8B84">{{ p.date }}</span>
+          </div>
+          <div style="font-size:18px;font-weight:800;line-height:1.3">{{ p.title }}</div>
+          <p style="margin:0;font-size:13.5px;line-height:1.6;color:#5C5A54;flex:1">{{ p.body }}</p>
+          <a href="{{ p.href }}" style="font-weight:800;font-size:13.5px;color:#B98E00">{{ p.cta }} →</a>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,600px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: 'All' };
+  renderVals() {
+    const POSTS = [
+      { tag: 'New Batch', date: 'Jul 8, 2026', title: 'Bug Bounty Hunting — September cohort announced', body: '50 days of recon-to-reporting training. Applications open now; mentor slots are limited.', cta: 'Register', href: 'Enroll.dc.html' },
+      { tag: 'Workshop', date: 'Jul 2, 2026', title: 'Free weekend workshop: Intro to OSINT', body: 'A 3-hour hands-on session at the Kolkata center. Learn to find anything — legally. Open to all.', cta: 'Register', href: 'Enroll.dc.html' },
+      { tag: 'Course Launch', date: 'Jun 24, 2026', title: 'New micro course: Prompt Engineering for Developers', body: '10 days, project-based, built for developers who want to ship AI features that actually work.', cta: 'Read more', href: 'Courses.dc.html' },
+      { tag: 'Event', date: 'Jun 15, 2026', title: 'EduDen CTF 2026 — registrations open', body: 'Our annual capture-the-flag. Prizes, internship interviews for top finishers, and bragging rights.', cta: 'Register', href: 'Enroll.dc.html' },
+      { tag: 'Update', date: 'Jun 5, 2026', title: 'Certificate verification portal upgraded', body: 'Instant lookups, QR support on new certificates, and downloadable verification reports.', cta: 'Read more', href: 'Verify.dc.html' },
+      { tag: 'New Batch', date: 'May 28, 2026', title: 'Digital Forensics — hybrid batch filling fast', body: '90-day deep dive with lab simulations. Weekend classroom slots at South Dumdum are almost full.', cta: 'Register', href: 'Enroll.dc.html' },
+      { tag: 'Workshop', date: 'May 18, 2026', title: 'Resume & portfolio clinic for tech roles', body: 'Placement-team session: get your resume and GitHub reviewed live. Free for enrolled students.', cta: 'Read more', href: 'Placement.dc.html' },
+      { tag: 'Course Launch', date: 'May 6, 2026', title: 'Cloud Computing with AWS relaunched with new labs', body: 'Fresh curriculum aligned to the latest certification paths, with 4 new deployment labs.', cta: 'Read more', href: 'Courses.dc.html' }
+    ];
+    const cats = ['All', 'New Batch', 'Workshop', 'Course Launch', 'Event', 'Update'];
+    const posts = POSTS.filter(p => this.state.cat === 'All' || p.tag === this.state.cat).map(p => ({
+      ...p,
+      tagBg: p.tag === 'New Batch' ? '#FDC804' : 'rgba(253,200,4,0.22)',
+      tagColor: '#141414'
+    }));
+    const filters = cats.map(name => {
+      const on = this.state.cat === name;
+      return { name, bg: on ? '#141414' : '#fff', color: on ? '#FDC804' : '#3E3C37', border: on ? '#141414' : 'rgba(20,20,20,0.12)', select: () => this.setState({ cat: name }) };
+    });
+    return { posts, filters };
+  }
+}
+</script>
+</body>
+</html>

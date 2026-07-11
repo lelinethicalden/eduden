@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #0F0E0C; font-family: 'Figtree', system-ui, sans-serif; color: #FAF8F2; }
+a { color: #FAF8F2; text-decoration: none; }
+a:hover { color: #FDC804; }
+</style>
+</helmet>
+<dc-import name="Header-Dark" active="Courses" hint-size="100%,72px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="Courses hero" style="background:#141414;color:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px">
+    <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:12px">All Courses</div>
+    <h1 style="margin:0;font-size:clamp(32px,4.6vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;max-width:720px">Find the course that fits your career plan.</h1>
+    <p style="margin:16px 0 0;font-size:16.5px;line-height:1.6;color:#B8B5AD;max-width:560px">Every course is hands-on, mentor-led, and built around real projects. Filter by category or search by skill.</p>
+    <div style="margin-top:32px;display:flex;align-items:center;gap:12px;background:#1C1A17;border-radius:999px;padding:8px 8px 8px 22px;max-width:560px;box-shadow:0 12px 32px rgba(0,0,0,0.3)">
+      <span style="font-size:17px;flex:none">🔍</span>
+      <input value="{{ query }}" onChange="{{ setQuery }}" placeholder="Search courses — e.g. hacking, python, cloud…" style="flex:1;border:none;outline:none;font-family:inherit;font-size:15.5px;color:#FAF8F2;background:transparent;min-width:0">
+      <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ clearQuery }}" style="flex:none;border:none;background:rgba(255,255,255,0.12);color:#FAF8F2;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:15px;font-weight:800">✕</button>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Course list" style="background:#0F0E0C">
+  <div style="max-width:1240px;margin:0 auto;padding:36px 24px clamp(64px,8vw,96px)">
+    <div style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="8">
+        <button onClick="{{ f.select }}" style="border:1.5px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};font-family:inherit;font-size:13.5px;font-weight:700;padding:9px 17px;border-radius:999px;cursor:pointer" style-hover="border-color:#FDC804">{{ f.name }}</button>
+      </sc-for>
+    </div>
+    <div style="font-size:14px;font-weight:600;color:#8E8B84;margin-bottom:20px">{{ countLabel }}</div>
+    <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:22px">
+        <sc-for list="{{ results }}" as="c" hint-placeholder-count="6">
+          <div style="background:#1C1A17;border:1.5px solid rgba(255,255,255,0.1);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.2s, box-shadow 0.2s" style-hover="transform:translateY(-4px);box-shadow:0 24px 48px rgba(20,20,20,0.1)">
+            <div style="background:{{ c.tint }};padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="width:46px;height:46px;border-radius:14px;background:#141414;color:#FDC804;display:flex;align-items:center;justify-content:center;font-size:20px">{{ c.icon }}</span>
+              <sc-if value="{{ c.discount }}" hint-placeholder-val="{{ false }}">
+                <span style="background:#1DA954;color:#fff;font-size:11.5px;font-weight:800;padding:6px 12px;border-radius:999px">{{ c.discount }}</span>
+              </sc-if>
+            </div>
+            <div style="padding:18px 22px 22px;display:flex;flex-direction:column;gap:11px;flex:1">
+              <div style="font-size:12.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#FDC804">{{ c.cat }}</div>
+              <div style="font-size:19px;font-weight:800;letter-spacing:-0.3px;line-height:1.25">{{ c.title }}</div>
+              <p style="margin:0;font-size:13.5px;line-height:1.55;color:#A9A69E;flex:1">{{ c.blurb }}</p>
+              <div style="display:flex;flex-wrap:wrap;gap:7px">
+                <span style="font-size:12px;font-weight:700;background:#26241F;border:1px solid rgba(255,255,255,0.12);padding:5px 10px;border-radius:999px;white-space:nowrap">⏱ {{ c.duration }}</span>
+                <span style="font-size:12px;font-weight:700;background:#26241F;border:1px solid rgba(255,255,255,0.12);padding:5px 10px;border-radius:999px;white-space:nowrap">📚 {{ c.lectures }}</span>
+                <span style="font-size:12px;font-weight:700;background:#26241F;border:1px solid rgba(255,255,255,0.12);padding:5px 10px;border-radius:999px;white-space:nowrap">🛠 {{ c.projects }}</span>
+                <span style="font-size:12px;font-weight:700;background:rgba(253,200,4,0.22);padding:5px 10px;border-radius:999px;white-space:nowrap">{{ c.mode }}</span>
+              </div>
+              <div style="display:flex;gap:10px;margin-top:6px">
+                <a href="Course-Detail-Dark.dc.html" style="flex:1;text-align:center;background:#FAF8F2;color:#141414;font-weight:800;font-size:13.5px;padding:12px;border-radius:999px" style-hover="background:#FDC804;color:#141414">View Course</a>
+                <a href="Enroll-Dark.dc.html" style="flex:1;text-align:center;border:1.5px solid rgba(255,255,255,0.2);font-weight:700;font-size:13.5px;padding:12px;border-radius:999px" style-hover="background:#FDC804;border-color:#FDC804;color:#141414">Inquiry</a>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:72px 24px;background:#1C1A17;border:1.5px dashed rgba(255,255,255,0.2);border-radius:24px">
+        <div style="font-size:44px;margin-bottom:14px">🔎</div>
+        <div style="font-size:21px;font-weight:800">No courses match that search.</div>
+        <p style="margin:8px auto 22px;font-size:14.5px;color:#A9A69E;max-width:360px">Try a different keyword or category — or tell us what you want to learn and we'll point you right.</p>
+        <button onClick="{{ resetAll }}" style="border:none;background:#FDC804;color:#141414;font-family:inherit;font-weight:800;font-size:14.5px;padding:13px 26px;border-radius:999px;cursor:pointer" style-hover="background:#FBBF07">Clear filters</button>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<dc-import name="Footer-Dark" hint-size="100%,600px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { query: '', cat: 'All' };
+  renderVals() {
+    const COURSES = [
+      { icon: '🛡️', cat: 'Cyber Security', title: 'Ethical Hacking for Beginners', blurb: 'Legally break into systems, find security flaws, and help companies fix them — from absolute zero.', duration: '45 days', lectures: '40 lectures', projects: '3 projects', mode: 'Hybrid', discount: '20% off', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '🐞', cat: 'Cyber Security', title: 'Start Bug Bounty Hunting', blurb: 'From recon to reporting — the complete roadmap for HackerOne, Bugcrowd and Synack, taught by real hunters.', duration: '50 days', lectures: '45 lectures', projects: '15+ assignments', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '🔍', cat: 'Cyber Security', title: 'Digital Forensics', blurb: 'Uncover hidden data, trace cybercrimes, and recover digital evidence using industry-standard tools.', duration: '90 days', lectures: '70 lectures', projects: '5 projects', mode: 'Hybrid', discount: 'New batch', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '📱', cat: 'Cyber Security', title: 'Android App Penetration Testing', blurb: 'Reverse-engineer APKs, intercept traffic, and test apps against the OWASP Mobile Top 10.', duration: '30 days', lectures: '26 lectures', projects: '3 assessments', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '⚡', cat: 'Cyber Security', title: 'Advanced Network Pentesting', blurb: 'OSCE-style training: custom scripting with Python & Bash, exploitation, evasion and lateral movement.', duration: '75 days', lectures: '60 lectures', projects: '6 projects', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '🤖', cat: 'Artificial Intelligence', title: 'AI Foundations with Python', blurb: 'From neural nets to real deployments — build AI features you can actually ship.', duration: '60 days', lectures: '50 lectures', projects: '4 projects', mode: 'Hybrid', discount: '15% off', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '🧠', cat: 'Machine Learning', title: 'Machine Learning Bootcamp', blurb: 'Regression to recommendation engines — trained on real datasets, verified by mentors.', duration: '60 days', lectures: '48 lectures', projects: '5 projects', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '📊', cat: 'Data Science', title: 'Data Science with Python', blurb: 'Pandas, SQL, visualization and storytelling with data — a complete analyst toolkit.', duration: '75 days', lectures: '58 lectures', projects: '5 projects', mode: 'Hybrid', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '⌨️', cat: 'Programming', title: 'Full-Stack Web Development', blurb: 'HTML to deployed apps: JavaScript, React, Node and databases with portfolio projects.', duration: '90 days', lectures: '75 lectures', projects: '6 projects', mode: 'Hybrid', discount: '10% off', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '☁️', cat: 'Cloud Computing', title: 'Cloud Computing with AWS', blurb: 'Architect, deploy and secure real workloads on AWS — aligned to certification paths.', duration: '45 days', lectures: '38 lectures', projects: '4 labs', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '♾️', cat: 'DevOps', title: 'DevOps Essentials', blurb: 'CI/CD, Docker, Kubernetes and infrastructure-as-code — the modern delivery pipeline, hands-on.', duration: '50 days', lectures: '42 lectures', projects: '4 projects', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '🐧', cat: 'Linux', title: 'Linux Administration', blurb: 'Command line to server hardening — the foundation every tech career is built on.', duration: '30 days', lectures: '28 lectures', projects: '3 labs', mode: 'Classroom-supported', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '🎨', cat: 'Graphics Design', title: 'Graphics Design Pro', blurb: 'Branding, layout and visual systems with real client-style briefs and portfolio reviews.', duration: '60 days', lectures: '44 lectures', projects: '6 projects', mode: 'Hybrid', discount: '', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '📣', cat: 'Digital Marketing', title: 'Digital Marketing Launchpad', blurb: 'SEO, ads, analytics and content strategy — run real campaigns, measure real results.', duration: '45 days', lectures: '36 lectures', projects: '4 campaigns', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '⛓️', cat: 'Blockchain', title: 'Blockchain & Web3 Basics', blurb: 'Smart contracts, wallets and dApps — understand the tech behind the hype, hands-on.', duration: '40 days', lectures: '32 lectures', projects: '3 projects', mode: 'Online', discount: '', tint: 'rgba(253,200,4,0.25)' },
+      { icon: '📡', cat: 'IoT', title: 'IoT with Arduino & Raspberry Pi', blurb: 'Build connected devices from scratch — sensors, boards, and cloud dashboards.', duration: '40 days', lectures: '30 lectures', projects: '4 builds', mode: 'Classroom-supported', discount: '', tint: 'rgba(253,200,4,0.14)' },
+      { icon: '🌐', cat: 'Networking', title: 'Networking Fundamentals', blurb: 'TCP/IP, routing, and packet analysis — the plumbing of the internet, demystified.', duration: '35 days', lectures: '30 lectures', projects: '3 labs', mode: 'Hybrid', discount: '', tint: 'rgba(253,200,4,0.25)' }
+    ];
+    const cats = ['All', ...Array.from(new Set(COURSES.map(c => c.cat)))];
+    const q = this.state.query.trim().toLowerCase();
+    const results = COURSES.filter(c =>
+      (this.state.cat === 'All' || c.cat === this.state.cat) &&
+      (!q || (c.title + ' ' + c.cat + ' ' + c.blurb).toLowerCase().includes(q))
+    );
+    const filters = cats.map(name => {
+      const on = this.state.cat === name;
+      return { name, bg: on ? '#FDC804' : '#1C1A17', color: on ? '#141414' : '#CFCCC4', border: on ? '#FDC804' : 'rgba(255,255,255,0.16)', select: () => this.setState({ cat: name }) };
+    });
+    return {
+      query: this.state.query,
+      hasQuery: !!this.state.query,
+      setQuery: e => this.setState({ query: e.target.value }),
+      clearQuery: () => this.setState({ query: '' }),
+      resetAll: () => this.setState({ query: '', cat: 'All' }),
+      filters,
+      results,
+      hasResults: results.length > 0,
+      noResults: results.length === 0,
+      countLabel: results.length + (results.length === 1 ? ' course' : ' courses') + (this.state.cat !== 'All' ? ' in ' + this.state.cat : '')
+    };
+  }
+}
+</script>
+</body>
+</html>

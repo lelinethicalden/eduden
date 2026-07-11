@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #F4F2ED; font-family: 'Figtree', system-ui, sans-serif; color: #111111; }
+a { color: #111111; text-decoration: none; }
+a:hover { color: #111111; }
+</style>
+</helmet>
+<dc-import name="Header-Minimal" active="About" hint-size="100%,68px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="About hero" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) 28px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:28px">
+      <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">About EduDen</span>
+    </div>
+    <h1 style="margin:0;font-size:clamp(40px,6.4vw,92px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1100px">We teach the skills the industry actually hires for.</h1>
+    <p style="margin:36px 0 0;font-size:clamp(15px,1.4vw,17px);line-height:1.7;color:#6B6861;max-width:560px">Too much education is theory-dumps and certificates that mean nothing. We build hands-on, mentor-led courses where every assignment is verified and every skill is job-relevant.</p>
+  </div>
+</section>
+
+<section data-screen-label="Mission" style="background:#111111;color:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) 28px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
+      <div>
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:18px">Our mission</div>
+        <h2 style="margin:0;font-size:clamp(28px,3.8vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Where learning meets imagination &amp; innovation.</h2>
+        <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#9B978E;max-width:480px">We bridge the gap between what colleges teach and what careers demand — through practical education, industry-focused curricula, and instructors who do the work they teach.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr">
+        <div style="border-left:1px solid rgba(255,255,255,0.12);padding:20px 24px"><div style="font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#FDC804">2,500+</div><div style="font-size:13px;color:#9B978E;margin-top:4px">Students trained</div></div>
+        <div style="border-left:1px solid rgba(255,255,255,0.12);padding:20px 24px"><div style="font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#FDC804">30+</div><div style="font-size:13px;color:#9B978E;margin-top:4px">Hands-on courses</div></div>
+        <div style="border-left:1px solid rgba(255,255,255,0.12);padding:20px 24px"><div style="font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#FDC804">15+</div><div style="font-size:13px;color:#9B978E;margin-top:4px">Industry mentors</div></div>
+        <div style="border-left:1px solid rgba(255,255,255,0.12);padding:20px 24px"><div style="font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#FDC804">94%</div><div style="font-size:13px;color:#9B978E;margin-top:4px">Completion rate</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Different" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 36px;font-size:clamp(30px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1;max-width:800px">No theory-dumps.<br>No shortcuts.</h2>
+    <div>
+      <sc-for list="{{ different }}" as="d" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:minmax(48px,80px) minmax(160px,1fr) 2fr;gap:20px;align-items:baseline;border-top:1px solid #D8D5CC;padding:24px 0">
+          <div style="font-size:13px;font-weight:700;color:#6B6861">{{ d.n }}</div>
+          <div style="font-size:clamp(16px,1.7vw,20px);font-weight:800;letter-spacing:-0.01em">{{ d.title }}</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.65;color:#6B6861;max-width:560px">{{ d.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Quote" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
+  <div style="max-width:860px;margin:0 auto;padding:clamp(72px,9vw,112px) 28px;text-align:center">
+    <p style="margin:0;font-size:clamp(21px,2.8vw,32px);font-weight:600;letter-spacing:-0.02em;line-height:1.4;text-wrap:balance">“I was a commerce graduate with zero tech background. EduDen got me from ‘what is Linux?’ to a paid cybersecurity internship in under six months.”</p>
+    <div style="margin-top:32px;font-size:14px;font-weight:700">Sayan Banerjee</div>
+    <div style="font-size:13px;color:#6B6861;margin-top:4px">Security Intern → SOC Analyst · Kolkata</div>
+    <a href="Courses-Minimal.dc.html" style="display:inline-block;margin-top:40px;background:#111111;color:#F4F2ED;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Find Your Course</a>
+  </div>
+</section>
+
+<dc-import name="Footer-Minimal" hint-size="100%,760px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      different: [
+        { n: '01', title: 'Practical education', body: 'Labs and real tools from day one. If a lesson can\u2019t be practiced, we don\u2019t teach it that way.' },
+        { n: '02', title: 'Industry-focused learning', body: 'Curricula built backwards from job descriptions and real engagements — not textbooks.' },
+        { n: '03', title: 'Expert instructors', body: 'Practitioners with active industry careers: pentesters, ML engineers, cloud architects, designers.' },
+        { n: '04', title: 'Verified assignments', body: 'Every submission is human-reviewed with feedback via Slack/GitHub. No auto-graded shortcuts.' },
+        { n: '05', title: 'Career growth', body: 'Resume support, interview prep, portfolio guidance and placement assistance built in.' },
+        { n: '06', title: 'Learn your way', body: 'Online, hybrid, or classroom-supported at our Kolkata center — same rigor in every mode.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #F4F2ED; font-family: 'Figtree', system-ui, sans-serif; color: #111111; }
+a { color: #111111; text-decoration: none; }
+a:hover { color: #111111; }
+</style>
+</helmet>
+<dc-import name="Header-Minimal" active="Courses" hint-size="100%,68px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="Course hero" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:32px 28px clamp(48px,6vw,72px)">
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#6B6861;margin-bottom:40px">
+      <a href="Home-Minimal.dc.html" style="color:#6B6861" style-hover="color:#111111">Home</a><span>/</span>
+      <a href="Courses-Minimal.dc.html" style="color:#6B6861" style-hover="color:#111111">Courses</a><span>/</span>
+      <span style="color:#111111">Ethical Hacking for Beginners</span>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:22px">
+      <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Cyber Security · Beginner-friendly · Bestseller</span>
+    </div>
+    <h1 style="margin:0;font-size:clamp(38px,5.8vw,80px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1000px">Ethical Hacking for Beginners.</h1>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:36px">
+      <p style="margin:0;font-size:15.5px;line-height:1.65;color:#6B6861;max-width:520px;text-wrap:pretty">Learn to legally break into systems, find security flaws, and help companies fix them — while building a career in cybersecurity. This is not a theory-dump.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="Enroll-Minimal.dc.html" style="background:#111111;color:#F4F2ED;font-weight:700;font-size:14.5px;padding:15px 30px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Admission Inquiry</a>
+        <a href="Brochure-Minimal.dc.html" style="border:1px solid #C9C6BD;color:#111111;font-weight:600;font-size:14.5px;padding:15px 30px;border-radius:999px" style-hover="border-color:#111111">Brochure ↓</a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border-top:1px solid #D8D5CC;margin-top:clamp(40px,5vw,56px)">
+      <sc-for list="{{ quickStats }}" as="s" hint-placeholder-count="5">
+        <div style="padding:22px 20px 0;border-right:1px solid #D8D5CC">
+          <div style="font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-0.02em">{{ s.value }}</div>
+          <div style="font-size:12.5px;font-weight:500;color:#6B6861;margin-top:4px">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Overview" style="background:#111111;color:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px">
+    <div>
+      <h2 style="margin:0 0 18px;font-size:clamp(26px,3.2vw,42px);font-weight:900;letter-spacing:-0.03em;text-transform:uppercase;line-height:1">Zero to job-ready in 45 days.</h2>
+      <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#9B978E">This fully hands-on course teaches you to think like a hacker, use real-world tools, and apply those skills to bug bounty programs, internships, or job-ready IT roles.</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#9B978E">You work inside safe, guided lab environments from day one — scanning networks, exploiting vulnerabilities, and writing reports the way professionals do.</p>
+    </div>
+    <div>
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:20px">Who can join</div>
+      <sc-for list="{{ eligibility }}" as="e" hint-placeholder-count="4">
+        <div style="border-top:1px solid rgba(255,255,255,0.12);padding:16px 0;font-size:14.5px;line-height:1.6;color:#D9D6CE">{{ e }}</div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="What you learn" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 36px;font-size:clamp(28px,3.6vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">What you will learn.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 48px">
+      <sc-for list="{{ learn }}" as="l" hint-placeholder-count="8">
+        <div style="display:flex;gap:14px;align-items:baseline;border-top:1px solid #D8D5CC;padding:18px 0">
+          <span style="flex:none;width:7px;height:7px;background:#FDC804;border-radius:2px;transform:translateY(-2px)"></span>
+          <span style="font-size:14.5px;font-weight:600;line-height:1.5">{{ l }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Curriculum" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
+  <div style="max-width:900px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 8px;font-size:clamp(28px,3.6vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Curriculum.</h2>
+    <p style="margin:0 0 36px;font-size:14.5px;color:#6B6861">6 modules · 40 lectures · 15+ labs · 11 mentor-verified assignments</p>
+    <div>
+      <sc-for list="{{ modules }}" as="m" hint-placeholder-count="6">
+        <div style="border-top:1px solid #D8D5CC">
+          <button onClick="{{ m.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left">
+            <div style="display:flex;align-items:baseline;gap:18px">
+              <span style="font-size:13px;font-weight:700;color:#6B6861">{{ m.n }}</span>
+              <span style="font-size:clamp(16px,1.7vw,19px);font-weight:800;color:#111111">{{ m.title }}</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;flex:none">
+              <span style="font-size:12.5px;font-weight:600;color:#6B6861">{{ m.meta }}</span>
+              <span style="font-size:20px;font-weight:400;color:#111111;line-height:1">{{ m.symbol }}</span>
+            </div>
+          </button>
+          <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 4px 24px 40px;display:flex;flex-direction:column;gap:9px">
+              <sc-for list="{{ m.topics }}" as="t" hint-placeholder-count="4">
+                <div style="font-size:14px;color:#6B6861;line-height:1.5">{{ t }}</div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:36px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861;margin-bottom:14px">Tools you'll master</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <sc-for list="{{ tools }}" as="t" hint-placeholder-count="8">
+          <span style="background:#fff;border:1px solid #E3E0D8;border-radius:999px;padding:8px 15px;font-size:13px;font-weight:600;white-space:nowrap">{{ t }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Certificate" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:center">
+    <div>
+      <h2 style="margin:0 0 16px;font-size:clamp(28px,3.6vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Finish strong.<br>Walk away verified.</h2>
+      <p style="margin:0 0 20px;font-size:15px;line-height:1.7;color:#6B6861;max-width:480px">Complete every assignment and score at least 50% in the final exams to earn a verifiable EduDen certificate — checkable anytime on our <a href="Verify-Minimal.dc.html" style="font-weight:700;border-bottom:2px solid #FDC804">Verify page</a>.</p>
+      <sc-for list="{{ outcomes }}" as="o" hint-placeholder-count="4">
+        <div style="display:flex;gap:14px;align-items:baseline;border-top:1px solid #D8D5CC;padding:14px 0;max-width:520px">
+          <span style="flex:none;width:7px;height:7px;background:#FDC804;border-radius:2px;transform:translateY(-2px)"></span>
+          <span style="font-size:14px;font-weight:600;line-height:1.5">{{ o }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="background:#fff;border:1px solid #E3E0D8;border-radius:24px;padding:clamp(28px,3.5vw,44px)">
+      <img src="assets/eduden-logo.png" alt="EduDen" style="height:24px;width:auto;display:block;margin-bottom:28px">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Certificate of Completion</div>
+      <div style="font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:-0.02em;margin-top:10px">Ethical Hacking for Beginners</div>
+      <div style="font-size:14px;color:#6B6861;margin-top:6px">Awarded to <b style="color:#111111">Your Name Here</b></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:36px;border-top:1px solid #E3E0D8;padding-top:18px">
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:#6B6861">CERTIFICATE ID</div>
+          <div style="font-size:14px;font-weight:700;letter-spacing:0.05em;margin-top:3px">ED-EH45-XXXX</div>
+        </div>
+        <span style="background:#FDC804;font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:999px">Verifiable</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Mentor" style="background:#111111;color:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:center">
+    <div>
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:18px">Your mentor</div>
+      <div style="font-size:clamp(24px,2.8vw,36px);font-weight:900;letter-spacing:-0.03em;text-transform:uppercase">Arindam Roy</div>
+      <div style="font-size:14px;font-weight:600;color:#9B978E;margin-top:6px">Cyber Security Lead · OSCP · 9+ years</div>
+      <p style="margin:18px 0 0;font-size:14.5px;line-height:1.7;color:#9B978E;max-width:440px">Professional pentester. Has reviewed 1,000+ student assignments and mentored students into SOC, pentesting and bug bounty roles.</p>
+      <a href="Faculty-Minimal.dc.html" style="display:inline-block;margin-top:22px;font-weight:700;font-size:14px;color:#F4F2ED;border-bottom:2px solid #FDC804;padding-bottom:3px" style-hover="color:#FDC804">Know your faculty →</a>
+    </div>
+    <div>
+      <p style="margin:0;font-size:clamp(18px,2vw,24px);font-weight:600;line-height:1.5;letter-spacing:-0.01em">“I joined knowing nothing about cybersecurity. 45 days later I had 3 projects, a certificate, and the confidence to clear my SOC Analyst interview.”</p>
+      <div style="margin-top:22px;font-size:14px;font-weight:700">Ritwika Ghosh</div>
+      <div style="font-size:13px;color:#9B978E;margin-top:3px">SOC Analyst · 2025 batch</div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Course FAQ" style="background:#F4F2ED">
+  <div style="max-width:860px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 36px;font-size:clamp(28px,3.6vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Before you ask.</h2>
+    <div>
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+        <div style="border-top:1px solid #D8D5CC">
+          <button onClick="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left">
+            <span style="font-size:16px;font-weight:700;color:#111111">{{ f.q }}</span>
+            <span style="flex:none;font-size:20px;font-weight:400;color:#111111;line-height:1">{{ f.symbol }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 4px 24px;font-size:14.5px;line-height:1.7;color:#6B6861;max-width:640px">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer-Minimal" hint-size="100%,760px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openModule: 0, openFaq: -1 };
+  renderVals() {
+    const quickStats = [
+      { value: '45 days', label: 'Duration' },
+      { value: '40', label: 'Lectures' },
+      { value: '3', label: 'Projects' },
+      { value: 'Hybrid', label: 'Mode' },
+      { value: 'Beginner', label: 'Level' }
+    ];
+    const eligibility = [
+      'Students & freshers curious about cybersecurity — no coding background needed',
+      'IT professionals who want to move into security roles',
+      'Anyone preparing for bug bounty programs or security internships',
+      'Basic computer literacy and your own laptop — that\u2019s it'
+    ];
+    const learn = [
+      'Think like a hacker: recon, scanning & enumeration',
+      'Exploit real vulnerabilities in safe lab environments',
+      'Use Kali Linux, Nmap, Burp Suite & Metasploit',
+      'Web app attacks: XSS, SQLi, and the OWASP Top 10',
+      'Wi-Fi and network security testing',
+      'Write professional pentest reports',
+      'Bug bounty basics: from finding to reporting',
+      'Build a portfolio that gets interview calls'
+    ];
+    const moduleData = [
+      { title: 'Hacking Foundations & Lab Setup', meta: '6 lectures', topics: ['How hacking actually works (and the law)', 'Kali Linux setup & command line essentials', 'Networking crash course: TCP/IP, ports, protocols', 'Your safe practice lab'] },
+      { title: 'Reconnaissance & Scanning', meta: '7 lectures', topics: ['Passive & active recon techniques', 'Nmap deep dive: scanning like a pro', 'Enumeration: users, shares, services', 'Lab: map a target network'] },
+      { title: 'Exploitation Basics', meta: '8 lectures', topics: ['Vulnerability analysis workflow', 'Metasploit fundamentals', 'Password attacks & privilege escalation', 'Lab: capture your first flag'] },
+      { title: 'Web Application Hacking', meta: '8 lectures', topics: ['OWASP Top 10 explained with live targets', 'Burp Suite: intercept, repeat, intrude', 'XSS & SQL injection hands-on', 'Lab: full web app assessment'] },
+      { title: 'Wireless & Network Attacks', meta: '5 lectures', topics: ['Wi-Fi security: WPA2 attacks & defenses', 'Man-in-the-middle techniques', 'Sniffing & spoofing with Wireshark', 'Lab: audit a wireless network'] },
+      { title: 'Reporting & Career Launch', meta: '6 lectures', topics: ['Writing reports clients actually read', 'Bug bounty platforms: your first submission', 'Resume, portfolio & interview prep', 'Final project: end-to-end engagement'] }
+    ];
+    const modules = moduleData.map((m, i) => {
+      const open = this.state.openModule === i;
+      return { ...m, n: (i + 1 < 10 ? '0' : '') + (i + 1), open, symbol: open ? '−' : '+', toggle: () => this.setState({ openModule: open ? -1 : i }) };
+    });
+    const tools = ['Kali Linux', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark', 'John the Ripper', 'Gobuster', 'SQLmap', 'Aircrack-ng', 'OSINT Framework'];
+    const outcomes = [
+      'Roles: SOC Analyst, Junior Pentester, Security Analyst',
+      'Ready for bug bounty platforms like HackerOne & Bugcrowd',
+      'Foundation for CEH, eJPT and Security+ certifications',
+      'Placement support: resume, interviews, portfolio'
+    ];
+    const faqData = [
+      { q: 'Is this course really for total beginners?', a: 'Yes. It\u2019s designed for people starting from scratch — we cover the networking and Linux basics you need in module 1. No coding background required.' },
+      { q: 'What happens after the course period ends?', a: 'Buying the course entitles you to access all course content. Once the period ends, there are no recurring charges — ever.' },
+      { q: 'How do I get the certificate?', a: 'Complete every assignment and the final exams with a minimum 50% mark. A digital certificate is available for download online.' },
+      { q: 'Can I attend labs in person?', a: 'Yes — hybrid mode includes classroom-supported lab sessions at our Kolkata center (Nokia Care Building, South Dumdum).' }
+    ];
+    const faqs = faqData.map((f, i) => {
+      const open = this.state.openFaq === i;
+      return { ...f, open, symbol: open ? '−' : '+', toggle: () => this.setState({ openFaq: open ? -1 : i }) };
+    });
+    return { quickStats, eligibility, learn, modules, tools, outcomes, faqs };
+  }
+}
+</script>
+</body>
+</html>

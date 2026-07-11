@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #141414; font-family: 'Figtree', system-ui, sans-serif; color: #141414; }
+a { color: #141414; text-decoration: none; }
+a:hover { color: #B98E00; }
+</style>
+</helmet>
+<dc-import name="Header" active="" hint-size="100%,72px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="Brochure form" style="background:#141414;color:#FAF8F2;min-height:calc(100vh - 72px);display:flex;align-items:center">
+  <div style="max-width:1140px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:44px;align-items:center;width:100%">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804">Download Brochure</div>
+      <h1 style="margin:0;font-size:clamp(32px,4.4vw,52px);font-weight:900;letter-spacing:-0.03em;line-height:1.05">Everything about the course, in one PDF.</h1>
+      <p style="margin:0;font-size:16px;line-height:1.65;color:#B8B5AD;max-width:440px">Full curriculum, batch schedules, fees, tools covered and certificate details — drop your info and the download starts instantly.</p>
+      <div style="display:flex;align-items:center;gap:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:18px 22px;align-self:flex-start">
+        <span style="width:48px;height:48px;border-radius:14px;background:#FDC804;color:#141414;display:flex;align-items:center;justify-content:center;font-size:21px;flex:none">📄</span>
+        <div>
+          <div style="font-size:15px;font-weight:800">EduDen Course Brochure 2026</div>
+          <div style="font-size:12.5px;color:#8E8B84;font-weight:600">PDF · 2.4 MB · Updated July 2026</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;color:#141414;border-radius:24px;padding:clamp(24px,3.5vw,36px);box-shadow:0 32px 72px rgba(0,0,0,0.4)">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13.5px;font-weight:800">Name</label>
+            <input value="{{ name }}" onChange="{{ setName }}" placeholder="Your name" style="border:1.5px solid {{ nameBorder }};border-radius:14px;padding:14px 16px;font-family:inherit;font-size:15px;outline:none;background:#FAF8F2" style-focus="border-color:#FDC804;background:#fff">
+            <sc-if value="{{ nameError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:700;color:#D64040">Please enter your name.</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13.5px;font-weight:800">WhatsApp number</label>
+            <input value="{{ phone }}" onChange="{{ setPhone }}" placeholder="+91 XXXXX XXXXX" style="border:1.5px solid {{ phoneBorder }};border-radius:14px;padding:14px 16px;font-family:inherit;font-size:15px;outline:none;background:#FAF8F2" style-focus="border-color:#FDC804;background:#fff">
+            <sc-if value="{{ phoneError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:700;color:#D64040">Please enter a valid number (10+ digits).</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13.5px;font-weight:800">Email</label>
+            <input value="{{ email }}" onChange="{{ setEmail }}" placeholder="you@example.com" style="border:1.5px solid {{ emailBorder }};border-radius:14px;padding:14px 16px;font-family:inherit;font-size:15px;outline:none;background:#FAF8F2" style-focus="border-color:#FDC804;background:#fff">
+            <sc-if value="{{ emailError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:700;color:#D64040">Please enter a valid email address.</span></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13.5px;font-weight:800">Course</label>
+            <select value="{{ course }}" onChange="{{ setCourse }}" style="border:1.5px solid {{ courseBorder }};border-radius:14px;padding:14px 16px;font-family:inherit;font-size:15px;outline:none;background:#FAF8F2;color:#141414;appearance:auto">
+              <option value="">Select a course</option>
+              <option>Ethical Hacking for Beginners</option>
+              <option>Start Bug Bounty Hunting</option>
+              <option>Digital Forensics</option>
+              <option>Android App Penetration Testing</option>
+              <option>Advanced Network Pentesting</option>
+              <option>AI Foundations with Python</option>
+              <option>Data Science with Python</option>
+              <option>Full-Stack Web Development</option>
+              <option>Cloud Computing with AWS</option>
+              <option>All courses (complete brochure)</option>
+            </select>
+            <sc-if value="{{ courseError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:700;color:#D64040">Please pick a course.</span></sc-if>
+          </div>
+          <button onClick="{{ submit }}" style="border:none;background:#FDC804;color:#141414;font-family:inherit;font-weight:800;font-size:16px;padding:17px;border-radius:999px;cursor:pointer;box-shadow:0 6px 18px rgba(253,200,4,0.35)" style-hover="background:#FBBF07;transform:translateY(-1px)">Download Brochure ↓</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:24px 8px">
+          <span style="width:56px;height:56px;border-radius:50%;background:#1DA954;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:900">✓</span>
+          <div style="font-size:22px;font-weight:900;margin-top:18px">Your download has started!</div>
+          <p style="margin:10px auto 0;max-width:320px;font-size:14.5px;line-height:1.65;color:#5C5A54">We've also sent a copy to your email. Didn't start? <a href="#" style="font-weight:800;color:#B98E00">Download again</a>.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+            <a href="Course-Detail.dc.html" style="background:#141414;color:#FAF8F2;font-weight:800;font-size:14.5px;padding:13px 26px;border-radius:999px" style-hover="color:#FDC804">View Course</a>
+            <a href="Enroll.dc.html" style="border:1.5px solid rgba(20,20,20,0.16);font-weight:700;font-size:14.5px;padding:13px 26px;border-radius:999px" style-hover="background:#FDC804;border-color:#FDC804;color:#141414">Enroll Now</a>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,600px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: '', phone: '', email: '', course: '', errors: {}, sent: false };
+  submit() {
+    const errors = {};
+    if (!this.state.name.trim()) errors.name = true;
+    if (this.state.phone.replace(/\D/g, '').length < 10) errors.phone = true;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email.trim())) errors.email = true;
+    if (!this.state.course) errors.course = true;
+    if (Object.keys(errors).length) { this.setState({ errors }); return; }
+    this.setState({ sent: true, errors: {} });
+  }
+  renderVals() {
+    const e = this.state.errors;
+    const b = k => e[k] ? '#D64040' : 'rgba(20,20,20,0.12)';
+    return {
+      name: this.state.name, phone: this.state.phone, email: this.state.email, course: this.state.course,
+      setName: ev => this.setState({ name: ev.target.value, errors: { ...e, name: false } }),
+      setPhone: ev => this.setState({ phone: ev.target.value, errors: { ...e, phone: false } }),
+      setEmail: ev => this.setState({ email: ev.target.value, errors: { ...e, email: false } }),
+      setCourse: ev => this.setState({ course: ev.target.value, errors: { ...e, course: false } }),
+      nameBorder: b('name'), phoneBorder: b('phone'), emailBorder: b('email'), courseBorder: b('course'),
+      nameError: !!e.name, phoneError: !!e.phone, emailError: !!e.email, courseError: !!e.course,
+      submit: () => this.submit(),
+      sent: this.state.sent, notSent: !this.state.sent
+    };
+  }
+}
+</script>
+</body>
+</html>

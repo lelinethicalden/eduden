@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #0F0E0C; font-family: 'Figtree', system-ui, sans-serif; color: #FAF8F2; }
+a { color: #FAF8F2; text-decoration: none; }
+a:hover { color: #FDC804; }
+</style>
+</helmet>
+<dc-import name="Header-Dark" active="Courses" hint-size="100%,72px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<!-- HERO -->
+<section data-screen-label="Course hero" style="background:#141414;color:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:28px 24px clamp(48px,6vw,72px)">
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#8E8B84;margin-bottom:32px">
+      <a href="Home-Dark.dc.html" style="color:#8E8B84" style-hover="background:#FDC804;color:#141414">Home</a><span>/</span>
+      <a href="Courses-Dark.dc.html" style="color:#8E8B84" style-hover="background:#FDC804;color:#141414">Courses</a><span>/</span>
+      <a href="Courses-Dark.dc.html" style="color:#8E8B84" style-hover="background:#FDC804;color:#141414">Cyber Security</a><span>/</span>
+      <span style="color:#FDC804">Ethical Hacking for Beginners</span>
+    </nav>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:44px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="background:#FDC804;color:#141414;font-size:12px;font-weight:800;padding:6px 14px;border-radius:999px">Bestseller</span>
+          <span style="background:rgba(255,255,255,0.1);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px">Cyber Security</span>
+          <span style="background:rgba(255,255,255,0.1);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px">Beginner-friendly</span>
+        </div>
+        <h1 style="margin:0;font-size:clamp(32px,4.4vw,54px);font-weight:900;letter-spacing:-0.03em;line-height:1.05">Ethical Hacking for Beginners</h1>
+        <p style="margin:0;font-size:16.5px;line-height:1.65;color:#B8B5AD;max-width:560px;text-wrap:pretty">Think hacking is just for movie villains and hoodie-wearing geniuses? Think again. Learn to legally break into systems, find security flaws, and help companies fix them — while building a career in cybersecurity. This is not a theory-dump.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="Enroll-Dark.dc.html" style="background:#FDC804;color:#141414;font-weight:800;font-size:15.5px;padding:15px 28px;border-radius:999px;box-shadow:0 8px 24px rgba(253,200,4,0.3)" style-hover="background:#FBBF07;color:#141414;transform:translateY(-2px)">Admission Inquiry</a>
+          <a href="Brochure-Dark.dc.html" style="border:1.5px solid rgba(255,255,255,0.3);color:#FAF8F2;font-weight:700;font-size:15.5px;padding:15px 28px;border-radius:999px" style-hover="border-color:#FDC804;color:#FDC804">Download Brochure ↓</a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px">
+        <sc-for list="{{ quickStats }}" as="s" hint-placeholder-count="5">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:20px 18px">
+            <div style="font-size:22px;margin-bottom:8px">{{ s.icon }}</div>
+            <div style="font-size:18px;font-weight:900;color:#FDC804">{{ s.value }}</div>
+            <div style="font-size:12.5px;font-weight:600;color:#8E8B84;margin-top:3px">{{ s.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO CAN JOIN + OVERVIEW -->
+<section data-screen-label="Overview" style="background:#0F0E0C">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px">
+    <div>
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:12px">Course Overview</div>
+      <h2 style="margin:0 0 18px;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em">Zero to job-ready in 45 days.</h2>
+      <p style="margin:0 0 14px;font-size:15.5px;line-height:1.7;color:#A9A69E">This fully hands-on course teaches you how to think like a hacker, use real-world tools, and apply those skills to bug bounty programs, cybersecurity internships, or job-ready IT roles.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#A9A69E">You'll work inside safe, guided lab environments from day one — scanning networks, exploiting vulnerabilities, and writing reports the way professionals do.</p>
+    </div>
+    <div style="background:#1C1A17;border:1.5px solid rgba(255,255,255,0.1);border-radius:22px;padding:28px">
+      <div style="font-size:17px;font-weight:800;margin-bottom:18px">Who can join</div>
+      <div style="display:flex;flex-direction:column;gap:13px">
+        <sc-for list="{{ eligibility }}" as="e" hint-placeholder-count="4">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(253,200,4,0.35);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>
+            <span style="font-size:14.5px;line-height:1.55;color:#CFCCC4">{{ e }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU WILL LEARN -->
+<section data-screen-label="What you learn" style="background:#1C1A17;border-top:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px">
+    <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:12px">What You Will Learn</div>
+    <h2 style="margin:0 0 36px;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em">Skills you'll actually use on the job.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px">
+      <sc-for list="{{ learn }}" as="l" hint-placeholder-count="8">
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#26241F;border:1.5px solid rgba(255,255,255,0.08);border-radius:16px;padding:17px 19px">
+          <span style="flex:none;width:24px;height:24px;border-radius:8px;background:#FDC804;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>
+          <span style="font-size:14.5px;font-weight:600;line-height:1.5;color:#CFCCC4">{{ l }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- HOW THE COURSE WORKS -->
+<section data-screen-label="Course format" style="background:#141414;color:#FAF8F2">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px">
+    <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:12px">Inside the Course</div>
+    <h2 style="margin:0 0 36px;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em">Built to keep you doing, not watching.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
+      <sc-for list="{{ format }}" as="f" hint-placeholder-count="4">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px" style-hover="border-color:rgba(253,200,4,0.4)">
+          <span style="width:44px;height:44px;border-radius:13px;background:#FDC804;color:#141414;display:flex;align-items:center;justify-content:center;font-size:19px">{{ f.icon }}</span>
+          <div style="font-size:17.5px;font-weight:800">{{ f.title }}</div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#B8B5AD">{{ f.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section data-screen-label="Curriculum" style="background:#0F0E0C">
+  <div style="max-width:860px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px">
+    <div style="text-align:center;margin-bottom:36px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:10px">Curriculum &amp; Tools</div>
+      <h2 style="margin:0;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em">6 modules. 40 lectures. 15+ labs.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ modules }}" as="m" hint-placeholder-count="6">
+        <div style="background:#1C1A17;border:1.5px solid {{ m.border }};border-radius:18px;overflow:hidden">
+          <button onClick="{{ m.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:19px 24px;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left">
+            <div style="display:flex;align-items:center;gap:14px">
+              <span style="flex:none;width:34px;height:34px;border-radius:11px;background:{{ m.numBg }};color:#141414;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900">{{ m.n }}</span>
+              <span style="font-size:15.5px;font-weight:800;color:#FAF8F2">{{ m.title }}</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;flex:none">
+              <span style="font-size:12.5px;font-weight:700;color:#8E8B84">{{ m.meta }}</span>
+              <span style="width:28px;height:28px;border-radius:50%;background:{{ m.numBg }};display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:#141414">{{ m.symbol }}</span>
+            </div>
+          </button>
+          <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 24px 20px 72px;display:flex;flex-direction:column;gap:9px">
+              <sc-for list="{{ m.topics }}" as="t" hint-placeholder-count="4">
+                <div style="font-size:14px;color:#A9A69E;display:flex;gap:9px;align-items:baseline"><span style="color:#FDC804;font-weight:900">›</span>{{ t }}</div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:28px;background:#1C1A17;border:1.5px solid rgba(255,255,255,0.1);border-radius:18px;padding:22px 26px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#FDC804;margin-bottom:12px">Tools you'll master</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <sc-for list="{{ tools }}" as="t" hint-placeholder-count="8">
+          <span style="font-size:13px;font-weight:700;background:#26241F;border:1px solid rgba(255,255,255,0.14);padding:7px 14px;border-radius:999px;white-space:nowrap">{{ t }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE + OUTCOMES -->
+<section data-screen-label="Certificate" style="background:#1C1A17;border-top:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:44px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804">Certificate &amp; Career Outcomes</div>
+      <h2 style="margin:0;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em;line-height:1.1">Finish strong. Walk away verified.</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.7;color:#A9A69E">Complete every assignment and score at least 50% in the final exams to earn a verifiable EduDen certificate — checkable anytime on our <a href="Verify-Dark.dc.html" style="font-weight:800;border-bottom:2px solid #FDC804">Verify page</a>.</p>
+      <div style="display:flex;flex-direction:column;gap:11px;margin-top:6px">
+        <sc-for list="{{ outcomes }}" as="o" hint-placeholder-count="4">
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(253,200,4,0.35);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>
+            <span style="font-size:14.5px;font-weight:600;color:#CFCCC4">{{ o }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="background:#FAF8F2;color:#141414;border:1.5px solid rgba(20,20,20,0.08);border-radius:24px;padding:34px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(253,200,4,0.3)"></div>
+      <div style="position:relative">
+        <img src="assets/eduden-logo.png" alt="EduDen" style="height:26px;width:auto;display:block;margin-bottom:24px">
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#B98E00">Certificate of Completion</div>
+        <div style="font-size:24px;font-weight:900;margin-top:10px">Ethical Hacking for Beginners</div>
+        <div style="font-size:14px;color:#5C5A54;margin-top:6px">Awarded to <b>Your Name Here</b></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:30px">
+          <div>
+            <div style="font-size:11.5px;font-weight:700;color:#8E8B84">CERTIFICATE ID</div>
+            <div style="font-size:14px;font-weight:800;letter-spacing:0.06em">ED-EH45-XXXX</div>
+          </div>
+          <span style="background:#1DA954;color:#fff;font-size:11.5px;font-weight:800;padding:6px 13px;border-radius:999px">✓ Verifiable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTOR + TESTIMONIAL -->
+<section data-screen-label="Mentor" style="background:#0F0E0C">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:22px">
+    <div style="background:#1C1A17;border:1.5px solid rgba(255,255,255,0.1);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804">Your Mentor</div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="width:64px;height:64px;border-radius:20px;background:rgba(253,200,4,0.4);display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900">AR</div>
+        <div>
+          <div style="font-size:19px;font-weight:800">Arindam Roy</div>
+          <div style="font-size:13.5px;font-weight:700;color:#FDC804">Cyber Security Lead · OSCP</div>
+        </div>
+      </div>
+      <p style="margin:0;font-size:14.5px;line-height:1.65;color:#A9A69E">9+ years as a professional pentester. Has reviewed 1,000+ student assignments and mentored students into SOC, pentesting and bug bounty roles.</p>
+      <a href="Faculty-Dark.dc.html" style="align-self:flex-start;font-weight:800;font-size:14px;border-bottom:2px solid #FDC804;padding-bottom:2px">Know your faculty →</a>
+    </div>
+    <div style="background:#141414;color:#FAF8F2;border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:15px;color:#FDC804;letter-spacing:3px">★★★★★</div>
+      <p style="margin:0;font-size:16.5px;line-height:1.65;flex:1">“I joined knowing nothing about cybersecurity. 45 days later I had 3 projects, a certificate, and the confidence to clear my SOC Analyst interview.”</p>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:44px;height:44px;border-radius:14px;background:rgba(253,200,4,0.9);color:#141414;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px">RG</div>
+        <div>
+          <div style="font-size:14.5px;font-weight:800">Ritwika Ghosh</div>
+          <div style="font-size:12.5px;color:#8E8B84;font-weight:600">SOC Analyst · 2025 batch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section data-screen-label="Course FAQ" style="background:#1C1A17;border-top:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:840px;margin:0 auto;padding:clamp(56px,7vw,80px) 24px clamp(80px,9vw,110px)">
+    <div style="text-align:center;margin-bottom:36px">
+      <div style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:10px">Course FAQ</div>
+      <h2 style="margin:0;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-0.02em">Before you ask…</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+        <div style="background:#26241F;border:1.5px solid {{ f.border }};border-radius:18px;overflow:hidden">
+          <button onClick="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:19px 24px;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left">
+            <span style="font-size:15.5px;font-weight:800;color:#FAF8F2">{{ f.q }}</span>
+            <span style="flex:none;width:28px;height:28px;border-radius:50%;background:{{ f.iconBg }};display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:#141414">{{ f.symbol }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 24px 20px;font-size:14.5px;line-height:1.65;color:#A9A69E">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer-Dark" hint-size="100%,600px"></dc-import>
+
+<!-- STICKY MOBILE CTA -->
+<sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(20,20,20,0.97);backdrop-filter:blur(10px);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;box-shadow:0 -12px 32px rgba(0,0,0,0.25)">
+    <a href="Enroll-Dark.dc.html" style="flex:1;text-align:center;background:#FDC804;color:#141414;font-weight:800;font-size:15px;padding:14px;border-radius:999px">Admission Inquiry</a>
+    <a href="Brochure-Dark.dc.html" style="flex:1;text-align:center;border:1.5px solid rgba(255,255,255,0.35);color:#FAF8F2;font-weight:700;font-size:15px;padding:14px;border-radius:999px">Brochure ↓</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openModule: 0, openFaq: -1, mobile: false };
+  componentDidMount() {
+    this._onR = () => this.setState({ mobile: window.innerWidth < 760 });
+    window.addEventListener('resize', this._onR);
+    this._onR();
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._onR); }
+  renderVals() {
+    const quickStats = [
+      { icon: '⏱', value: '45 days', label: 'Duration' },
+      { icon: '📚', value: '40', label: 'Lectures' },
+      { icon: '🛠', value: '3', label: 'Projects' },
+      { icon: '🖥', value: 'Hybrid', label: 'Mode' },
+      { icon: '📈', value: 'Beginner', label: 'Level' }
+    ];
+    const eligibility = [
+      'Students & freshers curious about cybersecurity — no coding background needed',
+      'IT professionals who want to move into security roles',
+      'Anyone preparing for bug bounty programs or security internships',
+      'Basic computer literacy and your own laptop — that\u2019s it'
+    ];
+    const learn = [
+      'Think like a hacker: recon, scanning & enumeration',
+      'Exploit real vulnerabilities in safe lab environments',
+      'Use Kali Linux, Nmap, Burp Suite & Metasploit',
+      'Web app attacks: XSS, SQLi, and the OWASP Top 10',
+      'Wi-Fi and network security testing',
+      'Write professional pentest reports',
+      'Bug bounty basics: from finding to reporting',
+      'Build a portfolio that gets interview calls'
+    ];
+    const format = [
+      { icon: '📝', title: 'Assignments', body: '11 mentor-verified assignments with feedback through Slack/GitHub. Humans review your work, not auto-graders.' },
+      { icon: '⚡', title: 'Quizzes', body: 'Quick checkpoints at the end of every module to lock in concepts before you move on.' },
+      { icon: '🎥', title: 'Live sessions', body: 'Weekly lab demos, tool walkthroughs and Q&A with practicing security professionals.' },
+      { icon: '🛠', title: 'Projects', body: '3 portfolio-grade projects: a full network assessment, a web app pentest, and a final reported engagement.' }
+    ];
+    const moduleData = [
+      { title: 'Hacking Foundations & Lab Setup', meta: '6 lectures', topics: ['How hacking actually works (and the law)', 'Kali Linux setup & command line essentials', 'Networking crash course: TCP/IP, ports, protocols', 'Your safe practice lab'] },
+      { title: 'Reconnaissance & Scanning', meta: '7 lectures', topics: ['Passive & active recon techniques', 'Nmap deep dive: scanning like a pro', 'Enumeration: users, shares, services', 'Lab: map a target network'] },
+      { title: 'Exploitation Basics', meta: '8 lectures', topics: ['Vulnerability analysis workflow', 'Metasploit fundamentals', 'Password attacks & privilege escalation', 'Lab: capture your first flag'] },
+      { title: 'Web Application Hacking', meta: '8 lectures', topics: ['OWASP Top 10 explained with live targets', 'Burp Suite: intercept, repeat, intrude', 'XSS & SQL injection hands-on', 'Lab: full web app assessment'] },
+      { title: 'Wireless & Network Attacks', meta: '5 lectures', topics: ['Wi-Fi security: WPA2 attacks & defenses', 'Man-in-the-middle techniques', 'Sniffing & spoofing with Wireshark', 'Lab: audit a wireless network'] },
+      { title: 'Reporting & Career Launch', meta: '6 lectures', topics: ['Writing reports clients actually read', 'Bug bounty platforms: your first submission', 'Resume, portfolio & interview prep', 'Final project: end-to-end engagement'] }
+    ];
+    const modules = moduleData.map((m, i) => {
+      const open = this.state.openModule === i;
+      return { ...m, n: i + 1, open, symbol: open ? '−' : '+', border: open ? '#FDC804' : 'rgba(255,255,255,0.12)', numBg: open ? '#FDC804' : '#FDC804', toggle: () => this.setState({ openModule: open ? -1 : i }) };
+    });
+    const tools = ['Kali Linux', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark', 'John the Ripper', 'Gobuster', 'SQLmap', 'Aircrack-ng', 'OSINT Framework'];
+    const outcomes = [
+      'Roles: SOC Analyst, Junior Pentester, Security Analyst',
+      'Ready for bug bounty platforms like HackerOne & Bugcrowd',
+      'Foundation for CEH, eJPT and Security+ certifications',
+      'Placement support: resume, interviews, portfolio'
+    ];
+    const faqData = [
+      { q: 'Is this course really for total beginners?', a: 'Yes. It\u2019s designed for people starting from scratch — we cover the networking and Linux basics you need in module 1. No coding background required.' },
+      { q: 'What happens after the course period ends?', a: 'Buying the course entitles you to access all course content. Once the period ends, there are no recurring charges — ever.' },
+      { q: 'How do I get the certificate?', a: 'Complete every assignment and the final exams with a minimum 50% mark. A digital certificate is available for download online; hard copies are not supplied.' },
+      { q: 'Can I attend labs in person?', a: 'Yes — hybrid mode includes classroom-supported lab sessions at our Kolkata center (Nokia Care Building, South Dumdum). Online-only is also fine.' }
+    ];
+    const faqs = faqData.map((f, i) => {
+      const open = this.state.openFaq === i;
+      return { ...f, open, symbol: open ? '−' : '+', border: open ? '#FDC804' : 'rgba(255,255,255,0.12)', iconBg: open ? '#FDC804' : '#FDC804', toggle: () => this.setState({ openFaq: open ? -1 : i }) };
+    });
+    return { quickStats, eligibility, learn, format, modules, tools, outcomes, faqs, mobile: this.state.mobile };
+  }
+}
+</script>
+</body>
+</html>

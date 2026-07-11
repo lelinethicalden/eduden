@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #F4F2ED; font-family: 'Figtree', system-ui, sans-serif; color: #111111; }
+a { color: #111111; text-decoration: none; }
+a:hover { color: #111111; }
+</style>
+</helmet>
+<dc-import name="Header-Minimal" active="Placement" hint-size="100%,68px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<section data-screen-label="Placement hero" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) 28px clamp(48px,6vw,72px)">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:28px">
+      <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Placement &amp; career support</span>
+    </div>
+    <h1 style="margin:0;font-size:clamp(40px,6.4vw,92px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1050px">The course ends. The support doesn't.</h1>
+    <p style="margin:36px 0 0;font-size:clamp(15px,1.4vw,17px);line-height:1.7;color:#6B6861;max-width:520px">From your first resume draft to your final interview round — our placement team works with you until you land the role.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #D8D5CC;margin-top:clamp(40px,5vw,56px)">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="padding:22px 20px 0;border-right:1px solid #D8D5CC">
+          <div style="font-size:clamp(24px,2.4vw,32px);font-weight:800;letter-spacing:-0.02em">{{ s.value }}</div>
+          <div style="font-size:12.5px;font-weight:500;color:#6B6861;margin-top:4px">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Placement process" style="background:#111111;color:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 40px;font-size:clamp(28px,3.8vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">A process, not a promise.</h2>
+    <div>
+      <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:minmax(48px,80px) minmax(160px,1fr) 2fr;gap:20px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.12);padding:24px 0">
+          <div style="font-size:13px;font-weight:700;color:#FDC804">{{ p.n }}</div>
+          <div style="font-size:clamp(16px,1.7vw,20px);font-weight:800">{{ p.title }}</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.65;color:#9B978E;max-width:560px">{{ p.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Roles" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <h2 style="margin:0 0 32px;font-size:clamp(28px,3.8vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Roles our alumni hold today.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:9px">
+      <sc-for list="{{ roles }}" as="r" hint-placeholder-count="10">
+        <span style="background:#fff;border:1px solid #E3E0D8;border-radius:999px;padding:10px 18px;font-size:13.5px;font-weight:600;white-space:nowrap">{{ r }}</span>
+      </sc-for>
+    </div>
+    <div style="font-size:12.5px;color:#6B6861;margin-top:20px">Representative outcomes — results vary by course, effort and market.</div>
+  </div>
+</section>
+
+<section data-screen-label="Alumni quote" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
+  <div style="max-width:860px;margin:0 auto;padding:clamp(72px,9vw,112px) 28px;text-align:center">
+    <p style="margin:0;font-size:clamp(21px,2.8vw,32px);font-weight:600;letter-spacing:-0.02em;line-height:1.4;text-wrap:balance">“The mock interviews were harder than my real one. When the actual panel asked me to walk through a pentest, I'd already done it five times.”</p>
+    <div style="margin-top:32px;font-size:14px;font-weight:700">Ritwika Ghosh</div>
+    <div style="font-size:13px;color:#6B6861;margin-top:4px">SOC Analyst · 2025 batch</div>
+    <a href="Courses-Minimal.dc.html" style="display:inline-block;margin-top:40px;background:#111111;color:#F4F2ED;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Start Learning</a>
+  </div>
+</section>
+
+<dc-import name="Footer-Minimal" hint-size="100%,760px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      stats: [
+        { value: '350+', label: 'Students placed & interning' },
+        { value: '40+', label: 'Hiring partner companies' },
+        { value: '4 wks', label: 'Avg. time to first interview' },
+        { value: '1:1', label: 'Career mentorship' }
+      ],
+      process: [
+        { n: '01', title: 'Resume support', body: 'Line-by-line resume and LinkedIn reviews with the placement team until they\u2019re interview-ready.' },
+        { n: '02', title: 'Portfolio guidance', body: 'Turn your course projects into a portfolio and GitHub profile that recruiters actually open.' },
+        { n: '03', title: 'Interview preparation', body: 'Mock technical and HR interviews with real feedback — including role-specific question banks.' },
+        { n: '04', title: 'Placement assistance', body: 'Referrals to hiring partners, job alerts matched to your track, and support through offer negotiation.' }
+      ],
+      roles: ['SOC Analyst', 'Junior Penetration Tester', 'Security Analyst', 'Bug Bounty Hunter', 'Data Analyst', 'ML Engineer (Junior)', 'Full-Stack Developer', 'Cloud Support Engineer', 'DevOps Engineer', 'Network Administrator', 'UI/Graphic Designer', 'Digital Marketing Executive']
+    };
+  }
+}
+</script>
+</body>
+</html>
