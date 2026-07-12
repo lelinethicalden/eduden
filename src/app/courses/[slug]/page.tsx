@@ -17,9 +17,8 @@ export async function generateMetadata({
   if (!course) return {};
 
   return {
-    title: "Business Analytics and MIS Reporting — EduDen",
-    description:
-      "Learn Excel, SQL and Power BI in a practical classroom environment and build dashboards you can show in interviews. No coding background required.",
+    title: `${course.title} — EduDen`,
+    description: course.blurb,
   };
 }
 
@@ -32,5 +31,5 @@ export default async function CourseDetailPage({
   const course = COURSES.find((c) => c.slug === slug);
   if (!course) notFound();
 
-  return <MgmtTemplate />;
+  return <MgmtTemplate course={course} />;
 }

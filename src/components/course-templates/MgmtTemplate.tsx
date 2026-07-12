@@ -1,15 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ModulesAccordion from "@/components/ModulesAccordion";
-import { unsplash } from "@/lib/unsplash";
-
-const QUICK_STATS = [
-  { value: "90 days", label: "Duration" },
-  { value: "50+", label: "Lectures" },
-  { value: "6", label: "Projects" },
-  { value: "Classroom", label: "Mode" },
-  { value: "No coding", label: "Prerequisite" },
-];
+import type { Course } from "@/data/courses";
 
 const ELIGIBILITY = [
   "Students from MBA, BBA, B.Com, Economics, Commerce, Arts, Social Science and related backgrounds",
@@ -108,7 +100,14 @@ const BENEFITS = [
   },
 ];
 
-export default function MgmtTemplate() {
+export default function MgmtTemplate({ course }: { course: Course }) {
+  const QUICK_STATS = [
+    { value: course.duration, label: "Duration" },
+    { value: course.lectures, label: "Lectures" },
+    { value: course.projects, label: "Projects" },
+    { value: course.mode, label: "Mode" },
+  ];
+
   return (
     <>
       <section className="bg-bg">
@@ -122,23 +121,21 @@ export default function MgmtTemplate() {
               Courses
             </Link>
             <span>/</span>
-            <span className="text-fg">Business Analytics and MIS Reporting</span>
+            <span className="text-fg">{course.title}</span>
           </nav>
           <div className="flex items-center gap-2 mb-5.5">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted">
-              AI &amp; Tech for Non-Tech Careers · Data Science · New
+              {course.cat}
+              {course.tag ? ` · ${course.tag}` : ""}
             </span>
           </div>
           <h1 className="m-0 text-[clamp(2.125em,4.8vw,4.25em)] font-black tracking-[-0.04em] uppercase leading-[0.95] max-w-5xl">
-            Business Analytics and MIS Reporting with Excel, SQL and Power BI.
+            {course.title}.
           </h1>
           <div className="flex flex-wrap justify-between items-end gap-7 mt-9">
             <p className="m-0 text-[0.96875em] leading-relaxed text-muted max-w-lg text-pretty">
-              Every company runs on reports. Built for MBA, BBA, Commerce, Economics
-              and Arts students — learn Excel, SQL and Power BI in a practical
-              classroom environment and build dashboards you can show in
-              interviews. No coding background required.
+              {course.blurb}
             </p>
             <div className="flex gap-3 flex-wrap">
               <Link
@@ -157,8 +154,8 @@ export default function MgmtTemplate() {
           </div>
           <div className="relative h-[clamp(13.75em,32vw,26.25em)] rounded-3xl overflow-hidden border border-border mt-9 md:mt-13">
             <Image
-              src={unsplash("1543286386-713bdd548da4")}
-              alt="Course photo — dashboard / classroom session"
+              src={course.img}
+              alt={course.title}
               fill
               sizes="(min-width: 1280px) 1200px, 100vw"
               className="object-cover"
