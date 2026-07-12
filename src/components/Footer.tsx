@@ -83,7 +83,9 @@ export default function Footer() {
             <Image
               src={logo}
               alt="EduDen"
-              className="w-[min(520px,72%)] h-auto opacity-90"
+              width={226}
+              height={61}
+              className="w-[226px] h-[61px]"
             />
           </div>
           <div className="border-t border-white/10 mt-10 py-5 flex flex-wrap gap-3 justify-between text-[12.5px] text-muted">

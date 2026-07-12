@@ -1,9 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { unsplash } from "@/lib/unsplash";
 
 const COURSES = [
+  "Business Analytics and MIS Reporting (New)",
+  "AI for Business Strategy and Decision Making (New)",
+  "Product Management and Digital Business with AI (New)",
+  "GeoAI, GIS and Location Intelligence (New)",
+  "Cyber GRC, Risk and Data Privacy (New)",
+  "Economics, Policy and Development Analytics (New)",
+  "Digital Business Operations and No Code Automation (New)",
   "Ethical Hacking for Beginners",
   "Start Bug Bounty Hunting",
   "Digital Forensics",
@@ -70,7 +79,7 @@ export default function Enroll() {
 
   return (
     <section className="bg-bg">
-      <div className="max-w-6xl mx-auto px-7 pt-12 md:pt-20 pb-16 md:pb-24 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+      <div className="max-w-[1180px] mx-auto px-7 pt-12 md:pt-20 pb-16 md:pb-24 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
         <div className="lg:sticky lg:top-24">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
@@ -98,6 +107,15 @@ export default function Enroll() {
               Your details stay private
             </div>
           </div>
+          <div className="relative h-[clamp(180px,20vw,260px)] rounded-[20px] overflow-hidden border border-border mt-7 max-w-md">
+            <Image
+              src={unsplash("1522202176988-66273c2fd55f")}
+              alt="Counselling session / campus photo"
+              fill
+              sizes="420px"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="bg-white border border-border rounded-3xl p-6 md:p-10">
@@ -111,7 +129,7 @@ export default function Enroll() {
                   setErrors((s) => ({ ...s, name: false }));
                 }}
                 placeholder="Your full name"
-                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.name)}`}
+                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.name)}`}
               />
               {errors.name && (
                 <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -131,7 +149,7 @@ export default function Enroll() {
                   setErrors((s) => ({ ...s, phone: false }));
                 }}
                 placeholder="+91 XXXXX XXXXX"
-                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.phone)}`}
+                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.phone)}`}
               />
               {errors.phone && (
                 <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -175,7 +193,7 @@ export default function Enroll() {
                     setErrors((s) => ({ ...s, alt: false }));
                   }}
                   placeholder="+91 XXXXX XXXXX"
-                  className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.alt)}`}
+                  className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.alt)}`}
                 />
                 {errors.alt && (
                   <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -194,7 +212,7 @@ export default function Enroll() {
                   setErrors((s) => ({ ...s, email: false }));
                 }}
                 placeholder="you@example.com"
-                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.email)}`}
+                className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.email)}`}
               />
               {errors.email && (
                 <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -272,7 +290,7 @@ export default function Enroll() {
 
             <button
               onClick={submit}
-              className="border-none bg-fg text-bg font-[inherit] font-bold text-[15px] py-4.25 rounded-full cursor-pointer hover:bg-accent hover:text-fg"
+              className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4.25 rounded-full cursor-pointer hover:bg-accent"
             >
               Submit Inquiry
             </button>

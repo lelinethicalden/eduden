@@ -31,6 +31,9 @@ a:hover { color: #111111; }
         <div style="border-bottom:1px solid #D8D5CC;padding:14px 4px;font-size:14px;font-weight:600">Free counselling — no commitment</div>
         <div style="padding:14px 4px;font-size:14px;font-weight:600">Your details stay private</div>
       </div>
+      <div style="position:relative;height:clamp(180px,20vw,260px);border-radius:20px;overflow:hidden;border:1px solid #E3E0D8;margin-top:28px;max-width:420px">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="enroll-counselling" shape="rect" placeholder="Counselling session / campus photo" hint-size="100%,220px" style="position:absolute;inset:0"></x-import>
+      </div>
     </div>
     <div style="background:#fff;border:1px solid #E3E0D8;border-radius:24px;padding:clamp(24px,3.5vw,40px)">
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -67,6 +70,13 @@ a:hover { color: #111111; }
           <label style="font-size:13px;font-weight:700">Course interested in</label>
           <select value="{{ course }}" onChange="{{ setCourse }}" style="border:1px solid {{ courseBorder }};border-radius:12px;padding:13px 15px;font-family:inherit;font-size:14.5px;outline:none;background:#F4F2ED;color:#111111;appearance:auto">
             <option value="">Select a course</option>
+            <option>Business Analytics and MIS Reporting (New)</option>
+            <option>AI for Business Strategy and Decision Making (New)</option>
+            <option>Product Management and Digital Business with AI (New)</option>
+            <option>GeoAI, GIS and Location Intelligence (New)</option>
+            <option>Cyber GRC, Risk and Data Privacy (New)</option>
+            <option>Economics, Policy and Development Analytics (New)</option>
+            <option>Digital Business Operations and No Code Automation (New)</option>
             <option>Ethical Hacking for Beginners</option>
             <option>Start Bug Bounty Hunting</option>
             <option>Digital Forensics</option>
@@ -100,7 +110,7 @@ a:hover { color: #111111; }
           <span style="font-size:13px;line-height:1.55;color:#6B6861">I agree to receive updates about courses, batches and offers from EduDen via WhatsApp, call or email.</span>
         </label>
         <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:600;color:#D64040;margin-top:-10px">Please tick the consent box so we can contact you.</span></sc-if>
-        <button onClick="{{ submit }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:15px;padding:17px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Submit Inquiry</button>
+        <button onClick="{{ submit }}" style="border:none;background:#FFD300;color:#111111;font-family:inherit;font-weight:700;font-size:15px;padding:17px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Submit Inquiry</button>
       </div>
     </div>
   </div>

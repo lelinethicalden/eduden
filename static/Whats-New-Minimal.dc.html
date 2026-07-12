@@ -32,6 +32,26 @@ a:hover { color: #111111; }
   </div>
 </section>
 
+<section data-screen-label="Featured launch" style="background:#F4F2ED">
+  <div style="max-width:1280px;margin:0 auto;padding:0 28px 40px">
+    <div style="background:#111111;color:#F4F2ED;border-radius:24px;padding:clamp(32px,4.5vw,56px)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#FDC804;color:#111111;padding:6px 14px;border-radius:999px">New program launch</span>
+        <span style="font-size:12.5px;font-weight:600;color:#9B978E">July 2026</span>
+      </div>
+      <h2 style="margin:0;font-size:clamp(26px,3.6vw,48px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1;max-width:900px">7 new courses for management &amp; non-tech students.</h2>
+      <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#9B978E;max-width:620px">A full track — AI &amp; Tech for Non-Technical Careers — built for MBA, BBA, Commerce, Economics, Arts and Social Science students. Business Analytics, AI for Business Strategy, Product Management, GeoAI &amp; GIS, Cyber GRC, Policy Analytics, and No-Code Automation. No coding background required.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+        <a href="Courses-Minimal.dc.html" style="background:#FDC804;color:#111111;font-weight:700;font-size:14.5px;padding:14px 28px;border-radius:999px" style-hover="background:#F4F2ED;color:#111111">Browse the New Courses</a>
+        <a href="Course-Detail-Mgmt-Minimal.dc.html" style="border:1px solid rgba(255,255,255,0.35);color:#F4F2ED;font-weight:600;font-size:14.5px;padding:14px 28px;border-radius:999px" style-hover="border-color:#FDC804;color:#FDC804">See a Course Detail</a>
+      </div>
+      <div style="position:relative;height:clamp(200px,26vw,340px);border-radius:18px;overflow:hidden;margin-top:36px">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="whatsnew-launch" shape="rect" placeholder="Launch photo — new batch orientation" hint-size="100%,300px" style="position:absolute;inset:0"></x-import>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section data-screen-label="Updates list" style="background:#F4F2ED">
   <div style="max-width:1280px;margin:0 auto;padding:8px 28px clamp(64px,8vw,96px)">
     <div style="border-top:1px solid #D8D5CC">
@@ -57,6 +77,7 @@ class Component extends DCLogic {
   state = { cat: 'All' };
   renderVals() {
     const POSTS = [
+      { tag: 'Course Launch', date: 'Jul 11, 2026', title: 'Management & non-tech track: 7 new courses now open', body: 'Business Analytics with Power BI, AI for Business Strategy, Product Management, GeoAI & GIS, Cyber GRC, Policy Analytics, and No-Code Automation — built for MBA, BBA, Commerce, Arts and Social Science students.', href: 'Courses-Minimal.dc.html' },
       { tag: 'New Batch', date: 'Jul 8, 2026', title: 'Bug Bounty Hunting — September cohort announced', body: '50 days of recon-to-reporting training. Applications open now; mentor slots are limited.', href: 'Enroll-Minimal.dc.html' },
       { tag: 'Workshop', date: 'Jul 2, 2026', title: 'Free weekend workshop: Intro to OSINT', body: 'A 3-hour hands-on session at the Kolkata center. Learn to find anything — legally. Open to all.', href: 'Enroll-Minimal.dc.html' },
       { tag: 'Course Launch', date: 'Jun 24, 2026', title: 'New micro course: Prompt Engineering for Developers', body: '10 days, project-based, built for developers who want to ship AI features that actually work.', href: 'Courses-Minimal.dc.html' },

@@ -32,9 +32,12 @@ a:hover { color: #111111; }
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:36px">
       <p style="margin:0;font-size:15.5px;line-height:1.65;color:#6B6861;max-width:520px;text-wrap:pretty">Learn to legally break into systems, find security flaws, and help companies fix them — while building a career in cybersecurity. This is not a theory-dump.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="Enroll-Minimal.dc.html" style="background:#111111;color:#F4F2ED;font-weight:700;font-size:14.5px;padding:15px 30px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Admission Inquiry</a>
+        <a href="Enroll-Minimal.dc.html" style="background:#FFD300;color:#111111;font-weight:700;font-size:14.5px;padding:15px 30px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Admission Inquiry</a>
         <a href="Brochure-Minimal.dc.html" style="border:1px solid #C9C6BD;color:#111111;font-weight:600;font-size:14.5px;padding:15px 30px;border-radius:999px" style-hover="border-color:#111111">Brochure ↓</a>
       </div>
+    </div>
+    <div style="position:relative;height:clamp(220px,32vw,420px);border-radius:24px;overflow:hidden;border:1px solid #E3E0D8;margin-top:clamp(36px,5vw,52px)">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="detail-hero" shape="rect" placeholder="Course photo — lab session / terminal in action" hint-size="100%,340px" style="position:absolute;inset:0"></x-import>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border-top:1px solid #D8D5CC;margin-top:clamp(40px,5vw,56px)">
       <sc-for list="{{ quickStats }}" as="s" hint-placeholder-count="5">

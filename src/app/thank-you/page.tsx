@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { unsplash } from "@/lib/unsplash";
 
 function readInquiryName() {
   if (typeof window === "undefined") return "";
@@ -17,7 +19,7 @@ export default function ThankYou() {
 
   return (
     <section className="bg-bg min-h-[calc(100vh-68px)] flex items-center">
-      <div className="max-w-3xl mx-auto px-7 py-14 md:py-20 text-center w-full">
+      <div className="max-w-[760px] mx-auto px-7 py-14 md:py-20 text-center w-full">
         <div className="inline-flex items-center gap-2 mb-7">
           <span className="w-2 h-2 bg-accent rounded-sm" />
           <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -37,18 +39,27 @@ export default function ThankYou() {
         <div className="flex gap-3 justify-center flex-wrap mt-9">
           <Link
             href="/courses"
-            className="bg-fg text-bg font-bold text-[14.5px] px-7.5 py-3.75 rounded-full hover:bg-accent hover:text-fg"
+            className="bg-[#FFD300] text-fg font-bold text-[14.5px] px-7.5 py-3.75 rounded-full hover:bg-accent"
           >
             Explore More Courses
           </Link>
           <Link
             href="/"
-            className="border border-border-strong font-semibold text-[14.5px] px-7.5 py-3.75 rounded-full hover:border-fg"
+            className="border border-border-strong font-semibold text-[14.5px] px-7.5 py-3.75 rounded-full "
           >
             Back to Home
           </Link>
         </div>
-        <div className="mt-14 border-t border-border-strong pt-6 text-sm leading-relaxed text-muted max-w-md mx-auto">
+        <div className="relative h-[clamp(160px,20vw,240px)] rounded-[20px] overflow-hidden border border-border mt-11">
+          <Image
+            src={unsplash("1551288049-bebda4e38f71")}
+            alt="Admissions team / campus photo"
+            fill
+            sizes="(min-width: 760px) 760px, 100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="mt-11 border-t border-border-strong pt-6 text-sm leading-relaxed text-muted max-w-md mx-auto">
           In a hurry? Message us on{" "}
           <a href="#" className="font-bold border-b-2 border-accent">
             WhatsApp

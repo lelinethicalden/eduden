@@ -1,15 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
 import FaqAccordion from "@/components/FaqAccordion";
 import ModulesAccordion from "@/components/ModulesAccordion";
-import logo from "../../../../public/images/eduden-logo.png";
-
-export const metadata: Metadata = {
-  title: "Ethical Hacking for Beginners — EduDen",
-  description:
-    "Learn to legally break into systems, find security flaws, and help companies fix them — while building a career in cybersecurity.",
-};
+import logo from "../../../public/images/eduden-logo.png";
 
 const QUICK_STATS = [
   { value: "45 days", label: "Duration" },
@@ -139,12 +132,12 @@ const FAQS = [
   },
 ];
 
-export default function CourseDetail() {
+export default function DetTemplate() {
   return (
     <>
       <section className="bg-bg">
         <div className="max-w-7xl mx-auto px-7 pt-8 pb-12 md:pb-18">
-          <nav className="flex flex-wrap items-center gap-2 text-[13px] font-semibold text-muted mb-10">
+          <nav className="flex flex-wrap items-center gap-2 text-[0.8125em] font-semibold text-muted mb-10">
             <Link href="/" className="text-muted hover:text-fg">
               Home
             </Link>
@@ -157,15 +150,15 @@ export default function CourseDetail() {
           </nav>
           <div className="flex items-center gap-2 mb-5.5">
             <span className="w-2 h-2 bg-accent rounded-sm" />
-            <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
+            <span className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted">
               Cyber Security · Beginner-friendly · Bestseller
             </span>
           </div>
-          <h1 className="m-0 text-[clamp(38px,5.8vw,80px)] font-black tracking-[-0.04em] uppercase leading-[0.95] max-w-5xl">
+          <h1 className="m-0 text-[clamp(2.375em,5.8vw,5em)] font-black tracking-[-0.04em] uppercase leading-[0.95] max-w-5xl">
             Ethical Hacking for Beginners.
           </h1>
           <div className="flex flex-wrap justify-between items-end gap-7 mt-9">
-            <p className="m-0 text-[15.5px] leading-relaxed text-muted max-w-lg text-pretty">
+            <p className="m-0 text-[0.96875em] leading-relaxed text-muted max-w-lg text-pretty">
               Learn to legally break into systems, find security flaws, and
               help companies fix them — while building a career in
               cybersecurity. This is not a theory-dump.
@@ -173,13 +166,13 @@ export default function CourseDetail() {
             <div className="flex gap-3 flex-wrap">
               <Link
                 href="/enroll"
-                className="bg-fg text-bg font-bold text-[14.5px] px-7.5 py-3.75 rounded-full hover:bg-accent hover:text-fg"
+                className="bg-[#FFD300] text-fg font-bold text-[0.90625em] px-7.5 py-3.75 rounded-full hover:bg-accent"
               >
                 Admission Inquiry
               </Link>
               <Link
                 href="/brochure"
-                className="border border-border-strong text-fg font-semibold text-[14.5px] px-7.5 py-3.75 rounded-full hover:border-fg"
+                className="border border-border-strong text-fg font-semibold text-[0.90625em] px-7.5 py-3.75 rounded-full "
               >
                 Brochure ↓
               </Link>
@@ -191,10 +184,10 @@ export default function CourseDetail() {
                 key={s.label}
                 className="pt-5.5 px-5 border-r border-border-strong"
               >
-                <div className="text-[clamp(20px,2vw,26px)] font-extrabold tracking-[-0.02em]">
+                <div className="text-[clamp(1.25em,2vw,1.625em)] font-extrabold tracking-[-0.02em]">
                   {s.value}
                 </div>
-                <div className="text-[12.5px] font-medium text-muted mt-1">
+                <div className="text-[0.78125em] font-medium text-muted mt-1">
                   {s.label}
                 </div>
               </div>
@@ -206,28 +199,28 @@ export default function CourseDetail() {
       <section className="bg-fg text-bg">
         <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <div>
-            <h2 className="mt-0 mb-4.5 text-[clamp(26px,3.2vw,42px)] font-black tracking-[-0.03em] uppercase leading-none">
+            <h2 className="mt-0 mb-4.5 text-[clamp(1.625em,3.2vw,2.625em)] font-black tracking-[-0.03em] uppercase leading-none">
               Zero to job-ready in 45 days.
             </h2>
-            <p className="m-0 mb-3.5 text-[15px] leading-relaxed text-muted-dark">
+            <p className="m-0 mb-3.5 text-[0.9375em] leading-relaxed text-muted-dark">
               This fully hands-on course teaches you to think like a
               hacker, use real-world tools, and apply those skills to bug
               bounty programs, internships, or job-ready IT roles.
             </p>
-            <p className="m-0 text-[15px] leading-relaxed text-muted-dark">
+            <p className="m-0 text-[0.9375em] leading-relaxed text-muted-dark">
               You work inside safe, guided lab environments from day one —
               scanning networks, exploiting vulnerabilities, and writing
               reports the way professionals do.
             </p>
           </div>
           <div>
-            <div className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-accent mb-5">
+            <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-accent mb-5">
               Who can join
             </div>
             {ELIGIBILITY.map((e) => (
               <div
                 key={e}
-                className="border-t border-white/12 py-4 text-[14.5px] leading-relaxed text-white/85"
+                className="border-t border-white/12 py-4 text-[0.90625em] leading-relaxed text-white/85"
               >
                 {e}
               </div>
@@ -238,7 +231,7 @@ export default function CourseDetail() {
 
       <section className="bg-bg">
         <div className="max-w-7xl mx-auto px-7 py-14 md:py-22">
-          <h2 className="mt-0 mb-9 text-[clamp(28px,3.6vw,48px)] font-black tracking-[-0.035em] uppercase leading-none">
+          <h2 className="mt-0 mb-9 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             What you will learn.
           </h2>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-x-12">
@@ -248,7 +241,7 @@ export default function CourseDetail() {
                 className="flex gap-3.5 items-baseline border-t border-border-strong py-4.5"
               >
                 <span className="flex-none w-1.75 h-1.75 bg-accent rounded-sm -translate-y-0.5" />
-                <span className="text-[14.5px] font-semibold leading-snug">
+                <span className="text-[0.90625em] font-semibold leading-snug">
                   {l}
                 </span>
               </div>
@@ -259,23 +252,23 @@ export default function CourseDetail() {
 
       <section className="bg-bg border-t border-border">
         <div className="max-w-4xl mx-auto px-7 py-14 md:py-22">
-          <h2 className="mt-0 mb-2 text-[clamp(28px,3.6vw,48px)] font-black tracking-[-0.035em] uppercase leading-none">
+          <h2 className="mt-0 mb-2 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             Curriculum.
           </h2>
-          <p className="m-0 mb-9 text-[14.5px] text-muted">
+          <p className="m-0 mb-9 text-[0.90625em] text-muted">
             6 modules · 40 lectures · 15+ labs · 11 mentor-verified
             assignments
           </p>
           <ModulesAccordion modules={MODULES} />
           <div className="mt-9">
-            <div className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted mb-3.5">
+            <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted mb-3.5">
               Tools you&apos;ll master
             </div>
             <div className="flex flex-wrap gap-2">
               {TOOLS.map((t) => (
                 <span
                   key={t}
-                  className="bg-white border border-border rounded-full px-3.75 py-2 text-[13px] font-semibold whitespace-nowrap"
+                  className="bg-white border border-border rounded-full px-3.75 py-2 text-[0.8125em] font-semibold whitespace-nowrap"
                 >
                   {t}
                 </span>
@@ -288,12 +281,12 @@ export default function CourseDetail() {
       <section className="bg-bg border-t border-border">
         <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-center">
           <div>
-            <h2 className="mt-0 mb-4 text-[clamp(28px,3.6vw,48px)] font-black tracking-[-0.035em] uppercase leading-none">
+            <h2 className="mt-0 mb-4 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
               Finish strong.
               <br />
               Walk away verified.
             </h2>
-            <p className="m-0 mb-5 text-[15px] leading-relaxed text-muted max-w-lg">
+            <p className="m-0 mb-5 text-[0.9375em] leading-relaxed text-muted max-w-lg">
               Complete every assignment and score at least 50% in the final
               exams to earn a verifiable EduDen certificate — checkable
               anytime on our{" "}
@@ -322,7 +315,7 @@ export default function CourseDetail() {
             <div className="text-xs font-bold tracking-[0.14em] uppercase text-muted">
               Certificate of Completion
             </div>
-            <div className="text-[clamp(20px,2.2vw,26px)] font-extrabold tracking-[-0.02em] mt-2.5">
+            <div className="text-[clamp(1.25em,2.2vw,1.625em)] font-extrabold tracking-[-0.02em] mt-2.5">
               Ethical Hacking for Beginners
             </div>
             <div className="text-sm text-muted mt-1.5">
@@ -330,14 +323,14 @@ export default function CourseDetail() {
             </div>
             <div className="flex justify-between items-end mt-9 border-t border-border pt-4.5">
               <div>
-                <div className="text-[11px] font-bold tracking-[0.1em] text-muted">
+                <div className="text-[0.6875em] font-bold tracking-[0.1em] text-muted">
                   CERTIFICATE ID
                 </div>
                 <div className="text-sm font-bold tracking-[0.05em] mt-0.75">
                   ED-EH45-XXXX
                 </div>
               </div>
-              <span className="bg-accent text-[11.5px] font-bold px-3.25 py-1.5 rounded-full">
+              <span className="bg-accent text-[0.71875em] font-bold px-3.25 py-1.5 rounded-full">
                 Verifiable
               </span>
             </div>
@@ -348,16 +341,16 @@ export default function CourseDetail() {
       <section className="bg-fg text-bg">
         <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-center">
           <div>
-            <div className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-accent mb-4.5">
+            <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-accent mb-4.5">
               Your mentor
             </div>
-            <div className="text-[clamp(24px,2.8vw,36px)] font-black tracking-[-0.03em] uppercase">
+            <div className="text-[clamp(1.5em,2.8vw,2.25em)] font-black tracking-[-0.03em] uppercase">
               Arindam Roy
             </div>
             <div className="text-sm font-semibold text-muted-dark mt-1.5">
               Cyber Security Lead · OSCP · 9+ years
             </div>
-            <p className="mt-4.5 text-[14.5px] leading-relaxed text-muted-dark max-w-md">
+            <p className="mt-4.5 text-[0.90625em] leading-relaxed text-muted-dark max-w-md">
               Professional pentester. Has reviewed 1,000+ student
               assignments and mentored students into SOC, pentesting and
               bug bounty roles.
@@ -370,13 +363,13 @@ export default function CourseDetail() {
             </Link>
           </div>
           <div>
-            <p className="m-0 text-[clamp(18px,2vw,24px)] font-semibold leading-relaxed tracking-[-0.01em]">
+            <p className="m-0 text-[clamp(1.125em,2vw,1.5em)] font-semibold leading-relaxed tracking-[-0.01em]">
               &ldquo;I joined knowing nothing about cybersecurity. 45 days
               later I had 3 projects, a certificate, and the confidence to
               clear my SOC Analyst interview.&rdquo;
             </p>
             <div className="mt-5.5 text-sm font-bold">Ritwika Ghosh</div>
-            <div className="text-[13px] text-muted-dark mt-0.75">
+            <div className="text-[0.8125em] text-muted-dark mt-0.75">
               SOC Analyst · 2025 batch
             </div>
           </div>
@@ -385,7 +378,7 @@ export default function CourseDetail() {
 
       <section className="bg-bg">
         <div className="max-w-4xl mx-auto px-7 py-14 md:py-22">
-          <h2 className="mt-0 mb-9 text-[clamp(28px,3.6vw,48px)] font-black tracking-[-0.035em] uppercase leading-none">
+          <h2 className="mt-0 mb-9 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             Before you ask.
           </h2>
           <FaqAccordion items={FAQS} />

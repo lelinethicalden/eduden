@@ -30,6 +30,9 @@ a:hover { color: #111111; }
         <div style="border-bottom:1px solid #D8D5CC;padding:14px 4px;display:flex;justify-content:space-between;gap:16px;font-size:14px"><span style="font-weight:700">EduDen Course Brochure 2026</span><span style="color:#6B6861;font-weight:600">PDF · 2.4 MB</span></div>
         <div style="padding:14px 4px;font-size:14px;color:#6B6861;font-weight:600">Updated July 2026</div>
       </div>
+      <div style="position:relative;height:clamp(180px,20vw,260px);border-radius:20px;overflow:hidden;border:1px solid #E3E0D8;margin-top:28px;max-width:420px">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="brochure-cover" shape="rect" placeholder="Brochure cover preview" hint-size="100%,220px" style="position:absolute;inset:0"></x-import>
+      </div>
     </div>
     <div style="background:#fff;border:1px solid #E3E0D8;border-radius:24px;padding:clamp(24px,3.5vw,40px)">
       <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
@@ -53,6 +56,13 @@ a:hover { color: #111111; }
             <label style="font-size:13px;font-weight:700">Course</label>
             <select value="{{ course }}" onChange="{{ setCourse }}" style="border:1px solid {{ courseBorder }};border-radius:12px;padding:13px 15px;font-family:inherit;font-size:14.5px;outline:none;background:#F4F2ED;color:#111111;appearance:auto">
               <option value="">Select a course</option>
+              <option>Business Analytics and MIS Reporting (New)</option>
+              <option>AI for Business Strategy and Decision Making (New)</option>
+              <option>Product Management and Digital Business with AI (New)</option>
+              <option>GeoAI, GIS and Location Intelligence (New)</option>
+              <option>Cyber GRC, Risk and Data Privacy (New)</option>
+              <option>Economics, Policy and Development Analytics (New)</option>
+              <option>Digital Business Operations and No Code Automation (New)</option>
               <option>Ethical Hacking for Beginners</option>
               <option>Start Bug Bounty Hunting</option>
               <option>Digital Forensics</option>
@@ -66,7 +76,7 @@ a:hover { color: #111111; }
             </select>
             <sc-if value="{{ courseError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:600;color:#D64040">Please pick a course.</span></sc-if>
           </div>
-          <button onClick="{{ submit }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:15px;padding:17px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Download Brochure ↓</button>
+          <button onClick="{{ submit }}" style="border:none;background:#FFD300;color:#111111;font-family:inherit;font-weight:700;font-size:15px;padding:17px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Download Brochure ↓</button>
         </div>
       </sc-if>
       <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
@@ -75,7 +85,7 @@ a:hover { color: #111111; }
           <div style="font-size:21px;font-weight:800;margin-top:18px">Your download has started!</div>
           <p style="margin:10px auto 0;max-width:320px;font-size:14px;line-height:1.65;color:#6B6861">We've also sent a copy to your email. Didn't start? <a href="#" style="font-weight:700;border-bottom:2px solid #FDC804">Download again</a>.</p>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
-            <a href="Course-Detail-Minimal.dc.html" style="background:#111111;color:#F4F2ED;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="background:#FDC804;color:#111111">View Course</a>
+            <a href="Course-Detail-Minimal.dc.html" style="background:#FFD300;color:#111111;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="background:#FDC804;color:#111111">View Course</a>
             <a href="Enroll-Minimal.dc.html" style="border:1px solid #C9C6BD;font-weight:600;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="border-color:#111111">Enroll Now</a>
           </div>
         </div>

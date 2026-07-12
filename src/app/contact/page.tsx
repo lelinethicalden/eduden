@@ -1,9 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { unsplash } from "@/lib/unsplash";
 
 const COURSES = [
+  "Business Analytics and MIS Reporting (New)",
+  "AI for Business Strategy and Decision Making (New)",
+  "Product Management and Digital Business with AI (New)",
+  "GeoAI, GIS and Location Intelligence (New)",
+  "Cyber GRC, Risk and Data Privacy (New)",
+  "Economics, Policy and Development Analytics (New)",
+  "Digital Business Operations and No Code Automation (New)",
   "Ethical Hacking for Beginners",
   "Start Bug Bounty Hunting",
   "Digital Forensics",
@@ -83,7 +92,7 @@ export default function Contact() {
                       setErrors((s) => ({ ...s, name: false }));
                     }}
                     placeholder="Your full name"
-                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.name)}`}
+                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.name)}`}
                   />
                   {errors.name && (
                     <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -101,7 +110,7 @@ export default function Contact() {
                       setErrors((s) => ({ ...s, email: false }));
                     }}
                     placeholder="you@example.com"
-                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.email)}`}
+                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.email)}`}
                   />
                   {errors.email && (
                     <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -121,7 +130,7 @@ export default function Contact() {
                       setErrors((s) => ({ ...s, phone: false }));
                     }}
                     placeholder="+91 XXXXX XXXXX"
-                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg focus:border-fg focus:bg-white ${fieldBorder(!!errors.phone)}`}
+                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${fieldBorder(!!errors.phone)}`}
                   />
                   {errors.phone && (
                     <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -156,7 +165,7 @@ export default function Contact() {
                     }}
                     placeholder="Tell us what you'd like to know…"
                     rows={4}
-                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg resize-y focus:border-fg focus:bg-white ${fieldBorder(!!errors.message)}`}
+                    className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg resize-y ${fieldBorder(!!errors.message)}`}
                   />
                   {errors.message && (
                     <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -167,7 +176,7 @@ export default function Contact() {
 
                 <button
                   onClick={submit}
-                  className="border-none bg-fg text-bg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent hover:text-fg"
+                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent"
                 >
                   Submit
                 </button>
@@ -186,7 +195,7 @@ export default function Contact() {
                 </p>
                 <Link
                   href="/courses"
-                  className="inline-block mt-5.5 bg-fg text-bg font-bold text-sm px-6.5 py-3.25 rounded-full hover:bg-accent hover:text-fg"
+                  className="inline-block mt-5.5 bg-[#FFD300] text-fg font-bold text-sm px-6.5 py-3.25 rounded-full hover:bg-accent"
                 >
                   Explore Courses Meanwhile
                 </Link>
@@ -252,6 +261,15 @@ export default function Contact() {
                     YouTube
                   </a>
                 </div>
+              </div>
+              <div className="relative h-[clamp(200px,24vw,300px)] rounded-[20px] overflow-hidden border border-border mt-6">
+                <Image
+                  src={unsplash("1497366216548-37526070297c")}
+                  alt="Kolkata center photo or map"
+                  fill
+                  sizes="(min-width: 1280px) 600px, 100vw"
+                  className="object-cover"
+                />
               </div>
             </div>
 

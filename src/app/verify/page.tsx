@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { unsplash } from "@/lib/unsplash";
 
 export default function Verify() {
   const [certId, setCertId] = useState("");
@@ -30,7 +32,7 @@ export default function Verify() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-3xl mx-auto px-7 pt-16 md:pt-24 pb-12 text-center">
+        <div className="max-w-[760px] mx-auto px-7 pt-16 md:pt-24 pb-12 text-center">
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -54,7 +56,7 @@ export default function Verify() {
             />
             <button
               onClick={verify}
-              className="flex-none border-none bg-fg text-bg font-[inherit] font-bold text-sm px-6 py-3.25 rounded-full cursor-pointer hover:bg-accent hover:text-fg"
+              className="flex-none border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-sm px-6 py-3.25 rounded-full cursor-pointer hover:bg-accent"
             >
               Verify
             </button>
@@ -73,7 +75,7 @@ export default function Verify() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-3xl mx-auto px-7 pb-16 md:pb-24">
+        <div className="max-w-[760px] mx-auto px-7 pb-16 md:pb-24">
           {result === "valid" && (
             <div className="bg-white border border-border rounded-3xl p-7 md:p-10">
               <div className="flex items-center gap-3.5 mb-7">
@@ -126,13 +128,13 @@ export default function Verify() {
               <div className="flex gap-3 flex-wrap mt-6">
                 <a
                   href="#"
-                  className="bg-fg text-bg font-bold text-[13.5px] px-6 py-3 rounded-full hover:bg-accent hover:text-fg"
+                  className="bg-[#FFD300] text-fg font-bold text-[13.5px] px-6 py-3 rounded-full hover:bg-accent"
                 >
                   View Certificate
                 </a>
                 <a
                   href="#"
-                  className="border border-border-strong font-semibold text-[13.5px] px-6 py-3 rounded-full hover:border-fg"
+                  className="border border-border-strong font-semibold text-[13.5px] px-6 py-3 rounded-full "
                 >
                   Download PDF ↓
                 </a>
@@ -156,13 +158,13 @@ export default function Verify() {
               <div className="flex gap-3 justify-center flex-wrap mt-6">
                 <button
                   onClick={reset}
-                  className="border-none bg-fg text-bg font-[inherit] font-bold text-[13.5px] px-6 py-3 rounded-full cursor-pointer"
+                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[13.5px] px-6 py-3 rounded-full cursor-pointer hover:bg-accent"
                 >
                   Try Again
                 </button>
                 <Link
                   href="/contact"
-                  className="border border-border-strong font-semibold text-[13.5px] px-6 py-3 rounded-full hover:border-fg"
+                  className="border border-border-strong font-semibold text-[13.5px] px-6 py-3 rounded-full "
                 >
                   Contact Us
                 </Link>
@@ -198,6 +200,15 @@ export default function Verify() {
                 cleared (min 50%).
               </p>
             </div>
+          </div>
+          <div className="relative h-[clamp(200px,26vw,340px)] rounded-[20px] overflow-hidden border border-border mt-9">
+            <Image
+              src={unsplash("1543286386-713bdd548da4")}
+              alt="Sample EduDen certificate image"
+              fill
+              sizes="(min-width: 1280px) 760px, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

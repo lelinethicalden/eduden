@@ -23,8 +23,15 @@ a:hover { color: #111111; }
       <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
       <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">About EduDen</span>
     </div>
-    <h1 style="margin:0;font-size:clamp(40px,6.4vw,92px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1100px">We teach the skills the industry actually hires for.</h1>
-    <p style="margin:36px 0 0;font-size:clamp(15px,1.4vw,17px);line-height:1.7;color:#6B6861;max-width:560px">Too much education is theory-dumps and certificates that mean nothing. We build hands-on, mentor-led courses where every assignment is verified and every skill is job-relevant.</p>
+    <h1 style="margin:0;font-size:clamp(40px,6.4vw,92px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1100px">A LARGE RANGE OF COURSE LEARNING PATHS HOME</h1>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:clamp(40px,5vw,56px)">
+      <div style="position:relative;height:clamp(220px,30vw,400px);border-radius:24px;overflow:hidden;border:1px solid #E3E0D8">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-hero-wide" shape="rect" placeholder="Classroom / mentoring session photo" hint-size="100%,320px" style="position:absolute;inset:0"></x-import>
+      </div>
+      <div style="position:relative;height:clamp(220px,30vw,400px);border-radius:24px;overflow:hidden;border:1px solid #E3E0D8">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-hero-tall" shape="rect" placeholder="Kolkata center photo" hint-size="100%,320px" style="position:absolute;inset:0"></x-import>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -32,9 +39,8 @@ a:hover { color: #111111; }
   <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) 28px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
       <div>
-        <div style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FDC804;margin-bottom:18px">Our mission</div>
-        <h2 style="margin:0;font-size:clamp(28px,3.8vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Where learning meets imagination &amp; innovation.</h2>
-        <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#9B978E;max-width:480px">We bridge the gap between what colleges teach and what careers demand — through practical education, industry-focused curricula, and instructors who do the work they teach.</p>
+        <h2 style="margin:0;font-size:clamp(28px,3.8vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">WE PROVIDE THE BEST QUALITY ONLINE COURSES</h2>
+        <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#9B978E;max-width:480px">Well, because we're not your grandma's boring old school! At eduden, we're the rebels of education, the mavericks of learning, and the champions of fun-filled knowledge. We'll teach you how to slay dragons and code websites, all while cracking jokes and sipping on virtual coffee. So, why settle for snooze-worthy lectures when you can join the eduden revolution? Let's make learning epic together!</p>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr">
         <div style="border-left:1px solid rgba(255,255,255,0.12);padding:20px 24px"><div style="font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#FDC804">2,500+</div><div style="font-size:13px;color:#9B978E;margin-top:4px">Students trained</div></div>
@@ -48,7 +54,7 @@ a:hover { color: #111111; }
 
 <section data-screen-label="Different" style="background:#F4F2ED">
   <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
-    <h2 style="margin:0 0 36px;font-size:clamp(30px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1;max-width:800px">No theory-dumps.<br>No shortcuts.</h2>
+    <h2 style="margin:0 0 36px;font-size:clamp(30px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1;max-width:800px">Core Pillars</h2>
     <div>
       <sc-for list="{{ different }}" as="d" hint-placeholder-count="6">
         <div style="display:grid;grid-template-columns:minmax(48px,80px) minmax(160px,1fr) 2fr;gap:20px;align-items:baseline;border-top:1px solid #D8D5CC;padding:24px 0">
@@ -61,30 +67,57 @@ a:hover { color: #111111; }
   </div>
 </section>
 
+<section data-screen-label="Technology" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px">
+      <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Technologies utilized</span>
+    </div>
+    <h2 style="margin:0;font-size:clamp(30px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1;max-width:800px">The technology behind our success</h2>
+    <p style="margin:20px 0 0;font-size:clamp(15px,1.4vw,17px);line-height:1.7;color:#6B6861;max-width:560px">Eduden combines AI innovation and cloud technology to deliver interactive, real-world learning. Our digital-first classrooms make education smarter, faster, and more engaging for every learner.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:14px;margin-top:40px">
+      <sc-for list="{{ techs }}" as="t" hint-placeholder-count="8">
+        <div style="background:#fff;border:1px solid #E3E0D8;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:12px;align-items:stretch">
+          <div style="position:relative;height:72px">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ t.slotId }}" shape="rounded" placeholder="{{ t.hint }}" hint-size="100%,72px" style="position:absolute;inset:0"></x-import>
+          </div>
+          <div style="font-size:12.5px;font-weight:700;letter-spacing:0.04em;text-align:center;color:#6B6861">{{ t.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
 <section data-screen-label="Quote" style="background:#F4F2ED;border-top:1px solid #E3E0D8">
   <div style="max-width:860px;margin:0 auto;padding:clamp(72px,9vw,112px) 28px;text-align:center">
     <p style="margin:0;font-size:clamp(21px,2.8vw,32px);font-weight:600;letter-spacing:-0.02em;line-height:1.4;text-wrap:balance">“I was a commerce graduate with zero tech background. EduDen got me from ‘what is Linux?’ to a paid cybersecurity internship in under six months.”</p>
     <div style="margin-top:32px;font-size:14px;font-weight:700">Sayan Banerjee</div>
     <div style="font-size:13px;color:#6B6861;margin-top:4px">Security Intern → SOC Analyst · Kolkata</div>
-    <a href="Courses-Minimal.dc.html" style="display:inline-block;margin-top:40px;background:#111111;color:#F4F2ED;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Find Your Course</a>
+    <a href="Courses-Minimal.dc.html" style="display:inline-block;margin-top:40px;background:#FFD300;color:#111111;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Find Your Course</a>
   </div>
 </section>
 
 <dc-import name="Footer-Minimal" hint-size="100%,760px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCareerGrowth&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
 class Component extends DCLogic {
   renderVals() {
-    return {
-      different: [
-        { n: '01', title: 'Practical education', body: 'Labs and real tools from day one. If a lesson can\u2019t be practiced, we don\u2019t teach it that way.' },
-        { n: '02', title: 'Industry-focused learning', body: 'Curricula built backwards from job descriptions and real engagements — not textbooks.' },
-        { n: '03', title: 'Expert instructors', body: 'Practitioners with active industry careers: pentesters, ML engineers, cloud architects, designers.' },
-        { n: '04', title: 'Verified assignments', body: 'Every submission is human-reviewed with feedback via Slack/GitHub. No auto-graded shortcuts.' },
-        { n: '05', title: 'Career growth', body: 'Resume support, interview prep, portfolio guidance and placement assistance built in.' },
-        { n: '06', title: 'Learn your way', body: 'Online, hybrid, or classroom-supported at our Kolkata center — same rigor in every mode.' }
-      ]
-    };
+    const all = [
+      { title: 'Course Certificate', body: 'Every assignment and the final exams with a minimum 50% mark will earn a course certificate.' },
+      { title: 'Best Instructors', body: 'Learn from industry-leading instructors with years of experience in their respective fields.' },
+      { title: 'Verified Assignments', body: 'All assignments are carefully evaluated to ensure quality and accuracy before certification.' },
+      { title: 'Career Growth', body: 'Our courses are tailored to boost your professional growth and industry readiness.' }
+    ];
+    const showCareerGrowth = this.props.showCareerGrowth ?? true;
+    const different = all
+      .filter(d => showCareerGrowth || d.title !== 'Career Growth')
+      .map((d, i) => ({ ...d, n: String(i + 1).padStart(2, '0') }));
+    const techs = ['Adobe', 'AWS', 'Docker', 'Linux', 'Next.js', 'Nmap', 'Node.js', 'Python'].map(name => ({
+      name,
+      slotId: 'about-tech-' + name.toLowerCase().replace(/[^a-z0-9]+/g, ''),
+      hint: name + ' logo'
+    }));
+    return { different, techs };
   }
 }
 </script>

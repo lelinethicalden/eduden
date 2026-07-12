@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#F4F2ED">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#F4F2ED"/>
+<rect x="420" y="280" width="360" height="200" rx="40" fill="#111111"/>
+<text x="600" y="420" font-family="sans-serif" font-size="110" font-weight="900" fill="#FDC804" text-anchor="middle">ED</text>
+<rect x="480" y="540" width="240" height="24" rx="12" fill="#FDC804"/>
+</svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #F4F2ED; font-family: 'Figtree', system-ui, sans-serif; color: #111111; }
+a { color: #111111; text-decoration: none; }
+a:hover { color: #111111; }
+</style>
+</helmet>
+<dc-import name="Header-Minimal" active="Placement" hint-size="100%,68px" style="position:sticky;top:0;z-index:1000"></dc-import>
+
+<!-- ===== LOGGED OUT: LANDING + LOGIN ===== -->
+<sc-if value="{{ loggedOut }}" hint-placeholder-val="{{ true }}">
+  <section data-screen-label="Placement landing" style="background:#F4F2ED">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) 28px clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:start">
+      <div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:28px">
+          <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+          <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Placement portal</span>
+        </div>
+        <h1 style="margin:0;font-size:clamp(38px,5.2vw,72px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95">The course ends. The support doesn't.</h1>
+        <p style="margin:28px 0 0;font-size:15.5px;line-height:1.7;color:#6B6861;max-width:480px">Log in to see live job postings from our hiring partners — open roles, eligibility, company details and how to apply. Save roles, apply through the placement team, and track it all in one place.</p>
+        <div style="margin-top:28px;border-top:1px solid #D8D5CC;max-width:480px">
+          <div style="border-bottom:1px solid #D8D5CC;padding:14px 4px;font-size:14px;font-weight:600;display:flex;justify-content:space-between;gap:16px"><span>Live postings matched to your course track</span><span style="color:#B98E00;font-weight:700;white-space:nowrap">{{ openCount }} open now</span></div>
+          <div style="border-bottom:1px solid #D8D5CC;padding:14px 4px;font-size:14px;font-weight:600">Eligibility and requirements stated upfront</div>
+          <div style="border-bottom:1px solid #D8D5CC;padding:14px 4px;font-size:14px;font-weight:600">One-click apply through the placement team</div>
+          <div style="padding:14px 4px;font-size:14px;font-weight:600">Save roles and track your applications</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));border-top:1px solid #D8D5CC;margin-top:36px;max-width:560px">
+          <div style="padding:20px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(22px,2.2vw,30px);font-weight:800;letter-spacing:-0.02em">350+</div><div style="font-size:12.5px;color:#6B6861;margin-top:4px">Students placed</div></div>
+          <div style="padding:20px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(22px,2.2vw,30px);font-weight:800;letter-spacing:-0.02em">40+</div><div style="font-size:12.5px;color:#6B6861;margin-top:4px">Hiring partners</div></div>
+          <div style="padding:20px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(22px,2.2vw,30px);font-weight:800;letter-spacing:-0.02em">4 wks</div><div style="font-size:12.5px;color:#6B6861;margin-top:4px">To first interview</div></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #E3E0D8;border-radius:24px;padding:clamp(24px,3.5vw,40px);max-width:460px;justify-self:end;width:100%;box-sizing:border-box;position:sticky;top:96px">
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.01em">Student login</div>
+        <p style="margin:8px 0 24px;font-size:13.5px;line-height:1.6;color:#6B6861">Use the credentials sent to you at enrollment.</p>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13px;font-weight:700">Email</label>
+            <input value="{{ email }}" onChange="{{ setEmail }}" onKeyDown="{{ onKey }}" placeholder="you@example.com" style="border:1px solid {{ emailBorder }};border-radius:12px;padding:13px 15px;font-family:inherit;font-size:14.5px;outline:none;background:#F4F2ED" style-focus="border-color:#111111;background:#fff">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:13px;font-weight:700">Password</label>
+            <div style="display:flex;align-items:center;gap:8px;border:1px solid {{ passBorder }};border-radius:12px;background:#F4F2ED;padding:0 6px 0 0" style-focus="border-color:#111111">
+              <input type="{{ passType }}" value="{{ password }}" onChange="{{ setPassword }}" onKeyDown="{{ onKey }}" placeholder="••••••••" style="flex:1;border:none;outline:none;background:transparent;padding:13px 15px;font-family:inherit;font-size:14.5px;min-width:0">
+              <button onClick="{{ togglePass }}" style="flex:none;border:none;background:none;font-family:inherit;font-size:12px;font-weight:700;color:#6B6861;cursor:pointer;padding:8px 10px" style-hover="color:#111111">{{ passToggleLabel }}</button>
+            </div>
+          </div>
+          <sc-if value="{{ loginError }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:12.5px;font-weight:600;color:#D64040">Incorrect email or password. Try the demo credentials below.</span>
+          </sc-if>
+          <button onClick="{{ login }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:15px;padding:16px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Log In</button>
+          <div style="font-size:12.5px;line-height:1.6;color:#6B6861;text-align:center">Demo: <button onClick="{{ fillDemo }}" style="border:none;background:none;font-family:inherit;font-weight:700;font-size:12.5px;cursor:pointer;color:#111111;border-bottom:2px solid #FDC804;padding:0 0 1px">student@eduden.io / eduden2026</button></div>
+          <div style="border-top:1px solid #E3E0D8;padding-top:16px;font-size:13px;line-height:1.6;color:#6B6861;text-align:center">Not enrolled yet? <a href="Enroll-Minimal.dc.html" style="font-weight:700;border-bottom:2px solid #FDC804">Start a course →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Placement process" style="background:#111111;color:#F4F2ED">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) 28px">
+      <h2 style="margin:0 0 40px;font-size:clamp(28px,3.8vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">A process, not a promise.</h2>
+      <div>
+        <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:minmax(48px,80px) minmax(160px,1fr) 2fr;gap:20px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.12);padding:24px 0">
+            <div style="font-size:13px;font-weight:700;color:#FDC804">{{ p.n }}</div>
+            <div style="font-size:clamp(16px,1.7vw,20px);font-weight:800">{{ p.title }}</div>
+            <p style="margin:0;font-size:14.5px;line-height:1.65;color:#9B978E;max-width:560px">{{ p.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Alumni quote" style="background:#F4F2ED">
+    <div style="max-width:860px;margin:0 auto;padding:clamp(72px,9vw,112px) 28px;text-align:center">
+      <p style="margin:0;font-size:clamp(21px,2.8vw,32px);font-weight:600;letter-spacing:-0.02em;line-height:1.4;text-wrap:balance">“The mock interviews were harder than my real one. When the actual panel asked me to walk through a pentest, I'd already done it five times.”</p>
+      <div style="margin-top:32px;font-size:14px;font-weight:700">Ritwika Ghosh</div>
+      <div style="font-size:13px;color:#6B6861;margin-top:4px">SOC Analyst · 2025 batch</div>
+    </div>
+  </section>
+</sc-if>
+
+<!-- ===== LOGGED IN: JOB DASHBOARD ===== -->
+<sc-if value="{{ showDashboard }}" hint-placeholder-val="{{ false }}">
+  <section data-screen-label="Job dashboard" style="background:#F4F2ED;min-height:70vh">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,64px) 28px clamp(64px,8vw,96px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+            <span style="width:8px;height:8px;background:#1DA954;border-radius:2px"></span>
+            <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Logged in · {{ userEmail }}</span>
+          </div>
+          <h1 style="margin:0;font-size:clamp(32px,4.4vw,60px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95">Open roles.</h1>
+        </div>
+        <button onClick="{{ logout }}" style="border:1px solid #C9C6BD;background:none;color:#111111;font-family:inherit;font-weight:600;font-size:13.5px;padding:11px 22px;border-radius:999px;cursor:pointer" style-hover="border-color:#111111">Log out</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #D8D5CC;margin-top:32px;max-width:640px">
+        <div style="padding:18px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(20px,2vw,26px);font-weight:800">{{ statOpen }}</div><div style="font-size:12.5px;color:#6B6861;margin-top:3px">Open roles</div></div>
+        <div style="padding:18px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(20px,2vw,26px);font-weight:800">{{ statApplied }}</div><div style="font-size:12.5px;color:#6B6861;margin-top:3px">Applied</div></div>
+        <div style="padding:18px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(20px,2vw,26px);font-weight:800">{{ statSaved }}</div><div style="font-size:12.5px;color:#6B6861;margin-top:3px">Saved</div></div>
+        <div style="padding:18px 18px 0;border-right:1px solid #D8D5CC"><div style="font-size:clamp(20px,2vw,26px);font-weight:800;color:#B98E00">{{ statClosing }}</div><div style="font-size:12.5px;color:#6B6861;margin-top:3px">Closing this week</div></div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:36px">
+        <div style="display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #E3E0D8;border-radius:999px;padding:5px 5px 5px 18px;max-width:400px;flex:1;min-width:240px">
+          <input value="{{ query }}" onChange="{{ setQuery }}" placeholder="Search role, company, skill…" style="flex:1;border:none;outline:none;font-family:inherit;font-size:14px;color:#111111;background:transparent;min-width:0">
+          <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ clearQuery }}" style="flex:none;border:none;background:#F4F2ED;color:#111111;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:12px;font-weight:700">✕</button>
+          </sc-if>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <sc-for list="{{ viewFilters }}" as="f" hint-placeholder-count="3">
+            <button onClick="{{ f.select }}" style="border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};font-family:inherit;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer" style-hover="border-color:#111111">{{ f.name }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px">
+        <sc-for list="{{ trackFilters }}" as="f" hint-placeholder-count="4">
+          <button onClick="{{ f.select }}" style="border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};font-family:inherit;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer" style-hover="border-color:#111111">{{ f.name }}</button>
+        </sc-for>
+      </div>
+
+      <div style="font-size:13px;font-weight:600;color:#6B6861;margin:22px 0 8px">{{ jobCount }}</div>
+      <sc-if value="{{ hasJobs }}" hint-placeholder-val="{{ true }}">
+        <div style="border-top:1px solid #D8D5CC">
+          <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="6">
+            <div onClick="{{ j.open }}" style="display:grid;grid-template-columns:minmax(200px,1.7fr) minmax(130px,1fr) minmax(150px,1fr) auto;gap:20px;align-items:center;border-bottom:1px solid #D8D5CC;padding:22px 4px;cursor:pointer" style-hover="background:#fff">
+              <div>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                  <span style="font-size:clamp(16px,1.8vw,21px);font-weight:800;letter-spacing:-0.015em;color:#111111">{{ j.title }}</span>
+                  <sc-if value="{{ j.applied }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#1DA954;color:#fff;padding:4px 10px;border-radius:999px">✓ Applied</span></sc-if>
+                  <sc-if value="{{ j.closingSoon }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#FDC804;padding:4px 10px;border-radius:999px">Closes in {{ j.daysLeft }}d</span></sc-if>
+                  <sc-if value="{{ j.isNew }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:1px solid #C9C6BD;padding:3px 10px;border-radius:999px;color:#6B6861">New</span></sc-if>
+                </div>
+                <div style="font-size:13px;font-weight:600;color:#6B6861;margin-top:5px">{{ j.company }} · {{ j.location }}</div>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:#6B6861">{{ j.type }}<br>{{ j.salary }}</div>
+              <div style="font-size:13px;font-weight:600;color:#6B6861">{{ j.track }}<br>Apply by {{ j.deadline }}</div>
+              <div style="display:flex;align-items:center;gap:8px;justify-self:end">
+                <button onClick="{{ j.toggleSave }}" title="{{ j.saveTitle }}" style="flex:none;border:1px solid {{ j.saveBorder }};background:{{ j.saveBg }};color:{{ j.saveColor }};font-family:inherit;font-size:12px;font-weight:700;padding:9px 15px;border-radius:999px;cursor:pointer" style-hover="border-color:#111111">{{ j.saveLabel }}</button>
+                <span style="flex:none;width:38px;height:38px;border-radius:50%;border:1px solid #C9C6BD;display:flex;align-items:center;justify-content:center;font-size:15px;color:#111111">↗</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ noJobs }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:64px 24px;border:1px dashed #C9C6BD;border-radius:20px">
+          <div style="font-size:19px;font-weight:800">{{ emptyTitle }}</div>
+          <p style="margin:8px auto 22px;font-size:14px;color:#6B6861;max-width:380px">{{ emptyBody }}</p>
+          <button onClick="{{ resetFilters }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Show all roles</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+</sc-if>
+
+<!-- ===== LOGGED IN: JOB DETAIL ===== -->
+<sc-if value="{{ showDetail }}" hint-placeholder-val="{{ false }}">
+  <section data-screen-label="Job detail" style="background:#F4F2ED;min-height:70vh">
+    <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5vw,64px) 28px clamp(64px,8vw,96px)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px">
+        <button onClick="{{ back }}" style="border:none;background:none;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;color:#111111;border-bottom:2px solid #FDC804;padding:0 0 2px">← All roles</button>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:13px;font-weight:600;color:#6B6861">{{ detailPos }}</span>
+          <button onClick="{{ prevJob }}" style="border:1px solid #C9C6BD;background:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:14px;color:#111111;font-family:inherit" style-hover="border-color:#111111">←</button>
+          <button onClick="{{ nextJob }}" style="border:1px solid #C9C6BD;background:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:14px;color:#111111;font-family:inherit" style-hover="border-color:#111111">→</button>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+        <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+        <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">{{ job.track }} · {{ job.type }} · {{ job.daysLeftLabel }}</span>
+      </div>
+      <h1 style="margin:0;font-size:clamp(30px,4vw,54px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:0.98">{{ job.title }}</h1>
+      <div style="font-size:15px;font-weight:600;color:#6B6861;margin-top:14px">{{ job.company }} · {{ job.location }} · {{ job.salary }}</div>
+
+      <sc-if value="{{ notApplied }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+          <button onClick="{{ apply }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:14.5px;padding:14px 28px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Apply via Placement Team</button>
+          <button onClick="{{ toggleSaveDetail }}" style="border:1px solid {{ detailSaveBorder }};background:{{ detailSaveBg }};color:{{ detailSaveColor }};font-family:inherit;font-weight:600;font-size:14.5px;padding:14px 28px;border-radius:999px;cursor:pointer" style-hover="border-color:#111111">{{ detailSaveLabel }}</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ justApplied }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:28px;background:#fff;border:1px solid #1DA954;border-radius:16px;padding:20px 24px;display:flex;gap:14px;align-items:flex-start;max-width:560px">
+          <span style="flex:none;width:28px;height:28px;border-radius:50%;background:#1DA954;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900">✓</span>
+          <div>
+            <div style="font-size:15px;font-weight:800">Application sent to the placement team</div>
+            <p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:#6B6861">They'll review your profile against the eligibility criteria and contact you on WhatsApp within one working day with next steps.</p>
+          </div>
+        </div>
+      </sc-if>
+
+      <div style="margin-top:clamp(36px,5vw,52px);border-top:1px solid #D8D5CC">
+        <div style="display:grid;grid-template-columns:minmax(150px,1fr) 2.4fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:22px 4px">
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6861">About the company</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#111111">{{ job.about }}</p>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(150px,1fr) 2.4fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:22px 4px">
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6861">Job description</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#111111">{{ job.description }}</p>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(150px,1fr) 2.4fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:22px 4px">
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6861">Requirements</div>
+          <div>
+            <sc-for list="{{ job.requirements }}" as="r" hint-placeholder-count="4">
+              <div style="display:flex;gap:12px;align-items:baseline;padding:5px 0">
+                <span style="flex:none;width:7px;height:7px;background:#FDC804;border-radius:2px;transform:translateY(-2px)"></span>
+                <span style="font-size:14.5px;line-height:1.6;color:#111111">{{ r }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(150px,1fr) 2.4fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:22px 4px">
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6861">Eligibility</div>
+          <div>
+            <sc-for list="{{ job.eligibility }}" as="e" hint-placeholder-count="3">
+              <div style="display:flex;gap:12px;align-items:baseline;padding:5px 0">
+                <span style="flex:none;width:7px;height:7px;background:#FDC804;border-radius:2px;transform:translateY(-2px)"></span>
+                <span style="font-size:14.5px;line-height:1.6;color:#111111">{{ e }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(150px,1fr) 2.4fr;gap:20px;align-items:baseline;padding:22px 4px">
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B6861">How to apply</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#111111">{{ job.apply }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<dc-import name="Footer-Minimal" hint-size="100%,760px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { auth: false, email: '', password: '', showPass: false, loginError: false, selected: -1, track: 'All', view: 'All', query: '', saved: [], applied: [], justApplied: false };
+  componentDidMount() {
+    try {
+      if (sessionStorage.getItem('eduden_placement_auth') === '1') {
+        this.setState({ auth: true, email: sessionStorage.getItem('eduden_placement_email') || 'student@eduden.io' });
+      }
+      const saved = JSON.parse(localStorage.getItem('eduden_placement_saved') || '[]');
+      const applied = JSON.parse(localStorage.getItem('eduden_placement_applied') || '[]');
+      this.setState({ saved: Array.isArray(saved) ? saved : [], applied: Array.isArray(applied) ? applied : [] });
+    } catch (e) {}
+  }
+  persist(key, arr) {
+    try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) {}
+  }
+  login() {
+    const ok = this.state.email.trim().toLowerCase() === 'student@eduden.io' && this.state.password === 'eduden2026';
+    if (ok) {
+      try {
+        sessionStorage.setItem('eduden_placement_auth', '1');
+        sessionStorage.setItem('eduden_placement_email', this.state.email.trim());
+      } catch (e) {}
+      this.setState({ auth: true, loginError: false });
+    } else {
+      this.setState({ loginError: true });
+    }
+  }
+  getJobs() {
+    return [
+      { id: 'soc-shieldworks', title: 'SOC Analyst (L1)', company: 'ShieldWorks MSSP', location: 'Kolkata (on-site)', type: 'Full-time', salary: '₹3.5–4.5 LPA', track: 'Cyber Security', deadline: 'Jul 25, 2026', deadlineISO: '2026-07-25', isNew: true,
+        about: 'ShieldWorks is a managed security services provider running 24/7 SOC operations for banking and SaaS clients across India.',
+        description: 'Monitor SIEM alerts, triage incidents, escalate confirmed threats, and document findings. You\u2019ll rotate across log analysis, phishing triage and threat-intel enrichment in your first six months.',
+        requirements: ['Working knowledge of networking (TCP/IP, ports, protocols)', 'Familiarity with SIEM concepts and log analysis', 'Clear written incident documentation', 'Willingness to work rotational shifts'],
+        eligibility: ['EduDen Ethical Hacking or Advanced Pentesting completion', 'Certificate verified (min 50% final score)', '2025–2026 batches preferred'],
+        apply: 'Apply through the placement team with your verified certificate ID and portfolio. Shortlisted candidates get a mock interview with the placement team before the company round.' },
+      { id: 'ba-finedge', title: 'Business Analyst Trainee', company: 'FinEdge Analytics', location: 'Kolkata / Remote', type: 'Full-time', salary: '₹3–4 LPA', track: 'Management & Analytics', deadline: 'Jul 30, 2026', deadlineISO: '2026-07-30', isNew: true,
+        about: 'FinEdge builds reporting and analytics products for mid-size NBFCs and fintech startups.',
+        description: 'Prepare MIS reports, maintain Power BI dashboards, and support monthly business reviews. You\u2019ll work directly with the analytics lead on client reporting.',
+        requirements: ['Strong Excel (pivot tables, lookups, conditional formatting)', 'Basic SQL (SELECT, GROUP BY, joins)', 'Power BI dashboard experience — portfolio required', 'Clear business communication'],
+        eligibility: ['EduDen Business Analytics & MIS Reporting completion', 'MBA/BBA/B.Com or equivalent background', 'Capstone dashboard project required in portfolio'],
+        apply: 'Submit your dashboard portfolio and certificate ID via the placement team. The company round includes a 45-minute Excel + SQL practical.' },
+      { id: 'mis-orbit', title: 'MIS Executive', company: 'Orbit Retail Group', location: 'Kolkata (on-site)', type: 'Full-time', salary: '₹2.8–3.5 LPA', track: 'Management & Analytics', deadline: 'Aug 5, 2026', deadlineISO: '2026-08-05', isNew: true,
+        about: 'Orbit runs 40+ retail outlets across East India with a central operations and reporting team in Kolkata.',
+        description: 'Own daily sales and inventory reporting across outlets. Build and maintain Excel/Power BI reports for store managers and leadership.',
+        requirements: ['Advanced Excel with large datasets', 'Report automation mindset', 'Attention to detail with reconciliations', 'Power BI a strong plus'],
+        eligibility: ['EduDen Business Analytics & MIS Reporting completion', 'Any graduate background — no coding required'],
+        apply: 'Apply via the placement team. Walk-in assessment at the Kolkata office: a 30-minute Excel reporting task.' },
+      { id: 'pentest-redcell', title: 'Junior Penetration Tester', company: 'RedCell Security', location: 'Remote (India)', type: 'Full-time', salary: '₹4.5–6 LPA', track: 'Cyber Security', deadline: 'Aug 10, 2026', deadlineISO: '2026-08-10', isNew: false,
+        about: 'RedCell is a boutique offensive-security firm doing web, network and mobile assessments for fintech and healthcare clients.',
+        description: 'Assist senior testers on scoped engagements: recon, vulnerability validation, exploitation under supervision, and drafting findings for client reports.',
+        requirements: ['Solid OWASP Top 10 hands-on knowledge', 'Burp Suite, Nmap, Metasploit proficiency', 'One complete pentest report writing sample', 'CTF or bug bounty activity a plus'],
+        eligibility: ['EduDen Advanced Network Pentesting or Ethical Hacking + Bug Bounty completion', 'Portfolio with at least 2 lab engagement reports'],
+        apply: 'Send your report samples and certificate ID to the placement team. Company round: a 4-hour take-home lab followed by a findings walkthrough.' },
+      { id: 'pa-loopwork', title: 'Product Analyst Trainee', company: 'Loopwork (SaaS)', location: 'Remote (India)', type: 'Internship → Full-time', salary: '₹15k/mo stipend', track: 'Management & Analytics', deadline: 'Aug 12, 2026', deadlineISO: '2026-08-12', isNew: true,
+        about: 'Loopwork builds workflow software for service teams — a 30-person product-led startup.',
+        description: 'Support the product team with user research summaries, feature usage reports, competitor teardowns and PRD drafting. Six-month internship with conversion path.',
+        requirements: ['User research and persona documentation skills', 'One complete product case study (PRD + wireframes)', 'Comfort with Notion, Figma basics and spreadsheets', 'AI-assisted documentation workflow a plus'],
+        eligibility: ['EduDen Product Management & Digital Business completion', 'Capstone product plan required in portfolio'],
+        apply: 'Share your capstone product plan via the placement team. Shortlist includes a product-thinking discussion with Loopwork\u2019s PM.' },
+      { id: 'da-metric', title: 'Data Analyst Intern', company: 'Metric Labs', location: 'Kolkata (hybrid)', type: 'Internship', salary: '₹12k/mo stipend', track: 'Data & AI', deadline: 'Aug 18, 2026', deadlineISO: '2026-08-18', isNew: false,
+        about: 'Metric Labs is a data consultancy serving e-commerce and D2C brands with reporting and experimentation.',
+        description: 'Clean client datasets, maintain weekly dashboards, and assist analysts with ad-hoc SQL pulls and chart preparation for client reviews.',
+        requirements: ['Python or SQL for data handling', 'Visualization fundamentals (Power BI or similar)', 'Careful, documented work habits'],
+        eligibility: ['EduDen Data Science with Python or Business Analytics completion', 'Any 2025–2026 batch'],
+        apply: 'Apply with your certificate ID and one dashboard or notebook sample. Interviews run weekly through the placement team.' },
+      { id: 'grc-assurexa', title: 'GRC Analyst Trainee', company: 'Assurexa Consulting', location: 'Kolkata / Remote', type: 'Full-time', salary: '₹3–4 LPA', track: 'Cyber Security', deadline: 'Aug 22, 2026', deadlineISO: '2026-08-22', isNew: true,
+        about: 'Assurexa helps mid-market companies with ISO 27001 readiness, vendor risk and privacy compliance.',
+        description: 'Support consultants on risk registers, policy drafting, evidence collection and audit preparation across 3–4 client accounts.',
+        requirements: ['Risk register and policy documentation skills', 'ISO 27001 awareness', 'Strong written English', 'Excel/Sheets fluency'],
+        eligibility: ['EduDen Cyber GRC, Risk & Data Privacy completion', 'Commerce, law, management or audit background welcome — no coding required'],
+        apply: 'Submit your GRC documentation pack (capstone) via the placement team. Company round: a policy-writing exercise and case discussion.' }
+    ];
+  }
+  renderVals() {
+    const JOBS = this.getJobs();
+    const now = new Date();
+    const withMeta = JOBS.map(j => {
+      const daysLeft = Math.max(0, Math.ceil((new Date(j.deadlineISO) - now) / 86400000));
+      return { ...j, daysLeft, closingSoon: daysLeft <= 14 && !this.state.applied.includes(j.id), applied: this.state.applied.includes(j.id), savedFlag: this.state.saved.includes(j.id), daysLeftLabel: 'Closes in ' + daysLeft + ' days' };
+    });
+    const q = this.state.query.trim().toLowerCase();
+    const filtered = withMeta.filter(j =>
+      (this.state.track === 'All' || j.track === this.state.track) &&
+      (this.state.view === 'All' || (this.state.view === 'Saved' && j.savedFlag) || (this.state.view === 'Applied' && j.applied)) &&
+      (!q || (j.title + ' ' + j.company + ' ' + j.track + ' ' + j.location + ' ' + j.requirements.join(' ')).toLowerCase().includes(q))
+    );
+    const tracks = ['All', ...Array.from(new Set(JOBS.map(j => j.track)))];
+    const trackFilters = tracks.map(name => {
+      const on = this.state.track === name;
+      const count = name === 'All' ? JOBS.length : JOBS.filter(j => j.track === name).length;
+      return { name: name + ' (' + count + ')', bg: on ? '#111111' : '#fff', color: on ? '#F4F2ED' : '#6B6861', border: on ? '#111111' : '#E3E0D8', select: () => this.setState({ track: name }) };
+    });
+    const views = ['All', 'Saved', 'Applied'];
+    const viewFilters = views.map(name => {
+      const on = this.state.view === name;
+      return { name, bg: on ? '#111111' : '#fff', color: on ? '#F4F2ED' : '#6B6861', border: on ? '#111111' : '#E3E0D8', select: () => this.setState({ view: name }) };
+    });
+    const toggleSave = (id, e) => {
+      if (e && e.stopPropagation) e.stopPropagation();
+      const saved = this.state.saved.includes(id) ? this.state.saved.filter(x => x !== id) : [...this.state.saved, id];
+      this.persist('eduden_placement_saved', saved);
+      this.setState({ saved });
+    };
+    const jobs = filtered.map(j => ({
+      ...j,
+      open: () => this.setState({ selected: JOBS.findIndex(x => x.id === j.id), justApplied: false }),
+      toggleSave: e => toggleSave(j.id, e),
+      saveLabel: j.savedFlag ? '★ Saved' : '☆ Save',
+      saveTitle: j.savedFlag ? 'Remove from saved' : 'Save this role',
+      saveBg: j.savedFlag ? '#FDC804' : '#fff',
+      saveColor: '#111111',
+      saveBorder: j.savedFlag ? '#FDC804' : '#E3E0D8'
+    }));
+    const sel = this.state.selected;
+    const job = sel >= 0 ? withMeta[sel] : withMeta[0];
+    const emptyByView = { Saved: ['No saved roles yet.', 'Tap ☆ Save on any role to keep it here for later.'], Applied: ['No applications yet.', 'Open a role and hit "Apply via Placement Team" to start.'] };
+    const empty = emptyByView[this.state.view] || ['No roles match that search.', 'Try a different keyword or clear the filters.'];
+    return {
+      loggedOut: !this.state.auth,
+      showDashboard: this.state.auth && sel < 0,
+      showDetail: this.state.auth && sel >= 0,
+      openCount: JOBS.length,
+      email: this.state.email,
+      password: this.state.password,
+      passType: this.state.showPass ? 'text' : 'password',
+      passToggleLabel: this.state.showPass ? 'Hide' : 'Show',
+      togglePass: () => this.setState({ showPass: !this.state.showPass }),
+      userEmail: this.state.email || 'student@eduden.io',
+      setEmail: e => this.setState({ email: e.target.value, loginError: false }),
+      setPassword: e => this.setState({ password: e.target.value, loginError: false }),
+      onKey: e => { if (e.key === 'Enter') this.login(); },
+      login: () => this.login(),
+      fillDemo: () => this.setState({ email: 'student@eduden.io', password: 'eduden2026', loginError: false }),
+      logout: () => {
+        try { sessionStorage.removeItem('eduden_placement_auth'); sessionStorage.removeItem('eduden_placement_email'); } catch (e) {}
+        this.setState({ auth: false, selected: -1, password: '', justApplied: false });
+      },
+      loginError: this.state.loginError,
+      emailBorder: this.state.loginError ? '#D64040' : '#E3E0D8',
+      passBorder: this.state.loginError ? '#D64040' : '#E3E0D8',
+      statOpen: JOBS.length,
+      statApplied: this.state.applied.length,
+      statSaved: this.state.saved.length,
+      statClosing: withMeta.filter(j => j.daysLeft <= 14).length,
+      query: this.state.query,
+      hasQuery: !!this.state.query,
+      setQuery: e => this.setState({ query: e.target.value }),
+      clearQuery: () => this.setState({ query: '' }),
+      resetFilters: () => this.setState({ query: '', track: 'All', view: 'All' }),
+      trackFilters, viewFilters, jobs,
+      hasJobs: filtered.length > 0,
+      noJobs: filtered.length === 0,
+      emptyTitle: empty[0],
+      emptyBody: empty[1],
+      jobCount: filtered.length + ' role' + (filtered.length === 1 ? '' : 's') + (this.state.view !== 'All' ? ' · ' + this.state.view.toLowerCase() : '') + (this.state.track !== 'All' ? ' · ' + this.state.track : ''),
+      job,
+      detailPos: (sel + 1) + ' of ' + JOBS.length,
+      prevJob: () => this.setState({ selected: (sel - 1 + JOBS.length) % JOBS.length, justApplied: false }),
+      nextJob: () => this.setState({ selected: (sel + 1) % JOBS.length, justApplied: false }),
+      back: () => this.setState({ selected: -1, justApplied: false }),
+      notApplied: sel >= 0 && !this.state.applied.includes(job.id),
+      justApplied: sel >= 0 && this.state.applied.includes(job.id),
+      apply: () => {
+        const applied = [...this.state.applied, job.id];
+        this.persist('eduden_placement_applied', applied);
+        this.setState({ applied, justApplied: true });
+      },
+      toggleSaveDetail: () => toggleSave(job.id),
+      detailSaveLabel: job.savedFlag ? '★ Saved' : '☆ Save for later',
+      detailSaveBg: job.savedFlag ? '#FDC804' : 'transparent',
+      detailSaveColor: '#111111',
+      detailSaveBorder: job.savedFlag ? '#FDC804' : '#C9C6BD',
+      process: [
+        { n: '01', title: 'Resume support', body: 'Line-by-line resume and LinkedIn reviews with the placement team until they\u2019re interview-ready.' },
+        { n: '02', title: 'Portfolio guidance', body: 'Turn your course projects into a portfolio and GitHub profile that recruiters actually open.' },
+        { n: '03', title: 'Interview preparation', body: 'Mock technical and HR interviews with real feedback — including role-specific question banks.' },
+        { n: '04', title: 'Placement assistance', body: 'Referrals to hiring partners, job alerts matched to your track, and support through offer negotiation.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

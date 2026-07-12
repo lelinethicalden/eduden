@@ -27,7 +27,7 @@ a:hover { color: #111111; }
     <p style="margin:24px auto 0;max-width:420px;font-size:15px;line-height:1.65;color:#6B6861">Enter the certificate ID printed on the certificate to confirm it was issued by EduDen.</p>
     <div style="margin-top:36px;display:flex;gap:8px;background:#fff;border:1px solid #E3E0D8;border-radius:999px;padding:6px 6px 6px 22px;align-items:center;text-align:left">
       <input value="{{ certId }}" onChange="{{ setCertId }}" onKeyDown="{{ onKey }}" placeholder="e.g. ED-EH45-2091" style="flex:1;border:none;outline:none;font-family:inherit;font-size:15px;color:#111111;background:transparent;min-width:0;letter-spacing:0.03em">
-      <button onClick="{{ verify }}" style="flex:none;border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Verify</button>
+      <button onClick="{{ verify }}" style="flex:none;border:none;background:#FFD300;color:#111111;font-family:inherit;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Verify</button>
     </div>
     <div style="margin-top:14px;font-size:13px;color:#6B6861">Try the demo: <button onClick="{{ tryValid }}" style="border:none;background:none;color:#111111;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer;border-bottom:2px solid #FDC804;padding:0 0 1px">ED-EH45-2091</button> (valid) or any other ID (not found)</div>
   </div>
@@ -51,7 +51,7 @@ a:hover { color: #111111; }
           <div style="display:flex;justify-content:space-between;gap:16px;padding:15px 0"><span style="font-size:13px;font-weight:600;color:#6B6861">Certificate ID</span><span style="font-size:14.5px;font-weight:700;letter-spacing:0.04em">ED-EH45-2091</span></div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-          <a href="#" style="background:#111111;color:#F4F2ED;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="background:#FDC804;color:#111111">View Certificate</a>
+          <a href="#" style="background:#FFD300;color:#111111;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="background:#FDC804;color:#111111">View Certificate</a>
           <a href="#" style="border:1px solid #C9C6BD;font-weight:600;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="border-color:#111111">Download PDF ↓</a>
         </div>
       </div>
@@ -62,7 +62,7 @@ a:hover { color: #111111; }
         <div style="font-size:19px;font-weight:800;margin-top:16px">Certificate not found</div>
         <p style="margin:10px auto 0;max-width:400px;font-size:14px;line-height:1.65;color:#6B6861">No certificate matches ID “{{ searched }}”. Double-check for typos — or if you believe this is an error, contact us.</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
-          <button onClick="{{ reset }}" style="border:none;background:#111111;color:#F4F2ED;font-family:inherit;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px;cursor:pointer">Try Again</button>
+          <button onClick="{{ reset }}" style="border:none;background:#FFD300;color:#111111;font-family:inherit;font-weight:700;font-size:13.5px;padding:12px 24px;border-radius:999px;cursor:pointer">Try Again</button>
           <a href="Contact-Minimal.dc.html" style="border:1px solid #C9C6BD;font-weight:600;font-size:13.5px;padding:12px 24px;border-radius:999px" style-hover="border-color:#111111">Contact Us</a>
         </div>
       </div>
@@ -71,6 +71,9 @@ a:hover { color: #111111; }
       <div style="display:grid;grid-template-columns:minmax(140px,1fr) 2fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:20px 4px"><div style="font-size:15px;font-weight:800">Tamper-proof</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#6B6861">Every certificate ID maps to a permanent record in our system.</p></div>
       <div style="display:grid;grid-template-columns:minmax(140px,1fr) 2fr;gap:20px;align-items:baseline;border-bottom:1px solid #D8D5CC;padding:20px 4px"><div style="font-size:15px;font-weight:800">Instant checks</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#6B6861">Employers can verify any candidate's certificate in seconds.</p></div>
       <div style="display:grid;grid-template-columns:minmax(140px,1fr) 2fr;gap:20px;align-items:baseline;padding:20px 4px"><div style="font-size:15px;font-weight:800">Earned, not given</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#6B6861">Issued only after all assignments and final exams are cleared (min 50%).</p></div>
+    </div>
+    <div style="position:relative;height:clamp(200px,26vw,340px);border-radius:20px;overflow:hidden;border:1px solid #E3E0D8;margin-top:36px">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="verify-sample-cert" shape="rect" placeholder="Sample EduDen certificate image" hint-size="100%,300px" style="position:absolute;inset:0"></x-import>
     </div>
   </div>
 </section>

@@ -21,39 +21,42 @@ a:hover { color: #111111; }
   <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) 28px 48px">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px">
       <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
-      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Know your faculty</span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B6861">Faculty Members</span>
     </div>
-    <h1 style="margin:0;font-size:clamp(40px,6.4vw,88px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1000px">Mentors who do the work, then teach it.</h1>
-    <p style="margin:32px 0 0;font-size:15.5px;line-height:1.65;color:#6B6861;max-width:520px">Every EduDen instructor has an active industry career. They review your assignments, run your labs, and answer your questions — personally.</p>
+    <h1 style="margin:0;font-size:clamp(40px,6.4vw,88px);font-weight:900;letter-spacing:-0.04em;text-transform:uppercase;line-height:0.95;max-width:1000px">Our dedicated faculty members</h1>
+    <p style="margin:32px 0 0;font-size:15.5px;line-height:1.65;color:#6B6861;max-width:560px">Our faculty members are accomplished educators and industry professionals, passionate about sharing their expertise and inspiring the next generation of learners. With diverse backgrounds and real-world experience, they bring knowledge, innovation, and mentorship to every class they teach.</p>
   </div>
 </section>
 
 <section data-screen-label="Faculty list" style="background:#F4F2ED">
   <div style="max-width:1280px;margin:0 auto;padding:0 28px clamp(64px,8vw,96px)">
+    <h2 style="margin:0 0 28px;font-size:clamp(26px,3.4vw,44px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Meet the team</h2>
     <div style="border-top:1px solid #D8D5CC">
-      <sc-for list="{{ faculty }}" as="f" hint-placeholder-count="6">
-        <div style="display:grid;grid-template-columns:minmax(180px,1.2fr) minmax(160px,1fr) 1.6fr minmax(180px,1fr);gap:20px;align-items:start;border-bottom:1px solid #D8D5CC;padding:30px 4px">
+      <sc-for list="{{ faculty }}" as="f" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:72px minmax(200px,1fr) 2fr;gap:24px;align-items:start;border-bottom:1px solid #D8D5CC;padding:30px 4px">
+          <div style="width:72px;height:72px;position:relative">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ f.slotId }}" shape="circle" placeholder="Photo" hint-size="72px,72px" style="position:absolute;inset:0"></x-import>
+          </div>
           <div>
             <div style="font-size:clamp(19px,2vw,24px);font-weight:800;letter-spacing:-0.02em">{{ f.name }}</div>
             <div style="font-size:13px;font-weight:600;color:#6B6861;margin-top:5px">{{ f.role }}</div>
           </div>
-          <div style="font-size:13px;font-weight:600;color:#6B6861;line-height:1.6">{{ f.exp }}<br>{{ f.count }}</div>
-          <p style="margin:0;font-size:14px;line-height:1.65;color:#6B6861;max-width:480px">{{ f.bio }}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start">
-            <sc-for list="{{ f.courses }}" as="c" hint-placeholder-count="2">
-              <span style="background:#fff;border:1px solid #E3E0D8;border-radius:999px;padding:6px 13px;font-size:12px;font-weight:600;white-space:nowrap">{{ c }}</span>
-            </sc-for>
-          </div>
+          <p style="margin:0;font-size:14px;line-height:1.65;color:#6B6861;max-width:620px">{{ f.bio }}</p>
         </div>
       </sc-for>
     </div>
   </div>
 </section>
 
-<section data-screen-label="Faculty CTA" style="background:#111111;color:#F4F2ED">
+<section data-screen-label="Support" style="background:#111111;color:#F4F2ED">
   <div style="max-width:900px;margin:0 auto;padding:clamp(64px,8vw,96px) 28px;text-align:center">
-    <h2 style="margin:0;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Want feedback like this on your work?</h2>
-    <a href="Courses-Minimal.dc.html" style="display:inline-block;margin-top:36px;background:#FDC804;color:#111111;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#F4F2ED;color:#111111">Explore Courses</a>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px">
+      <span style="width:8px;height:8px;background:#FDC804;border-radius:2px"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#9B978E">Support</span>
+    </div>
+    <h2 style="margin:0;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-0.035em;text-transform:uppercase;line-height:1">Need help?</h2>
+    <p style="margin:24px auto 0;font-size:15.5px;line-height:1.65;color:#9B978E;max-width:520px">Need help getting started or want to learn more about our services? Our experts are here to guide you. Reach out today and let's take the next step together!</p>
+    <a href="Contact-Minimal.dc.html" style="display:inline-block;margin-top:36px;background:#FFD300;color:#111111;font-weight:700;font-size:14.5px;padding:15px 32px;border-radius:999px" style-hover="background:#FDC804;color:#111111">Contact Us</a>
   </div>
 </section>
 
@@ -64,13 +67,15 @@ class Component extends DCLogic {
   renderVals() {
     return {
       faculty: [
-        { name: 'Arindam Roy', role: 'Cyber Security Lead · OSCP', exp: '9+ yrs experience', count: '4 courses', bio: 'Professional pentester who has assessed banks, fintechs and SaaS platforms. Has reviewed 1,000+ student assignments.', courses: ['Ethical Hacking', 'Adv. Pentesting', 'Bug Bounty'] },
-        { name: 'Sohini Mukherjee', role: 'AI & Data Science', exp: '7+ yrs experience', count: '3 courses', bio: 'ML engineer who has shipped recommendation systems and NLP products at scale. Believes models belong in production, not just notebooks.', courses: ['AI Foundations', 'ML Bootcamp', 'Data Science'] },
-        { name: 'Rajat Das', role: 'Cloud & DevOps Architect', exp: '10+ yrs experience', count: '3 courses', bio: 'AWS-certified architect who has migrated enterprise workloads to the cloud. Teaches infrastructure the way it\u2019s actually run.', courses: ['Cloud with AWS', 'DevOps', 'Linux Admin'] },
-        { name: 'Priya Sen', role: 'Design & Marketing Lead', exp: '8+ yrs experience', count: '2 courses', bio: 'Brand designer and growth marketer who has led campaigns for D2C brands. Brings real client briefs into every classroom.', courses: ['Graphics Design', 'Digital Marketing'] },
-        { name: 'Tanmay Kundu', role: 'Full-Stack Engineering', exp: '8+ yrs experience', count: '2 courses', bio: 'Full-stack engineer and open-source contributor. His students ship deployed, working apps — not todo-list clones.', courses: ['Full-Stack Web Dev', 'App Development'] },
-        { name: 'Nilanjana Bose', role: 'Forensics & Networking', exp: '6+ yrs experience', count: '3 courses', bio: 'Digital forensics investigator with law-enforcement casework experience. Teaches evidence handling with real lab simulations.', courses: ['Digital Forensics', 'Networking', 'OSINT'] }
-      ]
+        { name: 'Fardeen Ahmed', role: 'Cyber Security Expert', bio: 'Fardeen Ahmed is a seasoned cybersecurity and technology professional with over nine years of teaching experience and deep technical expertise across multiple domains. As Co-Founder and CEO of Eduden, he plays a pivotal role in designing and delivering practical, industry-aligned training programs in cybersecurity, ethical hacking, and advanced technology stacks.' },
+        { name: 'Nazmul Islam', role: 'Graphics Designer Expert', bio: 'Nazmul Islam is the Director and Country Head of Ethical Den Bangladesh, and a senior design leader with over a decade of experience in the graphic and digital design industry. As the Senior Graphic Designer and Head of the Graphics Department, he plays a central role in shaping the creative direction of Ethical Den\u2019s projects across education, technology, and brand development.' },
+        { name: 'Yathish', role: 'AI / ML Expert', bio: 'Yathish is a skilled AI/ML professional and Senior Instructor at Eduden, bringing practical industry experience and academic research expertise to the classroom. His work spans machine learning, deep learning, automation systems, and applied data science, with a focus on real-world problem solving and intelligent system design.' },
+        { name: 'Khokon Halder', role: 'Cyber Security Expert', bio: 'Khokon Halder is an experienced Networking and Cybersecurity Instructor at Eduden, with over seven years of hands-on experience in IT infrastructure, system support, and information security.' },
+        { name: 'Partho Halder', role: 'Digital Marketing Expert', bio: 'Partho Halder is a digital marketing professional with extensive industry experience in search engine optimization, paid advertising, and campaign strategy. With a strong background in both organic and performance-driven marketing, he brings a practical, results-oriented approach to Eduden\u2019s marketing education initiatives.' },
+        { name: 'Md. Shakil', role: 'Back-End Developer', bio: 'Shakil is a backend developer and IT instructor with a strong background in software development, technical training, and practical implementation of computer science principles. As a key team member at Ethical Den, he works on backend systems and development workflows, contributing to scalable, secure, and maintainable software infrastructure.' },
+        { name: 'Ayoushi Gupta', role: 'Digital Marketing Expert', bio: 'Ayoushi Gupta is a business development and content strategy professional with over a decade of experience in education, writing, and academic communication. As a Business Developer and Content Executive at Ethical Den, she plays a key role in crafting compelling narratives, overseeing editorial quality, and supporting the organization\u2019s strategic growth through impactful content initiatives.' },
+        { name: 'Joy Sutradhor', role: 'Front-End Developer', bio: 'Joy Sutradhor is a senior frontend developer and full-time team member at Ethical Den, specializing in modern web technologies and scalable user interface architecture. With deep expertise in React.js, Next.js, HTML, CSS, and JavaScript, he plays a critical role in delivering responsive, accessible, and high-performance web applications across client and internal projects.' }
+      ].map(f => ({ ...f, slotId: 'faculty-' + f.name.toLowerCase().replace(/[^a-z]+/g, '-') }))
     };
   }
 }

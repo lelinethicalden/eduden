@@ -5,6 +5,13 @@ import { useMemo, useState } from "react";
 
 const POSTS = [
   {
+    tag: "Course Launch",
+    date: "Jul 11, 2026",
+    title: "Management & non-tech track: 7 new courses now open",
+    body: "Business Analytics with Power BI, AI for Business Strategy, Product Management, GeoAI & GIS, Cyber GRC, Policy Analytics, and No-Code Automation — built for MBA, BBA, Commerce, Arts and Social Science students.",
+    href: "/courses",
+  },
+  {
     tag: "New Batch",
     date: "Jul 8, 2026",
     title: "Bug Bounty Hunting — September cohort announced",
@@ -92,7 +99,7 @@ export default function WhatsNew() {
                 <button
                   key={name}
                   onClick={() => setCat(name)}
-                  className={`border font-[inherit] text-[13px] font-semibold px-4 py-2.25 rounded-full cursor-pointer hover:border-fg ${
+                  className={`border font-[inherit] text-[13px] font-semibold px-4 py-2.25 rounded-full cursor-pointer  ${
                     on
                       ? "border-fg bg-fg text-bg"
                       : "border-border bg-white text-muted"
@@ -102,6 +109,45 @@ export default function WhatsNew() {
                 </button>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-bg">
+        <div className="max-w-7xl mx-auto px-7 pb-10">
+          <div className="bg-fg text-bg rounded-3xl p-8 md:p-14">
+            <div className="flex items-center gap-2.5 mb-5.5 flex-wrap">
+              <span className="text-[11.5px] font-bold tracking-[0.06em] uppercase bg-accent text-fg px-3.5 py-1.5 rounded-full">
+                New program launch
+              </span>
+              <span className="text-[12.5px] font-semibold text-muted-dark">
+                July 2026
+              </span>
+            </div>
+            <h2 className="m-0 text-[clamp(26px,3.6vw,48px)] font-black tracking-[-0.035em] uppercase leading-none max-w-3xl">
+              7 new courses for management &amp; non-tech students.
+            </h2>
+            <p className="mt-5 mb-0 text-[15px] leading-relaxed text-muted-dark max-w-2xl">
+              A full track — AI &amp; Tech for Non-Technical Careers — built
+              for MBA, BBA, Commerce, Economics, Arts and Social Science
+              students. Business Analytics, AI for Business Strategy, Product
+              Management, GeoAI &amp; GIS, Cyber GRC, Policy Analytics, and
+              No-Code Automation. No coding background required.
+            </p>
+            <div className="flex gap-3 flex-wrap mt-8">
+              <Link
+                href="/courses"
+                className="bg-accent text-fg font-bold text-[14.5px] px-7 py-3.5 rounded-full hover:bg-bg"
+              >
+                Browse the New Courses
+              </Link>
+              <Link
+                href="/courses/business-analytics-mis-reporting"
+                className="border border-white/35 text-bg font-semibold text-[14.5px] px-7 py-3.5 rounded-full"
+              >
+                See a Course Detail
+              </Link>
+            </div>
           </div>
         </div>
       </section>
