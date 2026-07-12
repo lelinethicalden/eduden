@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { COURSES } from "@/data/courses";
-import DetTemplate from "@/components/course-templates/DetTemplate";
 import MgmtTemplate from "@/components/course-templates/MgmtTemplate";
 
 export function generateStaticParams() {
@@ -17,17 +16,11 @@ export async function generateMetadata({
   const course = COURSES.find((c) => c.slug === slug);
   if (!course) return {};
 
-  return course.template === "mgmt"
-    ? {
-        title: "Business Analytics and MIS Reporting — EduDen",
-        description:
-          "Learn Excel, SQL and Power BI in a practical classroom environment and build dashboards you can show in interviews. No coding background required.",
-      }
-    : {
-        title: "Ethical Hacking for Beginners — EduDen",
-        description:
-          "Learn to legally break into systems, find security flaws, and help companies fix them — while building a career in cybersecurity.",
-      };
+  return {
+    title: "Business Analytics and MIS Reporting — EduDen",
+    description:
+      "Learn Excel, SQL and Power BI in a practical classroom environment and build dashboards you can show in interviews. No coding background required.",
+  };
 }
 
 export default async function CourseDetailPage({
@@ -39,5 +32,5 @@ export default async function CourseDetailPage({
   const course = COURSES.find((c) => c.slug === slug);
   if (!course) notFound();
 
-  return course.template === "mgmt" ? <MgmtTemplate /> : <DetTemplate />;
+  return <MgmtTemplate />;
 }

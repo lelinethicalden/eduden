@@ -1,7 +1,5 @@
 import { unsplash } from "@/lib/unsplash";
 
-export type CourseTemplate = "det" | "mgmt";
-
 export type Course = {
   slug: string;
   cat: string;
@@ -14,11 +12,7 @@ export type Course = {
   tag: string;
   img: string;
   blurb: string;
-  template: CourseTemplate;
 };
-
-const MGMT: CourseTemplate = "mgmt";
-const DET: CourseTemplate = "det";
 
 export const COURSES: Course[] = [
   {
@@ -31,7 +25,6 @@ export const COURSES: Course[] = [
     projects: "6 projects",
     mode: "Classroom",
     tag: "New",
-    template: MGMT,
     img: unsplash("1543286386-713bdd548da4"),
     blurb:
       "Build dashboards with Excel, SQL and Power BI — made for MBA, BBA, Commerce and Arts students. No coding needed.",
@@ -46,7 +39,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1620712943543-bcc4688e7485"),
     blurb:
       "Use AI for market research, competitor analysis, campaign planning and faster business decisions.",
@@ -61,7 +53,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1522071820081-009f0129c71c"),
     blurb:
       "Work in tech without becoming a developer — user research, PRDs, wireframes and product metrics.",
@@ -76,7 +67,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1451187580459-43490279c0fa"),
     blurb:
       "QGIS, satellite imagery, spatial analysis and location projects — for Geography and Environment students.",
@@ -91,7 +81,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1554224155-6726b3ff858f"),
     blurb:
       "Enter cybersecurity through governance, risk and compliance — no hacking or coding required.",
@@ -106,7 +95,6 @@ export const COURSES: Course[] = [
     projects: "4 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1560472354-b33ff0c44a43"),
     blurb:
       "Public datasets, indicators, dashboards and AI-assisted policy briefs for Economics students.",
@@ -121,7 +109,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New",
-    template: MGMT,
     img: unsplash("1571171637578-41bc2dd41cd2"),
     blurb: "Automate forms, sheets, reports and follow-ups with AI and no-code tools.",
   },
@@ -135,7 +122,6 @@ export const COURSES: Course[] = [
     projects: "3 projects",
     mode: "Hybrid",
     tag: "Bestseller",
-    template: DET,
     img: unsplash("1526374965328-7f61d4dc18c5"),
     blurb:
       "Legally break into systems, find security flaws, and help companies fix them — from absolute zero.",
@@ -150,7 +136,6 @@ export const COURSES: Course[] = [
     projects: "15+ assignments",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1550439062-609e1531270e"),
     blurb:
       "From recon to reporting — the complete roadmap for HackerOne, Bugcrowd and Synack.",
@@ -165,7 +150,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "New batch",
-    template: DET,
     img: unsplash("1573164713988-8665fc963095"),
     blurb:
       "Uncover hidden data, trace cybercrimes, and recover digital evidence using industry-standard tools.",
@@ -180,7 +164,6 @@ export const COURSES: Course[] = [
     projects: "3 assessments",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1512941937669-90a1b58e7e9c"),
     blurb:
       "Reverse-engineer APKs, intercept traffic, and test apps against the OWASP Mobile Top 10.",
@@ -195,7 +178,6 @@ export const COURSES: Course[] = [
     projects: "6 projects",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1544197150-b99a580bb7a8"),
     blurb: "Custom scripting with Python & Bash, exploitation, evasion and lateral movement.",
   },
@@ -209,7 +191,6 @@ export const COURSES: Course[] = [
     projects: "4 projects",
     mode: "Hybrid",
     tag: "",
-    template: DET,
     img: unsplash("1667372393119-3d4c48d07fc9"),
     blurb: "From neural nets to real deployments — build AI features you can actually ship.",
   },
@@ -223,7 +204,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1526378722484-bd91ca387e72"),
     blurb:
       "Regression to recommendation engines — trained on real datasets, verified by mentors.",
@@ -238,7 +218,6 @@ export const COURSES: Course[] = [
     projects: "5 projects",
     mode: "Hybrid",
     tag: "",
-    template: DET,
     img: unsplash("1571677246347-5040036b95cc"),
     blurb: "Pandas, SQL, visualization and storytelling with data — a complete analyst toolkit.",
   },
@@ -252,7 +231,6 @@ export const COURSES: Course[] = [
     projects: "6 projects",
     mode: "Hybrid",
     tag: "",
-    template: DET,
     img: unsplash("1516321318423-f06f85e504b3"),
     blurb:
       "HTML to deployed apps: JavaScript, React, Node and databases with portfolio projects.",
@@ -267,7 +245,6 @@ export const COURSES: Course[] = [
     projects: "4 labs",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1558494949-ef010cbdcc31"),
     blurb: "Architect, deploy and secure real workloads on AWS — aligned to certification paths.",
   },
@@ -281,7 +258,6 @@ export const COURSES: Course[] = [
     projects: "4 projects",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1573497491208-6b1acb260507"),
     blurb: "CI/CD, Docker, Kubernetes and infrastructure-as-code — the modern delivery pipeline.",
   },
@@ -295,7 +271,6 @@ export const COURSES: Course[] = [
     projects: "3 labs",
     mode: "Classroom",
     tag: "",
-    template: DET,
     img: unsplash("1580927752452-89d86da3fa0a"),
     blurb: "Command line to server hardening — the foundation every tech career is built on.",
   },
@@ -309,7 +284,6 @@ export const COURSES: Course[] = [
     projects: "6 projects",
     mode: "Hybrid",
     tag: "",
-    template: DET,
     img: unsplash("1580894732444-8ecded7900cd"),
     blurb:
       "Branding, layout and visual systems with real client-style briefs and portfolio reviews.",
@@ -324,7 +298,6 @@ export const COURSES: Course[] = [
     projects: "4 campaigns",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1553729459-efe14ef6055d"),
     blurb: "SEO, ads, analytics and content strategy — run real campaigns, measure real results.",
   },
@@ -338,7 +311,6 @@ export const COURSES: Course[] = [
     projects: "3 projects",
     mode: "Online",
     tag: "",
-    template: DET,
     img: unsplash("1620121692029-d088224ddc74"),
     blurb: "Smart contracts, wallets and dApps — understand the tech behind the hype.",
   },
@@ -352,7 +324,6 @@ export const COURSES: Course[] = [
     projects: "4 builds",
     mode: "Classroom",
     tag: "",
-    template: DET,
     img: unsplash("1518770660439-4636190af475"),
     blurb: "Build connected devices from scratch — sensors, boards, and cloud dashboards.",
   },
@@ -366,7 +337,6 @@ export const COURSES: Course[] = [
     projects: "3 labs",
     mode: "Hybrid",
     tag: "",
-    template: DET,
     img: unsplash("1544256718-3bcf237f3974"),
     blurb: "TCP/IP, routing, and packet analysis — the plumbing of the internet, demystified.",
   },
