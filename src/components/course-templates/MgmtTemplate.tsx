@@ -111,7 +111,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-8 pb-12 md:pb-18">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-8 pb-8 md:pb-18">
           <nav className="flex flex-wrap items-center gap-2 text-[0.8125em] font-semibold text-muted mb-10">
             <Link href="/" className="text-muted hover:text-fg">
               Home
@@ -176,7 +176,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
       </section>
 
       <section className="bg-fg text-bg">
-        <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <div>
             <h2 className="mt-0 mb-4.5 text-[clamp(1.625em,3.2vw,2.625em)] font-black tracking-[-0.03em] uppercase leading-none">
               Confident with data, not a heavy programmer.
@@ -209,7 +209,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 py-14 md:py-22">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22">
           <h2 className="mt-0 mb-9 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             6 projects you&apos;ll build.
           </h2>
@@ -225,7 +225,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
       </section>
 
       <section className="bg-bg border-t border-border">
-        <div className="max-w-4xl mx-auto px-7 py-14 md:py-22">
+        <div className="max-w-4xl mx-auto px-4 sm:px-7 py-9 md:py-22">
           <h2 className="mt-0 mb-2 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             Curriculum.
           </h2>
@@ -253,7 +253,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
       </section>
 
       <section className="bg-bg border-t border-border">
-        <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
           <div>
             <h2 className="mt-0 mb-4 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
               Career path after this course.
@@ -285,7 +285,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
             {BENEFITS.map((b) => (
               <div
                 key={b.title}
-                className="grid grid-cols-[minmax(140px,1fr)_2fr] gap-5 items-baseline border-t border-border-strong py-4.5"
+                className="grid grid-cols-1 sm:grid-cols-[minmax(140px,1fr)_2fr] gap-1.5 sm:gap-5 sm:items-baseline border-t border-border-strong py-4.5"
               >
                 <div className="text-[0.9375em] font-extrabold">{b.title}</div>
                 <p className="m-0 text-[0.84375em] leading-snug text-muted">{b.body}</p>

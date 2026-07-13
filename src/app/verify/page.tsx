@@ -32,7 +32,7 @@ export default function Verify() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-[760px] mx-auto px-7 pt-16 md:pt-24 pb-12 text-center">
+        <div className="max-w-[760px] mx-auto px-4 sm:px-7 pt-10 md:pt-24 pb-8 md:pb-12 text-center">
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -75,9 +75,9 @@ export default function Verify() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-[760px] mx-auto px-7 pb-16 md:pb-24">
+        <div className="max-w-[760px] mx-auto px-4 sm:px-7 pb-10 md:pb-24">
           {result === "valid" && (
-            <div className="bg-white border border-border rounded-3xl p-7 md:p-10">
+            <div className="bg-white border border-border rounded-3xl p-5 sm:p-7 md:p-10">
               <div className="flex items-center gap-3.5 mb-7">
                 <span className="w-10 h-10 rounded-full bg-[#1DA954] text-white flex items-center justify-center text-lg font-black flex-none">
                   ✓
@@ -143,7 +143,7 @@ export default function Verify() {
           )}
 
           {result === "invalid" && (
-            <div className="bg-white border border-[#E8B4B4] rounded-3xl p-7 md:p-10 text-center">
+            <div className="bg-white border border-[#E8B4B4] rounded-3xl p-5 sm:p-7 md:p-10 text-center">
               <span className="w-10 h-10 rounded-full bg-[#D64040] text-white inline-flex items-center justify-center text-base font-black">
                 ✕
               </span>
@@ -173,7 +173,7 @@ export default function Verify() {
           )}
 
           <div className="mt-14 border-t border-border-strong">
-            <div className="grid grid-cols-[minmax(140px,1fr)_2fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(140px,1fr)_2fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
               <div className="text-[15px] font-extrabold">
                 Tamper-proof
               </div>
@@ -182,7 +182,7 @@ export default function Verify() {
                 system.
               </p>
             </div>
-            <div className="grid grid-cols-[minmax(140px,1fr)_2fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(140px,1fr)_2fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
               <div className="text-[15px] font-extrabold">
                 Instant checks
               </div>
@@ -191,7 +191,7 @@ export default function Verify() {
                 seconds.
               </p>
             </div>
-            <div className="grid grid-cols-[minmax(140px,1fr)_2fr] gap-5 items-baseline py-5 px-1">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(140px,1fr)_2fr] gap-1.5 sm:gap-5 sm:items-baseline py-5 px-1">
               <div className="text-[15px] font-extrabold">
                 Earned, not given
               </div>

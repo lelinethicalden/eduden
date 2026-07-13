@@ -64,7 +64,7 @@ export default function Faculty() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-14 md:pt-24 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-9 md:pt-24 pb-8 md:pb-12">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -85,7 +85,7 @@ export default function Faculty() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pb-10 md:pb-24">
           <h2 className="mt-0 mb-7 text-[clamp(26px,3.4vw,44px)] font-black tracking-[-0.035em] uppercase leading-none">
             Meet the team
           </h2>
@@ -93,7 +93,7 @@ export default function Faculty() {
             {FACULTY.map((f) => (
               <div
                 key={f.name}
-                className="grid grid-cols-[72px_minmax(200px,1fr)_2fr] gap-6 items-start border-b border-border-strong py-7.5"
+                className="grid grid-cols-[72px_1fr] sm:grid-cols-[72px_minmax(200px,1fr)_2fr] gap-x-6 gap-y-4 sm:gap-y-0 items-start border-b border-border-strong py-7.5"
               >
                 <div className="relative w-18 h-18 rounded-full overflow-hidden">
                   <Image
@@ -112,7 +112,7 @@ export default function Faculty() {
                     {f.role}
                   </div>
                 </div>
-                <p className="m-0 text-sm leading-relaxed text-muted max-w-[620px]">
+                <p className="m-0 col-span-2 sm:col-span-1 text-sm leading-relaxed text-muted max-w-[620px]">
                   {f.bio}
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function Faculty() {
       </section>
 
       <section className="bg-fg text-bg">
-        <div className="max-w-[900px] mx-auto px-7 py-16 md:py-24 text-center">
+        <div className="max-w-[900px] mx-auto px-4 sm:px-7 py-10 md:py-24 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted-dark">

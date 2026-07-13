@@ -79,7 +79,7 @@ export default function Enroll() {
 
   return (
     <section className="bg-bg">
-      <div className="max-w-[1180px] mx-auto px-7 pt-12 md:pt-20 pb-16 md:pb-24 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-7 pt-8 md:pt-20 pb-10 md:pb-24 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
         <div className="lg:sticky lg:top-24">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
@@ -118,7 +118,7 @@ export default function Enroll() {
           </div>
         </div>
 
-        <div className="bg-white border border-border rounded-3xl p-6 md:p-10">
+        <div className="bg-white border border-border rounded-3xl p-5 sm:p-6 md:p-10">
           <div className="flex flex-col gap-4.5">
             <div className="flex flex-col gap-1.75">
               <label className="text-[13px] font-bold">Full name</label>

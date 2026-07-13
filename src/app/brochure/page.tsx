@@ -55,7 +55,7 @@ export default function Brochure() {
 
   return (
     <section className="bg-bg">
-      <div className="max-w-[1180px] mx-auto px-7 pt-12 md:pt-20 pb-16 md:pb-24 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-7 pt-8 md:pt-20 pb-10 md:pb-24 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
         <div className="lg:sticky lg:top-24">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
@@ -72,7 +72,7 @@ export default function Brochure() {
             instantly.
           </p>
           <div className="mt-7 border-t border-border-strong max-w-md">
-            <div className="border-b border-border-strong py-3.5 px-1 flex justify-between gap-4 text-sm">
+            <div className="border-b border-border-strong py-3.5 px-1 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 text-sm">
               <span className="font-bold">EduDen Course Brochure 2026</span>
               <span className="text-muted font-semibold">PDF · 2.4 MB</span>
             </div>
@@ -91,7 +91,7 @@ export default function Brochure() {
           </div>
         </div>
 
-        <div className="bg-white border border-border rounded-3xl p-6 md:p-10">
+        <div className="bg-white border border-border rounded-3xl p-5 sm:p-6 md:p-10">
           {!sent ? (
             <div className="flex flex-col gap-4.5">
               <div className="flex flex-col gap-1.75">

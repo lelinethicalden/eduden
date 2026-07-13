@@ -82,7 +82,7 @@ export default function WhatsNew() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-14 md:pt-24 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-9 md:pt-24 pb-8 sm:pb-10">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -114,8 +114,8 @@ export default function WhatsNew() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pb-10">
-          <div className="bg-fg text-bg rounded-3xl p-8 md:p-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pb-8 sm:pb-10">
+          <div className="bg-fg text-bg rounded-3xl p-6 sm:p-8 md:p-14">
             <div className="flex items-center gap-2.5 mb-5.5 flex-wrap">
               <span className="text-[11.5px] font-bold tracking-[0.06em] uppercase bg-accent text-fg px-3.5 py-1.5 rounded-full">
                 New program launch
@@ -153,26 +153,28 @@ export default function WhatsNew() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-2 pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-2 pb-10 md:pb-24">
           <div className="border-t border-border-strong">
             {posts.map((p) => (
               <Link
                 key={p.title}
                 href={p.href}
-                className="grid grid-cols-[minmax(100px,140px)_minmax(110px,150px)_1fr_auto] gap-5 items-center border-b border-border-strong py-6.5 px-1 text-fg hover:bg-white"
+                className="flex flex-col sm:grid sm:grid-cols-[minmax(100px,140px)_minmax(110px,150px)_1fr_auto] gap-3 sm:gap-5 sm:items-center border-b border-border-strong py-6.5 px-1 text-fg hover:bg-white"
               >
-                <div className="text-[13px] font-semibold text-muted">
-                  {p.date}
+                <div className="flex items-center gap-3 sm:contents">
+                  <div className="text-[13px] font-semibold text-muted">
+                    {p.date}
+                  </div>
+                  <span
+                    className={`text-[11.5px] font-bold tracking-[0.06em] uppercase border px-3 py-1.25 rounded-full whitespace-nowrap justify-self-start ${
+                      p.tag === "New Batch"
+                        ? "bg-accent border-accent"
+                        : "bg-white border-border"
+                    }`}
+                  >
+                    {p.tag}
+                  </span>
                 </div>
-                <span
-                  className={`text-[11.5px] font-bold tracking-[0.06em] uppercase border px-3 py-1.25 rounded-full whitespace-nowrap justify-self-start ${
-                    p.tag === "New Batch"
-                      ? "bg-accent border-accent"
-                      : "bg-white border-border"
-                  }`}
-                >
-                  {p.tag}
-                </span>
                 <div>
                   <div className="text-[clamp(16px,1.8vw,20px)] font-extrabold tracking-[-0.015em] leading-tight">
                     {p.title}
@@ -181,7 +183,7 @@ export default function WhatsNew() {
                     {p.body}
                   </p>
                 </div>
-                <span className="flex-none w-9.5 h-9.5 rounded-full border border-border-strong flex items-center justify-center text-[15px] justify-self-end">
+                <span className="flex-none w-9.5 h-9.5 rounded-full border border-border-strong flex items-center justify-center text-[15px] self-end sm:self-auto sm:justify-self-end">
                   ↗
                 </span>
               </Link>

@@ -63,7 +63,7 @@ export default function Contact() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-14 md:pt-24 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-9 md:pt-24 pb-8 md:pb-12">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -79,8 +79,8 @@ export default function Contact() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pb-16 md:pb-24 grid gap-7 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
-          <div className="bg-white border border-border rounded-3xl p-6 md:p-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pb-10 md:pb-24 grid gap-6 sm:gap-7 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+          <div className="bg-white border border-border rounded-3xl p-5 sm:p-6 md:p-10">
             {!sent ? (
               <div className="flex flex-col gap-4.5">
                 <div className="flex flex-col gap-1.75">
@@ -205,7 +205,7 @@ export default function Contact() {
 
           <div>
             <div className="border-t border-border-strong">
-              <div className="grid grid-cols-[minmax(110px,150px)_1fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   Visit
                 </div>
@@ -213,7 +213,7 @@ export default function Contact() {
                   Nokia Care Building, South Dumdum, Kolkata, West Bengal
                 </div>
               </div>
-              <div className="grid grid-cols-[minmax(110px,150px)_1fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   WhatsApp
                 </div>
@@ -224,7 +224,7 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              <div className="grid grid-cols-[minmax(110px,150px)_1fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   Email
                 </div>
@@ -235,7 +235,7 @@ export default function Contact() {
                   hello@eduden.io
                 </a>
               </div>
-              <div className="grid grid-cols-[minmax(110px,150px)_1fr] gap-5 items-baseline border-b border-border-strong py-5 px-1">
+              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   Hours
                 </div>
@@ -243,7 +243,7 @@ export default function Contact() {
                   Mon–Sat · 10:00–19:00 IST
                 </div>
               </div>
-              <div className="grid grid-cols-[minmax(110px,150px)_1fr] gap-5 items-baseline py-5 px-1">
+              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   Social
                 </div>

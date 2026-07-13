@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/images/eduden-logo.png";
+import logo from "../../public/images/eduden-logo-white.png";
 
 export default function Footer() {
   return (
     <div>
       <footer className="bg-fg text-muted-dark">
-        <div className="max-w-7xl mx-auto px-7 pt-16">
-          <div className="grid gap-10 pb-14 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-10 sm:pt-16">
+          <div className="grid gap-8 sm:gap-10 pb-10 sm:pb-14 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
             <div className="flex flex-col gap-3.5">
               <div className="text-xs font-bold tracking-[0.14em] uppercase text-bg">
                 EduDen
@@ -88,7 +88,7 @@ export default function Footer() {
               className="w-[226px] h-[61px]"
             />
           </div>
-          <div className="border-t border-white/10 mt-10 py-5 flex flex-wrap gap-3 justify-between text-[12.5px] text-muted">
+          <div className="border-t border-white/10 mt-6 sm:mt-10 py-4 sm:py-5 flex flex-wrap gap-3 justify-between text-[12.5px] text-muted">
             <span>© 2026 EduDen. All rights reserved.</span>
             <span>Where learning meets imagination &amp; innovation</span>
           </div>

@@ -115,7 +115,7 @@ export default function Courses() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-14 md:pt-24 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-9 md:pt-24 pb-8 sm:pb-10">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted">
@@ -128,10 +128,10 @@ export default function Courses() {
 
           <div className="flex flex-wrap gap-3 items-center mt-10">
             <div
-              className={`w-full flex items-center h-11.5 bg-white border rounded-full overflow-hidden flex-none transition-[max-width,box-shadow,border-color] duration-300 ${
+              className={`w-full flex items-center h-11.5 bg-white border rounded-full overflow-hidden flex-none transition-[max-width,box-shadow,border-color] duration-300 max-w-95 border-border shadow-[0_0.75em_1.75em_rgba(17,17,17,0.10)] ${
                 searchOpen
-                  ? "max-w-95 border-border shadow-[0_0.75em_1.75em_rgba(17,17,17,0.10)]"
-                  : "max-w-11.5 border-border"
+                  ? "sm:max-w-95 sm:shadow-[0_0.75em_1.75em_rgba(17,17,17,0.10)]"
+                  : "sm:max-w-11.5"
               }`}
             >
               <button
@@ -146,11 +146,11 @@ export default function Courses() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="hacking, python, excel, cloud…"
-                className={`flex-1 border-none outline-none font-[inherit] text-sm text-fg bg-transparent min-w-0 transition-opacity duration-200 ${
-                  searchOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                className={`flex-1 border-none outline-none font-[inherit] text-sm text-fg bg-transparent min-w-0 transition-opacity duration-200 opacity-100 pointer-events-auto ${
+                  searchOpen ? "" : "sm:opacity-0 sm:pointer-events-none"
                 }`}
               />
-              {searchOpen && query && (
+              {query && (
                 <button
                   onClick={() => setQuery("")}
                   className="flex-none border-none bg-bg text-fg w-8 h-8 mr-1.75 rounded-full cursor-pointer flex items-center justify-center transition-transform hover:scale-110"
@@ -209,7 +209,7 @@ export default function Courses() {
               )}
             </div>
 
-            <div className="flex items-center gap-2.5 flex-wrap ml-auto">
+            <div className="flex items-center gap-2.5 flex-wrap">
               <span className="text-[0.78125em] font-bold tracking-[0.1em] uppercase text-muted">
                 Sort
               </span>
@@ -270,33 +270,35 @@ export default function Courses() {
                 }}
               />
             </div>
-            <span className="text-[0.78125em] font-bold tracking-[0.1em] uppercase text-muted ml-3.5">
-              Length
-            </span>
-            <div className="relative flex items-center gap-1.5 flex-wrap">
-              {LENGTHS.map((name) => (
-                <button
-                  key={name}
-                  ref={(el) => {
-                    lengthSlide.refs.current[name] = el;
+            <div className="flex items-center gap-1.5 flex-wrap sm:ml-3.5">
+              <span className="text-[0.78125em] font-bold tracking-[0.1em] uppercase text-muted">
+                Length
+              </span>
+              <div className="relative flex items-center gap-1.5 flex-wrap">
+                {LENGTHS.map((name) => (
+                  <button
+                    key={name}
+                    ref={(el) => {
+                      lengthSlide.refs.current[name] = el;
+                    }}
+                    onClick={() => setLength(name)}
+                    className={`border-none bg-transparent font-[inherit] text-[0.78125em] py-1.5 px-0.5 font-semibold cursor-pointer hover:text-fg ${
+                      length === name ? "text-fg" : "text-muted"
+                    }`}
+                  >
+                    {name}
+                  </button>
+                ))}
+                <span
+                  aria-hidden
+                  className="absolute bottom-0 h-0.5 bg-accent rounded-full transition-[left,width,opacity] duration-300 ease-out pointer-events-none"
+                  style={{
+                    left: lengthSlide.indicator.left,
+                    width: lengthSlide.indicator.width,
+                    opacity: lengthSlide.indicator.visible ? 1 : 0,
                   }}
-                  onClick={() => setLength(name)}
-                  className={`border-none bg-transparent font-[inherit] text-[0.78125em] py-1.5 px-0.5 font-semibold cursor-pointer hover:text-fg ${
-                    length === name ? "text-fg" : "text-muted"
-                  }`}
-                >
-                  {name}
-                </button>
-              ))}
-              <span
-                aria-hidden
-                className="absolute bottom-0 h-0.5 bg-accent rounded-full transition-[left,width,opacity] duration-300 ease-out pointer-events-none"
-                style={{
-                  left: lengthSlide.indicator.left,
-                  width: lengthSlide.indicator.width,
-                  opacity: lengthSlide.indicator.visible ? 1 : 0,
-                }}
-              />
+                />
+              </div>
             </div>
             {anyFilterActive && (
               <button
@@ -311,7 +313,7 @@ export default function Courses() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-2 pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-2 pb-10 md:pb-24">
           <div className="text-[0.8125em] font-semibold text-muted mb-5">{countLabel}</div>
           {results.length > 0 ? (
             <div className="grid gap-5 grid-cols-[repeat(auto-fill,minmax(min(100%,20em),1fr))]">

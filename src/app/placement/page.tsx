@@ -358,7 +358,7 @@ export default function Placement() {
     return (
       <>
         <section className="bg-bg">
-          <div className="max-w-7xl mx-auto px-7 pt-14 md:pt-26 pb-12 md:pb-18 grid gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+          <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-9 md:pt-26 pb-8 md:pb-18 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
             <div>
               <div className="flex items-center gap-2 mb-7">
                 <span className="w-2 h-2 bg-accent rounded-sm" />
@@ -497,7 +497,7 @@ export default function Placement() {
         </section>
 
         <section className="bg-fg text-bg">
-          <div className="max-w-7xl mx-auto px-7 py-14 md:py-22">
+          <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22">
             <h2 className="mt-0 mb-10 text-[clamp(28px,3.8vw,52px)] font-black tracking-[-0.035em] uppercase leading-none">
               A process, not a promise.
             </h2>
@@ -505,11 +505,11 @@ export default function Placement() {
               {PROCESS.map((p) => (
                 <div
                   key={p.n}
-                  className="grid grid-cols-[minmax(48px,80px)_minmax(160px,1fr)_2fr] gap-5 items-baseline border-t border-white/12 py-6"
+                  className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,1fr)_2fr] gap-x-5 gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-white/12 py-6"
                 >
                   <div className="text-[13px] font-bold text-accent">{p.n}</div>
                   <div className="text-[clamp(16px,1.7vw,20px)] font-extrabold">{p.title}</div>
-                  <p className="m-0 text-[14.5px] leading-relaxed text-muted-dark max-w-xl">
+                  <p className="m-0 col-span-2 sm:col-span-1 text-[14.5px] leading-relaxed text-muted-dark max-w-xl">
                     {p.body}
                   </p>
                 </div>
@@ -528,7 +528,7 @@ export default function Placement() {
         </section>
 
         <section className="bg-bg">
-          <div className="max-w-[860px] mx-auto px-7 py-18 md:py-28 text-center">
+          <div className="max-w-[860px] mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
             <div className="relative w-19 h-19 rounded-full overflow-hidden mx-auto mb-7">
               <Image
                 src={unsplash("1544005313-94ddf0286df2")}
@@ -554,7 +554,7 @@ export default function Placement() {
   if (showDetail && job) {
     return (
       <section className="bg-bg min-h-[70vh]">
-        <div className="max-w-[980px] mx-auto px-7 pt-10 md:pt-16 pb-16 md:pb-24">
+        <div className="max-w-[980px] mx-auto px-4 sm:px-7 pt-8 md:pt-16 pb-10 md:pb-24">
           <div className="flex justify-between items-center gap-4 flex-wrap mb-9">
             <button
               onClick={() => setSelected(-1)}
@@ -629,19 +629,19 @@ export default function Placement() {
           )}
 
           <div className="mt-9 md:mt-13 border-t border-border-strong">
-            <div className="grid grid-cols-[minmax(150px,1fr)_2.4fr] gap-5 items-baseline border-b border-border-strong py-5.5">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
               <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                 About the company
               </div>
               <p className="m-0 text-[14.5px] leading-relaxed">{job.about}</p>
             </div>
-            <div className="grid grid-cols-[minmax(150px,1fr)_2.4fr] gap-5 items-baseline border-b border-border-strong py-5.5">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
               <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                 Job description
               </div>
               <p className="m-0 text-[14.5px] leading-relaxed">{job.description}</p>
             </div>
-            <div className="grid grid-cols-[minmax(150px,1fr)_2.4fr] gap-5 items-baseline border-b border-border-strong py-5.5">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
               <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                 Requirements
               </div>
@@ -654,7 +654,7 @@ export default function Placement() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-[minmax(150px,1fr)_2.4fr] gap-5 items-baseline border-b border-border-strong py-5.5">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
               <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                 Eligibility
               </div>
@@ -667,7 +667,7 @@ export default function Placement() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-[minmax(150px,1fr)_2.4fr] gap-5 items-baseline py-5.5">
+            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline py-5.5">
               <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                 How to apply
               </div>
@@ -681,7 +681,7 @@ export default function Placement() {
 
   return (
     <section className="bg-bg min-h-[70vh]">
-      <div className="max-w-7xl mx-auto px-7 pt-10 md:pt-16 pb-16 md:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-8 md:pt-16 pb-10 md:pb-24">
         <div className="flex flex-wrap justify-between items-end gap-5">
           <div>
             <div className="flex items-center gap-2 mb-5">
@@ -783,7 +783,7 @@ export default function Placement() {
               <div
                 key={j.id}
                 onClick={() => setSelected(JOBS.findIndex((x) => x.id === j.id))}
-                className="grid grid-cols-[minmax(200px,1.7fr)_minmax(130px,1fr)_minmax(150px,1fr)_auto] gap-5 items-center border-b border-border-strong py-5.5 px-1 cursor-pointer hover:bg-white"
+                className="flex flex-col sm:grid sm:grid-cols-[minmax(200px,1.7fr)_minmax(130px,1fr)_minmax(150px,1fr)_auto] gap-3 sm:gap-5 sm:items-center border-b border-border-strong py-5.5 px-1 cursor-pointer hover:bg-white"
               >
                 <div>
                   <div className="flex items-center gap-2.5 flex-wrap">
@@ -810,17 +810,19 @@ export default function Placement() {
                     {j.company} · {j.location}
                   </div>
                 </div>
-                <div className="text-[13px] font-semibold text-muted">
-                  {j.type}
-                  <br />
-                  {j.salary}
+                <div className="flex flex-wrap gap-4 sm:contents">
+                  <div className="text-[13px] font-semibold text-muted">
+                    {j.type}
+                    <br />
+                    {j.salary}
+                  </div>
+                  <div className="text-[13px] font-semibold text-muted">
+                    {j.track}
+                    <br />
+                    Apply by {j.deadline}
+                  </div>
                 </div>
-                <div className="text-[13px] font-semibold text-muted">
-                  {j.track}
-                  <br />
-                  Apply by {j.deadline}
-                </div>
-                <div className="flex items-center gap-2 justify-self-end">
+                <div className="flex items-center gap-2 sm:justify-self-end">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();

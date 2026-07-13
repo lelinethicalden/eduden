@@ -123,7 +123,7 @@ export default function Home() {
   return (
     <>
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pt-16 md:pt-24 lg:pt-30 pb-12 md:pb-18">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-10 md:pt-24 lg:pt-30 pb-8 md:pb-18">
           <h1 className="m-0 text-[clamp(44px,7.4vw,104px)] leading-[0.94] font-black tracking-[-0.04em] uppercase max-w-[1100px]">
             Where learning meets imagination &amp; innovation
           </h1>
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#FAC211] text-fg">
-        <div className="max-w-7xl mx-auto px-7 py-16 md:py-26 grid gap-11 grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-10 md:py-26 grid gap-8 sm:gap-11 grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))]">
           <div>
             <div className="text-[clamp(28px,3vw,40px)] font-black tracking-[-0.03em] uppercase text-fg">
               Learn.
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 py-14 md:py-22">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pb-14 md:pb-22">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pb-9 md:pb-22">
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))]">
             {FEATURED.map((c) => (
               <Link
@@ -317,7 +317,7 @@ export default function Home() {
       </section>
 
       <section className="bg-bg border-t border-border">
-        <div className="max-w-4xl mx-auto px-7 py-18 md:py-28 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
           <p className="m-0 text-[clamp(24px,3.2vw,40px)] font-bold tracking-[-0.025em] leading-[1.25] text-balance">
             With Eduden it all comes together. You learn a skill, apply it in
             a real lab, get your work{" "}
@@ -340,7 +340,7 @@ export default function Home() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-7xl mx-auto px-7 pb-14 md:pb-22">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 pb-9 md:pb-22">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
@@ -354,13 +354,13 @@ export default function Home() {
             {WHY.map((w) => (
               <div
                 key={w.n}
-                className="grid grid-cols-[minmax(48px,80px)_minmax(160px,1fr)_2fr] gap-5 items-baseline border-t border-border-strong py-6.5"
+                className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,1fr)_2fr] gap-x-5 gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-border-strong py-6.5"
               >
                 <div className="text-[13px] font-bold text-muted">{w.n}</div>
                 <div className="text-[clamp(17px,1.7vw,21px)] font-extrabold tracking-[-0.01em]">
                   {w.title}
                 </div>
-                <p className="m-0 text-[14.5px] leading-relaxed text-muted max-w-xl">
+                <p className="m-0 col-span-2 sm:col-span-1 text-[14.5px] leading-relaxed text-muted max-w-xl">
                   {w.body}
                 </p>
               </div>
@@ -370,7 +370,7 @@ export default function Home() {
       </section>
 
       <section className="bg-fg text-bg">
-        <div className="max-w-4xl mx-auto px-7 py-18 md:py-28 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
           <div className="relative w-19 h-19 rounded-full overflow-hidden mx-auto mb-7">
             <Image
               src={unsplash("1544005313-94ddf0286df2")}
@@ -393,7 +393,7 @@ export default function Home() {
       </section>
 
       <section className="bg-bg">
-        <div className="max-w-4xl mx-auto px-7 py-14 md:py-22">
+        <div className="max-w-4xl mx-auto px-4 sm:px-7 py-9 md:py-22">
           <h2 className="mt-0 mb-9 text-[clamp(30px,4vw,52px)] font-black tracking-[-0.035em] uppercase leading-none">
             Questions? Sorted.
           </h2>
@@ -402,7 +402,7 @@ export default function Home() {
       </section>
       
       <section className="bg-bg border-t border-border">
-        <div className="max-w-7xl mx-auto px-7 py-14 md:py-22 grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,340px),1fr))]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22 grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,340px),1fr))]">
           <Link
             href="/enroll"
             className="bg-accent rounded-3xl p-8 md:p-12 flex flex-col justify-between gap-12 text-fg hover:-translate-y-1 transition-transform"
