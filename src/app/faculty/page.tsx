@@ -7,7 +7,7 @@ import praveenImg from "../../../public/images/faculty/praveen.jpeg";
 import nazmulImg from "../../../public/images/faculty/nazmul.jpeg";
 import yathishImg from "../../../public/images/faculty/Yathish.webp";
 import khokonImg from "../../../public/images/faculty/khokon.webp";
-import shakilImg from "../../../public/images/faculty/MD. Shakil.jpg";
+import shakilImg from "../../../public/images/faculty/Shakil.png";
 import ayoushiImg from "../../../public/images/faculty/Ayushi.webp";
 import JoyImg from "../../../public/images/faculty/Joy.png";
 
