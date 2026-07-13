@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { unsplash } from "@/lib/unsplash";
+import fardeenImg from "../../../public/images/faculty/Fardeen.webp";
+import praveenImg from "../../../public/images/faculty/praveen.jpeg";
+import nazmulImg from "../../../public/images/faculty/nazmul.jpeg";
+import yathishImg from "../../../public/images/faculty/Yathish.webp";
+import khokonImg from "../../../public/images/faculty/khokon.webp";
+import shakilImg from "../../../public/images/faculty/MD. Shakil.jpg";
+import ayoushiImg from "../../../public/images/faculty/Ayushi.webp";
+import JoyImg from "../../../public/images/faculty/Joy.png";
 
 export const metadata: Metadata = {
   title: "Faculty — EduDen",
@@ -14,49 +22,49 @@ const FACULTY = [
     name: "Fardeen Ahmed",
     role: "Cyber Security Expert",
     bio: "Fardeen Ahmed is a seasoned cybersecurity and technology professional with over nine years of teaching experience and deep technical expertise across multiple domains. As Co-Founder and CEO of Eduden, he plays a pivotal role in designing and delivering practical, industry-aligned training programs in cybersecurity, ethical hacking, and advanced technology stacks.",
-    img: unsplash("1500648767791-00dcc994a43e"),
+    img: fardeenImg,
+  },
+  {
+    name: "Praveen Rathan N",
+    role: "UI/UX Expert",
+    bio: "Praveen Rathan N is a talented UI/UX designer with a strong background in creating intuitive and engaging user experiences. With over seven years of experience in the field, he brings a user-centered approach to his work, ensuring that every design decision is made with the end-user in mind.",
+    img: praveenImg,
   },
   {
     name: "Nazmul Islam",
     role: "Graphics Designer Expert",
     bio: "Nazmul Islam is the Director and Country Head of Ethical Den Bangladesh, and a senior design leader with over a decade of experience in the graphic and digital design industry. As the Senior Graphic Designer and Head of the Graphics Department, he plays a central role in shaping the creative direction of Ethical Den’s projects across education, technology, and brand development.",
-    img: unsplash("1519085360753-af0119f7cbe7"),
+    img: nazmulImg,
   },
   {
     name: "Yathish",
     role: "AI / ML Expert",
     bio: "Yathish is a skilled AI/ML professional and Senior Instructor at Eduden, bringing practical industry experience and academic research expertise to the classroom. His work spans machine learning, deep learning, automation systems, and applied data science, with a focus on real-world problem solving and intelligent system design.",
-    img: unsplash("1560250097-0b93528c311a"),
+    img: yathishImg,
   },
   {
     name: "Khokon Halder",
     role: "Cyber Security Expert",
     bio: "Khokon Halder is an experienced Networking and Cybersecurity Instructor at Eduden, with over seven years of hands-on experience in IT infrastructure, system support, and information security.",
-    img: unsplash("1595152772835-219674b2a8a6"),
-  },
-  {
-    name: "Partho Halder",
-    role: "Digital Marketing Expert",
-    bio: "Partho Halder is a digital marketing professional with extensive industry experience in search engine optimization, paid advertising, and campaign strategy. With a strong background in both organic and performance-driven marketing, he brings a practical, results-oriented approach to Eduden’s marketing education initiatives.",
-    img: unsplash("1531123897727-8f129e1688ce"),
+    img: khokonImg,
   },
   {
     name: "Md. Shakil",
     role: "Back-End Developer",
     bio: "Shakil is a backend developer and IT instructor with a strong background in software development, technical training, and practical implementation of computer science principles. As a key team member at Ethical Den, he works on backend systems and development workflows, contributing to scalable, secure, and maintainable software infrastructure.",
-    img: unsplash("1580489944761-15a19d654956"),
+    img: shakilImg,
   },
   {
     name: "Ayoushi Gupta",
     role: "Digital Marketing Expert",
     bio: "Ayoushi Gupta is a business development and content strategy professional with over a decade of experience in education, writing, and academic communication. As a Business Developer and Content Executive at Ethical Den, she plays a key role in crafting compelling narratives, overseeing editorial quality, and supporting the organization’s strategic growth through impactful content initiatives.",
-    img: unsplash("1517841905240-472988babdf9"),
+    img: ayoushiImg,
   },
   {
     name: "Joy Sutradhor",
     role: "Front-End Developer",
     bio: "Joy Sutradhor is a senior frontend developer and full-time team member at Ethical Den, specializing in modern web technologies and scalable user interface architecture. With deep expertise in React.js, Next.js, HTML, CSS, and JavaScript, he plays a critical role in delivering responsive, accessible, and high-performance web applications across client and internal projects.",
-    img: unsplash("1607746882042-944635dfe10e"),
+    img: JoyImg,
   },
 ];
 
