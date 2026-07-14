@@ -8,7 +8,7 @@ import { unsplash } from "@/lib/unsplash";
 import { COURSES } from "@/data/courses";
 
 const STATS = [
-  { value: "2,500+", label: "Students trained" },
+  { value: "750+", label: "Students trained" },
   { value: "30+", label: "Hands-on courses" },
   { value: "94%", label: "Completion rate" },
   { value: "4.8", label: "Average rating" },
@@ -16,7 +16,7 @@ const STATS = [
 
 const CATEGORIES = Array.from(new Set(COURSES.map((c) => c.cat)));
 
-const FEATURED_SLUGS = ["ethical-hacking-for-beginners", "bug-bounty", "forensics"];
+const FEATURED_SLUGS = ["business-analytics-mis-reporting", "policy-analytics", "ethical-hacking-for-beginners"];
 const FEATURED = FEATURED_SLUGS.map(
   (slug) => COURSES.find((c) => c.slug === slug)!
 ).filter(Boolean);
@@ -146,20 +146,18 @@ export default function Home() {
           </div>
           <div>
             <div className="text-[clamp(28px,3vw,40px)] font-black tracking-[-0.03em] uppercase text-fg">
-              Build.
+              PRACTICE.
             </div>
             <p className="mt-3.5 text-[14.5px] leading-relaxed text-fg max-w-xs">
-              Guided labs and portfolio projects from day one. Every
-              assignment reviewed by a mentor never an auto-grader.
+              Build confidence through assignments, live projects, and hands-on learning.
             </p>
           </div>
           <div>
             <div className="text-[clamp(28px,3vw,40px)] font-black tracking-[-0.03em] uppercase text-fg">
-              Prove.
+              GET HIRED.
             </div>
             <p className="mt-3.5 text-[14.5px] leading-relaxed text-fg max-w-xs">
-              A verifiable certificate, an interview-ready portfolio, and
-              placement support until you land the role.
+              Graduate with a strong portfolio, industry-recognized certification, and interview-ready skills.
             </p>
           </div>
         </div>
