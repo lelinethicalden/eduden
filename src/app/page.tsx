@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import FaqAccordion from "@/components/FaqAccordion";
 import { unsplash } from "@/lib/unsplash";
+import { COURSES } from "@/data/courses";
 
 const STATS = [
   { value: "2,500+", label: "Students trained" },
@@ -13,54 +14,12 @@ const STATS = [
   { value: "4.8", label: "Average rating" },
 ];
 
-const CATEGORIES = [
-  "AI & Tech for Non-Tech Careers",
-  "Cyber Security",
-  "Artificial Intelligence",
-  "Machine Learning",
-  "Data Science",
-  "Programming",
-  "Blockchain",
-  "IoT",
-  "Big Data",
-  "Cloud Computing",
-  "Linux",
-  "DevOps",
-  "App Development",
-  "Networking",
-  "Graphics Design",
-  "Digital Marketing",
-];
+const CATEGORIES = Array.from(new Set(COURSES.map((c) => c.cat)));
 
-const FEATURED = [
-  {
-    cat: "Cyber Security",
-    tag: "Bestseller",
-    title: "Ethical Hacking for Beginners",
-    meta: "45 days · 40 lectures · Hybrid",
-    blurb:
-      "Learn to legally break into systems, find security flaws, and build a cybersecurity career from scratch.",
-    img: unsplash("1526374965328-7f61d4dc18c5"),
-  },
-  {
-    cat: "Cyber Security",
-    tag: "High demand",
-    title: "Start Bug Bounty Hunting",
-    meta: "50 days · 45 lectures · Online",
-    blurb:
-      "A complete roadmap from recon to reporting — for HackerOne, Bugcrowd and beyond.",
-    img: unsplash("1550439062-609e1531270e"),
-  },
-  {
-    cat: "Cyber Security",
-    tag: "New batch",
-    title: "Digital Forensics",
-    meta: "90 days · 70 lectures · Hybrid",
-    blurb:
-      "Uncover hidden data, trace cybercrimes, and recover digital evidence with real lab simulations.",
-    img: unsplash("1573164713988-8665fc963095"),
-  },
-];
+const FEATURED_SLUGS = ["ethical-hacking-for-beginners", "bug-bounty", "forensics"];
+const FEATURED = FEATURED_SLUGS.map(
+  (slug) => COURSES.find((c) => c.slug === slug)!
+).filter(Boolean);
 
 const FEATURES = [
   "Mentor-verified assignments",
@@ -97,7 +56,7 @@ const WHY = [
 const FAQS = [
   {
     q: "What is eduden?",
-    a: "Eduden is an EdTech platform offering innovative and accessible learning solutions",
+    a: "eduden is an EdTech platform offering innovative and accessible learning solutions",
   },
   {
     q: "How do i enroll in a course on eduden?",
@@ -212,7 +171,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
-              16 tracks · New: AI &amp; Tech for Non-Tech Careers
+              {CATEGORIES.length} tracks · New: AI &amp; Tech for Non-Tech Careers
             </span>
           </div>
           <div className="flex flex-wrap justify-between items-end gap-5 mb-9">
@@ -275,8 +234,8 @@ export default function Home() {
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))]">
             {FEATURED.map((c) => (
               <Link
-                key={c.title}
-                href="/courses/ethical-hacking-for-beginners"
+                key={c.slug}
+                href={`/courses/${c.slug}`}
                 className="bg-white border border-border rounded-[20px] overflow-hidden flex flex-col text-fg "
               >
                 <div className="relative h-[170px] flex-none">
@@ -301,7 +260,7 @@ export default function Home() {
                     {c.title}
                   </div>
                   <div className="text-[13px] font-semibold text-muted">
-                    {c.meta}
+                    {c.duration} · {c.lectures} · {c.mode}
                   </div>
                   <p className="m-0 text-sm leading-relaxed text-muted flex-1">
                     {c.blurb}
@@ -319,7 +278,7 @@ export default function Home() {
       <section className="bg-bg border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
           <p className="m-0 text-[clamp(24px,3.2vw,40px)] font-bold tracking-[-0.025em] leading-[1.25] text-balance">
-            With Eduden it all comes together. You learn a skill, apply it in
+            With eduden it all comes together. You learn a skill, apply it in
             a real lab, get your work{" "}
             <span className="border-b-[3px] border-accent">
               verified by a mentor
@@ -344,7 +303,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
-              Why EduDen
+              Why eduden
             </span>
           </div>
           <h2 className="mt-0 mb-3 text-[clamp(30px,4vw,52px)] font-black tracking-[-0.035em] uppercase leading-none max-w-3xl">

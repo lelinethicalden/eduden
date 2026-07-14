@@ -35,7 +35,7 @@ const POSTS = [
   {
     tag: "Event",
     date: "Jun 15, 2026",
-    title: "EduDen CTF 2026 — registrations open",
+    title: "eduden CTF 2026 — registrations open",
     body: "Our annual capture-the-flag. Prizes, internship interviews for top finishers, and bragging rights.",
     href: "/enroll",
   },

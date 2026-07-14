@@ -284,7 +284,7 @@ export default function Contact() {
               <div className="absolute top-[34%] left-[56%] w-3 h-3 rounded-full bg-accent shadow-[0_0_0_9px_rgba(253,200,4,0.2)]" />
               <div className="relative text-bg flex justify-between items-center gap-4 w-full flex-wrap">
                 <div className="text-sm font-bold">
-                  EduDen — South Dumdum, Kolkata
+                  eduden — South Dumdum, Kolkata
                 </div>
                 <a
                   href="#"

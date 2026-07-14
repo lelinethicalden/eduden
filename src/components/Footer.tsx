@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="grid gap-8 sm:gap-10 pb-10 sm:pb-14 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
             <div className="flex flex-col gap-3.5">
               <div className="text-xs font-bold tracking-[0.14em] uppercase text-bg">
-                EduDen
+                eduden
               </div>
               <p className="text-sm leading-relaxed max-w-xs">
                 Hands-on, mentor-led tech education in Kolkata &amp; online.
@@ -82,14 +82,14 @@ export default function Footer() {
           <div className="pt-2 overflow-hidden">
             <Image
               src={logo}
-              alt="EduDen"
+              alt="eduden"
               width={226}
               height={61}
               className="w-[226px] h-[61px]"
             />
           </div>
           <div className="border-t border-white/10 mt-6 sm:mt-10 py-4 sm:py-5 flex flex-wrap gap-3 justify-between text-[12.5px] text-muted">
-            <span>© 2026 EduDen. All rights reserved.</span>
+            <span>© 2026 eduden. All rights reserved.</span>
             <span>Where learning meets imagination &amp; innovation</span>
           </div>
         </div>

@@ -45,7 +45,7 @@ export default function Header() {
     <div className="sticky top-0 z-[1000] bg-bg/92 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-7 flex items-center justify-between gap-4 h-[68px]">
         <Link href="/" className="flex items-center flex-none">
-          <Image src={logo} alt="EduDen" className="h-7 w-auto" priority />
+          <Image src={logo} alt="eduden" className="h-7 w-auto" priority />
         </Link>
 
         <nav className="hidden min-[1080px]:flex items-center gap-6.5 relative">

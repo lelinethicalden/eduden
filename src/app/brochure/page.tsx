@@ -2,28 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { unsplash } from "@/lib/unsplash";
+import { COURSES } from "@/data/courses";
 
-const COURSES = [
-  "Business Analytics and MIS Reporting (New)",
-  "AI for Business Strategy and Decision Making (New)",
-  "Product Management and Digital Business with AI (New)",
-  "GeoAI, GIS and Location Intelligence (New)",
-  "Cyber GRC, Risk and Data Privacy (New)",
-  "Economics, Policy and Development Analytics (New)",
-  "Digital Business Operations and No Code Automation (New)",
-  "Ethical Hacking for Beginners",
-  "Start Bug Bounty Hunting",
-  "Digital Forensics",
-  "Android App Penetration Testing",
-  "Advanced Network Pentesting",
-  "AI Foundations with Python",
-  "Data Science with Python",
-  "Full-Stack Web Development",
-  "Cloud Computing with AWS",
-  "All courses (complete brochure)",
-];
+const COURSE_OPTIONS = [...COURSES.map((c) => c.title), "All courses (complete brochure)"];
 
 type Errors = Partial<Record<"name" | "phone" | "email" | "course", boolean>>;
 
@@ -32,6 +16,15 @@ function fieldBorder(hasError: boolean) {
 }
 
 export default function Brochure() {
+  return (
+    <Suspense fallback={null}>
+      <BrochureForm />
+    </Suspense>
+  );
+}
+
+function BrochureForm() {
+  const searchParams = useSearchParams();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -39,12 +32,20 @@ export default function Brochure() {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
+  const slug = searchParams.get("course");
+  const matchedCourse = COURSES.find((c) => c.slug === slug);
+  const selectedCourse = matchedCourse ? matchedCourse.title : course;
+
+  const brochureName = matchedCourse
+    ? `${matchedCourse.title} — Brochure 2026`
+    : "eduden Course Brochure 2026";
+
   function submit() {
     const e: Errors = {};
     if (!name.trim()) e.name = true;
     if (phone.replace(/\D/g, "").length < 10) e.phone = true;
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) e.email = true;
-    if (!course) e.course = true;
+    if (!selectedCourse) e.course = true;
     if (Object.keys(e).length) {
       setErrors(e);
       return;
@@ -55,7 +56,7 @@ export default function Brochure() {
 
   return (
     <section className="bg-bg">
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-7 pt-8 md:pt-20 pb-10 md:pb-24 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-8 md:pt-20 pb-10 md:pb-24 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start">
         <div className="lg:sticky lg:top-24">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-2 h-2 bg-accent rounded-sm" />
@@ -73,8 +74,8 @@ export default function Brochure() {
           </p>
           <div className="mt-7 border-t border-border-strong max-w-md">
             <div className="border-b border-border-strong py-3.5 px-1 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 text-sm">
-              <span className="font-bold">EduDen Course Brochure 2026</span>
-              <span className="text-muted font-semibold">PDF · 2.4 MB</span>
+              <span className="font-bold">{brochureName}</span>
+              <span className="text-muted font-semibold whitespace-nowrap">PDF · 2.4 MB</span>
             </div>
             <div className="py-3.5 px-1 text-sm text-muted font-semibold">
               Updated July 2026
@@ -82,7 +83,7 @@ export default function Brochure() {
           </div>
           <div className="relative h-[clamp(180px,20vw,260px)] rounded-[20px] overflow-hidden border border-border mt-7 max-w-md">
             <Image
-              src={unsplash("1543286386-713bdd548da4")}
+              src={matchedCourse ? matchedCourse.img : unsplash("1543286386-713bdd548da4")}
               alt="Brochure cover preview"
               fill
               sizes="420px"
@@ -153,15 +154,16 @@ export default function Brochure() {
               <div className="flex flex-col gap-1.75">
                 <label className="text-[13px] font-bold">Course</label>
                 <select
-                  value={course}
+                  value={selectedCourse}
+                  disabled={!!matchedCourse}
                   onChange={(e) => {
                     setCourse(e.target.value);
                     setErrors((s) => ({ ...s, course: false }));
                   }}
-                  className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg text-fg ${fieldBorder(!!errors.course)}`}
+                  className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg text-fg disabled:opacity-60 disabled:cursor-not-allowed ${fieldBorder(!!errors.course)}`}
                 >
                   <option value="">Select a course</option>
-                  {COURSES.map((c) => (
+                  {COURSE_OPTIONS.map((c) => (
                     <option key={c}>{c}</option>
                   ))}
                 </select>
@@ -197,7 +199,7 @@ export default function Brochure() {
               </p>
               <div className="flex gap-3 justify-center flex-wrap mt-6">
                 <Link
-                  href="/courses/ethical-hacking-for-beginners"
+                  href={matchedCourse ? `/courses/${matchedCourse.slug}` : "/courses"}
                   className="bg-[#FFD300] text-fg font-bold text-[13.5px] px-6 py-3 rounded-full hover:bg-accent"
                 >
                   View Course

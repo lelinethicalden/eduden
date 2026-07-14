@@ -353,7 +353,7 @@ export default function Courses() {
                     >
                       {c.title}
                     </Link>
-                    <p className="m-0 text-[0.84375em] leading-snug text-muted flex-1">{c.blurb}</p>
+                    <p className="m-0 text-[0.84375em] leading-snug text-muted flex-1 line-clamp-3">{c.blurb}</p>
                     <div className="flex gap-3.5 border-t border-border pt-3 text-[0.78125em] font-semibold text-muted">
                       <span>{c.duration}</span>
                       <span>{c.lectures}</span>

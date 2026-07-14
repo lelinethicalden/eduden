@@ -33,7 +33,7 @@ export default function ThankYou() {
           Thank you{name ? `, ${name}` : ""}.
         </h1>
         <p className="mt-6 mx-auto max-w-md text-[15.5px] leading-relaxed text-muted">
-          The EduDen admissions team will contact you soon — usually
+          The eduden admissions team will contact you soon — usually
           within one working day — with batch dates, fees and next steps.
         </p>
         <div className="flex gap-3 justify-center flex-wrap mt-9">

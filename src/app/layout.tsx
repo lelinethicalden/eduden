@@ -10,7 +10,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "EduDen — Skills that move your career forward",
+  title: "eduden — Skills that move your career forward",
   description:
     "Hands-on courses led by industry mentors. Real projects, verified assignments, career-focused training.",
 };

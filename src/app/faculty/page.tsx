@@ -12,7 +12,7 @@ import ayoushiImg from "../../../public/images/faculty/Ayushi.webp";
 import JoyImg from "../../../public/images/faculty/Joy.png";
 
 export const metadata: Metadata = {
-  title: "Faculty — EduDen",
+  title: "Faculty — eduden",
   description:
     "Our faculty members are accomplished educators and industry professionals, passionate about sharing their expertise and inspiring the next generation of learners.",
 };
@@ -21,7 +21,7 @@ const FACULTY = [
   {
     name: "Fardeen Ahmed",
     role: "Cyber Security Expert",
-    bio: "Fardeen Ahmed is a seasoned cybersecurity and technology professional with over nine years of teaching experience and deep technical expertise across multiple domains. As Co-Founder and CEO of Eduden, he plays a pivotal role in designing and delivering practical, industry-aligned training programs in cybersecurity, ethical hacking, and advanced technology stacks.",
+    bio: "Fardeen Ahmed is a seasoned cybersecurity and technology professional with over nine years of teaching experience and deep technical expertise across multiple domains. As Co-Founder and CEO of eduden, he plays a pivotal role in designing and delivering practical, industry-aligned training programs in cybersecurity, ethical hacking, and advanced technology stacks.",
     img: fardeenImg,
   },
   {
@@ -39,13 +39,13 @@ const FACULTY = [
   {
     name: "Yathish",
     role: "AI / ML Expert",
-    bio: "Yathish is a skilled AI/ML professional and Senior Instructor at Eduden, bringing practical industry experience and academic research expertise to the classroom. His work spans machine learning, deep learning, automation systems, and applied data science, with a focus on real-world problem solving and intelligent system design.",
+    bio: "Yathish is a skilled AI/ML professional and Senior Instructor at eduden, bringing practical industry experience and academic research expertise to the classroom. His work spans machine learning, deep learning, automation systems, and applied data science, with a focus on real-world problem solving and intelligent system design.",
     img: yathishImg,
   },
   {
     name: "Khokon Halder",
     role: "Cyber Security Expert",
-    bio: "Khokon Halder is an experienced Networking and Cybersecurity Instructor at Eduden, with over seven years of hands-on experience in IT infrastructure, system support, and information security.",
+    bio: "Khokon Halder is an experienced Networking and Cybersecurity Instructor at eduden, with over seven years of hands-on experience in IT infrastructure, system support, and information security.",
     img: khokonImg,
   },
   {

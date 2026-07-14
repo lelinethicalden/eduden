@@ -10,7 +10,7 @@ Opening Course Description
 
 Every company runs on reports. Sales reports, finance reports, HR reports, operations dashboards, marketing performance, customer data, and management summaries are used every day to make decisions. 
 
-This course by Eduden is designed for students from MBA, BBA, Commerce, Economics, Arts, and other non computer backgrounds who want to build strong reporting and analytics skills. You will learn Excel, SQL, and Power BI in a practical classroom environment and build dashboards that can be shown in interviews, internships, and placements. 
+This course by eduden is designed for students from MBA, BBA, Commerce, Economics, Arts, and other non computer backgrounds who want to build strong reporting and analytics skills. You will learn Excel, SQL, and Power BI in a practical classroom environment and build dashboards that can be shown in interviews, internships, and placements. 
 
 Who Can Join 
 
@@ -83,7 +83,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students who complete the assignments and final project will receive an Eduden certificate of completion. 
+Students who complete the assignments and final project will receive an eduden certificate of completion. 
 
 Practical Project Experience 
 
@@ -137,7 +137,7 @@ Opening Course Description
 
 AI is not only for coders. Today, business teams use AI for market research, competitor analysis, customer understanding, sales planning, HR support, financial summaries, and faster decision making. 
 
-This course by Eduden is built for MBA, BBA, Commerce, Economics, and management students who want to understand how AI is used in real business work. The course focuses on practical use, clear thinking, and business outcomes. 
+This course by eduden is built for MBA, BBA, Commerce, Economics, and management students who want to understand how AI is used in real business work. The course focuses on practical use, clear thinking, and business outcomes. 
 
 Who Can Join 
 
@@ -212,7 +212,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students will receive an Eduden certificate after completing assignments and the final project. 
+Students will receive an eduden certificate after completing assignments and the final project. 
 
 Practical Business Use Cases 
 
@@ -312,7 +312,7 @@ Opening Course Description
 
 Every app, website, SaaS platform, and digital service needs people who understand users, business goals, product planning, and communication with technology teams. 
 
-This course by Eduden is designed for management students, business students, entrepreneurs, and non technical learners who want to work in technology companies without becoming full time developers. Students will learn how digital products are planned, researched, documented, tested, and improved. 
+This course by eduden is designed for management students, business students, entrepreneurs, and non technical learners who want to work in technology companies without becoming full time developers. Students will learn how digital products are planned, researched, documented, tested, and improved. 
 
 Who Can Join 
 
@@ -386,7 +386,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students receive an Eduden certificate after completing assignments and the capstone project. 
+Students receive an eduden certificate after completing assignments and the capstone project. 
 
 Practical Product Experience 
 
@@ -437,7 +437,7 @@ Opening Course Description
 
 Geography is no longer only about maps in books. Today, maps, satellite images, location data, and spatial analysis are used in urban planning, disaster management, environment studies, logistics, public policy, and business location decisions. 
 
-This course by Eduden is designed for Geography, Geology, Environmental Science, Urban Planning, and related students who want to build modern career skills using GIS and location intelligence. 
+This course by eduden is designed for Geography, Geology, Environmental Science, Urban Planning, and related students who want to build modern career skills using GIS and location intelligence. 
 
 Who Can Join 
 
@@ -508,7 +508,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students receive an Eduden certificate after completing assignments and the final project. 
+Students receive an eduden certificate after completing assignments and the final project. 
 
 Practical Map Based Projects 
 
@@ -564,7 +564,7 @@ Opening Course Description
 
 Cybersecurity is not only about hacking. Companies also need people who can manage risk, write policies, understand compliance, protect data, support audits, and help teams follow safe digital practices. 
 
-This course by Eduden is designed for management, commerce, law, audit, finance, and non technical students who want to enter cybersecurity through governance, risk, compliance, and privacy. 
+This course by eduden is designed for management, commerce, law, audit, finance, and non technical students who want to enter cybersecurity through governance, risk, compliance, and privacy. 
 
 Who Can Join 
 
@@ -637,7 +637,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students receive an Eduden certificate after completing assignments and the final project. 
+Students receive an eduden certificate after completing assignments and the final project. 
 
 Practical Documentation Experience 
 
@@ -691,7 +691,7 @@ Opening Course Description
 
 Economics, policy, and social science are built around real questions. What is changing? Who is affected? What does the data show? What action should be taken next? 
 
-This course by Eduden is designed for Economics, Political Science, Public Policy, Commerce, Sociology, and Social Science students who want to use data and AI tools for research, reports, dashboards, and policy analysis. 
+This course by eduden is designed for Economics, Political Science, Public Policy, Commerce, Sociology, and Social Science students who want to use data and AI tools for research, reports, dashboards, and policy analysis. 
 
 Who Can Join 
 
@@ -761,7 +761,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students receive an Eduden certificate after completing assignments and the final research project. 
+Students receive an eduden certificate after completing assignments and the final research project. 
 
 Practical Research Experience 
 
@@ -821,7 +821,7 @@ Opening Course Description
 
 Modern offices are full of repetitive work. Forms, sheets, emails, reports, follow ups, approvals, task tracking, customer records, and daily updates take a lot of time. AI and no code tools can make this work faster and more organized. 
 
-This course by Eduden is designed for non technical students who want to work in business operations, administration, startups, customer success, HR operations, marketing operations, or digital coordination roles. 
+This course by eduden is designed for non technical students who want to work in business operations, administration, startups, customer success, HR operations, marketing operations, or digital coordination roles. 
 
 Who Can Join 
 
@@ -896,7 +896,7 @@ What Benefits You Will Gain From the Course
 
 Course Certificate 
 
-Students receive an Eduden certificate after completing assignments and the final project. 
+Students receive an eduden certificate after completing assignments and the final project. 
 
 Practical Workflow Experience 
 

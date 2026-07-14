@@ -3,13 +3,22 @@ import Link from "next/link";
 import ModulesAccordion from "@/components/ModulesAccordion";
 import type { Course } from "@/data/courses";
 
-const ELIGIBILITY = [
+const DEFAULT_OVERVIEW_HEADLINE = "Confident with data, not a heavy programmer.";
+
+const DEFAULT_OVERVIEW_PARAGRAPHS = [
+  "Learn how to clean data, create reports, write basic SQL queries, build dashboards, and present insights clearly — practical analytics skills useful across industries.",
+  "By the end, you'll have dashboard projects, SQL practice files and reporting samples that add real value to your CV — proof you can handle business data, not just talk about it.",
+];
+
+const DEFAULT_ELIGIBILITY = [
   "Students from MBA, BBA, B.Com, Economics, Commerce, Arts, Social Science and related backgrounds",
   "No coding background required",
   "Basic computer knowledge and interest in working with data will be helpful",
 ];
 
-const PROJECTS = [
+const DEFAULT_PROJECTS_HEADLINE = "6 projects you'll build.";
+
+const DEFAULT_PROJECTS = [
   { n: "01", title: "Sales performance dashboard" },
   { n: "02", title: "HR attendance and employee report" },
   { n: "03", title: "Customer data analysis using SQL" },
@@ -18,7 +27,10 @@ const PROJECTS = [
   { n: "06", title: "Final MIS dashboard with written business insights" },
 ];
 
-const MODULES = [
+const DEFAULT_CURRICULUM_SUBTITLE =
+  "7 modules · 50+ lectures · 6 projects · Mentor-verified assignments & quizzes";
+
+const DEFAULT_MODULES = [
   {
     title: "Introduction to Business Analytics and MIS",
     meta: "",
@@ -60,7 +72,7 @@ const MODULES = [
   },
 ];
 
-const TOOLS = [
+const DEFAULT_TOOLS = [
   "Excel",
   "Google Sheets",
   "SQL",
@@ -69,7 +81,10 @@ const TOOLS = [
   "AI tools for report explanation",
 ];
 
-const ROLES = [
+const DEFAULT_CAREER_INTRO =
+  "Apply for roles where reporting, data handling and dashboard skills are required.";
+
+const DEFAULT_ROLES = [
   "MIS Executive",
   "Business Analyst Trainee",
   "Data Analyst Intern",
@@ -81,10 +96,10 @@ const ROLES = [
   "Research Analyst",
 ];
 
-const BENEFITS = [
+const DEFAULT_BENEFITS = [
   {
     title: "Course certificate",
-    body: "Complete the assignments and final project to receive an EduDen certificate of completion.",
+    body: "Complete the assignments and final project to receive an eduden certificate of completion.",
   },
   {
     title: "Practical projects",
@@ -100,6 +115,9 @@ const BENEFITS = [
   },
 ];
 
+const DEFAULT_NEXT_STEP =
+  "AI for Business Strategy, Advanced Business Analytics, Data Science with Python, or Product Management.";
+
 export default function MgmtTemplate({ course }: { course: Course }) {
   const QUICK_STATS = [
     { value: course.duration, label: "Duration" },
@@ -107,6 +125,20 @@ export default function MgmtTemplate({ course }: { course: Course }) {
     { value: course.projects, label: "Projects" },
     { value: course.mode, label: "Mode" },
   ];
+
+  const detail = course.detail;
+  const overviewHeadline = detail?.overviewHeadline ?? DEFAULT_OVERVIEW_HEADLINE;
+  const overviewParagraphs = detail?.overviewParagraphs ?? DEFAULT_OVERVIEW_PARAGRAPHS;
+  const eligibility = detail?.eligibility ?? DEFAULT_ELIGIBILITY;
+  const projectsHeadline = detail?.projectsHeadline ?? DEFAULT_PROJECTS_HEADLINE;
+  const projects = detail?.projects ?? DEFAULT_PROJECTS;
+  const curriculumSubtitle = detail?.curriculumSubtitle ?? DEFAULT_CURRICULUM_SUBTITLE;
+  const modules = detail?.modules ?? DEFAULT_MODULES;
+  const tools = detail?.tools ?? DEFAULT_TOOLS;
+  const careerIntro = detail?.careerIntro ?? DEFAULT_CAREER_INTRO;
+  const roles = detail?.roles ?? DEFAULT_ROLES;
+  const benefits = detail?.benefits ?? DEFAULT_BENEFITS;
+  const nextStep = detail?.nextStep ?? DEFAULT_NEXT_STEP;
 
   return (
     <>
@@ -145,7 +177,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
                 Admission Inquiry
               </Link>
               <Link
-                href="/brochure"
+                href={`/brochure?course=${course.slug}`}
                 className="border border-border-strong text-fg font-semibold text-[0.90625em] px-7.5 py-3.75 rounded-full "
               >
                 Brochure ↓
@@ -179,24 +211,24 @@ export default function MgmtTemplate({ course }: { course: Course }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <div>
             <h2 className="mt-0 mb-4.5 text-[clamp(1.625em,3.2vw,2.625em)] font-black tracking-[-0.03em] uppercase leading-none">
-              Confident with data, not a heavy programmer.
+              {overviewHeadline}
             </h2>
-            <p className="m-0 mb-3.5 text-[0.9375em] leading-relaxed text-muted-dark">
-              Learn how to clean data, create reports, write basic SQL queries,
-              build dashboards, and present insights clearly — practical
-              analytics skills useful across industries.
-            </p>
-            <p className="m-0 text-[0.9375em] leading-relaxed text-muted-dark">
-              By the end, you&apos;ll have dashboard projects, SQL practice
-              files and reporting samples that add real value to your CV —
-              proof you can handle business data, not just talk about it.
-            </p>
+            {overviewParagraphs.map((p, i) => (
+              <p
+                key={i}
+                className={`m-0 text-[0.9375em] leading-relaxed text-muted-dark ${
+                  i < overviewParagraphs.length - 1 ? "mb-3.5" : ""
+                }`}
+              >
+                {p}
+              </p>
+            ))}
           </div>
           <div>
             <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-accent mb-5">
               Who can join
             </div>
-            {ELIGIBILITY.map((e) => (
+            {eligibility.map((e) => (
               <div
                 key={e}
                 className="border-t border-white/12 py-4 text-[0.90625em] leading-relaxed text-white/85"
@@ -211,10 +243,10 @@ export default function MgmtTemplate({ course }: { course: Course }) {
       <section className="bg-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-7 py-9 md:py-22">
           <h2 className="mt-0 mb-9 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
-            6 projects you&apos;ll build.
+            {projectsHeadline}
           </h2>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-x-12">
-            {PROJECTS.map((p) => (
+            {projects.map((p) => (
               <div key={p.n} className="flex gap-4 items-baseline border-t border-border-strong py-4.5">
                 <span className="flex-none text-[0.8125em] font-bold text-muted">{p.n}</span>
                 <span className="text-[0.90625em] font-semibold leading-snug">{p.title}</span>
@@ -229,17 +261,14 @@ export default function MgmtTemplate({ course }: { course: Course }) {
           <h2 className="mt-0 mb-2 text-[clamp(1.75em,3.6vw,3em)] font-black tracking-[-0.035em] uppercase leading-none">
             Curriculum.
           </h2>
-          <p className="m-0 mb-9 text-[0.90625em] text-muted">
-            7 modules · 50+ lectures · 6 projects · Mentor-verified assignments
-            &amp; quizzes
-          </p>
-          <ModulesAccordion modules={MODULES} />
+          <p className="m-0 mb-9 text-[0.90625em] text-muted">{curriculumSubtitle}</p>
+          <ModulesAccordion modules={modules} />
           <div className="mt-9">
             <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted mb-3.5">
               Tools covered
             </div>
             <div className="flex flex-wrap gap-2">
-              {TOOLS.map((t) => (
+              {tools.map((t) => (
                 <span
                   key={t}
                   className="bg-white border border-border rounded-full px-3.75 py-2 text-[0.8125em] font-semibold whitespace-nowrap"
@@ -259,16 +288,15 @@ export default function MgmtTemplate({ course }: { course: Course }) {
               Career path after this course.
             </h2>
             <p className="m-0 mb-6 text-[0.9375em] leading-relaxed text-muted max-w-lg">
-              Apply for roles where reporting, data handling and dashboard
-              skills are required. Complete the assignments and final project
-              to earn a verifiable EduDen certificate — checkable on our{" "}
+              {careerIntro} Complete the assignments and final project
+              to earn a verifiable eduden certificate — checkable on our{" "}
               <Link href="/verify" className="font-bold border-b-2 border-accent">
                 Verify page
               </Link>
               .
             </p>
             <div className="flex flex-wrap gap-2.25">
-              {ROLES.map((r) => (
+              {roles.map((r) => (
                 <span
                   key={r}
                   className="bg-white border border-border rounded-full px-4.5 py-2.5 text-[0.84375em] font-semibold whitespace-nowrap"
@@ -282,7 +310,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
             <div className="text-[0.78125em] font-bold tracking-[0.14em] uppercase text-muted mb-2">
               What you&apos;ll gain
             </div>
-            {BENEFITS.map((b) => (
+            {benefits.map((b) => (
               <div
                 key={b.title}
                 className="grid grid-cols-1 sm:grid-cols-[minmax(140px,1fr)_2fr] gap-1.5 sm:gap-5 sm:items-baseline border-t border-border-strong py-4.5"
@@ -292,9 +320,7 @@ export default function MgmtTemplate({ course }: { course: Course }) {
               </div>
             ))}
             <div className="mt-6 text-[0.84375em] leading-relaxed text-muted">
-              <b className="text-fg">Next learning step:</b> AI for Business
-              Strategy, Advanced Business Analytics, Data Science with Python,
-              or Product Management.
+              <b className="text-fg">Next learning step:</b> {nextStep}
             </div>
           </div>
         </div>

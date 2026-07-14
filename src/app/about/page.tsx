@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { unsplash } from "@/lib/unsplash";
 
 export const metadata: Metadata = {
-  title: "About — EduDen",
+  title: "About — eduden",
   description:
     "A large range of course learning paths — hands-on, mentor-led courses with verified assignments and industry-focused curricula.",
 };
@@ -59,7 +59,7 @@ export default function About() {
           <div className="flex items-center gap-2 mb-7">
             <span className="w-2 h-2 bg-accent rounded-sm" />
             <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
-              About EduDen
+              About eduden
             </span>
           </div>
           <h1 className="m-0 text-[clamp(40px,6.4vw,92px)] font-black tracking-[-0.04em] uppercase leading-[0.95] max-w-[1100px]">
@@ -79,7 +79,7 @@ export default function About() {
             <div className="relative h-[clamp(220px,30vw,400px)] rounded-3xl overflow-hidden border border-border">
               <Image
                 src={unsplash("1497366216548-37526070297c")}
-                alt="EduDen Kolkata center"
+                alt="eduden Kolkata center"
                 fill
                 sizes="(min-width: 1280px) 400px, 33vw"
                 className="object-cover"
@@ -155,7 +155,7 @@ export default function About() {
             The technology behind our success
           </h2>
           <p className="mt-5 text-[clamp(15px,1.4vw,17px)] leading-relaxed text-muted max-w-xl">
-            Eduden combines AI innovation and cloud technology to deliver
+            eduden combines AI innovation and cloud technology to deliver
             interactive, real-world learning. Our digital-first classrooms
             make education smarter, faster, and more engaging for every
             learner.
@@ -182,7 +182,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
           <p className="m-0 text-[clamp(21px,2.8vw,32px)] font-semibold tracking-[-0.02em] leading-[1.4] text-balance">
             &ldquo;I was a commerce graduate with zero tech background.
-            EduDen got me from &lsquo;what is Linux?&rsquo; to a paid
+            eduden got me from &lsquo;what is Linux?&rsquo; to a paid
             cybersecurity internship in under six months.&rdquo;
           </p>
           <div className="mt-8 text-sm font-bold">Sayan Banerjee</div>

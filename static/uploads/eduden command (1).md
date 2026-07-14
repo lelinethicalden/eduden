@@ -9,7 +9,7 @@ Use the attached MD files as an additional content source. These MD files contai
 Important requirements:
 
 1. Existing Website Content  
-   Use all content from the current EduDen website and place it correctly across the respective pages. Do not miss important sections, course details, page content, CTAs, contact information, or navigation items.  
+   Use all content from the current eduden website and place it correctly across the respective pages. Do not miss important sections, course details, page content, CTAs, contact information, or navigation items.  
 2. Management Course Content  
    Use the attached MD files to add the Management-related course content into the website.  
 3. What’s New Page  
@@ -32,9 +32,9 @@ After login, users should be able to view:
 Before login, show a clean placement landing section that explains the benefit of the placement portal and encourages students to log in.
 
 6. Visual Design Direction  
-   Use the current EduDen logo and brand colors, but make the design look slightly more colorful and visually engaging. The current direction feels too subtle, so use the brand colors more confidently across the interface.
+   Use the current eduden logo and brand colors, but make the design look slightly more colorful and visually engaging. The current direction feels too subtle, so use the brand colors more confidently across the interface.
 
-Use EduDen’s yellow/gold as the primary highlight color, but support it with complementary warm tones, soft gradients, colorful cards, section backgrounds, icons, badges, and visual accents. The design should still feel professional and trustworthy, but not plain or overly muted.
+Use eduden’s yellow/gold as the primary highlight color, but support it with complementary warm tones, soft gradients, colorful cards, section backgrounds, icons, badges, and visual accents. The design should still feel professional and trustworthy, but not plain or overly muted.
 
 Make the UI feel:
 
@@ -57,7 +57,7 @@ Use color in a controlled way:
 * Interactive hover states  
 * Accent icons and illustrations
 
-Do not use random colors that clash with the EduDen brand. The design should feel colorful while still staying within the brand identity.
+Do not use random colors that clash with the eduden brand. The design should feel colorful while still staying within the brand identity.
 
 7. Overall UI Direction  
    Keep the design modern, professional, student-friendly, and conversion-focused. The website should feel trustworthy, practical, skill-based, and career-oriented.  

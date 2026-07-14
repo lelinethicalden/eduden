@@ -107,7 +107,7 @@ a:hover { color: #111111; }
         </div>
         <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;background:#F4F2ED;border:1px solid {{ consentBorder }};border-radius:12px;padding:14px 16px">
           <input type="checkbox" checked="{{ consent }}" onChange="{{ toggleConsent }}" style="width:17px;height:17px;margin-top:1px;accent-color:#111111;flex:none">
-          <span style="font-size:13px;line-height:1.55;color:#6B6861">I agree to receive updates about courses, batches and offers from EduDen via WhatsApp, call or email.</span>
+          <span style="font-size:13px;line-height:1.55;color:#6B6861">I agree to receive updates about courses, batches and offers from eduden via WhatsApp, call or email.</span>
         </label>
         <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;font-weight:600;color:#D64040;margin-top:-10px">Please tick the consent box so we can contact you.</span></sc-if>
         <button onClick="{{ submit }}" style="border:none;background:#FFD300;color:#111111;font-family:inherit;font-weight:700;font-size:15px;padding:17px;border-radius:999px;cursor:pointer" style-hover="background:#FDC804;color:#111111">Submit Inquiry</button>

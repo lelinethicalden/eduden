@@ -1,8 +1,8 @@
-Redesign the complete EduDen website UI using the current website as the base reference: [https://www.eduden.io/](https://www.eduden.io/)
+Redesign the complete eduden website UI using the current website as the base reference: [https://www.eduden.io/](https://www.eduden.io/)
 
-Use the same EduDen logo, brand colors, and existing brand identity from the current website. Do not create a new logo or change the core brand color palette. Extract the current logo colors and use them consistently across buttons, highlights, icons, cards, gradients, and section accents.
+Use the same eduden logo, brand colors, and existing brand identity from the current website. Do not create a new logo or change the core brand color palette. Extract the current logo colors and use them consistently across buttons, highlights, icons, cards, gradients, and section accents.
 
-Also use the attached inspiration images as the visual direction. Combine the existing EduDen brand with the mood, layout style, spacing, and modern UI treatment from the reference images. The final design should feel premium, modern, trustworthy, educational, practical, and career-focused.
+Also use the attached inspiration images as the visual direction. Combine the existing eduden brand with the mood, layout style, spacing, and modern UI treatment from the reference images. The final design should feel premium, modern, trustworthy, educational, practical, and career-focused.
 
 Design the full website, including all major pages and responsive mobile versions.
 
@@ -24,7 +24,7 @@ Pages to design:
 
 Overall design direction:
 
-Create a modern ed-tech platform UI that feels practical, skill-based, and industry-ready. EduDen should not look like a generic online course website. It should feel like a career-growth platform for students and professionals who want hands-on learning, mentorship, projects, certifications, and placement support.
+Create a modern ed-tech platform UI that feels practical, skill-based, and industry-ready. eduden should not look like a generic online course website. It should feel like a career-growth platform for students and professionals who want hands-on learning, mentorship, projects, certifications, and placement support.
 
 The design should communicate:
 
@@ -38,7 +38,7 @@ The design should communicate:
 
 Visual style:
 
-Use a clean, modern, high-contrast layout. Keep the existing EduDen color identity, but make the interface more premium and structured. Use strong typography, generous spacing, rounded cards, clean grids, smooth hover states, and modern section transitions.
+Use a clean, modern, high-contrast layout. Keep the existing eduden color identity, but make the interface more premium and structured. Use strong typography, generous spacing, rounded cards, clean grids, smooth hover states, and modern section transitions.
 
 The UI should feel:
 
@@ -56,7 +56,7 @@ Avoid:
 * Cluttered layouts  
 * Too many repeated sections  
 * Generic stock-photo-heavy design  
-* Random colors outside the EduDen palette  
+* Random colors outside the eduden palette  
 * Overly childish education visuals  
 * Low-quality icons  
 * Weak CTA hierarchy  
@@ -70,7 +70,7 @@ Navigation:
 
 Design a sticky header with:
 
-* EduDen logo on the left  
+* eduden logo on the left  
 * Home  
 * About Us  
 * Courses  
@@ -107,14 +107,14 @@ Include trust indicators:
 * Certificate on completion  
 * Hybrid learning support
 
-Add a modern visual element in the hero: course dashboard preview, floating course cards, mentor/student visuals, or abstract tech-learning graphics using EduDen brand colors.
+Add a modern visual element in the hero: course dashboard preview, floating course cards, mentor/student visuals, or abstract tech-learning graphics using eduden brand colors.
 
 Home sections:
 
 1. Hero  
 2. Course categories  
 3. Featured courses  
-4. Why EduDen  
+4. Why eduden  
 5. Hands-on learning process  
 6. Student success / placement outcomes  
 7. Upcoming micro courses  
@@ -164,7 +164,7 @@ Course cards should be highly scannable and not text-heavy. Use consistent card 
 
 Course Detail Page Template:
 
-Design a premium course detail page for any EduDen course.
+Design a premium course detail page for any eduden course.
 
 Sections:
 
@@ -195,7 +195,7 @@ Make the course detail page conversion-focused but not aggressive. The user shou
 
 About Us Page:
 
-Design an About page that explains EduDen’s mission clearly:
+Design an About page that explains eduden’s mission clearly:
 
 * Practical education  
 * Industry-focused learning  
@@ -207,8 +207,8 @@ Design an About page that explains EduDen’s mission clearly:
 Sections:
 
 1. About hero  
-2. EduDen mission  
-3. What makes EduDen different  
+2. eduden mission  
+3. What makes eduden different  
 4. Learning philosophy  
 5. Impact/stats  
 6. Instructor quality  
@@ -248,7 +248,7 @@ Certificate Verify Page:
 
 Design a simple trust-focused verification page:
 
-* Hero: “Verify EduDen Certificate”  
+* Hero: “Verify eduden Certificate”  
 * Input field for certificate ID  
 * CTA: Verify Certificate  
 * Result state: Valid certificate  
@@ -322,7 +322,7 @@ Thank You Page:
 Create a clear confirmation page:
 
 * “Thank you\! Your inquiry has been submitted.”  
-* Mention that EduDen will contact the student soon.  
+* Mention that eduden will contact the student soon.  
 * CTA: Explore More Courses  
 * CTA: Back to Home
 
@@ -362,7 +362,7 @@ Footer:
 
 Include:
 
-* EduDen logo  
+* eduden logo  
 * Short brand description  
 * Quick links  
 * Course categories  
@@ -394,5 +394,5 @@ Design desktop, tablet, and mobile versions. Mobile is very important. Keep CTAs
 
 Output expectation:
 
-Create a complete UI design system and page designs in Figma-ready format. Keep all pages visually consistent. Use the current EduDen brand colors and logo. Use the attached inspiration images for layout, spacing, visual rhythm, component style, and overall UI feel. Make the final website look modern, credible, and conversion-focused while still feeling approachable for students.
+Create a complete UI design system and page designs in Figma-ready format. Keep all pages visually consistent. Use the current eduden brand colors and logo. Use the attached inspiration images for layout, spacing, visual rhythm, component style, and overall UI feel. Make the final website look modern, credible, and conversion-focused while still feeling approachable for students.
 

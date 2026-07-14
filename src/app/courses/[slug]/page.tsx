@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!course) return {};
 
   return {
-    title: `${course.title} — EduDen`,
+    title: `${course.title} — eduden`,
     description: course.blurb,
   };
 }

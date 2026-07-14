@@ -279,7 +279,7 @@ export default function Enroll() {
               />
               <span className="text-[13px] leading-snug text-muted">
                 I agree to receive updates about courses, batches and
-                offers from EduDen via WhatsApp, call or email.
+                offers from eduden via WhatsApp, call or email.
               </span>
             </label>
             {errors.consent && (

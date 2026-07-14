@@ -44,7 +44,7 @@ export default function Verify() {
           </h1>
           <p className="mt-6 mx-auto max-w-md text-[15px] leading-relaxed text-muted">
             Enter the certificate ID printed on the certificate to confirm
-            it was issued by EduDen.
+            it was issued by eduden.
           </p>
           <div className="mt-9 flex gap-2 bg-white border border-border rounded-full py-1.5 pl-5.5 pr-1.5 items-center text-left">
             <input
@@ -87,7 +87,7 @@ export default function Verify() {
                     Valid certificate
                   </div>
                   <div className="text-[13px] text-muted font-medium">
-                    This certificate was issued by EduDen.
+                    This certificate was issued by eduden.
                   </div>
                 </div>
               </div>
@@ -204,7 +204,7 @@ export default function Verify() {
           <div className="relative h-[clamp(200px,26vw,340px)] rounded-[20px] overflow-hidden border border-border mt-9">
             <Image
               src={unsplash("1543286386-713bdd548da4")}
-              alt="Sample EduDen certificate image"
+              alt="Sample eduden certificate image"
               fill
               sizes="(min-width: 1280px) 760px, 100vw"
               className="object-cover"

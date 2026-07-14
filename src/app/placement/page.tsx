@@ -51,7 +51,7 @@ const JOBS = [
       "Willingness to work rotational shifts",
     ],
     eligibility: [
-      "EduDen Ethical Hacking or Advanced Pentesting completion",
+      "eduden Ethical Hacking or Advanced Pentesting completion",
       "Certificate verified (min 50% final score)",
       "2025–2026 batches preferred",
     ],
@@ -80,7 +80,7 @@ const JOBS = [
       "Clear business communication",
     ],
     eligibility: [
-      "EduDen Business Analytics & MIS Reporting completion",
+      "eduden Business Analytics & MIS Reporting completion",
       "MBA/BBA/B.Com or equivalent background",
       "Capstone dashboard project required in portfolio",
     ],
@@ -109,7 +109,7 @@ const JOBS = [
       "Power BI a strong plus",
     ],
     eligibility: [
-      "EduDen Business Analytics & MIS Reporting completion",
+      "eduden Business Analytics & MIS Reporting completion",
       "Any graduate background — no coding required",
     ],
     apply:
@@ -137,7 +137,7 @@ const JOBS = [
       "CTF or bug bounty activity a plus",
     ],
     eligibility: [
-      "EduDen Advanced Network Pentesting or Ethical Hacking + Bug Bounty completion",
+      "eduden Advanced Network Pentesting or Ethical Hacking + Bug Bounty completion",
       "Portfolio with at least 2 lab engagement reports",
     ],
     apply:
@@ -164,7 +164,7 @@ const JOBS = [
       "AI-assisted documentation workflow a plus",
     ],
     eligibility: [
-      "EduDen Product Management & Digital Business completion",
+      "eduden Product Management & Digital Business completion",
       "Capstone product plan required in portfolio",
     ],
     apply:
@@ -191,7 +191,7 @@ const JOBS = [
       "Careful, documented work habits",
     ],
     eligibility: [
-      "EduDen Data Science with Python or Business Analytics completion",
+      "eduden Data Science with Python or Business Analytics completion",
       "Any 2025–2026 batch",
     ],
     apply:
@@ -219,7 +219,7 @@ const JOBS = [
       "Excel/Sheets fluency",
     ],
     eligibility: [
-      "EduDen Cyber GRC, Risk & Data Privacy completion",
+      "eduden Cyber GRC, Risk & Data Privacy completion",
       "Commerce, law, management or audit background welcome — no coding required",
     ],
     apply:
