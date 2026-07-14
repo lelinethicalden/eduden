@@ -243,7 +243,7 @@ export default function Contact() {
                   Mon–Sat · 10:00–19:00 IST
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline py-5 px-1">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline py-5 px-1">
                 <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
                   Social
                 </div>
@@ -261,7 +261,7 @@ export default function Contact() {
                     YouTube
                   </a>
                 </div>
-              </div>
+              </div> */}
               <div className="relative h-[clamp(200px,24vw,300px)] rounded-[20px] overflow-hidden border border-border mt-6">
                 <Image
                   src={unsplash("1497366216548-37526070297c")}
@@ -286,12 +286,13 @@ export default function Contact() {
                 <div className="text-sm font-bold">
                   eduden — South Dumdum, Kolkata
                 </div>
-                <a
-                  href="#"
+                <Link
+                  href="https://maps.app.goo.gl/fsvD1MsmkP7dKvjx5"
+                  target="_blank"
                   className="text-[12.5px] font-bold text-bg border border-white/35 px-4 py-2 rounded-full hover:border-accent hover:text-accent"
                 >
                   Open in Maps →
-                </a>
+                </Link>
               </div>
             </div>
           </div>

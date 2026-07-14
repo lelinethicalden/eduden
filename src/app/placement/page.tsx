@@ -472,19 +472,6 @@ export default function Placement() {
                 >
                   Log In
                 </button>
-                <div className="text-[12.5px] leading-relaxed text-muted text-center">
-                  Demo:{" "}
-                  <button
-                    onClick={() => {
-                      setEmail("student@eduden.io");
-                      setPassword("eduden2026");
-                      setLoginError(false);
-                    }}
-                    className="border-none bg-transparent font-[inherit] font-bold text-[12.5px] cursor-pointer text-fg border-b-2 border-accent pb-0.25"
-                  >
-                    student@eduden.io / eduden2026
-                  </button>
-                </div>
                 <div className="border-t border-border pt-4 text-[13px] leading-relaxed text-muted text-center">
                   Not enrolled yet?{" "}
                   <Link href="/enroll" className="font-bold border-b-2 border-accent">
