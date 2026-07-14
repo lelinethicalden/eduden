@@ -13,8 +13,7 @@ export default function Footer() {
                 eduden
               </div>
               <p className="text-sm leading-relaxed max-w-xs">
-                Hands-on, mentor-led tech education in Kolkata &amp; online.
-                Real projects, verified assignments, career-focused training.
+                Practical, classroom-based technology training designed to build skills, confidence, and career opportunities through real projects and expert mentorship
               </p>
             </div>
             <div className="flex flex-col gap-2.75">
@@ -90,7 +89,9 @@ export default function Footer() {
           </div>
           <div className="border-t border-white/10 mt-6 sm:mt-10 py-4 sm:py-5 flex flex-wrap gap-3 justify-between text-[12.5px] text-muted">
             <span>© 2026 eduden. All rights reserved.</span>
-            <span>Where learning meets imagination &amp; innovation</span>
+            <span>The Learning Division of <Link href="https://www.ethicalden.com/" className="text-[#FFD300] hover:underline" target="_blank">
+              Ethical Den
+            </Link></span>
           </div>
         </div>
       </footer>

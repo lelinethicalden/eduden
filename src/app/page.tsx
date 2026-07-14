@@ -55,24 +55,24 @@ const WHY = [
 
 const FAQS = [
   {
-    q: "What is eduden?",
-    a: "eduden is an EdTech platform offering innovative and accessible learning solutions",
+    q: "Which course is right for me?",
+    a: "Our team helps you choose a course based on your academic background, interests, and career goals. Whether you're a beginner or looking to specialize, we'll recommend a learning path that fits you.",
   },
   {
-    q: "How do i enroll in a course on eduden?",
-    a: "Simple sign up, browse courses, and follow the easy registration process to get started.",
+    q: "Do I need prior experience to join?",
+    a: "Many of our beginner courses are designed for students with no prior technical experience. Advanced programs may have recommended prerequisites, which are clearly mentioned on each course page.",
   },
   {
-    q: "Do eduden courses come with certificates?",
-    a: "Yes, eduden provides certificates upon successful course completion.",
+    q: "How are the classes conducted?",
+    a: "Classes are conducted in a classroom environment with experienced mentors, practical exercises, assignments, and project-based learning to ensure students gain hands-on experience.",
   },
   {
-    q: "Is the tutor support available on eduden?",
-    a: "Yes, expert tutors are available to guide and support you throughout your learning journey.",
+    q: "Will I work on real projects?",
+    a: "Yes. Every course includes practical assignments, mini projects, and a capstone project that helps you build a portfolio and apply what you learn.",
   },
   {
-    q: "How do i make the payments for eduden courses?",
-    a: "Payments can be made securely using credit/debit cards, digital wallets, or other online methods.",
+    q: "Will this course help me prepare for my career?",
+    a: "Our courses are designed to build practical skills, strengthen your portfolio, and improve your confidence for internships, placements, and future career opportunities.",
   },
 ];
 
@@ -337,7 +337,7 @@ export default function Home() {
             />
           </div>
           <p className="m-0 text-[clamp(21px,2.8vw,32px)] font-semibold tracking-[-0.02em] leading-[1.4] text-balance">
-            &ldquo;I joined knowing nothing about cybersecurity. 45 days
+            &ldquo;Beaing from nothing about cybersecurity. 45 days
             later I had 3 projects, a certificate, and the confidence to
             clear my SOC Analyst interview.&rdquo;
           </p>
