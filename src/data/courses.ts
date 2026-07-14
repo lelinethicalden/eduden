@@ -1351,7 +1351,7 @@ export const COURSES: Course[] = [
     tag: "Bestseller",
     img: unsplash("1526374965328-7f61d4dc18c5"),
     blurb:
-      "Legally break into systems, find security flaws, and help companies fix them — from absolute zero.",
+      "Think like an attacker, defend like a professional, and build practical cybersecurity skills.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
