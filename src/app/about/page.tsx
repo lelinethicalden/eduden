@@ -93,7 +93,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-7 py-10 md:py-26 grid gap-8 md:gap-12 grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-center">
           <div>
             <h2 className="m-0 text-[clamp(28px,3.8vw,52px)] font-black tracking-[-0.035em] uppercase leading-none">
-              We provide the best quality online courses
+              Skills That Go Beyond The Classroom
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-muted-dark max-w-lg">
               Well, because we&apos;re not your grandma&apos;s boring old
