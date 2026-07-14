@@ -141,8 +141,7 @@ export default function Home() {
               Learn.
             </div>
             <p className="mt-3.5 text-[14.5px] leading-relaxed text-fg max-w-xs">
-              Short, focused lessons live and recorded taught by people with
-              active industry careers.
+              Learn practical skills through classroom training led by industry professionals.
             </p>
           </div>
           <div>
