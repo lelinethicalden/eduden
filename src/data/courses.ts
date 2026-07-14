@@ -43,7 +43,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1543286386-713bdd548da4"),
     blurb:
-      "Build dashboards with Excel, SQL and Power BI — made for MBA, BBA, Commerce and Arts students. No coding needed.",
+      "Build practical business analytics skills with Excel, SQL and Power BI through real projects and guided learning.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
