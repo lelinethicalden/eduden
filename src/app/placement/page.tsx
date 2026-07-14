@@ -3,6 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import AppIcon from "@/components/AppIcon";
+import apiClient, { type ApiError } from "@/lib/api-client";
+import { mapPlacement, type Placement, type PlacementsResponse } from "@/lib/placements";
+import { getToken, removeToken, setToken } from "@/lib/token";
 import { unsplash } from "@/lib/unsplash";
 
 const PROCESS = [
@@ -28,206 +32,20 @@ const PROCESS = [
   },
 ];
 
-const JOBS = [
-  {
-    id: "soc-shieldworks",
-    title: "SOC Analyst (L1)",
-    company: "ShieldWorks MSSP",
-    location: "Kolkata (on-site)",
-    type: "Full-time",
-    salary: "₹3.5–4.5 LPA",
-    track: "Cyber Security",
-    deadline: "Jul 25, 2026",
-    deadlineISO: "2026-07-25",
-    isNew: true,
-    about:
-      "ShieldWorks is a managed security services provider running 24/7 SOC operations for banking and SaaS clients across India.",
-    description:
-      "Monitor SIEM alerts, triage incidents, escalate confirmed threats, and document findings. You'll rotate across log analysis, phishing triage and threat-intel enrichment in your first six months.",
-    requirements: [
-      "Working knowledge of networking (TCP/IP, ports, protocols)",
-      "Familiarity with SIEM concepts and log analysis",
-      "Clear written incident documentation",
-      "Willingness to work rotational shifts",
-    ],
-    eligibility: [
-      "eduden Ethical Hacking or Advanced Pentesting completion",
-      "Certificate verified (min 50% final score)",
-      "2025–2026 batches preferred",
-    ],
-    apply:
-      "Apply through the placement team with your verified certificate ID and portfolio. Shortlisted candidates get a mock interview with the placement team before the company round.",
-  },
-  {
-    id: "ba-finedge",
-    title: "Business Analyst Trainee",
-    company: "FinEdge Analytics",
-    location: "Kolkata / Remote",
-    type: "Full-time",
-    salary: "₹3–4 LPA",
-    track: "Management & Analytics",
-    deadline: "Jul 30, 2026",
-    deadlineISO: "2026-07-30",
-    isNew: true,
-    about:
-      "FinEdge builds reporting and analytics products for mid-size NBFCs and fintech startups.",
-    description:
-      "Prepare MIS reports, maintain Power BI dashboards, and support monthly business reviews. You'll work directly with the analytics lead on client reporting.",
-    requirements: [
-      "Strong Excel (pivot tables, lookups, conditional formatting)",
-      "Basic SQL (SELECT, GROUP BY, joins)",
-      "Power BI dashboard experience — portfolio required",
-      "Clear business communication",
-    ],
-    eligibility: [
-      "eduden Business Analytics & MIS Reporting completion",
-      "MBA/BBA/B.Com or equivalent background",
-      "Capstone dashboard project required in portfolio",
-    ],
-    apply:
-      "Submit your dashboard portfolio and certificate ID via the placement team. The company round includes a 45-minute Excel + SQL practical.",
-  },
-  {
-    id: "mis-orbit",
-    title: "MIS Executive",
-    company: "Orbit Retail Group",
-    location: "Kolkata (on-site)",
-    type: "Full-time",
-    salary: "₹2.8–3.5 LPA",
-    track: "Management & Analytics",
-    deadline: "Aug 5, 2026",
-    deadlineISO: "2026-08-05",
-    isNew: true,
-    about:
-      "Orbit runs 40+ retail outlets across East India with a central operations and reporting team in Kolkata.",
-    description:
-      "Own daily sales and inventory reporting across outlets. Build and maintain Excel/Power BI reports for store managers and leadership.",
-    requirements: [
-      "Advanced Excel with large datasets",
-      "Report automation mindset",
-      "Attention to detail with reconciliations",
-      "Power BI a strong plus",
-    ],
-    eligibility: [
-      "eduden Business Analytics & MIS Reporting completion",
-      "Any graduate background — no coding required",
-    ],
-    apply:
-      "Apply via the placement team. Walk-in assessment at the Kolkata office: a 30-minute Excel reporting task.",
-  },
-  {
-    id: "pentest-redcell",
-    title: "Junior Penetration Tester",
-    company: "RedCell Security",
-    location: "Remote (India)",
-    type: "Full-time",
-    salary: "₹4.5–6 LPA",
-    track: "Cyber Security",
-    deadline: "Aug 10, 2026",
-    deadlineISO: "2026-08-10",
-    isNew: false,
-    about:
-      "RedCell is a boutique offensive-security firm doing web, network and mobile assessments for fintech and healthcare clients.",
-    description:
-      "Assist senior testers on scoped engagements: recon, vulnerability validation, exploitation under supervision, and drafting findings for client reports.",
-    requirements: [
-      "Solid OWASP Top 10 hands-on knowledge",
-      "Burp Suite, Nmap, Metasploit proficiency",
-      "One complete pentest report writing sample",
-      "CTF or bug bounty activity a plus",
-    ],
-    eligibility: [
-      "eduden Advanced Network Pentesting or Ethical Hacking + Bug Bounty completion",
-      "Portfolio with at least 2 lab engagement reports",
-    ],
-    apply:
-      "Send your report samples and certificate ID to the placement team. Company round: a 4-hour take-home lab followed by a findings walkthrough.",
-  },
-  {
-    id: "pa-loopwork",
-    title: "Product Analyst Trainee",
-    company: "Loopwork (SaaS)",
-    location: "Remote (India)",
-    type: "Internship → Full-time",
-    salary: "₹15k/mo stipend",
-    track: "Management & Analytics",
-    deadline: "Aug 12, 2026",
-    deadlineISO: "2026-08-12",
-    isNew: true,
-    about: "Loopwork builds workflow software for service teams — a 30-person product-led startup.",
-    description:
-      "Support the product team with user research summaries, feature usage reports, competitor teardowns and PRD drafting. Six-month internship with conversion path.",
-    requirements: [
-      "User research and persona documentation skills",
-      "One complete product case study (PRD + wireframes)",
-      "Comfort with Notion, Figma basics and spreadsheets",
-      "AI-assisted documentation workflow a plus",
-    ],
-    eligibility: [
-      "eduden Product Management & Digital Business completion",
-      "Capstone product plan required in portfolio",
-    ],
-    apply:
-      "Share your capstone product plan via the placement team. Shortlist includes a product-thinking discussion with Loopwork's PM.",
-  },
-  {
-    id: "da-metric",
-    title: "Data Analyst Intern",
-    company: "Metric Labs",
-    location: "Kolkata (hybrid)",
-    type: "Internship",
-    salary: "₹12k/mo stipend",
-    track: "Data & AI",
-    deadline: "Aug 18, 2026",
-    deadlineISO: "2026-08-18",
-    isNew: false,
-    about:
-      "Metric Labs is a data consultancy serving e-commerce and D2C brands with reporting and experimentation.",
-    description:
-      "Clean client datasets, maintain weekly dashboards, and assist analysts with ad-hoc SQL pulls and chart preparation for client reviews.",
-    requirements: [
-      "Python or SQL for data handling",
-      "Visualization fundamentals (Power BI or similar)",
-      "Careful, documented work habits",
-    ],
-    eligibility: [
-      "eduden Data Science with Python or Business Analytics completion",
-      "Any 2025–2026 batch",
-    ],
-    apply:
-      "Apply with your certificate ID and one dashboard or notebook sample. Interviews run weekly through the placement team.",
-  },
-  {
-    id: "grc-assurexa",
-    title: "GRC Analyst Trainee",
-    company: "Assurexa Consulting",
-    location: "Kolkata / Remote",
-    type: "Full-time",
-    salary: "₹3–4 LPA",
-    track: "Cyber Security",
-    deadline: "Aug 22, 2026",
-    deadlineISO: "2026-08-22",
-    isNew: true,
-    about:
-      "Assurexa helps mid-market companies with ISO 27001 readiness, vendor risk and privacy compliance.",
-    description:
-      "Support consultants on risk registers, policy drafting, evidence collection and audit preparation across 3–4 client accounts.",
-    requirements: [
-      "Risk register and policy documentation skills",
-      "ISO 27001 awareness",
-      "Strong written English",
-      "Excel/Sheets fluency",
-    ],
-    eligibility: [
-      "eduden Cyber GRC, Risk & Data Privacy completion",
-      "Commerce, law, management or audit background welcome — no coding required",
-    ],
-    apply:
-      "Submit your GRC documentation pack (capstone) via the placement team. Company round: a policy-writing exercise and case discussion.",
-  },
-];
-
 const VIEWS = ["All", "Saved", "Applied"] as const;
+
+type ApiUser = {
+  id: number;
+  username: string;
+  email: string;
+  user_type: string;
+};
+
+type LoginResponse = {
+  success: boolean;
+  message: string;
+  user_data: ApiUser & { token: string };
+};
 
 function readJSON(key: string): string[] {
   try {
@@ -240,38 +58,72 @@ function readJSON(key: string): string[] {
 
 export default function Placement() {
   const [auth, setAuth] = useState(false);
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState<ApiUser | null>(null);
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
-  const [loginError, setLoginError] = useState(false);
-  const [selected, setSelected] = useState(-1);
-  const [track, setTrack] = useState("All");
-  const [view, setView] = useState("All");
+  const [loginErrorMsg, setLoginErrorMsg] = useState("");
+  const [loggingIn, setLoggingIn] = useState(false);
+  const [view, setView] = useState<(typeof VIEWS)[number]>("All");
   const [query, setQuery] = useState("");
   const [saved, setSaved] = useState<string[]>([]);
   const [applied, setApplied] = useState<string[]>([]);
 
+  const [jobs, setJobs] = useState<Placement[]>([]);
+  const [jobsLoading, setJobsLoading] = useState(false);
+  const [jobsError, setJobsError] = useState("");
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
+  const [totalCount, setTotalCount] = useState<number | null>(null);
+
   // One-time hydration from browser storage on mount — there is no
-  // synchronous way to read sessionStorage/localStorage during SSR.
+  // synchronous way to read the token cookie / sessionStorage during SSR.
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
-    try {
-      if (sessionStorage.getItem("eduden_placement_auth") === "1") {
-        setAuth(true);
-        setEmail(sessionStorage.getItem("eduden_placement_email") || "student@eduden.io");
-      }
-    } catch {}
+    if (getToken()) {
+      try {
+        const raw = sessionStorage.getItem("eduden_placement_user");
+        if (raw) setUser(JSON.parse(raw));
+      } catch {}
+      setAuth(true);
+    }
     setSaved(readJSON("eduden_placement_saved"));
     setApplied(readJSON("eduden_placement_applied"));
   }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
 
+  async function fetchPlacements(pageNum: number) {
+    setJobsLoading(true);
+    setJobsError("");
+    try {
+      const data = await apiClient.get<PlacementsResponse>(
+        `/placements/?page=${pageNum}`,
+        getToken()
+      );
+      const mapped = data.data.map(mapPlacement);
+      setJobs((prev) => (pageNum === 1 ? mapped : [...prev, ...mapped]));
+      setHasMore(Boolean(data.next));
+      setTotalCount(data.count);
+      setPage(pageNum);
+    } catch (err) {
+      setJobsError((err as ApiError).message || "Couldn't load placements.");
+    } finally {
+      setJobsLoading(false);
+    }
+  }
+
+  /* eslint-disable react-hooks/set-state-in-effect */
+  useEffect(() => {
+    if (auth) fetchPlacements(1);
+  }, [auth]);
+  /* eslint-enable react-hooks/set-state-in-effect */
+
   const withMeta = useMemo(() => {
     const now = new Date();
-    return JOBS.map((j) => {
+    return jobs.map((j) => {
       const daysLeft = Math.max(
         0,
-        Math.ceil((new Date(j.deadlineISO).getTime() - now.getTime()) / 86400000)
+        Math.ceil((new Date(j.deadline).getTime() - now.getTime()) / 86400000)
       );
       return {
         ...j,
@@ -282,47 +134,55 @@ export default function Placement() {
         daysLeftLabel: "Closes in " + daysLeft + " days",
       };
     });
-  }, [applied, saved]);
-
-  const tracks = ["All", ...Array.from(new Set(JOBS.map((j) => j.track)))];
+  }, [jobs, applied, saved]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return withMeta.filter(
       (j) =>
-        (track === "All" || j.track === track) &&
         (view === "All" ||
           (view === "Saved" && j.savedFlag) ||
           (view === "Applied" && j.appliedFlag)) &&
         (!q ||
-          (j.title + " " + j.company + " " + j.track + " " + j.location + " " + j.requirements.join(" "))
+          (j.title + " " + j.company + " " + j.type + " " + j.location + " " + j.experience)
             .toLowerCase()
             .includes(q))
     );
-  }, [withMeta, track, view, query]);
+  }, [withMeta, view, query]);
 
-  function login() {
-    const ok =
-      email.trim().toLowerCase() === "student@eduden.io" && password === "eduden2026";
-    if (ok) {
+  async function login() {
+    setLoginErrorMsg("");
+    setLoggingIn(true);
+    try {
+      const data = await apiClient.post<LoginResponse>("/login/", {
+        username: username.trim(),
+        password,
+      });
+      if (!data.success) {
+        setLoginErrorMsg(data.message || "Incorrect username or password.");
+        return;
+      }
+      const { token, ...u } = data.user_data;
+      setToken(token);
       try {
-        sessionStorage.setItem("eduden_placement_auth", "1");
-        sessionStorage.setItem("eduden_placement_email", email.trim());
+        sessionStorage.setItem("eduden_placement_user", JSON.stringify(u));
       } catch {}
+      setUser(u);
       setAuth(true);
-      setLoginError(false);
-    } else {
-      setLoginError(true);
+    } catch (err) {
+      setLoginErrorMsg((err as ApiError).message || "Incorrect username or password.");
+    } finally {
+      setLoggingIn(false);
     }
   }
 
   function logout() {
+    removeToken();
     try {
-      sessionStorage.removeItem("eduden_placement_auth");
-      sessionStorage.removeItem("eduden_placement_email");
+      sessionStorage.removeItem("eduden_placement_user");
     } catch {}
     setAuth(false);
-    setSelected(-1);
+    setUser(null);
     setPassword("");
   }
 
@@ -333,17 +193,6 @@ export default function Placement() {
     } catch {}
     setSaved(next);
   }
-
-  function apply(id: string) {
-    const next = [...applied, id];
-    try {
-      localStorage.setItem("eduden_placement_applied", JSON.stringify(next));
-    } catch {}
-    setApplied(next);
-  }
-
-  const job = selected >= 0 ? withMeta[selected] : null;
-  const showDetail = auth && selected >= 0 && job;
 
   const emptyByView: Record<string, [string, string]> = {
     Saved: ["No saved roles yet.", "Tap ☆ Save on any role to keep it here for later."],
@@ -379,7 +228,7 @@ export default function Placement() {
                 <div className="border-b border-border-strong py-3.5 px-1 flex justify-between gap-4 text-sm font-semibold">
                   <span>Live postings matched to your course track</span>
                   <span className="text-[#B98E00] font-bold whitespace-nowrap">
-                    {JOBS.length} open now
+                    Updated weekly
                   </span>
                 </div>
                 <div className="border-b border-border-strong py-3.5 px-1 text-sm font-semibold">
@@ -421,17 +270,17 @@ export default function Placement() {
               </p>
               <div className="flex flex-col gap-4.5">
                 <div className="flex flex-col gap-1.75">
-                  <label className="text-[13px] font-bold">Email</label>
+                  <label className="text-[13px] font-bold">Username</label>
                   <input
-                    value={email}
+                    value={username}
                     onChange={(e) => {
-                      setEmail(e.target.value);
-                      setLoginError(false);
+                      setUsername(e.target.value);
+                      setLoginErrorMsg("");
                     }}
                     onKeyDown={(e) => e.key === "Enter" && login()}
-                    placeholder="you@example.com"
+                    placeholder="EDU-STU-00003"
                     className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg ${
-                      loginError ? "border-[#D64040]" : "border-border"
+                      loginErrorMsg ? "border-[#D64040]" : "border-border"
                     }`}
                   />
                 </div>
@@ -439,7 +288,7 @@ export default function Placement() {
                   <label className="text-[13px] font-bold">Password</label>
                   <div
                     className={`flex items-center gap-2 border rounded-xl bg-bg pr-1.5 ${
-                      loginError ? "border-[#D64040]" : "border-border"
+                      loginErrorMsg ? "border-[#D64040]" : "border-border"
                     }`}
                   >
                     <input
@@ -447,7 +296,7 @@ export default function Placement() {
                       value={password}
                       onChange={(e) => {
                         setPassword(e.target.value);
-                        setLoginError(false);
+                        setLoginErrorMsg("");
                       }}
                       onKeyDown={(e) => e.key === "Enter" && login()}
                       placeholder="••••••••"
@@ -461,16 +310,17 @@ export default function Placement() {
                     </button>
                   </div>
                 </div>
-                {loginError && (
+                {loginErrorMsg && (
                   <span className="text-[12.5px] font-semibold text-[#D64040]">
-                    Incorrect email or password. Try the demo credentials below.
+                    {loginErrorMsg}
                   </span>
                 )}
                 <button
                   onClick={login}
-                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent"
+                  disabled={loggingIn}
+                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Log In
+                  {loggingIn ? "Logging in…" : "Log In"}
                 </button>
                 <div className="border-t border-border pt-4 text-[13px] leading-relaxed text-muted text-center">
                   Not enrolled yet?{" "}
@@ -538,134 +388,6 @@ export default function Placement() {
     );
   }
 
-  if (showDetail && job) {
-    return (
-      <section className="bg-bg min-h-[70vh]">
-        <div className="max-w-[980px] mx-auto px-4 sm:px-7 pt-8 md:pt-16 pb-10 md:pb-24">
-          <div className="flex justify-between items-center gap-4 flex-wrap mb-9">
-            <button
-              onClick={() => setSelected(-1)}
-              className="border-none bg-transparent font-[inherit] font-bold text-sm cursor-pointer text-fg border-b-2 border-accent pb-0.5"
-            >
-              ← All roles
-            </button>
-            <div className="flex items-center gap-2.5">
-              <span className="text-[13px] font-semibold text-muted">
-                {selected + 1} of {JOBS.length}
-              </span>
-              <button
-                onClick={() => setSelected((selected - 1 + JOBS.length) % JOBS.length)}
-                className="border border-border-strong bg-transparent w-9 h-9 rounded-full cursor-pointer text-sm text-fg font-[inherit] "
-              >
-                ←
-              </button>
-              <button
-                onClick={() => setSelected((selected + 1) % JOBS.length)}
-                className="border border-border-strong bg-transparent w-9 h-9 rounded-full cursor-pointer text-sm text-fg font-[inherit] "
-              >
-                →
-              </button>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 mb-5">
-            <span className="w-2 h-2 bg-accent rounded-sm" />
-            <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
-              {job.track} · {job.type} · {job.daysLeftLabel}
-            </span>
-          </div>
-          <h1 className="m-0 text-[clamp(30px,4vw,54px)] font-black tracking-[-0.035em] uppercase leading-[0.98]">
-            {job.title}
-          </h1>
-          <div className="text-[15px] font-semibold text-muted mt-3.5">
-            {job.company} · {job.location} · {job.salary}
-          </div>
-
-          {!job.appliedFlag ? (
-            <div className="flex gap-3 flex-wrap mt-7">
-              <button
-                onClick={() => apply(job.id)}
-                className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[14.5px] px-7 py-3.5 rounded-full cursor-pointer hover:bg-accent"
-              >
-                Apply via Placement Team
-              </button>
-              <button
-                onClick={() => toggleSave(job.id)}
-                className={`font-[inherit] font-semibold text-[14.5px] px-7 py-3.5 rounded-full cursor-pointer border  ${
-                  job.savedFlag ? "bg-accent border-accent" : "bg-transparent border-border-strong"
-                }`}
-              >
-                {job.savedFlag ? "★ Saved" : "☆ Save for later"}
-              </button>
-            </div>
-          ) : (
-            <div className="mt-7 bg-white border border-[#1DA954] rounded-2xl p-5 md:p-6 flex gap-3.5 items-start max-w-lg">
-              <span className="flex-none w-7 h-7 rounded-full bg-[#1DA954] text-white flex items-center justify-center text-[13px] font-black">
-                ✓
-              </span>
-              <div>
-                <div className="text-[15px] font-extrabold">
-                  Application sent to the placement team
-                </div>
-                <p className="mt-1.5 mb-0 text-[13.5px] leading-relaxed text-muted">
-                  They&apos;ll review your profile against the eligibility
-                  criteria and contact you on WhatsApp within one working day
-                  with next steps.
-                </p>
-              </div>
-            </div>
-          )}
-
-          <div className="mt-9 md:mt-13 border-t border-border-strong">
-            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
-              <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
-                About the company
-              </div>
-              <p className="m-0 text-[14.5px] leading-relaxed">{job.about}</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
-              <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
-                Job description
-              </div>
-              <p className="m-0 text-[14.5px] leading-relaxed">{job.description}</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
-              <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
-                Requirements
-              </div>
-              <div>
-                {job.requirements.map((r) => (
-                  <div key={r} className="flex gap-3 items-baseline py-1">
-                    <span className="flex-none w-1.75 h-1.75 bg-accent rounded-sm -translate-y-0.5" />
-                    <span className="text-[14.5px] leading-relaxed">{r}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5.5">
-              <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
-                Eligibility
-              </div>
-              <div>
-                {job.eligibility.map((e) => (
-                  <div key={e} className="flex gap-3 items-baseline py-1">
-                    <span className="flex-none w-1.75 h-1.75 bg-accent rounded-sm -translate-y-0.5" />
-                    <span className="text-[14.5px] leading-relaxed">{e}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-[minmax(150px,1fr)_2.4fr] gap-1.5 sm:gap-5 sm:items-baseline py-5.5">
-              <div className="text-[13px] font-bold tracking-[0.1em] uppercase text-muted">
-                How to apply
-              </div>
-              <p className="m-0 text-[14.5px] leading-relaxed">{job.apply}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="bg-bg min-h-[70vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-7 pt-8 md:pt-16 pb-10 md:pb-24">
@@ -674,7 +396,7 @@ export default function Placement() {
             <div className="flex items-center gap-2 mb-5">
               <span className="w-2 h-2 bg-[#1DA954] rounded-sm" />
               <span className="text-[12.5px] font-bold tracking-[0.14em] uppercase text-muted">
-                Logged in · {email || "student@eduden.io"}
+                Logged in · {user?.email || user?.username}
               </span>
             </div>
             <h1 className="m-0 text-[clamp(32px,4.4vw,60px)] font-black tracking-[-0.04em] uppercase leading-[0.95]">
@@ -689,29 +411,38 @@ export default function Placement() {
           </button>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] border-t border-border-strong mt-8 max-w-xl">
-          <div className="pt-4.5 px-4.5 border-r border-border-strong">
-            <div className="text-[clamp(20px,2vw,26px)] font-extrabold">{JOBS.length}</div>
-            <div className="text-[12.5px] text-muted mt-0.75">Open roles</div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] border-t border-border-strong mt-12 md:mt-18">
+          <div className="pt-6 pr-6 border-r border-border-strong pl-5">
+            <div className="text-[clamp(26px,2.6vw,36px)] font-extrabold tracking-[-0.02em]">
+              {totalCount ?? jobs.length}
+            </div>
+            <div className="text-[13px] font-medium text-muted mt-1">Open roles</div>
           </div>
-          <div className="pt-4.5 px-4.5 border-r border-border-strong">
-            <div className="text-[clamp(20px,2vw,26px)] font-extrabold">{applied.length}</div>
-            <div className="text-[12.5px] text-muted mt-0.75">Applied</div>
+          <div className="pt-6 pr-6 border-r border-border-strong pl-5">
+            <div className="text-[clamp(26px,2.6vw,36px)] font-extrabold tracking-[-0.02em]">
+              {applied.length}
+            </div>
+            <div className="text-[13px] font-medium text-muted mt-1">Applied</div>
           </div>
-          <div className="pt-4.5 px-4.5 border-r border-border-strong">
-            <div className="text-[clamp(20px,2vw,26px)] font-extrabold">{saved.length}</div>
-            <div className="text-[12.5px] text-muted mt-0.75">Saved</div>
+          <div className="pt-6 pr-6 border-r border-border-strong pl-5">
+            <div className="text-[clamp(26px,2.6vw,36px)] font-extrabold tracking-[-0.02em]">
+              {saved.length}
+            </div>
+            <div className="text-[13px] font-medium text-muted mt-1">Saved</div>
           </div>
-          <div className="pt-4.5 px-4.5 border-r border-border-strong">
-            <div className="text-[clamp(20px,2vw,26px)] font-extrabold text-[#B98E00]">
+          <div className="pt-6 pr-6 border-r border-border-strong pl-5">
+            <div className="text-[clamp(26px,2.6vw,36px)] font-extrabold tracking-[-0.02em]">
               {withMeta.filter((j) => j.daysLeft <= 14).length}
             </div>
-            <div className="text-[12.5px] text-muted mt-0.75">Closing this week</div>
+            <div className="text-[13px] font-medium text-muted mt-1">Closing this week</div>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-3 items-center justify-between mt-9">
-          <div className="flex items-center gap-2.5 bg-white border border-border rounded-full py-1.25 pl-4.5 pr-1.25 max-w-[400px] flex-1 min-w-[240px]">
+          <div className="flex items-center h-11.5 bg-white border border-border rounded-full overflow-hidden max-w-[400px] flex-1 min-w-[240px] shadow-[0_0.75em_1.75em_rgba(17,17,17,0.10)]">
+            <span className="flex-none w-11 h-11 flex items-center justify-center">
+              <AppIcon icon="hugeicons:search-02" size="sm" />
+            </span>
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -721,9 +452,9 @@ export default function Placement() {
             {query && (
               <button
                 onClick={() => setQuery("")}
-                className="flex-none border-none bg-bg text-fg w-8 h-8 rounded-full cursor-pointer text-xs font-bold"
+                className="flex-none border-none bg-bg text-fg w-8 h-8 mr-1.75 rounded-full cursor-pointer flex items-center justify-center transition-transform hover:scale-110"
               >
-                ✕
+                <AppIcon icon="hugeicons:cancel-01" size="xs" />
               </button>
             )}
           </div>
@@ -741,35 +472,27 @@ export default function Placement() {
             ))}
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 mt-3.5">
-          {tracks.map((name) => {
-            const count = name === "All" ? JOBS.length : JOBS.filter((j) => j.track === name).length;
-            return (
-              <button
-                key={name}
-                onClick={() => setTrack(name)}
-                className={`font-[inherit] text-[13px] font-semibold px-4 py-2.25 rounded-full cursor-pointer border  ${
-                  track === name ? "bg-fg text-bg border-fg" : "bg-white text-muted border-border"
-                }`}
-              >
-                {name} ({count})
-              </button>
-            );
-          })}
-        </div>
 
         <div className="text-[13px] font-semibold text-muted mt-5.5 mb-2">
-          {filtered.length} role{filtered.length === 1 ? "" : "s"}
-          {view !== "All" ? " · " + view.toLowerCase() : ""}
-          {track !== "All" ? " · " + track : ""}
+          {jobsLoading && jobs.length === 0
+            ? "Loading roles…"
+            : `${filtered.length} role${filtered.length === 1 ? "" : "s"}${
+                view !== "All" ? " · " + view.toLowerCase() : ""
+              }`}
         </div>
+
+        {jobsError && (
+          <div className="border border-[#D64040] bg-white rounded-2xl p-5 text-[13.5px] font-semibold text-[#D64040] mb-4">
+            {jobsError}
+          </div>
+        )}
 
         {filtered.length > 0 ? (
           <div className="border-t border-border-strong">
             {filtered.map((j) => (
-              <div
+              <Link
                 key={j.id}
-                onClick={() => setSelected(JOBS.findIndex((x) => x.id === j.id))}
+                href={`/placement/${j.id}`}
                 className="flex flex-col sm:grid sm:grid-cols-[minmax(200px,1.7fr)_minmax(130px,1fr)_minmax(150px,1fr)_auto] gap-3 sm:gap-5 sm:items-center border-b border-border-strong py-5.5 px-1 cursor-pointer hover:bg-white"
               >
                 <div>
@@ -787,11 +510,6 @@ export default function Placement() {
                         Closes in {j.daysLeft}d
                       </span>
                     )}
-                    {j.isNew && (
-                      <span className="text-[11px] font-bold tracking-[0.06em] uppercase border border-border-strong text-muted px-2.5 py-0.75 rounded-full">
-                        New
-                      </span>
-                    )}
                   </div>
                   <div className="text-[13px] font-semibold text-muted mt-1.25">
                     {j.company} · {j.location}
@@ -804,7 +522,7 @@ export default function Placement() {
                     {j.salary}
                   </div>
                   <div className="text-[13px] font-semibold text-muted">
-                    {j.track}
+                    {j.experience}
                     <br />
                     Apply by {j.deadline}
                   </div>
@@ -826,22 +544,35 @@ export default function Placement() {
                     ↗
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 px-6 border border-dashed border-border-strong rounded-[20px]">
-            <div className="text-[19px] font-extrabold">{empty[0]}</div>
-            <p className="mx-auto mt-2 mb-5.5 text-sm text-muted max-w-sm">{empty[1]}</p>
+          !jobsLoading && (
+            <div className="text-center py-16 px-6 border border-dashed border-border-strong rounded-[20px]">
+              <div className="text-[19px] font-extrabold">{empty[0]}</div>
+              <p className="mx-auto mt-2 mb-5.5 text-sm text-muted max-w-sm">{empty[1]}</p>
+              <button
+                onClick={() => {
+                  setQuery("");
+                  setView("All");
+                }}
+                className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-sm px-6.5 py-3.25 rounded-full cursor-pointer hover:bg-accent"
+              >
+                Show all roles
+              </button>
+            </div>
+          )
+        )}
+
+        {hasMore && (
+          <div className="flex justify-center mt-8">
             <button
-              onClick={() => {
-                setQuery("");
-                setTrack("All");
-                setView("All");
-              }}
-              className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-sm px-6.5 py-3.25 rounded-full cursor-pointer hover:bg-accent"
+              onClick={() => fetchPlacements(page + 1)}
+              disabled={jobsLoading}
+              className="border border-border-strong bg-white font-[inherit] font-bold text-[13.5px] px-6.5 py-3.25 rounded-full cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Show all roles
+              {jobsLoading ? "Loading…" : "Load more roles"}
             </button>
           </div>
         )}

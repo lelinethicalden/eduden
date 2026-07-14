@@ -3,34 +3,12 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { COURSES } from "@/data/courses";
 import { unsplash } from "@/lib/unsplash";
 
-const COURSES = [
-  "Business Analytics and MIS Reporting (New)",
-  "AI for Business Strategy and Decision Making (New)",
-  "Product Management and Digital Business with AI (New)",
-  "GeoAI, GIS and Location Intelligence (New)",
-  "Cyber GRC, Risk and Data Privacy (New)",
-  "Economics, Policy and Development Analytics (New)",
-  "Digital Business Operations and No Code Automation (New)",
-  "Ethical Hacking for Beginners",
-  "Start Bug Bounty Hunting",
-  "Digital Forensics",
-  "Android App Penetration Testing",
-  "Advanced Network Pentesting",
-  "AI Foundations with Python",
-  "Machine Learning Bootcamp",
-  "Data Science with Python",
-  "Full-Stack Web Development",
-  "Cloud Computing with AWS",
-  "DevOps Essentials",
-  "Linux Administration",
-  "Graphics Design Pro",
-  "Digital Marketing Launchpad",
-  "Blockchain & Web3 Basics",
-  "IoT with Arduino & Raspberry Pi",
-  "Networking Fundamentals",
-  "Other / Not sure yet",
+const COURSE_OPTIONS = [
+  ...COURSES.map((c) => ({ value: c.slug, label: c.title })),
+  { value: "not-sure", label: "Other / Not sure yet" },
 ];
 
 type Errors = Partial<
@@ -234,8 +212,10 @@ export default function Enroll() {
                 className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg text-fg ${fieldBorder(!!errors.course)}`}
               >
                 <option value="">Select a course</option>
-                {COURSES.map((c) => (
-                  <option key={c}>{c}</option>
+                {COURSE_OPTIONS.map((c) => (
+                  <option key={c.value} value={c.value}>
+                    {c.label}
+                  </option>
                 ))}
               </select>
               {errors.course && (

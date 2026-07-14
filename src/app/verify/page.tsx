@@ -3,30 +3,75 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import apiClient, { type ApiError } from "@/lib/api-client";
 import { unsplash } from "@/lib/unsplash";
+
+type Certificate = {
+  student_name: string;
+  batch_id: number;
+  course_name: string;
+  certificate_number: string;
+  verification_code: string;
+  issue_date: string;
+};
+
+type CertificateResponse = {
+  success: boolean;
+  message: string;
+  data: Certificate;
+};
+
+function formatDate(iso: string) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
 
 export default function Verify() {
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState<"valid" | "invalid" | null>(null);
+  const [cert, setCert] = useState<Certificate | null>(null);
   const [searched, setSearched] = useState("");
+  const [verifying, setVerifying] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function verify() {
-    const id = certId.trim();
+  async function verify(idOverride?: string) {
+    const id = (idOverride ?? certId).trim();
     if (!id) return;
-    setResult(id.toUpperCase() === "ED-EH45-2091" ? "valid" : "invalid");
-    setSearched(id);
-  }
-
-  function tryValid() {
-    setCertId("ED-EH45-2091");
-    setResult("valid");
-    setSearched("ED-EH45-2091");
+    setVerifying(true);
+    setErrorMsg("");
+    try {
+      const data = await apiClient.get<CertificateResponse>(
+        `/certificates/search/?student_batch_id=${encodeURIComponent(id)}`
+      );
+      if (data.success) {
+        setCert(data.data);
+        setResult("valid");
+      } else {
+        setCert(null);
+        setResult("invalid");
+      }
+    } catch (err) {
+      const apiErr = err as ApiError;
+      if (apiErr.status === 404) {
+        setCert(null);
+        setResult("invalid");
+      } else {
+        setErrorMsg(apiErr.message || "Couldn't verify right now. Please try again.");
+        setResult(null);
+      }
+    } finally {
+      setSearched(id);
+      setVerifying(false);
+    }
   }
 
   function reset() {
     setCertId("");
     setResult(null);
+    setCert(null);
     setSearched("");
+    setErrorMsg("");
   }
 
   return (
@@ -43,7 +88,7 @@ export default function Verify() {
             Verify a certificate.
           </h1>
           <p className="mt-6 mx-auto max-w-md text-[15px] leading-relaxed text-muted">
-            Enter the certificate ID printed on the certificate to confirm
+            Enter the student batch ID printed on the certificate to confirm
             it was issued by eduden.
           </p>
           <div className="mt-9 flex gap-2 bg-white border border-border rounded-full py-1.5 pl-5.5 pr-1.5 items-center text-left">
@@ -51,32 +96,26 @@ export default function Verify() {
               value={certId}
               onChange={(e) => setCertId(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && verify()}
-              placeholder="e.g. ED-EH45-2091"
+              placeholder="e.g. EDU-STU-IP-01-001"
               className="flex-1 border-none outline-none font-[inherit] text-[15px] text-fg bg-transparent min-w-0 tracking-[0.03em]"
             />
             <button
-              onClick={verify}
-              className="flex-none border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-sm px-6 py-3.25 rounded-full cursor-pointer hover:bg-accent"
+              onClick={() => verify()}
+              disabled={verifying}
+              className="flex-none border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-sm px-6 py-3.25 rounded-full cursor-pointer hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Verify
+              {verifying ? "Verifying…" : "Verify"}
             </button>
           </div>
-          <div className="mt-3.5 text-[13px] text-muted">
-            Try the demo:{" "}
-            <button
-              onClick={tryValid}
-              className="border-none bg-transparent text-fg font-[inherit] font-bold text-[13px] cursor-pointer border-b-2 border-accent pb-0.25"
-            >
-              ED-EH45-2091
-            </button>{" "}
-            (valid) or any other ID (not found)
-          </div>
+          {errorMsg && (
+            <div className="mt-3.5 text-[13px] font-semibold text-[#D64040]">{errorMsg}</div>
+          )}
         </div>
       </section>
 
       <section className="bg-bg">
         <div className="max-w-[760px] mx-auto px-4 sm:px-7 pb-10 md:pb-24">
-          {result === "valid" && (
+          {result === "valid" && cert && (
             <div className="bg-white border border-border rounded-3xl p-5 sm:p-7 md:p-10">
               <div className="flex items-center gap-3.5 mb-7">
                 <span className="w-10 h-10 rounded-full bg-[#1DA954] text-white flex items-center justify-center text-lg font-black flex-none">
@@ -97,7 +136,7 @@ export default function Verify() {
                     Student name
                   </span>
                   <span className="text-[14.5px] font-bold">
-                    Ritwika Ghosh
+                    {cert.student_name}
                   </span>
                 </div>
                 <div className="flex justify-between gap-4 py-3.75 border-b border-border">
@@ -105,39 +144,33 @@ export default function Verify() {
                     Course
                   </span>
                   <span className="text-[14.5px] font-bold">
-                    Ethical Hacking for Beginners
+                    {cert.course_name}
                   </span>
                 </div>
                 <div className="flex justify-between gap-4 py-3.75 border-b border-border">
                   <span className="text-[13px] font-semibold text-muted">
-                    Completed
+                    Issued on
                   </span>
                   <span className="text-[14.5px] font-bold">
-                    14 Nov 2025
+                    {formatDate(cert.issue_date)}
+                  </span>
+                </div>
+                <div className="flex justify-between gap-4 py-3.75 border-b border-border">
+                  <span className="text-[13px] font-semibold text-muted">
+                    Certificate No.
+                  </span>
+                  <span className="text-[14.5px] font-bold tracking-[0.04em]">
+                    {cert.certificate_number}
                   </span>
                 </div>
                 <div className="flex justify-between gap-4 py-3.75">
                   <span className="text-[13px] font-semibold text-muted">
-                    Certificate ID
+                    Verification code
                   </span>
-                  <span className="text-[14.5px] font-bold tracking-[0.04em]">
-                    ED-EH45-2091
+                  <span className="text-[13px] font-bold tracking-[0.02em]">
+                    {cert.verification_code}
                   </span>
                 </div>
-              </div>
-              <div className="flex gap-3 flex-wrap mt-6">
-                <a
-                  href="#"
-                  className="bg-[#FFD300] text-fg font-bold text-[13.5px] px-6 py-3 rounded-full hover:bg-accent"
-                >
-                  View Certificate
-                </a>
-                <a
-                  href="#"
-                  className="border border-border-strong font-semibold text-[13.5px] px-6 py-3 rounded-full "
-                >
-                  Download PDF ↓
-                </a>
               </div>
             </div>
           )}
@@ -151,7 +184,7 @@ export default function Verify() {
                 Certificate not found
               </div>
               <p className="mx-auto mt-2.5 max-w-sm text-sm leading-relaxed text-muted">
-                No certificate matches ID &ldquo;{searched}&rdquo;.
+                No certificate matches student batch ID &ldquo;{searched}&rdquo;.
                 Double-check for typos — or if you believe this is an
                 error, contact us.
               </p>
