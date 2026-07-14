@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "2,500+", label: "Students trained" },
+  { value: "750+", label: "Students trained" },
   { value: "30+", label: "Hands-on courses" },
   { value: "15+", label: "Industry mentors" },
   { value: "94%", label: "Completion rate" },
