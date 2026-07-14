@@ -33,23 +33,23 @@ const FEATURES = [
 const WHY = [
   {
     n: "01",
-    title: "100% hands-on",
-    body: "Labs, real-world tools, and live simulated environments — not slide decks. You learn by breaking and building things.",
+    title: "Less Theory. More Practice.",
+    body: "Classroom sessions backed by labs, projects, and practical exercises that help you learn by doing.",
   },
   {
     n: "02",
-    title: "Verified assignments",
-    body: "Every assignment is reviewed by mentors with feedback through Slack and GitHub. No auto-graded shortcuts.",
+    title: "Build More Than Skills",
+    body: "Every project you complete becomes part of a portfolio you can confidently showcase during internships and interviews.",
   },
   {
     n: "03",
-    title: "Mentor-led, always",
-    body: "Weekly live sessions, Q&A and 1:1 guidance from practitioners who work in the industry right now.",
+    title: "Industry Experience Matters",
+    body: "Learn from professionals who understand current technologies, workplace expectations, and real business challenges.",
   },
   {
     n: "04",
-    title: "Career outcomes",
-    body: "Resume support, interview prep, portfolio guidance and placement assistance built into career-track courses.",
+    title: "Focused on Careers",
+    body: "From certification to interview preparation, every course is designed to help you move closer to your career goals.",
   },
 ];
 
