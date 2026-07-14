@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import FaqAccordion from "@/components/FaqAccordion";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import { unsplash } from "@/lib/unsplash";
 import { COURSES } from "@/data/courses";
 
@@ -50,6 +51,37 @@ const WHY = [
     n: "04",
     title: "Focused on Careers",
     body: "From certification to interview preparation, every course is designed to help you move closer to your career goals.",
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    name: "Chitranjan Singh",
+    role: "Student at Delhi University",
+    quote:
+      "This course assisted me in gaining a foothold in the cybersecurity area as a newbie. This is a good place to start for Ethical Hackers who want to pursue Cyber Security as career. Mr. Fardeen's teaching style is excellent; he will make it simple for you to comprehend. I definitely advise anyone interested in getting into cyber security course to take this course as a first step.",
+    img: unsplash("1544005313-94ddf0286df2"),
+  },
+  {
+    name: "Prem Prakash Dubey",
+    role: "Presales Project Manager at UnifyCloud LLC",
+    quote:
+      "Being from a Cyber Security products pre-sale, I was looking for a course which could help me understand the client’s pain point in detail. Ethical Hacking course taught by Mr. Fardeen was more than adequate in gaining a strong foothold in a short span of time. The course was flexible and Fardeen’s one-on-one mentoring made it a personalized learning experience.",
+    img: unsplash("1472099645785-5658abf4ff4e"),
+  },
+  {
+    name: "Tejarsha M",
+    role: "Information Security & Risk Professional, Wells Fargo",
+    quote:
+      "Good mentor, A warm thanks to Fardeen for amazing training session. Not only the session was very informative but the training material provided was also clear understandable and interesting on live scenario's",
+    img: unsplash("1494790108377-be9c29b29330"),
+  },
+  {
+    name: "Arun Kumar",
+    role: "Student at Kingdom College, Bangalore",
+    quote:
+      "Fardeen sir is simply the best tutor in Cyber Science and constantly motivates and makes us think differently.",
+    img: unsplash("1494790108377-be9c29b29330"),
   },
 ];
 
@@ -310,10 +342,10 @@ export default function Home() {
             {WHY.map((w) => (
               <div
                 key={w.n}
-                className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,1fr)_2fr] gap-x-5 gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-border-strong py-6.5"
+                className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,1fr)_2fr] gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-border-strong py-6.5"
               >
-                <div className="text-[13px] font-bold text-muted">{w.n}</div>
-                <div className="text-[clamp(17px,1.7vw,21px)] font-extrabold tracking-[-0.01em]">
+                <div className="font-bold">{w.n}</div>
+                <div className="font-extrabold tracking-[-0.01em]">
                   {w.title}
                 </div>
                 <p className="m-0 col-span-2 sm:col-span-1 text-[14.5px] leading-relaxed text-muted max-w-xl">
@@ -326,25 +358,8 @@ export default function Home() {
       </section>
 
       <section className="bg-fg text-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-7 py-11 md:py-28 text-center">
-          <div className="relative w-19 h-19 rounded-full overflow-hidden mx-auto mb-7">
-            <Image
-              src={unsplash("1544005313-94ddf0286df2")}
-              alt="Ritwika Ghosh"
-              fill
-              sizes="76px"
-              className="object-cover"
-            />
-          </div>
-          <p className="m-0 text-[clamp(21px,2.8vw,32px)] font-semibold tracking-[-0.02em] leading-[1.4] text-balance">
-            &ldquo;Beaing from nothing about cybersecurity. 45 days
-            later I had 3 projects, a certificate, and the confidence to
-            clear my SOC Analyst interview.&rdquo;
-          </p>
-          <div className="mt-8 text-sm font-bold">Ritwika Ghosh</div>
-          <div className="text-[13px] text-muted-dark mt-1">
-            SOC Analyst · 2025 batch
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-7 py-11 md:py-28">
+          <TestimonialSlider items={TESTIMONIALS} />
         </div>
       </section>
 

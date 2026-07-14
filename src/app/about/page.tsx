@@ -128,10 +128,10 @@ export default function About() {
             {PILLARS.map((d) => (
               <div
                 key={d.n}
-                className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,1fr)_2fr] gap-x-5 gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-border-strong py-6"
+                className="grid grid-cols-[minmax(32px,48px)_1fr] sm:grid-cols-[minmax(48px,80px)_minmax(140px,260px)_1fr] m:gap-x-8 gap-y-2 sm:gap-y-0 sm:items-baseline border-t border-border-strong py-6"
               >
-                <div className="text-[13px] font-bold text-muted">{d.n}</div>
-                <div className="text-[clamp(16px,1.7vw,20px)] font-extrabold tracking-[-0.01em]">
+                <div className="font-bold">{d.n}</div>
+                <div className="font-extrabold tracking-[-0.01em]">
                   {d.title}
                 </div>
                 <p className="m-0 col-span-2 sm:col-span-1 text-[14.5px] leading-relaxed text-muted max-w-xl">

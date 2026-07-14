@@ -232,7 +232,7 @@ export default function Contact() {
                   href="mailto:hello@eduden.io"
                   className="text-[15px] font-bold border-b-2 border-accent justify-self-start"
                 >
-                  hello@eduden.io
+                  connect@eduden.io
                 </a>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-[minmax(110px,150px)_1fr] gap-1.5 sm:gap-5 sm:items-baseline border-b border-border-strong py-5 px-1">
