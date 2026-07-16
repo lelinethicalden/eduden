@@ -59,22 +59,16 @@ export default function Footer() {
                 <br />
                 South Dumdum, Kolkata
               </div>
-              <a
-                href="mailto:hello@eduden.io"
+              <Link
+                href="mailto:connect@eduden.io"
                 className="text-sm text-[#9B978E]"
               >
-                hello@eduden.io
-              </a>
+                connect@eduden.io
+              </Link>
               <div className="flex gap-3.5 mt-1.5 text-[13px] font-semibold">
-                <a href="#" className="text-[#9B978E]">
+                <Link href="https://www.linkedin.com/company/edu-den/" target="_blank" className="text-[#9B978E]">
                   LinkedIn
-                </a>
-                <a href="#" className="text-[#9B978E]">
-                  Instagram
-                </a>
-                <a href="#" className="text-[#9B978E]">
-                  YouTube
-                </a>
+                </Link>
               </div>
             </div>
           </div>

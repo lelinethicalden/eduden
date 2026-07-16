@@ -229,7 +229,12 @@ export default function Contact() {
                 </div>
                 <div className="text-[15px] font-semibold">
                   Fastest response —{" "}
-                  <a href="#" className="border-b-2 border-accent font-bold">
+                  <a
+                    href="https://wa.me/919547578920"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-b-2 border-accent font-bold"
+                  >
                     chat with us →
                   </a>
                 </div>
@@ -239,7 +244,7 @@ export default function Contact() {
                   Email
                 </div>
                 <a
-                  href="mailto:hello@eduden.io"
+                  href="mailto:connect@eduden.io"
                   className="text-[15px] font-bold border-b-2 border-accent justify-self-start"
                 >
                   connect@eduden.io

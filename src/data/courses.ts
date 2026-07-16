@@ -59,7 +59,7 @@ export const COURSES: Course[] = [
         "How It Helps in CV Building: Students can add dashboard projects, SQL query work, Excel reports, and final capstone work to their CV. This gives recruiters proof that the student can handle business data and not just speak about analytics theoretically.",
       ],
       eligibility: [
-        "Students from MBA, BBA, B.Com, Economics, Commerce, Arts, Social Science, and related backgrounds can join this course.",
+        "Students from Engineering, BBA, B.Com, Economics, Commerce, Arts, Social Science, and related backgrounds can join this course.",
         "No coding background is required.",
         "Basic computer knowledge and interest in working with data will be helpful.",
       ],
@@ -936,214 +936,7 @@ export const COURSES: Course[] = [
         "Product Management, Business Analytics, AI for Business Strategy, Digital Marketing, or Data Analytics.",
     },
   },
-  {
-    slug: "genai-prompt-engineering",
-    brochureUrl: "/Old Course/AI/Generative AI & Prompt Engineering.pdf",
-    brochureSizeMB: 11.6,
-    cat: "AI & Tech for Non-Tech Careers",
-    title: "Generative AI & Prompt Engineering",
-    days: 45,
-    duration: "45 Days",
-    lectures: "50+ Lectures",
-    projects: "6 Projects",
-    mode: "Hybrid",
-    tag: "New",
-    img: unsplash("1677442136019-21780ecad995"),
-    blurb:
-      "Master the future of AI by learning how to talk to it — hands-on with GPT-4, Claude, Gemini and other LLMs.",
-    detail: {
-      overviewHeadline: "Course Overview",
-      overviewParagraphs: [
-        "To help learners understand how to interact with, customize, and build tools using large language models (LLMs). The focus is on practical prompt design, chaining prompts, building chatbots, and using GenAI tools to create value — whether you're coding, designing, selling, or solving business problems.",
-      ],
-      eligibility: [
-        "Anyone curious about ChatGPT, AI tools, or building with LLMs",
-        "Students and professionals (no coding experience required)",
-        "Freelancers and content creators",
-        "Developers, marketers, analysts, educators",
-      ],
-      projectsHeadline: "What's inside the course.",
-      projects: [
-        {
-          n: "01",
-          title:
-            "Assignments — design prompts, build workflows, and explore AI-powered automation tasks",
-        },
-        {
-          n: "02",
-          title:
-            "Quizzes — quick assessments on prompt design, LLM behavior, and GenAI concepts",
-        },
-        {
-          n: "03",
-          title:
-            "Live Sessions — AI tool walkthroughs, live builds, and hands-on GenAI integration workshops",
-        },
-        {
-          n: "04",
-          title:
-            "Projects — create prompt-based tools, chatbots, and automation workflows for real-world tasks",
-        },
-      ],
-      curriculumSubtitle: "6 modules · 50+ lectures · 6 projects",
-      modules: [
-        {
-          title: "Foundations of Generative AI & LLMs",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Prompt Engineering 101",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Using LLMs for Productivity & Content",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Building with OpenAI API & LangChain",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Integrating GenAI into Real Workflows",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Final Projects & Real-World Use Cases",
-          meta: "",
-          topics: [],
-        },
-      ],
-      tools: ["GPT-4", "Claude", "Gemini", "OpenAI API", "LangChain"],
-      careerIntro:
-        "Build AI-powered tools, chatbots and content workflows — useful whether you're coding, designing, selling, or solving business problems.",
-      roles: [
-        "Prompt Engineer",
-        "AI Tools Consultant",
-        "GenAI Content Specialist",
-      ],
-      benefits: [
-        {
-          title: "Course Certificate",
-          body: "A digital certificate of completion from Eduden after completing all modules and submitting your final project.",
-        },
-        {
-          title: "100% Access on Purchase Period",
-          body: "Lifetime access to recorded sessions, hands-on lab assignments, and downloadable resources through the Eduden dashboard.",
-        },
-        {
-          title: "Ready for interviews",
-          body: "Upon completion of the course, students will always be interviewed to assess their skills and readiness for practical applications.",
-        },
-      ],
-      nextStep:
-        "AI for Business Strategy, Product Management and Digital Business with AI, or Digital Business Operations and No Code Automation with AI.",
-    },
-  },
-  {
-    slug: "applied-ai-healthcare-finance-marketing",
-    brochureUrl: "/Old Course/AI/Applied AI in Healthcare, Finance & Marketing.pdf",
-    brochureSizeMB: 7.56,
-    cat: "AI & Tech for Non-Tech Careers",
-    title: "Applied AI in Healthcare, Finance & Marketing",
-    days: 45,
-    duration: "45 Days",
-    lectures: "55+ Lectures",
-    projects: "6 Projects",
-    mode: "Hybrid",
-    tag: "New",
-    img: unsplash("1576091160399-112ba8d25d1d"),
-    blurb:
-      "Solve real-world problems in healthcare diagnostics, financial fraud detection, and AI-powered marketing.",
-    detail: {
-      overviewHeadline: "Course Overview",
-      overviewParagraphs: [
-        "To help learners understand how AI is transforming the world's biggest industries and give them the tools to build intelligent solutions across domains like healthcare, fintech, and digital marketing.",
-      ],
-      eligibility: [
-        "Professionals in healthcare, marketing, finance",
-        "ML/DS students who want domain-specific expertise",
-        "Business owners & consultants exploring AI automation",
-        "Entrepreneurs building AI-based SaaS products",
-      ],
-      projectsHeadline: "What's inside the course.",
-      projects: [
-        {
-          n: "01",
-          title:
-            "Assignments — domain-based problem-solving using industry datasets and real KPIs",
-        },
-        {
-          n: "02",
-          title:
-            "Quizzes — assessments to reinforce AI concepts in healthcare, finance, and marketing",
-        },
-        {
-          n: "03",
-          title:
-            "Live Sessions — industry case studies, project walkthroughs, and tool usage demos",
-        },
-        {
-          n: "04",
-          title:
-            "Projects — predictive healthcare models, fintech fraud detectors, AI-powered marketing tools",
-        },
-      ],
-      curriculumSubtitle: "4 modules · 55+ lectures · 6 projects",
-      modules: [
-        {
-          title: "AI in Healthcare",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "AI in Finance (FinTech)",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "AI in Digital Marketing",
-          meta: "",
-          topics: [],
-        },
-        {
-          title: "Building & Presenting Business Projects",
-          meta: "",
-          topics: [],
-        },
-      ],
-      tools: ["AI/ML Platforms", "Industry Datasets"],
-      careerIntro:
-        "Build intelligent solutions across healthcare, fintech and digital marketing — and present them as real business projects.",
-      roles: [
-        "AI Solutions Consultant",
-        "Healthcare AI Analyst",
-        "FinTech AI Analyst",
-        "AI Marketing Specialist",
-      ],
-      benefits: [
-        {
-          title: "Course Certificate",
-          body: "A digital certificate of completion from Eduden after completing all modules and submitting your final project.",
-        },
-        {
-          title: "100% Access on Purchase Period",
-          body: "Lifetime access to recorded sessions, hands-on lab assignments, and downloadable resources through the Eduden dashboard.",
-        },
-        {
-          title: "Ready for interviews",
-          body: "Upon completion of the course, students will always be interviewed to assess their skills and readiness for practical applications.",
-        },
-      ],
-      nextStep:
-        "Generative AI & Prompt Engineering, AI for Business Strategy, or Product Management and Digital Business with AI.",
-    },
-  },
-  {
+   {
     slug: "ux-ui-design-business-product",
     brochureUrl: "/New Courses/UI-UX/UX-UI Design for Business and Product Careers with Figma.pdf",
     brochureSizeMB: 16.77,
@@ -1359,6 +1152,10 @@ export const COURSES: Course[] = [
         "Product Management, AI for Business Strategy, Business Analytics and MIS Reporting, or Digital Marketing and Growth.",
     },
   },
+
+
+  
+ 
 
   //Cyber Security Courses
   {
@@ -2354,18 +2151,112 @@ export const COURSES: Course[] = [
 
   //Artificial Intelligence Courses
   {
-    slug: "ai-foundations",
-    cat: "Artificial Intelligence",
-    title: "AI Foundations with Python",
-    days: 60,
-    duration: "60 days",
-    lectures: "50 Lectures",
-    projects: "4 Projects",
+    slug: "genai-prompt-engineering",
+    brochureUrl: "/Old Course/AI/Generative AI & Prompt Engineering.pdf",
+    brochureSizeMB: 11.6,
+    cat: "AI & Tech for Non-Tech Careers",
+    title: "Generative AI & Prompt Engineering 45 Days Hand on Course",
+    days: 45,
+    duration: "45 Days",
+    lectures: "50+ Lectures",
+    projects: "6 Projects",
     mode: "Hybrid",
-    tag: "",
-    img: unsplash("1667372393119-3d4c48d07fc9"),
+    tag: "New",
+    img: unsplash("1677442136019-21780ecad995"),
     blurb:
-      "From neural nets to real deployments — build AI features you can actually ship.",
+      "Master the future of AI by learning how to talk to it — hands-on with GPT-4, Claude, Gemini and other LLMs.",
+    detail: {
+      overviewHeadline: "Course Overview",
+      overviewParagraphs: [
+        "To help learners understand how to interact with, customize, and build tools using large language models (LLMs). The focus is on practical prompt design, chaining prompts, building chatbots, and using GenAI tools to create value — whether you're coding, designing, selling, or solving business problems.",
+      ],
+      eligibility: [
+        "Anyone curious about ChatGPT, AI tools, or building with LLMs",
+        "Students and professionals (no coding experience required)",
+        "Freelancers and content creators",
+        "Developers, marketers, analysts, educators",
+      ],
+      projectsHeadline: "What's inside the course.",
+      projects: [
+        {
+          n: "01",
+          title:
+            "Assignments — design prompts, build workflows, and explore AI-powered automation tasks",
+        },
+        {
+          n: "02",
+          title:
+            "Quizzes — quick assessments on prompt design, LLM behavior, and GenAI concepts",
+        },
+        {
+          n: "03",
+          title:
+            "Live Sessions — AI tool walkthroughs, live builds, and hands-on GenAI integration workshops",
+        },
+        {
+          n: "04",
+          title:
+            "Projects — create prompt-based tools, chatbots, and automation workflows for real-world tasks",
+        },
+      ],
+      curriculumSubtitle: "6 modules · 50+ lectures · 6 projects",
+      modules: [
+        {
+          title: "Foundations of Generative AI & LLMs",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Prompt Engineering 101",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Using LLMs for Productivity & Content",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Building with OpenAI API & LangChain",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Integrating GenAI into Real Workflows",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Final Projects & Real-World Use Cases",
+          meta: "",
+          topics: [],
+        },
+      ],
+      tools: ["GPT-4", "Claude", "Gemini", "OpenAI API", "LangChain"],
+      careerIntro:
+        "Build AI-powered tools, chatbots and content workflows — useful whether you're coding, designing, selling, or solving business problems.",
+      roles: [
+        "Prompt Engineer",
+        "AI Tools Consultant",
+        "GenAI Content Specialist",
+      ],
+      benefits: [
+        {
+          title: "Course Certificate",
+          body: "A digital certificate of completion from Eduden after completing all modules and submitting your final project.",
+        },
+        {
+          title: "100% Access on Purchase Period",
+          body: "Lifetime access to recorded sessions, hands-on lab assignments, and downloadable resources through the Eduden dashboard.",
+        },
+        {
+          title: "Ready for interviews",
+          body: "Upon completion of the course, students will always be interviewed to assess their skills and readiness for practical applications.",
+        },
+      ],
+      nextStep:
+        "AI for Business Strategy, Product Management and Digital Business with AI, or Digital Business Operations and No Code Automation with AI.",
+    },
   },
   {
     slug: "deep-learning-tensorflow-keras",
@@ -2479,6 +2370,106 @@ export const COURSES: Course[] = [
       ],
       nextStep:
         "AI Foundations with Python, Machine Learning Bootcamp, or Data Science with Python.",
+    },
+  },
+  
+  {
+    slug: "applied-ai-healthcare-finance-marketing",
+    brochureUrl: "/Old Course/AI/Applied AI in Healthcare, Finance & Marketing.pdf",
+    brochureSizeMB: 7.56,
+    cat: "AI & Tech for Non-Tech Careers",
+    title: "Applied AI in Healthcare, Finance & Marketing 45 Days Industry Focused Course",
+    days: 45,
+    duration: "45 Days",
+    lectures: "55+ Lectures",
+    projects: "6 Projects",
+    mode: "Hybrid",
+    tag: "New",
+    img: unsplash("1576091160399-112ba8d25d1d"),
+    blurb:
+      "Solve real-world problems in healthcare diagnostics, financial fraud detection, and AI-powered marketing.",
+    detail: {
+      overviewHeadline: "Course Overview",
+      overviewParagraphs: [
+        "To help learners understand how AI is transforming the world's biggest industries and give them the tools to build intelligent solutions across domains like healthcare, fintech, and digital marketing.",
+      ],
+      eligibility: [
+        "Professionals in healthcare, marketing, finance",
+        "ML/DS students who want domain-specific expertise",
+        "Business owners & consultants exploring AI automation",
+        "Entrepreneurs building AI-based SaaS products",
+      ],
+      projectsHeadline: "What's inside the course.",
+      projects: [
+        {
+          n: "01",
+          title:
+            "Assignments — domain-based problem-solving using industry datasets and real KPIs",
+        },
+        {
+          n: "02",
+          title:
+            "Quizzes — assessments to reinforce AI concepts in healthcare, finance, and marketing",
+        },
+        {
+          n: "03",
+          title:
+            "Live Sessions — industry case studies, project walkthroughs, and tool usage demos",
+        },
+        {
+          n: "04",
+          title:
+            "Projects — predictive healthcare models, fintech fraud detectors, AI-powered marketing tools",
+        },
+      ],
+      curriculumSubtitle: "4 modules · 55+ lectures · 6 projects",
+      modules: [
+        {
+          title: "AI in Healthcare",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "AI in Finance (FinTech)",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "AI in Digital Marketing",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Building & Presenting Business Projects",
+          meta: "",
+          topics: [],
+        },
+      ],
+      tools: ["AI/ML Platforms", "Industry Datasets"],
+      careerIntro:
+        "Build intelligent solutions across healthcare, fintech and digital marketing — and present them as real business projects.",
+      roles: [
+        "AI Solutions Consultant",
+        "Healthcare AI Analyst",
+        "FinTech AI Analyst",
+        "AI Marketing Specialist",
+      ],
+      benefits: [
+        {
+          title: "Course Certificate",
+          body: "A digital certificate of completion from Eduden after completing all modules and submitting your final project.",
+        },
+        {
+          title: "100% Access on Purchase Period",
+          body: "Lifetime access to recorded sessions, hands-on lab assignments, and downloadable resources through the Eduden dashboard.",
+        },
+        {
+          title: "Ready for interviews",
+          body: "Upon completion of the course, students will always be interviewed to assess their skills and readiness for practical applications.",
+        },
+      ],
+      nextStep:
+        "Generative AI & Prompt Engineering, AI for Business Strategy, or Product Management and Digital Business with AI.",
     },
   },
 
@@ -2822,6 +2813,7 @@ export const COURSES: Course[] = [
         "AI & Machine Learning with Python, AI Foundations with Python, or Data Science & Analytics with Python + Power BI.",
     },
   },
+
   {
     slug: "shell-scripting",
     brochureUrl: "/Old Course/Programming/Shell Scripting.pdf",
