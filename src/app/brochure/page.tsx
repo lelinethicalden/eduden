@@ -7,7 +7,12 @@ import { useSearchParams } from "next/navigation";
 import { unsplash } from "@/lib/unsplash";
 import { COURSES } from "@/data/courses";
 
-const COURSE_OPTIONS = [...COURSES.map((c) => c.title), "All courses (complete brochure)"];
+const ALL_COURSES_VALUE = "all";
+const BROCHURE_URL = "/brochure.pdf";
+
+function pdfHref(url: string) {
+  return encodeURI(url);
+}
 
 type Errors = Partial<Record<"name" | "phone" | "email" | "course", boolean>>;
 
@@ -34,24 +39,36 @@ function BrochureForm() {
 
   const slug = searchParams.get("course");
   const matchedCourse = COURSES.find((c) => c.slug === slug);
-  const selectedCourse = matchedCourse ? matchedCourse.title : course;
+  const selectedSlug = matchedCourse ? matchedCourse.slug : course;
+  const selectedCourseObj = matchedCourse ?? COURSES.find((c) => c.slug === selectedSlug);
 
-  const brochureName = matchedCourse
-    ? `${matchedCourse.title} — Brochure 2026`
+  const brochureName = selectedCourseObj
+    ? `${selectedCourseObj.title} — Brochure 2026`
     : "eduden Course Brochure 2026";
+
+  const downloadUrl = selectedCourseObj?.brochureUrl ?? BROCHURE_URL;
+  const downloadFilename = `${(selectedCourseObj?.title ?? "eduden-brochure").replace(/[\\/:*?"<>|]/g, "")}.pdf`;
 
   function submit() {
     const e: Errors = {};
     if (!name.trim()) e.name = true;
     if (phone.replace(/\D/g, "").length < 10) e.phone = true;
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) e.email = true;
-    if (!selectedCourse) e.course = true;
+    if (!selectedSlug) e.course = true;
     if (Object.keys(e).length) {
       setErrors(e);
       return;
     }
     setSent(true);
     setErrors({});
+    triggerDownload();
+  }
+
+  function triggerDownload() {
+    const a = document.createElement("a");
+    a.href = pdfHref(downloadUrl);
+    a.download = downloadFilename;
+    a.click();
   }
 
   return (
@@ -75,7 +92,9 @@ function BrochureForm() {
           <div className="mt-7 border-t border-border-strong max-w-md">
             <div className="border-b border-border-strong py-3.5 px-1 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 text-sm">
               <span className="font-bold">{brochureName}</span>
-              <span className="text-muted font-semibold whitespace-nowrap">PDF · 2.4 MB</span>
+              <span className="text-muted font-semibold whitespace-nowrap">
+                PDF · {(selectedCourseObj?.brochureSizeMB ?? 16.8).toFixed(1)} MB
+              </span>
             </div>
             <div className="py-3.5 px-1 text-sm text-muted font-semibold">
               Updated July 2026
@@ -154,7 +173,7 @@ function BrochureForm() {
               <div className="flex flex-col gap-1.75">
                 <label className="text-[13px] font-bold">Course</label>
                 <select
-                  value={selectedCourse}
+                  value={selectedSlug}
                   disabled={!!matchedCourse}
                   onChange={(e) => {
                     setCourse(e.target.value);
@@ -163,9 +182,12 @@ function BrochureForm() {
                   className={`border rounded-xl px-4 py-3.25 font-[inherit] text-[14.5px] outline-none bg-bg text-fg disabled:opacity-60 disabled:cursor-not-allowed ${fieldBorder(!!errors.course)}`}
                 >
                   <option value="">Select a course</option>
-                  {COURSE_OPTIONS.map((c) => (
-                    <option key={c}>{c}</option>
+                  {COURSES.map((c) => (
+                    <option key={c.slug} value={c.slug}>
+                      {c.title}
+                    </option>
                   ))}
+                  <option value={ALL_COURSES_VALUE}>All courses (complete brochure)</option>
                 </select>
                 {errors.course && (
                   <span className="text-[12.5px] font-semibold text-[#D64040]">
@@ -192,7 +214,11 @@ function BrochureForm() {
               <p className="mx-auto mt-2.5 max-w-xs text-sm leading-relaxed text-muted">
                 We&apos;ve also sent a copy to your email. Didn&apos;t
                 start?{" "}
-                <a href="#" className="font-bold border-b-2 border-accent">
+                <a
+                  href={pdfHref(downloadUrl)}
+                  download={downloadFilename}
+                  className="font-bold border-b-2 border-accent"
+                >
                   Download again
                 </a>
                 .
