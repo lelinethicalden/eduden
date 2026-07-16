@@ -45,7 +45,7 @@ export const COURSES: Course[] = [
     projects: "6 Projects",
     mode: "Classroom",
     tag: "New",
-    img: unsplash("1543286386-713bdd548da4"),
+    img: '/images/courses/Business-Analytics.webp',
     blurb:
       "Build practical business analytics skills with Excel, SQL and Power BI through real projects and guided learning.",
     detail: {
@@ -170,7 +170,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1620712943543-bcc4688e7485"),
+    img: "/images/courses/AI for Business Strategy and Decision Making.webp",
     blurb:
       "Use AI for market research, competitor analysis, campaign planning and faster business decisions.",
     detail: {
@@ -303,9 +303,9 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1522071820081-009f0129c71c"),
+    img: "/images/courses/Product Management and Digital Business with AI.jpg",
     blurb:
-      "Work in tech without becoming a developer — user research, PRDs, wireframes and product metrics.",
+      "Work in tech without becoming a developer user research, PRDs, wireframes and product metrics.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -438,7 +438,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1451187580459-43490279c0fa"),
     blurb:
-      "QGIS, satellite imagery, spatial analysis and location projects — for Geography and Environment students.",
+      "QGIS, satellite imagery, spatial analysis and location projects for Geography and Environment students.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -563,9 +563,9 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1554224155-6726b3ff858f"),
+    img: "/images/courses/Cyber GRC, Risk and data privacy.jpg",
     blurb:
-      "Enter cybersecurity through governance, risk and compliance — no hacking or coding required.",
+      "Enter cybersecurity through governance, risk and compliance no hacking or coding required.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -692,7 +692,7 @@ export const COURSES: Course[] = [
     projects: "4 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1560472354-b33ff0c44a43"),
+    img: "/images/courses/Economics, Policy and Development Analytics with AI.jpg",
     blurb:
       "Public datasets, indicators, dashboards and AI-assisted policy briefs for Economics students.",
     detail: {
@@ -816,7 +816,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1571171637578-41bc2dd41cd2"),
+    img: "/images/courses/Digital Business Operations and No Code Automation with AI.png",
     blurb:
       "Automate forms, sheets, reports and follow-ups with AI and no-code tools.",
     detail: {
@@ -950,13 +950,13 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1587440871875-191322ee64b0"),
     blurb:
-      "UX thinking, UI fundamentals and Figma for MBA, BBA, Commerce and Arts students — no design background needed.",
+      "UX thinking, UI fundamentals and Figma for MBA, BBA, Commerce and Arts students no design background needed.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
         "Every product people love is built on good design. Apps, websites, payment screens, food delivery flows, banking dashboards, and e-commerce checkouts all succeed or fail based on how easy and enjoyable they are to use. Companies today treat user experience as a business priority, not just a creative task. This course by Eduden is designed for students from MBA, BBA, Commerce, Economics, Arts, and other non design backgrounds who want to understand how digital products are designed and improved. You will learn UX thinking, UI fundamentals, and Figma in a practical classroom environment and build design projects that can be shown in interviews, internships, and placements.",
         "This course focuses on practical UX/UI skills that are useful in product, marketing, consulting, and startup roles. Students will learn how to research users, map customer journeys, apply design thinking, create wireframes, design clean screens in Figma, build clickable prototypes, and test designs with real users. The goal is not to make students professional graphic artists. The goal is to help them think like a user, communicate design decisions in business language, and confidently contribute to product and digital teams. By the end of the course, students will have wireframes, Figma designs, prototypes, and case study write-ups that can add real value to their CV.",
-        "Learning Objectives — by the end of this course, students will be able to: understand what UX and UI mean and why they matter to business and product strategy; conduct basic user research through interviews, surveys, and observation; map customer journeys and identify pain points and opportunities; apply the design thinking process to real business problems; create wireframes and clickable prototypes in Figma; apply visual hierarchy, typography, color, spacing, and layout principles; write clear and simple UX copy for screens and flows; run basic usability tests and turn feedback into design improvements; present design work with business reasoning during interviews and reviews.",
+        "Learning Objectives by the end of this course, students will be able to: understand what UX and UI mean and why they matter to business and product strategy; conduct basic user research through interviews, surveys, and observation; map customer journeys and identify pain points and opportunities; apply the design thinking process to real business problems; create wireframes and clickable prototypes in Figma; apply visual hierarchy, typography, color, spacing, and layout principles; write clear and simple UX copy for screens and flows; run basic usability tests and turn feedback into design improvements; present design work with business reasoning during interviews and reviews.",
         "Assignments: Students will complete assignments on user interviews, journey mapping, wireframe sketching, Figma screen design, UX writing, prototype building, and usability test reporting.",
         "Quizzes: Short quizzes will test understanding of UX terms, design thinking stages, UI principles, typography and color basics, prototyping concepts, and usability testing methods.",
         "Live Sessions: Live classroom sessions will include Figma demonstrations, guided design practice, doubt clearing, design critiques, case study discussions, and project reviews.",
@@ -1163,7 +1163,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Ethical Hacking For Beginners.pdf",
     brochureSizeMB: 15.3,
     cat: "Cyber Security",
-    title: "Ethical Hacking for Beginners - 45 Days Hand on Course",
+    title: "Ethical Hacking for Beginners 45 Days Hand on Course",
     days: 45,
     duration: "45 Days",
     lectures: "32+ Lectures",
@@ -1176,11 +1176,11 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This 45-day ethical hacking course by Eduden is designed for total beginners who want to learn cybersecurity from scratch and enter one of the most in-demand industries in India. You'll master the core hacking phases — from reconnaissance and vulnerability scanning to exploitation, report writing, and responsible disclosure.",
-        "All training is based on real-world attack simulations and live lab environments using tools like Kali Linux, Burp Suite, Wireshark, Nmap, and Metasploit — making this one of the most practical cybersecurity courses for beginners in India. Whether your goal is to become a penetration tester, land your first cybersecurity job, or kick off your journey as a bug bounty hunter in India, this course will set you up with the exact skills needed.",
+        "This 45-day ethical hacking course by Eduden is designed for total beginners who want to learn cybersecurity from scratch and enter one of the most in-demand industries in India. You'll master the core hacking phases from reconnaissance and vulnerability scanning to exploitation, report writing, and responsible disclosure.",
+        "All training is based on real-world attack simulations and live lab environments using tools like Kali Linux, Burp Suite, Wireshark, Nmap, and Metasploit making this one of the most practical cybersecurity courses for beginners in India. Whether your goal is to become a penetration tester, land your first cybersecurity job, or kick off your journey as a bug bounty hunter in India, this course will set you up with the exact skills needed.",
       ],
       eligibility: [
-        "Total beginners — no prior cybersecurity experience needed",
+        "Total beginners no prior cybersecurity experience needed",
         "No coding background required to start",
         "Anyone aiming to become a penetration tester, bug bounty hunter, or start a career in cybersecurity",
       ],
@@ -1189,21 +1189,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — assignments that simulate real attack scenarios, perfect for building your portfolio and practicing concepts outside the classroom",
+            "10+ Assignments assignments that simulate real attack scenarios, perfect for building your portfolio and practicing concepts outside the classroom",
         },
         {
           n: "02",
           title:
-            "Quizzes — knowledge-check quizzes after each tool/module to test your progress and reinforce everything you have learned",
+            "Quizzes knowledge-check quizzes after each tool/module to test your progress and reinforce everything you have learned",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live sessions with industry professionals covering ethical hacking labs, career guidance, and Q&A with certified penetration testers",
+            "Live Sessions weekly live sessions with industry professionals covering ethical hacking labs, career guidance, and Q&A with certified penetration testers",
         },
         {
           n: "04",
-          title: "Projects — you'll build 4 hands-on database applications",
+          title: "Projects you'll build 4 hands-on database applications",
         },
       ],
       curriculumSubtitle: "8 modules · 32+ lectures · 5+ projects",
@@ -1280,7 +1280,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Start Bug Bounty Hunting.pdf",
     brochureSizeMB: 10.14,
     cat: "Cyber Security",
-    title: "Start Bug Bounty Hunting - 50 Days Hands-On Training",
+    title: "Start Bug Bounty Hunting 50 Days Hands-On Training",
     days: 50,
     duration: "50 Days",
     lectures: "35 Lectures",
@@ -1289,12 +1289,12 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1550439062-609e1531270e"),
     blurb:
-      "From recon to reporting — the complete roadmap for HackerOne, Bugcrowd and Synack.",
+      "From recon to reporting the complete roadmap for HackerOne, Bugcrowd and Synack.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This 50-day hands-on program is the ultimate beginner's course to start your bug bounty journey in India. Whether you want to hunt on HackerOne, Bugcrowd, or Synack, this course will give you a complete roadmap — from recon to reporting — using the same tools used by top hunters worldwide.",
-        "You'll learn how to discover and exploit vulnerabilities in web applications, perform recon using automated and manual techniques, write professional reports that get accepted, and set up your own ethical hacking workflow. If you're serious about earning money through cybersecurity, or landing internships and jobs in penetration testing, this is the best bug bounty training in Kolkata, West Bengal that actually prepares you for real-world targets — not just labs.",
+        "This 50-day hands-on program is the ultimate beginner's course to start your bug bounty journey in India. Whether you want to hunt on HackerOne, Bugcrowd, or Synack, this course will give you a complete roadmap from recon to reporting using the same tools used by top hunters worldwide.",
+        "You'll learn how to discover and exploit vulnerabilities in web applications, perform recon using automated and manual techniques, write professional reports that get accepted, and set up your own ethical hacking workflow. If you're serious about earning money through cybersecurity, or landing internships and jobs in penetration testing, this is the best bug bounty training in Kolkata, West Bengal that actually prepares you for real-world targets not just labs.",
       ],
       eligibility: [
         "Beginners with basic web and networking knowledge",
@@ -1306,22 +1306,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "15+ Assignments — recon, exploitation, and reporting assignments with feedback through Slack/GitHub",
+            "15+ Assignments recon, exploitation, and reporting assignments with feedback through Slack/GitHub",
         },
         {
           n: "02",
           title:
-            "Quizzes — quick challenges, protocol knowledge tests, and recon logic rounds to sharpen your bug-hunting brain",
+            "Quizzes quick challenges, protocol knowledge tests, and recon logic rounds to sharpen your bug-hunting brain",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live labs, tool walkthroughs, bounty report breakdowns, and Q&A with real bug bounty hunters",
+            "Live Sessions live labs, tool walkthroughs, bounty report breakdowns, and Q&A with real bug bounty hunters",
         },
         {
           n: "04",
           title:
-            "Projects — you'll complete 6 real-world styled bug bounty projects",
+            "Projects you'll complete 6 real-world styled bug bounty projects",
         },
       ],
       curriculumSubtitle: "6 modules · 35 lectures · 6 projects",
@@ -1359,7 +1359,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Burp Suite", "Recon Tools", "OWASP Top 10"],
       careerIntro:
-        "Positions in bug bounty hunting are highly sought after — this course prepares you to land your first gig.",
+        "Positions in bug bounty hunting are highly sought after this course prepares you to land your first gig.",
       roles: [
         "Bug Bounty Hunter",
         "Penetration Tester",
@@ -1388,7 +1388,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Digital Forensics.pdf",
     brochureSizeMB: 11.76,
     cat: "Cyber Security",
-    title: "Digital Forensics - 90 Days Hands-On Training",
+    title: "Digital Forensics 90 Days Hands-On Training",
     days: 90,
     duration: "90 Days",
     lectures: "48 Lectures",
@@ -1401,8 +1401,8 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This course covers everything from disk forensics and deleted file recovery to network log analysis and mobile forensics. You'll learn how to use real forensic tools like Autopsy, FTK Imager, Volatility, Wireshark, and Sleuth Kit — and apply them to realistic scenarios involving malware, insider threats, phishing, and digital fraud.",
-        "You'll also learn the legal and reporting side of digital forensics, ensuring you can conduct investigations that hold up in a real-world environment — whether it's for a private company, law enforcement, or cyber response team. If you're planning to become a forensics analyst, incident responder, or even step into cybercrime law, this is the most practical digital forensics training in India to get started.",
+        "This course covers everything from disk forensics and deleted file recovery to network log analysis and mobile forensics. You'll learn how to use real forensic tools like Autopsy, FTK Imager, Volatility, Wireshark, and Sleuth Kit and apply them to realistic scenarios involving malware, insider threats, phishing, and digital fraud.",
+        "You'll also learn the legal and reporting side of digital forensics, ensuring you can conduct investigations that hold up in a real-world environment whether it's for a private company, law enforcement, or cyber response team. If you're planning to become a forensics analyst, incident responder, or even step into cybercrime law, this is the most practical digital forensics training in India to get started.",
       ],
       eligibility: [
         "Any basic cybersecurity certification (e.g., CEH, Security+, eJPT)",
@@ -1413,21 +1413,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "15+ Assignments — case-based forensic challenges covering memory dumps, disk images, log files, and malware behavior",
+            "15+ Assignments case-based forensic challenges covering memory dumps, disk images, log files, and malware behavior",
         },
         {
           n: "02",
           title:
-            "Quizzes — scenario-based tests after each module, focused on forensic tools, evidence chain-of-custody, and investigative procedures",
+            "Quizzes scenario-based tests after each module, focused on forensic tools, evidence chain-of-custody, and investigative procedures",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly walkthroughs of digital crime cases, malware investigations, and open Q&A sessions with industry experts",
+            "Live Sessions weekly walkthroughs of digital crime cases, malware investigations, and open Q&A sessions with industry experts",
         },
         {
           n: "04",
-          title: "Projects — you'll complete 6 hands-on forensics projects",
+          title: "Projects you'll complete 6 hands-on forensics projects",
         },
       ],
       curriculumSubtitle: "6 modules · 48 lectures · 6 projects",
@@ -1465,7 +1465,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Autopsy", "FTK Imager", "Volatility", "Wireshark", "Sleuth Kit"],
       careerIntro:
-        "Step into roles in digital forensics, incident response, or cybercrime investigation — for private companies, law enforcement, or cyber response teams.",
+        "Step into roles in digital forensics, incident response, or cybercrime investigation for private companies, law enforcement, or cyber response teams.",
       roles: [
         "Forensics Analyst",
         "Incident Responder",
@@ -1508,7 +1508,7 @@ export const COURSES: Course[] = [
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
         "This 30-day program is designed to introduce students to the foundations of Android mobile app penetration testing, using simple tools and real-world apps. You'll learn how to analyze APK files, inspect insecure coding practices, capture data in transit, and test Android apps for OWASP Mobile Top 10 vulnerabilities.",
-        "You'll also learn how to use tools like MobSF, jadx, Burp Suite, and Android emulators — all inside a safe, fully guided lab environment. Whether you're a student, entry-level analyst, or a developer curious about mobile security, this is one of the most practical Android security courses in India right now.",
+        "You'll also learn how to use tools like MobSF, jadx, Burp Suite, and Android emulators all inside a safe, fully guided lab environment. Whether you're a student, entry-level analyst, or a developer curious about mobile security, this is one of the most practical Android security courses in India right now.",
       ],
       eligibility: [
         "Any basic cybersecurity certification (e.g. CEH, Security+, eJPT)",
@@ -1519,22 +1519,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — APK decompilation tasks, mobile traffic interception, and insecure storage analysis, with walkthroughs and mentorship",
+            "Assignments APK decompilation tasks, mobile traffic interception, and insecure storage analysis, with walkthroughs and mentorship",
         },
         {
           n: "02",
           title:
-            "Quizzes — quick checkpoints at the end of every module to reinforce learning, focused on OWASP Mobile concepts and tool usage",
+            "Quizzes quick checkpoints at the end of every module to reinforce learning, focused on OWASP Mobile concepts and tool usage",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly lab demos, tool walkthroughs, and Q&A sessions with mobile security practitioners",
+            "Live Sessions weekly lab demos, tool walkthroughs, and Q&A sessions with mobile security practitioners",
         },
         {
           n: "04",
           title:
-            "Projects — you'll complete 3 key hands-on mobile app assessments",
+            "Projects you'll complete 3 key hands-on mobile app assessments",
         },
       ],
       curriculumSubtitle: "5 modules · 24 lectures · 3 projects",
@@ -1567,7 +1567,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["MobSF", "jadx", "Burp Suite", "Android Emulators"],
       careerIntro:
-        "Positions in mobile security, ethical hacking, and app penetration testing are in high demand — this course prepares you for roles such as Mobile Security Analyst, Penetration Tester, and Ethical Hacker.",
+        "Positions in mobile security, ethical hacking, and app penetration testing are in high demand this course prepares you for roles such as Mobile Security Analyst, Penetration Tester, and Ethical Hacker.",
       roles: [
         "Mobile Security Analyst",
         "Penetration Tester",
@@ -1597,7 +1597,7 @@ export const COURSES: Course[] = [
     brochureSizeMB: 7.47,
     cat: "Cyber Security",
     title:
-      "Android Application Penetration Testing – Advanced (45 Days Hands-On Course)",
+      "Android Application Penetration Testing Advanced (45 Days Hands-On Course)",
     days: 45,
     duration: "45 Days",
     lectures: "30 Lectures",
@@ -1614,7 +1614,7 @@ export const COURSES: Course[] = [
         "We'll walk you through real-world CVEs, appstore vulnerabilities, and CTF-style labs, designed to challenge your skills and deepen your understanding of secure mobile architecture. This is one of the most practical Android penetration testing courses in Kolkata and India, trusted by both red teamers and aspiring bug bounty hunters.",
       ],
       eligibility: [
-        "Completed Android Application Penetration Testing – Basics course and scored at least 90%",
+        "Completed Android Application Penetration Testing Basics course and scored at least 90%",
         "Knowledge of APK structure, static analysis, Burp Suite, MobSF, and OWASP Mobile Top 10 concepts",
         "Familiarity with Android emulator setup and traffic interception",
       ],
@@ -1623,22 +1623,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — Frida scripting challenges, runtime hook simulations, bypass tasks, and post-exploit analysis, guided with trainer support",
+            "Assignments Frida scripting challenges, runtime hook simulations, bypass tasks, and post-exploit analysis, guided with trainer support",
         },
         {
           n: "02",
           title:
-            "Quizzes — advanced scenario-based quizzes with disassembly, patching logic, Frida hooks, and mobile security workflows",
+            "Quizzes advanced scenario-based quizzes with disassembly, patching logic, Frida hooks, and mobile security workflows",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly reverse engineering labs, deep dives into custom CVEs, and real-world vulnerability discussions with experts",
+            "Live Sessions weekly reverse engineering labs, deep dives into custom CVEs, and real-world vulnerability discussions with experts",
         },
         {
           n: "04",
           title:
-            "Projects — you'll complete 5 intense mobile hacking challenges",
+            "Projects you'll complete 5 intense mobile hacking challenges",
         },
       ],
       curriculumSubtitle: "6 modules · 30 lectures · 5 projects",
@@ -1676,7 +1676,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Frida", "Objection", "Xposed"],
       careerIntro:
-        "Positions in mobile security, ethical hacking, and app penetration testing are in high demand — this course prepares you for roles such as Mobile Security Analyst, Penetration Tester, and Ethical Hacker.",
+        "Positions in mobile security, ethical hacking, and app penetration testing are in high demand this course prepares you for roles such as Mobile Security Analyst, Penetration Tester, and Ethical Hacker.",
       roles: [
         "Mobile Security Analyst",
         "Penetration Tester",
@@ -1705,7 +1705,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Network Penetration Testing.pdf",
     brochureSizeMB: 14.3,
     cat: "Cyber Security",
-    title: "Network Pentesting - 45 Days Hands-On Course",
+    title: "Network Pentesting 45 Days Hands-On Course",
     days: 45,
     duration: "45 Days",
     lectures: "36 Lectures",
@@ -1719,7 +1719,7 @@ export const COURSES: Course[] = [
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
         "This 45-day hands-on offensive security course is designed for professionals who want to master the real-world tactics used in red team assessments, vulnerability research, and internal/external network exploitation. You'll learn how to go from initial access to full network control, bypassing modern security controls like firewalls, antivirus, IDS/IPS, and EDR.",
-        "Through live labs and realistic attack chains, students will execute custom payloads, write Python/Bash scripts for automation, simulate pivoting across subnets, and craft detailed post-exploitation reports that demonstrate professional-grade assessments. If you're serious about getting into advanced ethical hacking, red teaming, or want to level up after CEH/OSCP prep — this is one of the top offensive security training programs in India right now.",
+        "Through live labs and realistic attack chains, students will execute custom payloads, write Python/Bash scripts for automation, simulate pivoting across subnets, and craft detailed post-exploitation reports that demonstrate professional-grade assessments. If you're serious about getting into advanced ethical hacking, red teaming, or want to level up after CEH/OSCP prep this is one of the top offensive security training programs in India right now.",
       ],
       eligibility: [
         "At least 1 cybersecurity certification (e.g., CEH, eJPT, PNPT, or equivalent)",
@@ -1731,22 +1731,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — 12+ technical write-ups and scripting challenges including payload crafting, custom scanners, lateral movement automation, and log evasion",
+            "Assignments 12+ technical write-ups and scripting challenges including payload crafting, custom scanners, lateral movement automation, and log evasion",
         },
         {
           n: "02",
           title:
-            "Quizzes — built-in assessment checkpoints after major labs, designed to mimic real pentest decision-making",
+            "Quizzes built-in assessment checkpoints after major labs, designed to mimic real pentest decision-making",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live weekly exploit walkthroughs, post-exploitation simulations, scripting reviews, and case study discussions",
+            "Live Sessions live weekly exploit walkthroughs, post-exploitation simulations, scripting reviews, and case study discussions",
         },
         {
           n: "04",
           title:
-            "Projects — complete 5 advanced projects built on enterprise-like infrastructures",
+            "Projects complete 5 advanced projects built on enterprise-like infrastructures",
         },
       ],
       curriculumSubtitle: "6 modules · 36 lectures · 5 projects",
@@ -1789,7 +1789,7 @@ export const COURSES: Course[] = [
         "EDR Bypass Techniques",
       ],
       careerIntro:
-        "Positions in penetration testing are highly sought after — this course prepares you to land your first gig.",
+        "Positions in penetration testing are highly sought after this course prepares you to land your first gig.",
       roles: ["Penetration Tester", "Red Teamer", "Vulnerability Researcher"],
       benefits: [
         {
@@ -1814,7 +1814,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Cybersecurity Advanced.pdf",
     brochureSizeMB: 7.9,
     cat: "Cyber Security",
-    title: "Cybersecurity Advanced – Red Team/Blue Team Career Track",
+    title: "Cybersecurity Advanced Red Team/Blue Team Career Track",
     days: 90,
     duration: "90 Days",
     lectures: "80+ Lectures",
@@ -1827,7 +1827,7 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To provide learners with a deep, hands-on understanding of offensive and defensive security — including network penetration testing, web app exploits, SIEM-based defense, and incident response. You'll be able to simulate attacks, build defense mechanisms, and respond like a pro in real-world scenarios.",
+        "To provide learners with a deep, hands-on understanding of offensive and defensive security including network penetration testing, web app exploits, SIEM-based defense, and incident response. You'll be able to simulate attacks, build defense mechanisms, and respond like a pro in real-world scenarios.",
       ],
       eligibility: [
         "Ethical hacking/basic cybersecurity course graduates",
@@ -1840,58 +1840,58 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on attack and defense scenarios using virtual labs, tools, and real-world attack chains",
+            "Assignments hands-on attack and defense scenarios using virtual labs, tools, and real-world attack chains",
         },
         {
           n: "02",
           title:
-            "Quizzes — assess knowledge on CVEs, MITRE ATT&CK framework, log analysis, and incident workflows",
+            "Quizzes assess knowledge on CVEs, MITRE ATT&CK framework, log analysis, and incident workflows",
         },
         {
           n: "03",
           title:
-            "Live Sessions — Red vs Blue drills, threat hunting walkthroughs, and adversary emulation sessions",
+            "Live Sessions Red vs Blue drills, threat hunting walkthroughs, and adversary emulation sessions",
         },
         {
           n: "04",
           title:
-            "Projects — simulate domain takeovers, SOC monitoring, malware response, and end-to-end kill chain exercises",
+            "Projects simulate domain takeovers, SOC monitoring, malware response, and end-to-end kill chain exercises",
         },
       ],
       curriculumSubtitle: "8 modules · 80+ lectures · 8 projects",
       modules: [
         {
-          title: "Red Team – Advanced Reconnaissance & OSINT",
+          title: "Red Team Advanced Reconnaissance & OSINT",
           meta: "",
           topics: [],
         },
         {
-          title: "Red Team – Vulnerability Analysis & Exploitation",
+          title: "Red Team Vulnerability Analysis & Exploitation",
           meta: "",
           topics: [],
         },
         {
-          title: "Red Team – Web Application Hacking",
+          title: "Red Team Web Application Hacking",
           meta: "",
           topics: [],
         },
         {
-          title: "Red Team – Active Directory & Post-Exploitation",
+          title: "Red Team Active Directory & Post-Exploitation",
           meta: "",
           topics: [],
         },
         {
-          title: "Blue Team – Log Analysis & Threat Detection",
+          title: "Blue Team Log Analysis & Threat Detection",
           meta: "",
           topics: [],
         },
         {
-          title: "Blue Team – Incident Response & Threat Hunting",
+          title: "Blue Team Incident Response & Threat Hunting",
           meta: "",
           topics: [],
         },
         {
-          title: "Blue Team – Network Security Monitoring",
+          title: "Blue Team Network Security Monitoring",
           meta: "",
           topics: [],
         },
@@ -1933,7 +1933,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/SOC Analyst.pdf",
     brochureSizeMB: 13.3,
     cat: "Cyber Security",
-    title: "SOC Analyst - 60 Days Hands-On Training",
+    title: "SOC Analyst 60 Days Hands-On Training",
     days: 60,
     duration: "60 Days",
     lectures: "40 Lectures",
@@ -1942,11 +1942,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1551288049-bebda4e38f71"),
     blurb:
-      "Real-time threat monitoring, alert triage, and incident response — your fast-track into a SOC.",
+      "Real-time threat monitoring, alert triage, and incident response your fast-track into a SOC.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This course is designed to make you SOC floor-ready — teaching you everything from the basics of threat intelligence to advanced SIEM queries, log correlation, and real-time alert handling. You'll use tools like Splunk, Wazuh, Kibana, and Wireshark to simulate real-world attacks and defense strategies.",
+        "This course is designed to make you SOC floor-ready teaching you everything from the basics of threat intelligence to advanced SIEM queries, log correlation, and real-time alert handling. You'll use tools like Splunk, Wazuh, Kibana, and Wireshark to simulate real-world attacks and defense strategies.",
         "Every module includes lab-based scenarios, helping you understand how threats behave, how alerts are triggered, and how incidents are managed in live SOC environments. If you're serious about getting your first job in cybersecurity as a SOC Analyst in India, this course is your best launchpad.",
       ],
       eligibility: [
@@ -1959,21 +1959,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — log analysis, alert triage, and correlation assignments reviewed via GitHub or LMS portal",
+            "Assignments log analysis, alert triage, and correlation assignments reviewed via GitHub or LMS portal",
         },
         {
           n: "02",
           title:
-            "Quizzes — threat detection, IOC recognition, and investigation scenario-based quizzes after each module",
+            "Quizzes threat detection, IOC recognition, and investigation scenario-based quizzes after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly interactive labs, case study breakdowns, threat analysis Q&As, and SIEM query deep-dives",
+            "Live Sessions weekly interactive labs, case study breakdowns, threat analysis Q&As, and SIEM query deep-dives",
         },
         {
           n: "04",
-          title: "Projects — you'll complete 6 key SOC analyst projects",
+          title: "Projects you'll complete 6 key SOC analyst projects",
         },
       ],
       curriculumSubtitle: "6 modules · 40 lectures · 6 projects",
@@ -2011,7 +2011,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Splunk", "Wazuh", "Kibana", "Wireshark"],
       careerIntro:
-        "Positions in cybersecurity and SOC analysis are in demand — this course prepares you for your first SOC analyst role.",
+        "Positions in cybersecurity and SOC analysis are in demand this course prepares you for your first SOC analyst role.",
       roles: ["SOC Analyst", "Threat Analyst", "Incident Response Analyst"],
       benefits: [
         {
@@ -2036,7 +2036,7 @@ export const COURSES: Course[] = [
     brochureUrl: "/Old Course/Cyber Security/Cloud Security.pdf",
     brochureSizeMB: 11.52,
     cat: "Cyber Security",
-    title: "Cloud Security - 60 Days Hands-On Training",
+    title: "Cloud Security 60 Days Hands-On Training",
     days: 60,
     duration: "60 Days",
     lectures: "38 Lectures",
@@ -2045,12 +2045,12 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1550751827-4bd374c3f58b"),
     blurb:
-      "Secure real AWS, Azure and GCP environments — IAM, network security, threat detection and compliance.",
+      "Secure real AWS, Azure and GCP environments IAM, network security, threat detection and compliance.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This 60-day hands-on course takes you through the entire lifecycle of securing cloud infrastructure — from IAM policies and network security groups to real-world vulnerabilities, threat detection, DevSecOps, and compliance. You'll work inside actual AWS, Azure, and GCP environments, simulating attacks, writing policies, implementing security controls, and using tools like CloudTrail, GuardDuty, Azure Defender, and GCP Security Command Center.",
-        "It's one of the most comprehensive cloud security certification courses in India — designed to make you job-ready for roles like Cloud Security Engineer, DevSecOps Analyst, or SOC+Cloud Hybrid roles.",
+        "This 60-day hands-on course takes you through the entire lifecycle of securing cloud infrastructure from IAM policies and network security groups to real-world vulnerabilities, threat detection, DevSecOps, and compliance. You'll work inside actual AWS, Azure, and GCP environments, simulating attacks, writing policies, implementing security controls, and using tools like CloudTrail, GuardDuty, Azure Defender, and GCP Security Command Center.",
+        "It's one of the most comprehensive cloud security certification courses in India designed to make you job-ready for roles like Cloud Security Engineer, DevSecOps Analyst, or SOC+Cloud Hybrid roles.",
       ],
       eligibility: [
         "Basic knowledge of Networking & Linux",
@@ -2062,21 +2062,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "15+ Assignments — IAM configuration, bucket hardening, serverless protection, and log monitoring",
+            "15+ Assignments IAM configuration, bucket hardening, serverless protection, and log monitoring",
         },
         {
           n: "02",
           title:
-            "Quizzes — security scenarios, misconfig hunting, and compliance challenges after every section",
+            "Quizzes security scenarios, misconfig hunting, and compliance challenges after every section",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly labs with cloud trainers, plus walkthroughs of real CVEs & security breaches from the cloud world",
+            "Live Sessions weekly labs with cloud trainers, plus walkthroughs of real CVEs & security breaches from the cloud world",
         },
         {
           n: "04",
-          title: "Projects — you'll complete 5 hands-on projects",
+          title: "Projects you'll complete 5 hands-on projects",
         },
       ],
       curriculumSubtitle: "7 modules · 38 lectures · 5 projects",
@@ -2124,7 +2124,7 @@ export const COURSES: Course[] = [
         "GCP Security Command Center",
       ],
       careerIntro:
-        "Positions in cloud security, DevSecOps, and related fields are highly sought after — this course prepares you for roles like Cloud Security Engineer and DevSecOps Analyst.",
+        "Positions in cloud security, DevSecOps, and related fields are highly sought after this course prepares you for roles like Cloud Security Engineer and DevSecOps Analyst.",
       roles: [
         "Cloud Security Engineer",
         "DevSecOps Analyst",
@@ -2162,13 +2162,13 @@ export const COURSES: Course[] = [
     projects: "6 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: unsplash("1677442136019-21780ecad995"),
+    img: "/images/courses/Generative AI & Prompt Engineering.avif",
     blurb:
-      "Master the future of AI by learning how to talk to it — hands-on with GPT-4, Claude, Gemini and other LLMs.",
+      "Master the future of AI by learning how to talk to it hands-on with GPT-4, Claude, Gemini and other LLMs.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To help learners understand how to interact with, customize, and build tools using large language models (LLMs). The focus is on practical prompt design, chaining prompts, building chatbots, and using GenAI tools to create value — whether you're coding, designing, selling, or solving business problems.",
+        "To help learners understand how to interact with, customize, and build tools using large language models (LLMs). The focus is on practical prompt design, chaining prompts, building chatbots, and using GenAI tools to create value whether you're coding, designing, selling, or solving business problems.",
       ],
       eligibility: [
         "Anyone curious about ChatGPT, AI tools, or building with LLMs",
@@ -2181,22 +2181,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — design prompts, build workflows, and explore AI-powered automation tasks",
+            "Assignments design prompts, build workflows, and explore AI-powered automation tasks",
         },
         {
           n: "02",
           title:
-            "Quizzes — quick assessments on prompt design, LLM behavior, and GenAI concepts",
+            "Quizzes quick assessments on prompt design, LLM behavior, and GenAI concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — AI tool walkthroughs, live builds, and hands-on GenAI integration workshops",
+            "Live Sessions AI tool walkthroughs, live builds, and hands-on GenAI integration workshops",
         },
         {
           n: "04",
           title:
-            "Projects — create prompt-based tools, chatbots, and automation workflows for real-world tasks",
+            "Projects create prompt-based tools, chatbots, and automation workflows for real-world tasks",
         },
       ],
       curriculumSubtitle: "6 modules · 50+ lectures · 6 projects",
@@ -2234,7 +2234,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["GPT-4", "Claude", "Gemini", "OpenAI API", "LangChain"],
       careerIntro:
-        "Build AI-powered tools, chatbots and content workflows — useful whether you're coding, designing, selling, or solving business problems.",
+        "Build AI-powered tools, chatbots and content workflows useful whether you're coding, designing, selling, or solving business problems.",
       roles: [
         "Prompt Engineer",
         "AI Tools Consultant",
@@ -2272,11 +2272,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1555255707-c07966088b7b"),
     blurb:
-      "Build powerful AI models that think like a human brain — neural networks, TensorFlow and Keras for vision, NLP and forecasting.",
+      "Build powerful AI models that think like a human brain neural networks, TensorFlow and Keras for vision, NLP and forecasting.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To provide a solid foundation in neural network architectures, deep learning workflows, and real-world AI applications using TensorFlow and Keras — all taught with hands-on projects, not just theory.",
+        "To provide a solid foundation in neural network architectures, deep learning workflows, and real-world AI applications using TensorFlow and Keras all taught with hands-on projects, not just theory.",
       ],
       eligibility: [
         "Learners with basic ML or Python experience",
@@ -2289,22 +2289,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — train neural networks, tweak hyperparameters, and visualize layers using TensorFlow/Keras",
+            "Assignments train neural networks, tweak hyperparameters, and visualize layers using TensorFlow/Keras",
         },
         {
           n: "02",
           title:
-            "Quizzes — concept checks on backpropagation, optimizers, and CNN/RNN mechanisms",
+            "Quizzes concept checks on backpropagation, optimizers, and CNN/RNN mechanisms",
         },
         {
           n: "03",
           title:
-            "Live Sessions — deep learning builds, architecture walkthroughs, and real-time model debugging",
+            "Live Sessions deep learning builds, architecture walkthroughs, and real-time model debugging",
         },
         {
           n: "04",
           title:
-            "Projects — image classification, sentiment analysis, sequence forecasting, and final capstone builds",
+            "Projects image classification, sentiment analysis, sequence forecasting, and final capstone builds",
         },
       ],
       curriculumSubtitle: "7 modules · 70+ lectures · 8 projects",
@@ -2347,7 +2347,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["TensorFlow", "Keras", "Python"],
       careerIntro:
-        "Build the skills for AI Engineer roles or research — from computer vision to NLP and time series forecasting.",
+        "Build the skills for AI Engineer roles or research from computer vision to NLP and time series forecasting.",
       roles: [
         "AI Engineer",
         "Deep Learning Engineer",
@@ -2404,22 +2404,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — domain-based problem-solving using industry datasets and real KPIs",
+            "Assignments domain-based problem-solving using industry datasets and real KPIs",
         },
         {
           n: "02",
           title:
-            "Quizzes — assessments to reinforce AI concepts in healthcare, finance, and marketing",
+            "Quizzes assessments to reinforce AI concepts in healthcare, finance, and marketing",
         },
         {
           n: "03",
           title:
-            "Live Sessions — industry case studies, project walkthroughs, and tool usage demos",
+            "Live Sessions industry case studies, project walkthroughs, and tool usage demos",
         },
         {
           n: "04",
           title:
-            "Projects — predictive healthcare models, fintech fraud detectors, AI-powered marketing tools",
+            "Projects predictive healthcare models, fintech fraud detectors, AI-powered marketing tools",
         },
       ],
       curriculumSubtitle: "4 modules · 55+ lectures · 6 projects",
@@ -2447,7 +2447,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["AI/ML Platforms", "Industry Datasets"],
       careerIntro:
-        "Build intelligent solutions across healthcare, fintech and digital marketing — and present them as real business projects.",
+        "Build intelligent solutions across healthcare, fintech and digital marketing and present them as real business projects.",
       roles: [
         "AI Solutions Consultant",
         "Healthcare AI Analyst",
@@ -2488,7 +2488,7 @@ export const COURSES: Course[] = [
     tag: "",
     img: "/courses/python-ai.jpeg",
     blurb:
-      "Master AI and Machine Learning using Python — build ML models, visualize data, and deploy AI solutions with a real portfolio.",
+      "Master AI and Machine Learning using Python build ML models, visualize data, and deploy AI solutions with a real portfolio.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -2505,22 +2505,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — solve classification and regression problems, clean real datasets, and visualize insights",
+            "Assignments solve classification and regression problems, clean real datasets, and visualize insights",
         },
         {
           n: "02",
           title:
-            "Quizzes — concept checks on ML theory, Python libraries, statistics, and neural networks",
+            "Quizzes concept checks on ML theory, Python libraries, statistics, and neural networks",
         },
         {
           n: "03",
           title:
-            "Live Sessions — model walkthroughs, data science project reviews, and mentoring for job readiness",
+            "Live Sessions model walkthroughs, data science project reviews, and mentoring for job readiness",
         },
         {
           n: "04",
           title:
-            "Projects — build models like fraud detectors, recommendation systems, and image classifiers",
+            "Projects build models like fraud detectors, recommendation systems, and image classifiers",
         },
       ],
       curriculumSubtitle: "8 modules · 75+ lectures · 8 projects",
@@ -2605,7 +2605,7 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1571677246347-5040036b95cc"),
     blurb:
-      "Pandas, SQL, visualization and storytelling with data — a complete analyst toolkit.",
+      "Pandas, SQL, visualization and storytelling with data a complete analyst toolkit.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -2622,22 +2622,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — practical hands-on exercises using Python and Power BI",
+            "Assignments practical hands-on exercises using Python and Power BI",
         },
         {
           n: "02",
           title:
-            "Quizzes — assessments to reinforce data analysis and visualization concepts",
+            "Quizzes assessments to reinforce data analysis and visualization concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive discussions on key concepts and real-life business cases",
+            "Live Sessions interactive discussions on key concepts and real-life business cases",
         },
         {
           n: "04",
           title:
-            "Projects — build real business dashboards and data analysis projects",
+            "Projects build real business dashboards and data analysis projects",
         },
       ],
       curriculumSubtitle: "6 modules · 60+ lectures · 6 projects",
@@ -2715,15 +2715,15 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1526379095098-d400fd0bf935"),
     blurb:
-      "No fluff — 30 days of practical Python that sets you up for freelancing, internships, or advanced ML and Data Science courses.",
+      "No fluff 30 days of practical Python that sets you up for freelancing, internships, or advanced ML and Data Science courses.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This hands-on Python course is designed to teach you the fundamentals of programming and help you transition into more advanced fields like AI, machine learning, or data analysis. We start from zero — no prior coding knowledge required — and walk you through the basics of variables, loops, functions, and file handling.",
+        "This hands-on Python course is designed to teach you the fundamentals of programming and help you transition into more advanced fields like AI, machine learning, or data analysis. We start from zero no prior coding knowledge required and walk you through the basics of variables, loops, functions, and file handling.",
         "You will write code daily, complete logic challenges, build working mini projects, and understand how Python is used to automate tasks and power real-world applications. By the end, you'll be able to read and write clean Python code, solve beginner problems, and build projects that you can show off on GitHub or in interviews.",
       ],
       eligibility: [
-        "Complete beginners — no prior coding knowledge required",
+        "Complete beginners no prior coding knowledge required",
         "Anyone who wants to automate tasks, work with data, or start toward AI and ML",
       ],
       projectsHeadline: "What's inside the course.",
@@ -2731,21 +2731,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — coding assignments uploaded to GitHub or shared in Slack, designed for logic building and skill development",
+            "10+ Assignments coding assignments uploaded to GitHub or shared in Slack, designed for logic building and skill development",
         },
         {
           n: "02",
           title:
-            "15+ Quizzes — short quizzes and brain teasers after each module to lock in your learning",
+            "15+ Quizzes short quizzes and brain teasers after each module to lock in your learning",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live weekly coding reviews and real-time debugging with mentors",
+            "Live Sessions live weekly coding reviews and real-time debugging with mentors",
         },
         {
           n: "04",
-          title: "4+ Projects — you'll work on 4 practical projects",
+          title: "4+ Projects you'll work on 4 practical projects",
         },
       ],
       curriculumSubtitle: "8 modules · 24 lectures · 4 projects",
@@ -2793,7 +2793,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Python", "GitHub"],
       careerIntro:
-        "Positions in Data Science and Machine Learning are in high demand — build the confidence and portfolio to navigate interviews for roles like Data Analyst or Machine Learning Engineer.",
+        "Positions in Data Science and Machine Learning are in high demand build the confidence and portfolio to navigate interviews for roles like Data Analyst or Machine Learning Engineer.",
       roles: ["Data Analyst", "Machine Learning Engineer"],
       benefits: [
         {
@@ -2832,35 +2832,35 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This course is your fast-track to writing Bash shell scripts on Linux. You'll learn the fundamentals of scripting — variables, loops, conditionals, functions — and quickly move into real-world applications like file manipulation, automation, cron jobs, and system monitoring.",
-        "We won't just teach syntax. We'll teach how to think in Bash, debug scripts, and turn logic into actual, useful tools — whether you're working with Kali Linux, Ubuntu, Red Hat, or any other flavor of Linux. By the end, you'll be automating repetitive tasks, creating custom command-line tools, and feeling right at home inside the terminal.",
+        "This course is your fast-track to writing Bash shell scripts on Linux. You'll learn the fundamentals of scripting variables, loops, conditionals, functions and quickly move into real-world applications like file manipulation, automation, cron jobs, and system monitoring.",
+        "We won't just teach syntax. We'll teach how to think in Bash, debug scripts, and turn logic into actual, useful tools whether you're working with Kali Linux, Ubuntu, Red Hat, or any other flavor of Linux. By the end, you'll be automating repetitive tasks, creating custom command-line tools, and feeling right at home inside the terminal.",
       ],
       eligibility: [
         "Basic Linux/terminal knowledge",
         "Any cybersecurity, DevOps, or system admin background (optional, but helpful)",
-        "No prior coding experience required — we teach from scratch",
+        "No prior coding experience required we teach from scratch",
       ],
       projectsHeadline: "What's inside the course.",
       projects: [
         {
           n: "01",
           title:
-            "10+ Assignments — daily script challenges covering logic building, conditional workflows, and real use cases",
+            "10+ Assignments daily script challenges covering logic building, conditional workflows, and real use cases",
         },
         {
           n: "02",
           title:
-            "10+ Quizzes — syntax checks, script flow puzzles, and debugging logic tests after each module",
+            "10+ Quizzes syntax checks, script flow puzzles, and debugging logic tests after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly coding walkthroughs, script reviews, automation demos, and live error solving with mentors",
+            "Live Sessions weekly coding walkthroughs, script reviews, automation demos, and live error solving with mentors",
         },
         {
           n: "04",
           title:
-            "3+ Projects — you'll build 3+ practical tools using Shell Scripting",
+            "3+ Projects you'll build 3+ practical tools using Shell Scripting",
         },
       ],
       curriculumSubtitle: "7 modules · 24 lectures · 3 projects",
@@ -2941,8 +2941,8 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This 45-day course teaches you how to leverage Python for real-world offensive security work — from automating recon to building port scanners, brute forcers, keyloggers, backdoors, and reporting bots. You'll use popular libraries like socket, scapy, requests, paramiko, and nmap to code your own attack tools.",
-        "Each lesson is practical, each project solves a real security problem, and by the end, you will be able to confidently say, I built this exploit from scratch. Whether you are preparing for OSCP, PNPT, or bug bounty programs, this course is your hacker toolkit — coded in Python.",
+        "This 45-day course teaches you how to leverage Python for real-world offensive security work from automating recon to building port scanners, brute forcers, keyloggers, backdoors, and reporting bots. You'll use popular libraries like socket, scapy, requests, paramiko, and nmap to code your own attack tools.",
+        "Each lesson is practical, each project solves a real security problem, and by the end, you will be able to confidently say, I built this exploit from scratch. Whether you are preparing for OSCP, PNPT, or bug bounty programs, this course is your hacker toolkit coded in Python.",
       ],
       eligibility: [
         "Basic Python knowledge (variables, loops, functions, imports)",
@@ -2954,22 +2954,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — custom scripting tasks covering network mapping, payload crafting, packet sniffing, file exfiltration, and bypass automation",
+            "10+ Assignments custom scripting tasks covering network mapping, payload crafting, packet sniffing, file exfiltration, and bypass automation",
         },
         {
           n: "02",
           title:
-            "15+ Quizzes — knowledge checks after each concept, focusing on code logic, vulnerability use-cases, and script performance",
+            "15+ Quizzes knowledge checks after each concept, focusing on code logic, vulnerability use-cases, and script performance",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly coding breakdowns, malware analysis labs, and exploit build challenges with real red teamers",
+            "Live Sessions weekly coding breakdowns, malware analysis labs, and exploit build challenges with real red teamers",
         },
         {
           n: "04",
           title:
-            "4+ Projects — you'll build 4 key offensive tools, plus a final all-in-one framework",
+            "4+ Projects you'll build 4 key offensive tools, plus a final all-in-one framework",
         },
       ],
       curriculumSubtitle: "6 modules · 30 lectures · 4 projects",
@@ -3057,21 +3057,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — practical tasks including form design, responsive layout building, navbar creation, and image sliders",
+            "10+ Assignments practical tasks including form design, responsive layout building, navbar creation, and image sliders",
         },
         {
           n: "02",
           title:
-            "25+ Quizzes — quick quizzes after each module to strengthen syntax, logic, and web architecture understanding",
+            "25+ Quizzes quick quizzes after each module to strengthen syntax, logic, and web architecture understanding",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live code-alongs, troubleshooting sessions, and project reviews with mentors",
+            "Live Sessions weekly live code-alongs, troubleshooting sessions, and project reviews with mentors",
         },
         {
           n: "04",
-          title: "3+ Projects — you'll build 3+ fully functional websites",
+          title: "3+ Projects you'll build 3+ fully functional websites",
         },
       ],
       curriculumSubtitle: "6 modules · 30 lectures · 3 projects",
@@ -3147,8 +3147,8 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "Over 90 days, you'll master the complete WordPress ecosystem — from installing and customizing themes to designing full websites with Elementor and setting up secure online stores with WooCommerce.",
-        "We'll also cover SEO, plugins, blogging, security, speed optimization, payments, and automation — all hands-on, all beginner-friendly. By the end, you'll walk away with real client-ready websites, a personal portfolio, and the skills to freelance or build your own online business.",
+        "Over 90 days, you'll master the complete WordPress ecosystem from installing and customizing themes to designing full websites with Elementor and setting up secure online stores with WooCommerce.",
+        "We'll also cover SEO, plugins, blogging, security, speed optimization, payments, and automation all hands-on, all beginner-friendly. By the end, you'll walk away with real client-ready websites, a personal portfolio, and the skills to freelance or build your own online business.",
       ],
       eligibility: [
         "No prior coding or design experience required",
@@ -3160,21 +3160,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — website tasks, plugin experiments, page design drills, and real-world eCommerce simulations, all with instructor feedback",
+            "10+ Assignments website tasks, plugin experiments, page design drills, and real-world eCommerce simulations, all with instructor feedback",
         },
         {
           n: "02",
           title:
-            "15+ Quizzes — quick-check quizzes on WordPress structure, plugin use, theme customization, and page-building logic",
+            "15+ Quizzes quick-check quizzes on WordPress structure, plugin use, theme customization, and page-building logic",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live code-alongs, troubleshooting sessions, and project reviews with mentors",
+            "Live Sessions weekly live code-alongs, troubleshooting sessions, and project reviews with mentors",
         },
         {
           n: "04",
-          title: "5+ Projects — you'll build at least 5 real websites",
+          title: "5+ Projects you'll build at least 5 real websites",
         },
       ],
       curriculumSubtitle: "7 modules · 50 lectures · 5 projects",
@@ -3259,11 +3259,11 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This course is your complete roadmap to becoming a modern frontend developer using JavaScript, React & Next.js. You'll learn core logic, UI frameworks, state management, APIs, routing, authentication, deployment, and more — all by building real apps.",
+        "This course is your complete roadmap to becoming a modern frontend developer using JavaScript, React & Next.js. You'll learn core logic, UI frameworks, state management, APIs, routing, authentication, deployment, and more all by building real apps.",
       ],
       eligibility: [
         "Basic understanding of HTML & CSS",
-        "No prior JavaScript or React experience needed — we teach it all",
+        "No prior JavaScript or React experience needed we teach it all",
         "Ideal for students, freelancers, aspiring devs, and career switchers",
       ],
       projectsHeadline: "What's inside the course.",
@@ -3271,21 +3271,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — component challenges, logic puzzles, form validation tasks, routing logic, and state exercises",
+            "10+ Assignments component challenges, logic puzzles, form validation tasks, routing logic, and state exercises",
         },
         {
           n: "02",
           title:
-            "15+ Quizzes — module quizzes for JavaScript concepts, React component hierarchy, state management, and Next.js routing",
+            "15+ Quizzes module quizzes for JavaScript concepts, React component hierarchy, state management, and Next.js routing",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live coding sessions, project deep-dives, and performance optimization tips from working developers",
+            "Live Sessions weekly live coding sessions, project deep-dives, and performance optimization tips from working developers",
         },
         {
           n: "04",
-          title: "6+ Projects — you'll build 6 real apps",
+          title: "6+ Projects you'll build 6 real apps",
         },
       ],
       curriculumSubtitle: "7 modules · 55 lectures · 6 projects",
@@ -3366,7 +3366,7 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "This course teaches you everything you need to know to build robust, scalable backends using Django — one of the most powerful and popular web frameworks in the world. You'll go from setting up your first project to building real-world APIs, working with relational databases, handling user auth, and deploying to the cloud.",
+        "This course teaches you everything you need to know to build robust, scalable backends using Django one of the most powerful and popular web frameworks in the world. You'll go from setting up your first project to building real-world APIs, working with relational databases, handling user auth, and deploying to the cloud.",
         "You'll even explore Django Rest Framework (DRF) to make your apps mobile and frontend-ready. By the end of the course, you'll have 4 portfolio-ready apps, a fully functioning API, and the skills to work as a Django backend developer or build your own product.",
       ],
       eligibility: [
@@ -3379,21 +3379,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "10+ Assignments — query building, model relationships, user auth flows, API creation, deployment walkthroughs, all hands-on and guided",
+            "10+ Assignments query building, model relationships, user auth flows, API creation, deployment walkthroughs, all hands-on and guided",
         },
         {
           n: "02",
           title:
-            "15+ Quizzes — mini assessments after each module to test your grasp on views, models, routes, auth logic, and database queries",
+            "15+ Quizzes mini assessments after each module to test your grasp on views, models, routes, auth logic, and database queries",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly backend architecture walkthroughs, model design planning, DRF lab sessions, and code optimization support",
+            "Live Sessions weekly backend architecture walkthroughs, model design planning, DRF lab sessions, and code optimization support",
         },
         {
           n: "04",
-          title: "4+ Projects — you'll build 4 full backend applications",
+          title: "4+ Projects you'll build 4 full backend applications",
         },
       ],
       curriculumSubtitle: "6 modules · 45 lectures · 4 projects",
@@ -3486,21 +3486,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — request/response cycle practice, database modeling, API routing, token-based auth flows, and deployment tasks",
+            "Assignments request/response cycle practice, database modeling, API routing, token-based auth flows, and deployment tasks",
         },
         {
           n: "02",
           title:
-            "Quizzes — assess your skills on topics like Node.js core modules, Express routing, MongoDB schemas, and REST standards",
+            "Quizzes assess your skills on topics like Node.js core modules, Express routing, MongoDB schemas, and REST standards",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live coding walkthroughs, debugging sessions, API design reviews, and architectural breakdowns",
+            "Live Sessions weekly live coding walkthroughs, debugging sessions, API design reviews, and architectural breakdowns",
         },
         {
           n: "04",
-          title: "Projects — you'll build 4 backend projects using Node.js",
+          title: "Projects you'll build 4 backend projects using Node.js",
         },
       ],
       curriculumSubtitle: "6 modules · 40+ lectures · 4 projects",
@@ -3577,12 +3577,12 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1607706189992-eae578626c86"),
     blurb:
-      "SQL fundamentals, relational design and ER modeling — plus hands-on MongoDB and MariaDB.",
+      "SQL fundamentals, relational design and ER modeling plus hands-on MongoDB and MariaDB.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "Over 45 days, you'll go from designing normalized databases with ER diagrams and writing SQL queries to building and querying document-based data with MongoDB, and working with MariaDB — a drop-in replacement for MySQL used globally by large-scale applications.",
-        "This course blends classic RDBMS training (theory + MySQL/MariaDB) with modern NoSQL practice (MongoDB), preparing you for any project stack — backend APIs, real-time dashboards, or eCommerce systems.",
+        "Over 45 days, you'll go from designing normalized databases with ER diagrams and writing SQL queries to building and querying document-based data with MongoDB, and working with MariaDB a drop-in replacement for MySQL used globally by large-scale applications.",
+        "This course blends classic RDBMS training (theory + MySQL/MariaDB) with modern NoSQL practice (MongoDB), preparing you for any project stack backend APIs, real-time dashboards, or eCommerce systems.",
       ],
       eligibility: [
         "No prior DB experience required",
@@ -3594,21 +3594,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — ER diagrams, relational schemas, query tasks in SQL and Mongo shell, NoSQL document structuring, data migration challenges",
+            "Assignments ER diagrams, relational schemas, query tasks in SQL and Mongo shell, NoSQL document structuring, data migration challenges",
         },
         {
           n: "02",
           title:
-            "Quizzes — topic-wise assessments on DBMS theory, SQL logic, Mongo syntax, indexing, and schema best practices",
+            "Quizzes topic-wise assessments on DBMS theory, SQL logic, Mongo syntax, indexing, and schema best practices",
         },
         {
           n: "03",
           title:
-            "Live Sessions — schema reviews, query live coding, data modeling walkthroughs, and system design challenges weekly with mentors",
+            "Live Sessions schema reviews, query live coding, data modeling walkthroughs, and system design challenges weekly with mentors",
         },
         {
           n: "04",
-          title: "Projects — you'll build 4 hands-on database applications",
+          title: "Projects you'll build 4 hands-on database applications",
         },
       ],
       curriculumSubtitle: "6 modules · 30+ lectures · 4+ projects",
@@ -3646,7 +3646,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["MySQL", "MariaDB", "MongoDB"],
       careerIntro:
-        "Positions in database management and engineering are in high demand — build the skills to secure roles in top tech companies.",
+        "Positions in database management and engineering are in high demand build the skills to secure roles in top tech companies.",
       roles: ["Database Administrator", "Backend Developer", "Data Analyst"],
       benefits: [
         {
@@ -3680,7 +3680,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1633356122102-3fe601e05bd2"),
     blurb:
-      "Build dynamic apps using React, Node, Express, and MongoDB — integrate, secure, and deploy your own full-stack projects.",
+      "Build dynamic apps using React, Node, Express, and MongoDB integrate, secure, and deploy your own full-stack projects.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -3697,22 +3697,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — complete hands-on assignments to master the MERN stack, including MongoDB, Express, React, and Node.js",
+            "Assignments complete hands-on assignments to master the MERN stack, including MongoDB, Express, React, and Node.js",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your knowledge of MERN stack concepts after each module",
+            "Quizzes test your knowledge of MERN stack concepts after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live, interactive coding sessions where you can ask questions, collaborate with peers, and get expert feedback",
+            "Live Sessions live, interactive coding sessions where you can ask questions, collaborate with peers, and get expert feedback",
         },
         {
           n: "04",
           title:
-            "Projects — build 8 practical projects, such as product catalogs, APIs, dashboards, and booking systems",
+            "Projects build 8 practical projects, such as product catalogs, APIs, dashboards, and booking systems",
         },
       ],
       curriculumSubtitle: "6 modules · 90+ lectures · 8 projects",
@@ -3788,7 +3788,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1517430816045-df4b7de11d1d"),
     blurb:
-      "A complete job-ready full stack web development program — React, Next.js, Django and real-world databases.",
+      "A complete job-ready full stack web development program React, Next.js, Django and real-world databases.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -3805,22 +3805,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on assignments covering React, Next.js, Django, PostgreSQL, and MongoDB",
+            "Assignments hands-on assignments covering React, Next.js, Django, PostgreSQL, and MongoDB",
         },
         {
           n: "02",
           title:
-            "Quizzes — reinforce your understanding of full stack concepts after each module",
+            "Quizzes reinforce your understanding of full stack concepts after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live coding sessions where you can ask questions and get real-time feedback",
+            "Live Sessions live coding sessions where you can ask questions and get real-time feedback",
         },
         {
           n: "04",
           title:
-            "Projects — work on 10+ real-world projects, including blogs, APIs, and ecommerce platforms",
+            "Projects work on 10+ real-world projects, including blogs, APIs, and ecommerce platforms",
         },
       ],
       curriculumSubtitle: "6 modules · 120+ lectures · 12 projects",
@@ -3913,22 +3913,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — practice writing smart contracts, integrating wallets, and interacting with the Ethereum blockchain",
+            "Assignments practice writing smart contracts, integrating wallets, and interacting with the Ethereum blockchain",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your understanding of Web3 concepts, Solidity, dApp architecture, and blockchain workflows",
+            "Quizzes test your understanding of Web3 concepts, Solidity, dApp architecture, and blockchain workflows",
         },
         {
           n: "03",
           title:
-            "Live Sessions — expert-led sessions on smart contract design, frontend integration, and real-world Web3 challenges",
+            "Live Sessions expert-led sessions on smart contract design, frontend integration, and real-world Web3 challenges",
         },
         {
           n: "04",
           title:
-            "Projects — build and deploy complete dApps including NFT minting platforms, custom tokens, and DeFi features",
+            "Projects build and deploy complete dApps including NFT minting platforms, custom tokens, and DeFi features",
         },
       ],
       curriculumSubtitle: "7 modules · 65+ lectures · 6 projects",
@@ -3971,7 +3971,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Solidity", "Hardhat", "web3.js", "ethers.js", "IPFS"],
       careerIntro:
-        "Build and deploy complete dApps — from NFT minting platforms to custom tokens and DeFi features.",
+        "Build and deploy complete dApps from NFT minting platforms to custom tokens and DeFi features.",
       roles: [
         "Blockchain Developer",
         "Smart Contract Developer",
@@ -4012,11 +4012,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1558494949-ef010cbdcc31"),
     blurb:
-      "Architect, deploy and secure real workloads on AWS — aligned to certification paths.",
+      "Architect, deploy and secure real workloads on AWS aligned to certification paths.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To help learners understand what cloud computing is, how AWS delivers cloud services, and how to create and manage real cloud infrastructure — all from scratch. You'll learn everything from theory to hands-on practice: launching servers, configuring storage, working with AWS services like EC2, S3, IAM, and more — all in a guided, no-fluff format.",
+        "To help learners understand what cloud computing is, how AWS delivers cloud services, and how to create and manage real cloud infrastructure all from scratch. You'll learn everything from theory to hands-on practice: launching servers, configuring storage, working with AWS services like EC2, S3, IAM, and more all in a guided, no-fluff format.",
       ],
       eligibility: [
         "Beginners with no prior cloud experience",
@@ -4029,22 +4029,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs to deploy real cloud infrastructure using AWS services like EC2, S3, and RDS",
+            "Assignments hands-on labs to deploy real cloud infrastructure using AWS services like EC2, S3, and RDS",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your knowledge on cloud computing concepts, AWS services, and best practices",
+            "Quizzes test your knowledge on cloud computing concepts, AWS services, and best practices",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with AWS professionals to guide you through the setup and configuration of AWS services",
+            "Live Sessions interactive sessions with AWS professionals to guide you through the setup and configuration of AWS services",
         },
         {
           n: "04",
           title:
-            "Projects — work on deploying cloud projects such as websites and databases on AWS",
+            "Projects work on deploying cloud projects such as websites and databases on AWS",
         },
       ],
       curriculumSubtitle: "6 modules · 60 lectures · 5 projects",
@@ -4120,7 +4120,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1523474253046-8cd2748b5fd2"),
     blurb:
-      "Design, deploy, and manage scalable, secure, cost-efficient cloud architectures — aligned to AWS Solutions Architect certifications.",
+      "Design, deploy, and manage scalable, secure, cost-efficient cloud architectures aligned to AWS Solutions Architect certifications.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -4137,22 +4137,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and projects that simulate real-world AWS architecture and cloud infrastructure",
+            "Assignments hands-on labs and projects that simulate real-world AWS architecture and cloud infrastructure",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your knowledge with quizzes covering each module's key concepts",
+            "Quizzes test your knowledge with quizzes covering each module's key concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live training sessions with experienced AWS professionals to clarify concepts and troubleshoot",
+            "Live Sessions live training sessions with experienced AWS professionals to clarify concepts and troubleshoot",
         },
         {
           n: "04",
           title:
-            "Projects — work on end-to-end AWS architecture projects, including cost-optimized, highly available, and secure solutions",
+            "Projects work on end-to-end AWS architecture projects, including cost-optimized, highly available, and secure solutions",
         },
       ],
       curriculumSubtitle: "6 modules · 90 lectures · 6 projects",
@@ -4190,7 +4190,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["AWS EC2", "Auto Scaling", "AWS Networking", "AWS Monitoring"],
       careerIntro:
-        "Apply for cloud architect, DevOps engineer, or infrastructure lead roles — and prepare for top AWS certifications.",
+        "Apply for cloud architect, DevOps engineer, or infrastructure lead roles and prepare for top AWS certifications.",
       roles: ["Cloud Architect", "DevOps Engineer", "Infrastructure Lead"],
       benefits: [
         {
@@ -4224,11 +4224,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1633419461186-7d40a38105ec"),
     blurb:
-      "Deploy, manage, and secure cloud applications on Microsoft Azure — prepping for the AZ-900 certification.",
+      "Deploy, manage, and secure cloud applications on Microsoft Azure prepping for the AZ-900 certification.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To equip learners with the knowledge and hands-on skills to confidently use Azure cloud services, including VMs, storage, networking, databases, and identity management — following Microsoft's cloud computing best practices. Whether you're planning to build your own cloud project, pursue certification, or land a cloud support/admin/dev job, this course sets you up right.",
+        "To equip learners with the knowledge and hands-on skills to confidently use Azure cloud services, including VMs, storage, networking, databases, and identity management following Microsoft's cloud computing best practices. Whether you're planning to build your own cloud project, pursue certification, or land a cloud support/admin/dev job, this course sets you up right.",
       ],
       eligibility: [
         "Beginners with basic computer or IT knowledge",
@@ -4241,22 +4241,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and projects to get familiar with Azure services",
+            "Assignments hands-on labs and projects to get familiar with Azure services",
         },
         {
           n: "02",
           title:
-            "Quizzes — quiz after each module to test your understanding of cloud concepts",
+            "Quizzes quiz after each module to test your understanding of cloud concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with Azure experts to help you master the platform",
+            "Live Sessions interactive sessions with Azure experts to help you master the platform",
         },
         {
           n: "04",
           title:
-            "Projects — work on real-world cloud projects such as deploying applications, configuring networks, and more",
+            "Projects work on real-world cloud projects such as deploying applications, configuring networks, and more",
         },
       ],
       curriculumSubtitle: "6 modules · 45 lectures · 6 projects",
@@ -4354,21 +4354,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and projects to practice DevOps automation and cloud provisioning",
+            "Assignments hands-on labs and projects to practice DevOps automation and cloud provisioning",
         },
         {
           n: "02",
-          title: "Quizzes — test your knowledge with quizzes after each module",
+          title: "Quizzes test your knowledge with quizzes after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live training sessions with instructors to address doubts and clarify concepts",
+            "Live Sessions live training sessions with instructors to address doubts and clarify concepts",
         },
         {
           n: "04",
           title:
-            "Projects — work on real-world DevOps and cloud engineering projects to demonstrate your skills",
+            "Projects work on real-world DevOps and cloud engineering projects to demonstrate your skills",
         },
       ],
       curriculumSubtitle: "7 modules · 60 lectures · 7 projects",
@@ -4459,7 +4459,7 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1573497491208-6b1acb260507"),
     blurb:
-      "CI/CD, Docker, Kubernetes and infrastructure-as-code — the modern delivery pipeline.",
+      "CI/CD, Docker, Kubernetes and infrastructure-as-code the modern delivery pipeline.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -4476,22 +4476,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and exercises to practice DevOps essentials",
+            "Assignments hands-on labs and exercises to practice DevOps essentials",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your understanding of core DevOps concepts after each module",
+            "Quizzes test your understanding of core DevOps concepts after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with instructors to clarify concepts and address questions",
+            "Live Sessions interactive sessions with instructors to clarify concepts and address questions",
         },
         {
           n: "04",
           title:
-            "Projects — work on practical projects that demonstrate your newly acquired skills",
+            "Projects work on practical projects that demonstrate your newly acquired skills",
         },
       ],
       curriculumSubtitle: "5 modules · 30 lectures · 5 projects",
@@ -4562,7 +4562,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1605745341112-85968b19335b"),
     blurb:
-      "CI/CD, containerization, Kubernetes, Jenkins, and Terraform — deploy applications across AWS, Azure, and GCP.",
+      "CI/CD, containerization, Kubernetes, Jenkins, and Terraform deploy applications across AWS, Azure, and GCP.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -4579,22 +4579,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs to practice automation, deployment, and cloud-based infrastructure management",
+            "Assignments hands-on labs to practice automation, deployment, and cloud-based infrastructure management",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your knowledge and skills with quizzes after each module",
+            "Quizzes test your knowledge and skills with quizzes after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive instructor-led sessions for problem-solving and in-depth understanding",
+            "Live Sessions interactive instructor-led sessions for problem-solving and in-depth understanding",
         },
         {
           n: "04",
           title:
-            "Projects — work on real-world projects that demonstrate your advanced DevOps skills",
+            "Projects work on real-world projects that demonstrate your advanced DevOps skills",
         },
       ],
       curriculumSubtitle: "8 modules · 60 lectures · 7 projects",
@@ -4693,7 +4693,7 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To teach you how to build modern, responsive, real-world mobile applications using Flutter & Dart, and deploy them on Android, iOS, and Web — all with a single codebase. This is the perfect course for students, freelancers, and developers who want to enter the cross-platform mobile app market, without learning separate native languages for each OS.",
+        "To teach you how to build modern, responsive, real-world mobile applications using Flutter & Dart, and deploy them on Android, iOS, and Web all with a single codebase. This is the perfect course for students, freelancers, and developers who want to enter the cross-platform mobile app market, without learning separate native languages for each OS.",
       ],
       eligibility: [
         "Beginners with no prior app development experience",
@@ -4706,22 +4706,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on projects building real-world apps using Flutter",
+            "Assignments hands-on projects building real-world apps using Flutter",
         },
         {
           n: "02",
           title:
-            "Quizzes — short quizzes to test your understanding of concepts like Flutter widgets, APIs, Firebase, and state management",
+            "Quizzes short quizzes to test your understanding of concepts like Flutter widgets, APIs, Firebase, and state management",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive live coding sessions with experts and Q&A to resolve your queries",
+            "Live Sessions interactive live coding sessions with experts and Q&A to resolve your queries",
         },
         {
           n: "04",
           title:
-            "Projects — multiple practical projects including weather apps, blog readers, and a final capstone project",
+            "Projects multiple practical projects including weather apps, blog readers, and a final capstone project",
         },
       ],
       curriculumSubtitle: "5 modules · 30 lectures · 5 projects",
@@ -4797,7 +4797,7 @@ export const COURSES: Course[] = [
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To help you master cross-platform mobile app development using React Native — one of the most in-demand frameworks globally. You'll learn to build smooth, beautiful, and real-world apps using JavaScript + React, and deploy them on Android and iOS devices — all with one codebase. This is a practical, portfolio-ready program that prepares you for real jobs, freelance gigs, or launching your own mobile app.",
+        "To help you master cross-platform mobile app development using React Native one of the most in-demand frameworks globally. You'll learn to build smooth, beautiful, and real-world apps using JavaScript + React, and deploy them on Android and iOS devices all with one codebase. This is a practical, portfolio-ready program that prepares you for real jobs, freelance gigs, or launching your own mobile app.",
       ],
       eligibility: [
         "Anyone with basic knowledge of JavaScript or React",
@@ -4810,22 +4810,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — real-world app development challenges with hands-on exercises",
+            "Assignments real-world app development challenges with hands-on exercises",
         },
         {
           n: "02",
           title:
-            "Quizzes — short quizzes after each module to test your understanding",
+            "Quizzes short quizzes after each module to test your understanding",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive live coding sessions and Q&A with experts",
+            "Live Sessions interactive live coding sessions and Q&A with experts",
         },
         {
           n: "04",
           title:
-            "Projects — 5 hands-on projects that will form the foundation of your portfolio",
+            "Projects 5 hands-on projects that will form the foundation of your portfolio",
         },
       ],
       curriculumSubtitle: "5 modules · 30 lectures · 5 projects",
@@ -4896,7 +4896,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1621839673705-6617adf9e890"),
     blurb:
-      "Build beautiful, responsive iOS apps with Swift and Xcode — from your first line of code to the App Store.",
+      "Build beautiful, responsive iOS apps with Swift and Xcode from your first line of code to the App Store.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -4913,22 +4913,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — code-focused assignments after each module to sharpen your skills",
+            "Assignments code-focused assignments after each module to sharpen your skills",
         },
         {
           n: "02",
           title:
-            "Quizzes — quick quizzes to help you retain key Swift and iOS concepts",
+            "Quizzes quick quizzes to help you retain key Swift and iOS concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — instructor-led live coding and walkthrough sessions",
+            "Live Sessions instructor-led live coding and walkthrough sessions",
         },
         {
           n: "04",
           title:
-            "Projects — 4 guided projects that showcase your real-world iOS development skills",
+            "Projects 4 guided projects that showcase your real-world iOS development skills",
         },
       ],
       curriculumSubtitle: "4 modules · 30 lectures · 4 projects",
@@ -4991,7 +4991,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1607252650355-f7fd0460ccdb"),
     blurb:
-      "Flutter for frontend, Django for REST APIs — become a job-ready full stack mobile app developer.",
+      "Flutter for frontend, Django for REST APIs become a job-ready full stack mobile app developer.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -5008,22 +5008,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — weekly real-world challenges across frontend and backend",
+            "Assignments weekly real-world challenges across frontend and backend",
         },
         {
           n: "02",
           title:
-            "Quizzes — assessments after each module to test both Flutter and Django knowledge",
+            "Quizzes assessments after each module to test both Flutter and Django knowledge",
         },
         {
           n: "03",
           title:
-            "Live Sessions — instructor-led coding, debugging, and project support",
+            "Live Sessions instructor-led coding, debugging, and project support",
         },
         {
           n: "04",
           title:
-            "Projects — 6 hands-on projects including a final full stack app deployment",
+            "Projects 6 hands-on projects including a final full stack app deployment",
         },
       ],
       curriculumSubtitle: "5 modules · 45 lectures · 6 projects",
@@ -5096,11 +5096,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1487014679447-9f8336841d58"),
     blurb:
-      "Manage massive datasets with Hadoop, Spark, Kafka and Airflow — build batch and real-time data pipelines.",
+      "Manage massive datasets with Hadoop, Spark, Kafka and Airflow build batch and real-time data pipelines.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To give learners the knowledge, tools, and real-world experience to work with large-scale datasets, build ETL pipelines, process real-time data streams, and prepare for roles like Big Data Engineer, Data Pipeline Developer, or DataOps Specialist. You'll go from foundational data concepts to building real pipelines with Hadoop, Spark, Kafka, and Airflow — all with hands-on projects, cloud integration, and GitHub-ready portfolio building.",
+        "To give learners the knowledge, tools, and real-world experience to work with large-scale datasets, build ETL pipelines, process real-time data streams, and prepare for roles like Big Data Engineer, Data Pipeline Developer, or DataOps Specialist. You'll go from foundational data concepts to building real pipelines with Hadoop, Spark, Kafka, and Airflow all with hands-on projects, cloud integration, and GitHub-ready portfolio building.",
       ],
       eligibility: [
         "Beginners with basic Python or SQL knowledge",
@@ -5113,22 +5113,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — build ETL workflows, stream data from Kafka, and manage tasks with Airflow",
+            "Assignments build ETL workflows, stream data from Kafka, and manage tasks with Airflow",
         },
         {
           n: "02",
           title:
-            "Quizzes — concept checks on Hadoop, Spark internals, real-time streaming, and orchestration",
+            "Quizzes concept checks on Hadoop, Spark internals, real-time streaming, and orchestration",
         },
         {
           n: "03",
           title:
-            "Live Sessions — walkthroughs of distributed processing, cluster management, and real-world pipeline building",
+            "Live Sessions walkthroughs of distributed processing, cluster management, and real-world pipeline building",
         },
         {
           n: "04",
           title:
-            "Projects — deploy end-to-end data pipelines from ingestion to transformation and cloud deployment",
+            "Projects deploy end-to-end data pipelines from ingestion to transformation and cloud deployment",
         },
       ],
       curriculumSubtitle: "8+ modules · 80+ lectures · 9 projects",
@@ -5216,11 +5216,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1580927752452-89d86da3fa0a"),
     blurb:
-      "Command line to server hardening — the foundation every tech career is built on.",
+      "Command line to server hardening the foundation every tech career is built on.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "Perfect for beginners, this course provides a comprehensive dive into Linux essentials. Learn terminal commands, manage users and services, configure basic networking, and get introduced to shell scripting — all through hands-on labs that prepare you for Red Hat certification and a Linux-based career path.",
+        "Perfect for beginners, this course provides a comprehensive dive into Linux essentials. Learn terminal commands, manage users and services, configure basic networking, and get introduced to shell scripting all through hands-on labs that prepare you for Red Hat certification and a Linux-based career path.",
       ],
       eligibility: [
         "Students and freshers with no prior Linux experience",
@@ -5233,22 +5233,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — practice essential Linux commands and system tasks through guided assignments tailored to RHCE fundamentals",
+            "Assignments practice essential Linux commands and system tasks through guided assignments tailored to RHCE fundamentals",
         },
         {
           n: "02",
           title:
-            "Quizzes — reinforce your understanding of Linux concepts and system operations with end-of-module quizzes",
+            "Quizzes reinforce your understanding of Linux concepts and system operations with end-of-module quizzes",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive mentorship sessions to discuss RHCE topics, troubleshoot issues, and clarify technical concepts",
+            "Live Sessions interactive mentorship sessions to discuss RHCE topics, troubleshoot issues, and clarify technical concepts",
         },
         {
           n: "04",
           title:
-            "Projects — build and configure real-world Linux environments through practical capstone projects aligned with RHCE standards",
+            "Projects build and configure real-world Linux environments through practical capstone projects aligned with RHCE standards",
         },
       ],
       curriculumSubtitle: "6 modules · 40 lectures · 4 projects",
@@ -5324,7 +5324,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1541560052-5e137f229371"),
     blurb:
-      "Configure, secure, automate, and manage Linux servers in production — process management, LVM, services, Bash and Ansible.",
+      "Configure, secure, automate, and manage Linux servers in production process management, LVM, services, Bash and Ansible.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -5341,22 +5341,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — deep-dive tasks focused on system management, user permissions, service configurations, and networking",
+            "Assignments deep-dive tasks focused on system management, user permissions, service configurations, and networking",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your grasp of RHCE-level topics like systemd, SELinux, and firewalld with challenging module-end quizzes",
+            "Quizzes test your grasp of RHCE-level topics like systemd, SELinux, and firewalld with challenging module-end quizzes",
         },
         {
           n: "03",
           title:
-            "Live Sessions — expert-led mentorship sessions to review advanced Linux concepts, troubleshoot labs, and discuss real-world use cases",
+            "Live Sessions expert-led mentorship sessions to review advanced Linux concepts, troubleshoot labs, and discuss real-world use cases",
         },
         {
           n: "04",
           title:
-            "Projects — real-time automation and server administration projects using bash scripting and Ansible",
+            "Projects real-time automation and server administration projects using bash scripting and Ansible",
         },
       ],
       curriculumSubtitle: "7 modules · 50 lectures · 6 projects",
@@ -5454,22 +5454,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "12 Assignments — assignment solutions will be posted on GitHub or Slack after the course for self-practice",
+            "12 Assignments assignment solutions will be posted on GitHub or Slack after the course for self-practice",
         },
         {
           n: "02",
           title:
-            "30+ Quizzes — quick quizzes after each topic to test your understanding (and give you bragging rights)",
+            "30+ Quizzes quick quizzes after each topic to test your understanding (and give you bragging rights)",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly live classes with interactive project reviews, tool deep-dives, and 1:1 mentor time",
+            "Live Sessions weekly live classes with interactive project reviews, tool deep-dives, and 1:1 mentor time",
         },
         {
           n: "04",
           title:
-            "9 Projects — you'll work on 5 core projects that build your portfolio and prove your skills",
+            "9 Projects you'll work on 5 core projects that build your portfolio and prove your skills",
         },
       ],
       curriculumSubtitle: "7 modules · 30 lectures · 5 projects",
@@ -5546,7 +5546,7 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1559028006-448665bd7c7f"),
     blurb:
-      "Research, wireframe, design, prototype and test interfaces — build a portfolio that gets you hired.",
+      "Research, wireframe, design, prototype and test interfaces build a portfolio that gets you hired.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -5562,21 +5562,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "15+ Assignments — exercises ranging from wireframes to hi-fi UI designs and feedback iterations",
+            "15+ Assignments exercises ranging from wireframes to hi-fi UI designs and feedback iterations",
         },
         {
           n: "02",
           title:
-            "20+ Quizzes — topic-based mini challenges to reinforce concepts (no boring theory exams here)",
+            "20+ Quizzes topic-based mini challenges to reinforce concepts (no boring theory exams here)",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly mentor-led design critiques, portfolio reviews, and tool walkthroughs",
+            "Live Sessions weekly mentor-led design critiques, portfolio reviews, and tool walkthroughs",
         },
         {
           n: "04",
-          title: "Projects — you'll work on 6 portfolio-worthy projects",
+          title: "Projects you'll work on 6 portfolio-worthy projects",
         },
       ],
       curriculumSubtitle: "7 modules · 48 lectures · 6 projects",
@@ -5653,11 +5653,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1553729459-efe14ef6055d"),
     blurb:
-      "SEO, ads, analytics and content strategy — run real campaigns, measure real results.",
+      "SEO, ads, analytics and content strategy run real campaigns, measure real results.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "Fast, practical, and beginner-friendly — this course will give you a complete understanding of advanced digital marketing platforms, strategies, and tools. You'll practice SEO, SMM, Email Marketing, and Ads setup through real-life use cases. Perfect for learners aiming to freelance, grow their personal brand, or land marketing roles.",
+        "Fast, practical, and beginner-friendly this course will give you a complete understanding of advanced digital marketing platforms, strategies, and tools. You'll practice SEO, SMM, Email Marketing, and Ads setup through real-life use cases. Perfect for learners aiming to freelance, grow their personal brand, or land marketing roles.",
       ],
       eligibility: [
         "No experience required",
@@ -5669,21 +5669,21 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — practice campaigns, blog optimization, email drafts, and more",
+            "Assignments practice campaigns, blog optimization, email drafts, and more",
         },
         {
           n: "02",
-          title: "Quizzes — topic-wise quizzes to reinforce marketing concepts",
+          title: "Quizzes topic-wise quizzes to reinforce marketing concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with digital marketing experts",
+            "Live Sessions interactive sessions with digital marketing experts",
         },
         {
           n: "04",
           title:
-            "Projects — hands-on ad campaign creation, post scheduling, and analytics",
+            "Projects hands-on ad campaign creation, post scheduling, and analytics",
         },
       ],
       curriculumSubtitle: "6 modules · 48 lectures · 5 projects",
@@ -5764,11 +5764,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1562577309-4932fdd64cd1"),
     blurb:
-      "Ethical, high-impact SEO strategies — how Google ranks content and how to optimize for visibility, traffic and conversions.",
+      "Ethical, high-impact SEO strategies how Google ranks content and how to optimize for visibility, traffic and conversions.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To give you a complete, practical understanding of how SEO works, how Google ranks content, and how to optimize websites for visibility, traffic, and conversions — using ethical, long-term strategies that actually work. This course is ideal for anyone who wants to grow organically — whether you're working for clients, managing your own site, or looking to build a career in digital marketing.",
+        "To give you a complete, practical understanding of how SEO works, how Google ranks content, and how to optimize websites for visibility, traffic, and conversions using ethical, long-term strategies that actually work. This course is ideal for anyone who wants to grow organically whether you're working for clients, managing your own site, or looking to build a career in digital marketing.",
       ],
       eligibility: [
         "No prior experience required",
@@ -5780,20 +5780,20 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — work on keyword mapping, on-page SEO, and audits",
+            "Assignments work on keyword mapping, on-page SEO, and audits",
         },
         {
           n: "02",
-          title: "Quizzes — validate your SEO knowledge after each module",
+          title: "Quizzes validate your SEO knowledge after each module",
         },
         {
           n: "03",
-          title: "Live Sessions — weekly live classes with SEO professionals",
+          title: "Live Sessions weekly live classes with SEO professionals",
         },
         {
           n: "04",
           title:
-            "Projects — hands-on backlink strategy, website audits, and optimization tasks",
+            "Projects hands-on backlink strategy, website audits, and optimization tasks",
         },
       ],
       curriculumSubtitle: "6 modules · 30 lectures · 6 projects",
@@ -5835,7 +5835,7 @@ export const COURSES: Course[] = [
         "Backlink Analysis Tools",
       ],
       careerIntro:
-        "Grow organically — whether you're working for clients, managing your own site, or building a career in digital marketing.",
+        "Grow organically whether you're working for clients, managing your own site, or building a career in digital marketing.",
       roles: [
         "SEO Specialist",
         "Content Strategist",
@@ -5873,11 +5873,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1533750349088-cd871a92f312"),
     blurb:
-      "Rank, scale, convert, and track ROI across multiple channels — advanced SEO and performance marketing combined.",
+      "Rank, scale, convert, and track ROI across multiple channels advanced SEO and performance marketing combined.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To transform you into a digital marketing strategist — someone who not only understands how to post content or run ads, but knows how to rank, scale, convert, and track ROI across multiple channels. By the end of this course, you'll be ready to handle real-world campaigns, freelance confidently, apply for job roles like Digital Marketing Executive, SEO Analyst, Performance Marketer, or even start your own agency.",
+        "To transform you into a digital marketing strategist someone who not only understands how to post content or run ads, but knows how to rank, scale, convert, and track ROI across multiple channels. By the end of this course, you'll be ready to handle real-world campaigns, freelance confidently, apply for job roles like Digital Marketing Executive, SEO Analyst, Performance Marketer, or even start your own agency.",
       ],
       eligibility: [
         "Marketing students or freelancers looking to go pro",
@@ -5890,22 +5890,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — comprehensive digital marketing strategies, SEO audits, and ad campaigns",
+            "Assignments comprehensive digital marketing strategies, SEO audits, and ad campaigns",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your knowledge on advanced SEO and performance marketing concepts",
+            "Quizzes test your knowledge on advanced SEO and performance marketing concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive classes with real-world insights and strategies from professionals",
+            "Live Sessions interactive classes with real-world insights and strategies from professionals",
         },
         {
           n: "04",
           title:
-            "Projects — hands-on experience with campaigns, performance tracking, and marketing tools",
+            "Projects hands-on experience with campaigns, performance tracking, and marketing tools",
         },
       ],
       curriculumSubtitle: "7 modules · 50 lectures · 10 projects",
@@ -5991,11 +5991,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1611926653458-09294b3142bf"),
     blurb:
-      "Launch high-performing campaigns with AI — AI-generated content, ad and SEO optimization, and automated workflows.",
+      "Launch high-performing campaigns with AI AI-generated content, ad and SEO optimization, and automated workflows.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To equip learners with the latest skills in performance marketing and automation, using AI-powered tools to create content, optimize ads, plan campaigns, analyze performance, and scale results faster than traditional methods. You'll walk away with live campaign experience, a real marketing portfolio, and the confidence to run campaigns that convert — whether for your clients, startup, or side hustle.",
+        "To equip learners with the latest skills in performance marketing and automation, using AI-powered tools to create content, optimize ads, plan campaigns, analyze performance, and scale results faster than traditional methods. You'll walk away with live campaign experience, a real marketing portfolio, and the confidence to run campaigns that convert whether for your clients, startup, or side hustle.",
       ],
       eligibility: [
         "Students, freelancers & job seekers exploring digital marketing",
@@ -6008,22 +6008,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — create ad copy, email funnels, landing pages, and full campaigns using AI tools",
+            "Assignments create ad copy, email funnels, landing pages, and full campaigns using AI tools",
         },
         {
           n: "02",
           title:
-            "Quizzes — assess understanding of SEO, ad strategy, email workflows, and AI integrations",
+            "Quizzes assess understanding of SEO, ad strategy, email workflows, and AI integrations",
         },
         {
           n: "03",
           title:
-            "Live Sessions — weekly strategy workshops, ad campaign walkthroughs, and tool mastery sprints",
+            "Live Sessions weekly strategy workshops, ad campaign walkthroughs, and tool mastery sprints",
         },
         {
           n: "04",
           title:
-            "Projects — launch real ads, build automation, generate SEO content, and complete a capstone campaign",
+            "Projects launch real ads, build automation, generate SEO content, and complete a capstone campaign",
         },
       ],
       curriculumSubtitle: "7 modules · 60+ lectures · 7 projects",
@@ -6071,7 +6071,7 @@ export const COURSES: Course[] = [
         "AI Design & Video Tools",
       ],
       careerIntro:
-        "Run campaigns that convert — whether for clients, your own startup, or a side hustle.",
+        "Run campaigns that convert whether for clients, your own startup, or a side hustle.",
       roles: [
         "Digital Marketing Executive",
         "Performance Marketer",
@@ -6111,7 +6111,7 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1620121692029-d088224ddc74"),
     blurb:
-      "Smart contracts, wallets and dApps — understand the tech behind the hype.",
+      "Smart contracts, wallets and dApps understand the tech behind the hype.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -6128,22 +6128,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — code smart contracts, simulate transactions, and integrate dApps with a frontend",
+            "Assignments code smart contracts, simulate transactions, and integrate dApps with a frontend",
         },
         {
           n: "02",
           title:
-            "Quizzes — test understanding of cryptographic principles, Solidity syntax, and Web3 logic",
+            "Quizzes test understanding of cryptographic principles, Solidity syntax, and Web3 logic",
         },
         {
           n: "03",
           title:
-            "Live Sessions — mentorship on Solidity, smart contract security, and dApp walkthroughs",
+            "Live Sessions mentorship on Solidity, smart contract security, and dApp walkthroughs",
         },
         {
           n: "04",
           title:
-            "Projects — deploy smart contracts, integrate MetaMask, and build real Web3 applications",
+            "Projects deploy smart contracts, integrate MetaMask, and build real Web3 applications",
         },
       ],
       curriculumSubtitle: "6 modules · 50+ lectures · 6 projects",
@@ -6221,7 +6221,7 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1518770660439-4636190af475"),
     blurb:
-      "Build connected devices from scratch — sensors, boards, and cloud dashboards.",
+      "Build connected devices from scratch sensors, boards, and cloud dashboards.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
@@ -6238,22 +6238,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on tasks like connecting sensors, setting up microcontrollers, and configuring networks for IoT solutions",
+            "Assignments hands-on tasks like connecting sensors, setting up microcontrollers, and configuring networks for IoT solutions",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your understanding of IoT concepts such as cloud communication, networking protocols, and sensor integration after each module",
+            "Quizzes test your understanding of IoT concepts such as cloud communication, networking protocols, and sensor integration after each module",
         },
         {
           n: "03",
           title:
-            "Live Sessions — live, interactive sessions with experts to discuss IoT concepts, troubleshoot hardware issues, and enhance your projects",
+            "Live Sessions live, interactive sessions with experts to discuss IoT concepts, troubleshoot hardware issues, and enhance your projects",
         },
         {
           n: "04",
           title:
-            "Projects — work on real-world IoT projects, building a complete system that connects sensors to the cloud and visualizes data on mobile dashboards",
+            "Projects work on real-world IoT projects, building a complete system that connects sensors to the cloud and visualizes data on mobile dashboards",
         },
       ],
       curriculumSubtitle: "6 modules · 40 lectures · 5 projects",
@@ -6331,11 +6331,11 @@ export const COURSES: Course[] = [
     tag: "",
     img: unsplash("1544256718-3bcf237f3974"),
     blurb:
-      "TCP/IP, routing, and packet analysis — the plumbing of the internet, demystified.",
+      "TCP/IP, routing, and packet analysis the plumbing of the internet, demystified.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To give students a strong foundation in computer networking, aligned with the CCNA syllabus, while focusing on hands-on configuration, troubleshooting, and network design. From routers and IP addresses to VLANs and security — this course turns complete beginners into confident network technicians or support engineers.",
+        "To give students a strong foundation in computer networking, aligned with the CCNA syllabus, while focusing on hands-on configuration, troubleshooting, and network design. From routers and IP addresses to VLANs and security this course turns complete beginners into confident network technicians or support engineers.",
       ],
       eligibility: [
         "Beginners with no prior networking experience",
@@ -6348,22 +6348,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and practical tasks on network configuration and troubleshooting",
+            "Assignments hands-on labs and practical tasks on network configuration and troubleshooting",
         },
         {
           n: "02",
           title:
-            "Quizzes — test your networking knowledge with periodic assessments",
+            "Quizzes test your networking knowledge with periodic assessments",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with instructors to clarify concepts and practice real-world scenarios",
+            "Live Sessions interactive sessions with instructors to clarify concepts and practice real-world scenarios",
         },
         {
           n: "04",
           title:
-            "Projects — work on a full network setup, including IP addressing, routing, and security configurations",
+            "Projects work on a full network setup, including IP addressing, routing, and security configurations",
         },
       ],
       curriculumSubtitle: "6 modules · 50 lectures · 10 projects",
@@ -6401,7 +6401,7 @@ export const COURSES: Course[] = [
       ],
       tools: ["Cisco IOS", "Packet Tracer", "CCNA 200-301 Syllabus"],
       careerIntro:
-        "Turn complete beginners into confident network technicians or support engineers — prepared for CCNA certification.",
+        "Turn complete beginners into confident network technicians or support engineers prepared for CCNA certification.",
       roles: [
         "Network Technician",
         "IT Support Engineer",
@@ -6439,11 +6439,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1580584126903-c17d41830450"),
     blurb:
-      "Enterprise-level routing protocols — EIGRP, OSPF, BGP and more — aligned to CCNP ENCOR and CCIE Routing & Services.",
+      "Enterprise-level routing protocols EIGRP, OSPF, BGP and more aligned to CCNP ENCOR and CCIE Routing & Services.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To equip you with the skills, configs, and real-world logic to master advanced routing concepts used in large-scale enterprise and service provider environments — following the official CCNP ENCOR + CCIE Routing & Services syllabus. This course is practical, exam-relevant, and field-proven.",
+        "To equip you with the skills, configs, and real-world logic to master advanced routing concepts used in large-scale enterprise and service provider environments following the official CCNP ENCOR + CCIE Routing & Services syllabus. This course is practical, exam-relevant, and field-proven.",
       ],
       eligibility: [
         "CCNA-certified professionals or those with equivalent knowledge",
@@ -6456,22 +6456,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and practical tasks focusing on advanced routing configurations",
+            "Assignments hands-on labs and practical tasks focusing on advanced routing configurations",
         },
         {
           n: "02",
           title:
-            "Quizzes — assess your knowledge and understanding of advanced routing concepts",
+            "Quizzes assess your knowledge and understanding of advanced routing concepts",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with instructors for real-world network scenarios",
+            "Live Sessions interactive sessions with instructors for real-world network scenarios",
         },
         {
           n: "04",
           title:
-            "Projects — work on large-scale network configurations, including advanced routing protocols",
+            "Projects work on large-scale network configurations, including advanced routing protocols",
         },
       ],
       curriculumSubtitle: "7 modules · 70 lectures · 12 projects",
@@ -6552,11 +6552,11 @@ export const COURSES: Course[] = [
     tag: "New",
     img: unsplash("1601132359864-c974e79890ac"),
     blurb:
-      "Configure, troubleshoot, and optimize enterprise switching infrastructure — Layer 2 and Layer 3, aligned to CCNP and CCIE.",
+      "Configure, troubleshoot, and optimize enterprise switching infrastructure Layer 2 and Layer 3, aligned to CCNP and CCIE.",
     detail: {
       overviewHeadline: "Course Overview",
       overviewParagraphs: [
-        "To give learners the practical and theoretical knowledge required to configure, troubleshoot, and optimize enterprise switching infrastructure — from access to distribution layers, covering all critical Layer 2 and Layer 3 switching topics aligned with Cisco CCNP & CCIE EI certifications. You'll build skills that directly map to real-world job roles and Cisco's most elite certifications.",
+        "To give learners the practical and theoretical knowledge required to configure, troubleshoot, and optimize enterprise switching infrastructure from access to distribution layers, covering all critical Layer 2 and Layer 3 switching topics aligned with Cisco CCNP & CCIE EI certifications. You'll build skills that directly map to real-world job roles and Cisco's most elite certifications.",
       ],
       eligibility: [
         "CCNA-certified professionals or those with solid networking fundamentals",
@@ -6569,22 +6569,22 @@ export const COURSES: Course[] = [
         {
           n: "01",
           title:
-            "Assignments — hands-on labs and practical tasks focusing on Layer 2 and Layer 3 switching configurations",
+            "Assignments hands-on labs and practical tasks focusing on Layer 2 and Layer 3 switching configurations",
         },
         {
           n: "02",
           title:
-            "Quizzes — assess your knowledge on advanced switching topics, VLANs, and network security",
+            "Quizzes assess your knowledge on advanced switching topics, VLANs, and network security",
         },
         {
           n: "03",
           title:
-            "Live Sessions — interactive sessions with instructors covering complex switching scenarios and troubleshooting techniques",
+            "Live Sessions interactive sessions with instructors covering complex switching scenarios and troubleshooting techniques",
         },
         {
           n: "04",
           title:
-            "Projects — work on real-world network switching configurations, including VLANs, EtherChannel, and advanced security",
+            "Projects work on real-world network switching configurations, including VLANs, EtherChannel, and advanced security",
         },
       ],
       curriculumSubtitle: "7 modules · 80 lectures · 12 projects",

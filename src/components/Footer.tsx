@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/images/eduden-logo-white-1.png";
+import logo from "../../public/images/eduden-logo-footer.png";
 
 export default function Footer() {
   return (
