@@ -2495,7 +2495,7 @@ export const COURSES: Course[] = [
     projects: "8 Projects",
     mode: "Online",
     tag: "",
-    img: unsplash("1526378722484-bd91ca387e72"),
+    img: "/courses/python-ai.jpeg",
     blurb:
       "Master AI and Machine Learning using Python — build ML models, visualize data, and deploy AI solutions with a real portfolio.",
     detail: {
@@ -2707,21 +2707,6 @@ export const COURSES: Course[] = [
       nextStep:
         "AI & Machine Learning with Python, Business Analytics and MIS Reporting with Excel, SQL and Power BI, or Deep Learning & Neural Networks with TensorFlow & Keras.",
     },
-  },
-  
-  {
-    slug: "fullstack",
-    cat: "Programming",
-    title: "Full-Stack Web Development",
-    days: 90,
-    duration: "90 days",
-    lectures: "75 Lectures",
-    projects: "6 Projects",
-    mode: "Hybrid",
-    tag: "",
-    img: unsplash("1516321318423-f06f85e504b3"),
-    blurb:
-      "HTML to deployed apps: JavaScript, React, Node and databases with portfolio projects.",
   },
 
   //Programming Courses

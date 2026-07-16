@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { COURSES } from "@/data/courses";
 import { unsplash } from "@/lib/unsplash";
+import apiClient, { type ApiError } from "@/lib/api-client";
 
 const COURSE_OPTIONS = [
   ...COURSES.map((c) => ({ value: c.slug, label: c.title })),
@@ -26,8 +27,10 @@ export default function Contact() {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
   const [sentName, setSentName] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function submit() {
+  async function submit() {
     const e: Errors = {};
     if (!name.trim()) e.name = true;
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) e.email = true;
@@ -37,9 +40,25 @@ export default function Contact() {
       setErrors(e);
       return;
     }
-    setSent(true);
-    setSentName(name.trim().split(" ")[0]);
-    setErrors({});
+    const courseLabel = COURSE_OPTIONS.find((c) => c.value === course)?.label ?? "";
+    setSubmitError("");
+    setSubmitting(true);
+    try {
+      await apiClient.post("/contact-queries/", {
+        full_name: name.trim(),
+        whatsapp_number: phone.trim(),
+        email: email.trim(),
+        interested_course: courseLabel,
+        query: message.trim(),
+      });
+      setSent(true);
+      setSentName(name.trim().split(" ")[0]);
+      setErrors({});
+    } catch (err) {
+      setSubmitError((err as ApiError).message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -158,11 +177,18 @@ export default function Contact() {
                   )}
                 </div>
 
+                {submitError && (
+                  <span className="text-[12.5px] font-semibold text-[#D64040]">
+                    {submitError}
+                  </span>
+                )}
+
                 <button
                   onClick={submit}
-                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent"
+                  disabled={submitting}
+                  className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4 rounded-full cursor-pointer hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {submitting ? "Sending…" : "Submit"}
                 </button>
               </div>
             ) : (

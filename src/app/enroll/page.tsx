@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { COURSES } from "@/data/courses";
 import { unsplash } from "@/lib/unsplash";
+import apiClient, { type ApiError } from "@/lib/api-client";
 
 const COURSE_OPTIONS = [
   ...COURSES.map((c) => ({ value: c.slug, label: c.title })),
@@ -36,8 +37,10 @@ export default function Enroll() {
   const [start, setStart] = useState<"now" | "later">("now");
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function submit() {
+  async function submit() {
     const e: Errors = {};
     if (!name.trim()) e.name = true;
     if (phone.replace(/\D/g, "").length < 10) e.phone = true;
@@ -49,10 +52,27 @@ export default function Enroll() {
       setErrors(e);
       return;
     }
+    const courseLabel = COURSE_OPTIONS.find((c) => c.value === course)?.label ?? course;
+    setSubmitError("");
+    setSubmitting(true);
     try {
-      sessionStorage.setItem("eduden_inquiry_name", name.trim().split(" ")[0]);
-    } catch {}
-    router.push("/thank-you");
+      await apiClient.post("/enroll-inquiries/", {
+        full_name: name.trim(),
+        whatsapp_number: phone.trim(),
+        calling_number: same === "yes" ? phone.trim() : alt.trim(),
+        email: email.trim(),
+        interested_course: courseLabel,
+        want_to_start: start === "now" ? "Immediately" : "Later",
+      });
+      try {
+        sessionStorage.setItem("eduden_inquiry_name", name.trim().split(" ")[0]);
+      } catch {}
+      router.push("/thank-you");
+    } catch (err) {
+      setSubmitError((err as ApiError).message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -268,11 +288,18 @@ export default function Enroll() {
               </span>
             )}
 
+            {submitError && (
+              <span className="text-[12.5px] font-semibold text-[#D64040]">
+                {submitError}
+              </span>
+            )}
+
             <button
               onClick={submit}
-              className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4.25 rounded-full cursor-pointer hover:bg-accent"
+              disabled={submitting}
+              className="border-none bg-[#FFD300] text-fg font-[inherit] font-bold text-[15px] py-4.25 rounded-full cursor-pointer hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Submit Inquiry
+              {submitting ? "Submitting…" : "Submit Inquiry"}
             </button>
           </div>
         </div>
