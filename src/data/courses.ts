@@ -2154,7 +2154,7 @@ export const COURSES: Course[] = [
     slug: "genai-prompt-engineering",
     brochureUrl: "/Old Course/AI/Generative AI & Prompt Engineering.pdf",
     brochureSizeMB: 11.6,
-    cat: "AI & Tech for Non-Tech Careers",
+    cat: "Artificial Intelligence",
     title: "Generative AI & Prompt Engineering 45 Days Hand on Course",
     days: 45,
     duration: "45 Days",
@@ -2372,12 +2372,11 @@ export const COURSES: Course[] = [
         "AI Foundations with Python, Machine Learning Bootcamp, or Data Science with Python.",
     },
   },
-  
   {
     slug: "applied-ai-healthcare-finance-marketing",
     brochureUrl: "/Old Course/AI/Applied AI in Healthcare, Finance & Marketing.pdf",
     brochureSizeMB: 7.56,
-    cat: "AI & Tech for Non-Tech Careers",
+    cat: "Artificial Intelligence",
     title: "Applied AI in Healthcare, Finance & Marketing 45 Days Industry Focused Course",
     days: 45,
     duration: "45 Days",
@@ -2470,6 +2469,126 @@ export const COURSES: Course[] = [
       ],
       nextStep:
         "Generative AI & Prompt Engineering, AI for Business Strategy, or Product Management and Digital Business with AI.",
+    },
+  },
+  {
+    slug: "nlp-llms-hugging-face",
+    brochureUrl: "/Old Course/AI/Natural Language Processing (NLP).pdf",
+    brochureSizeMB: 6.76,
+    cat: "Artificial Intelligence",
+    title: "Natural Language Processing (NLP) & LLMs with Hugging Face 60 Days Hands-On Course",
+    days: 60,
+    duration: "60 Days",
+    lectures: "60+ Lectures",
+    projects: "6 Projects",
+    mode: "Hybrid",
+    tag: "New",
+    img: unsplash("1677442136019-21780ecad995"),
+    blurb:
+      "Teach AI to read, write and understand human language master NLP models, transformers, and build AI assistants with Hugging Face.",
+    detail: {
+      overviewHeadline: "Course Overview",
+      overviewParagraphs: [
+        "To give learners hands-on experience with processing, analyzing, and generating human language using traditional NLP techniques and modern LLMs, enabling them to build everything from classifiers to chatbots and Q&A systems. You'll go from classic NLP tasks to cutting-edge transformer models and large language models using libraries like spaCy, Hugging Face Transformers, and OpenAI.",
+      ],
+      eligibility: [
+        "AI/ML students or professionals",
+        "Python developers exploring text/AI",
+        "Data scientists breaking into NLP",
+        "Tech entrepreneurs building smart tools",
+      ],
+      projectsHeadline: "What's inside the course.",
+      projects: [
+        {
+          n: "01",
+          title:
+            "Assignments build spam classifiers, text summarizers, and sentiment models with real datasets",
+        },
+        {
+          n: "02",
+          title:
+            "Quizzes quick assessments on NLP concepts, transformer architecture, and LLM behavior",
+        },
+        {
+          n: "03",
+          title:
+            "Live Sessions hands-on walkthroughs of spaCy, Hugging Face, and LangChain workflows",
+        },
+        {
+          n: "04",
+          title:
+            "Projects fine-tune BERT and build a GPT-powered chatbot, classifier, or sentiment dashboard",
+        },
+      ],
+      curriculumSubtitle: "6 modules · 60+ lectures · 6 projects",
+      modules: [
+        {
+          title: "Fundamentals of NLP",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "NLP with spaCy & NLTK",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Deep Learning for NLP",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Transformers & Hugging Face",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Working with LLMs & ChatGPT APIs",
+          meta: "",
+          topics: [],
+        },
+        {
+          title: "Final Capstone Project",
+          meta: "",
+          topics: [],
+        },
+      ],
+      tools: [
+        "Python",
+        "spaCy",
+        "NLTK",
+        "Hugging Face Transformers",
+        "OpenAI API",
+        "TensorFlow/Keras",
+        "LangChain",
+        "Streamlit",
+      ],
+      careerIntro:
+        "Build intelligent systems that read, understand and generate human language from classifiers and summarizers to transformer-based chatbots and LLM-powered assistants.",
+      roles: [
+        "NLP Engineer",
+        "AI Assistant Developer",
+        "ML Engineer NLP Track",
+        "LLM Integrator / API Developer",
+        "Text Mining/Data Analyst",
+        "Prompt Engineer (Advanced)",
+      ],
+      benefits: [
+        {
+          title: "Course Certificate",
+          body: "Eduden Certificate in NLP & LLMs (Hugging Face + GPT) after completing all modules and submitting your final project and notebook.",
+        },
+        {
+          title: "100% Access on Purchase Period",
+          body: "Lifetime access to recorded sessions, hands-on lab assignments, and downloadable resources through the Eduden dashboard.",
+        },
+        {
+          title: "Ready for interviews",
+          body: "Upon completion of the course, students will always be interviewed to assess their skills and readiness for practical applications.",
+        },
+      ],
+      nextStep:
+        "Generative AI & Prompt Engineering, Deep Learning & Neural Networks with TensorFlow & Keras, or AI & Machine Learning with Python.",
     },
   },
 
