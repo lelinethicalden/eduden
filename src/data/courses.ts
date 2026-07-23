@@ -35,7 +35,7 @@ export type Course = {
 export const COURSES: Course[] = [
   {
     slug: "business-analytics-mis-reporting",
-    brochureUrl: "/New Courses/New Courses/Business Analytics and MIS Reporting with Excel, SQL and Power BI.pdf",
+    brochureUrl: "/New-Courses/New-Courses/Business-Analytics-and-MIS-Reporting-with-Excel-SQL-and-Power-BI.pdf",
     brochureSizeMB: 11.58,
     cat: "AI & Tech for Non-Tech Careers",
     title: "Business Analytics and MIS Reporting with Excel, SQL and Power BI",
@@ -160,7 +160,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "ai-strategy",
-    brochureUrl: "/New Courses/New Courses/AI for Business Strategy and Decision Making.pdf",
+    brochureUrl: "/New-Courses/New-Courses/AI-for-Business-Strategy-and-Decision-Making.pdf",
     brochureSizeMB: 11.55,
     cat: "AI & Tech for Non-Tech Careers",
     title: "AI for Business Strategy and Decision Making",
@@ -170,7 +170,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/AI for Business Strategy and Decision Making.webp",
+    img: "/images/courses/AI-for-Business-Strategy-and-Decision-Making.webp",
     blurb:
       "Use AI for market research, competitor analysis, campaign planning and faster business decisions.",
     detail: {
@@ -293,7 +293,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "product-mgmt",
-    brochureUrl: "/New Courses/New Courses/Product Management and Digital Business with AI.pdf",
+    brochureUrl: "/New-Courses/New-Courses/Product-Management-and-Digital-Business-with-AI.pdf",
     brochureSizeMB: 9.59,
     cat: "AI & Tech for Non-Tech Careers",
     title: "Product Management and Digital Business with AI",
@@ -303,7 +303,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/Product Management and Digital Business with AI.jpg",
+    img: "/images/courses/Product-Management-and-Digital-Business-with-AI.jpg",
     blurb:
       "Work in tech without becoming a developer user research, PRDs, wireframes and product metrics.",
     detail: {
@@ -426,7 +426,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "geoai",
-    brochureUrl: "/New Courses/New Courses/GeoAI, GIS and Location Intelligence.pdf",
+    brochureUrl: "/New-Courses/New-Courses/GeoAI-GIS-and-Location-Intelligence.pdf",
     brochureSizeMB: 11.66,
     cat: "AI & Tech for Non-Tech Careers",
     title: "GeoAI, GIS and Location Intelligence",
@@ -553,7 +553,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "cyber-grc",
-    brochureUrl: "/New Courses/New Courses/Cyber GRC, Risk and Data Privacy.pdf",
+    brochureUrl: "/New-Courses/New-Courses/Cyber-GRC-Risk-and-Data-Privacy.pdf",
     brochureSizeMB: 12.98,
     cat: "AI & Tech for Non-Tech Careers",
     title: "Cyber GRC, Risk and Data Privacy",
@@ -563,7 +563,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/Cyber GRC, Risk and data privacy.jpg",
+    img: "/images/courses/Cyber-GRC-Risk-and-data-privacy.jpg",
     blurb:
       "Enter cybersecurity through governance, risk and compliance no hacking or coding required.",
     detail: {
@@ -682,7 +682,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "policy-analytics",
-    brochureUrl: "/New Courses/New Courses/Economics, Policy and Development Analytics with AI.pdf",
+    brochureUrl: "/New-Courses/New-Courses/Economics-Policy-and-Development-Analytics-with-AI.pdf",
     brochureSizeMB: 14.16,
     cat: "AI & Tech for Non-Tech Careers",
     title: "Economics, Policy and Development Analytics with AI",
@@ -692,7 +692,7 @@ export const COURSES: Course[] = [
     projects: "4 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/Economics, Policy and Development Analytics with AI.jpg",
+    img: "/images/courses/Economics-Policy-and-Development-Analytics-with-AI.jpg",
     blurb:
       "Public datasets, indicators, dashboards and AI-assisted policy briefs for Economics students.",
     detail: {
@@ -806,7 +806,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "nocode-ops",
-    brochureUrl: "/New Courses/New Courses/Digital Business Operations and No Code Automation with AI.pdf",
+    brochureUrl: "/New-Courses/New-Courses/Digital-Business-Operations-and-No-Code-Automation-with-AI.pdf",
     brochureSizeMB: 17.63,
     cat: "AI & Tech for Non-Tech Careers",
     title: "Digital Business Operations and No Code Automation with AI",
@@ -816,7 +816,7 @@ export const COURSES: Course[] = [
     projects: "5 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/Digital Business Operations and No Code Automation with AI.png",
+    img: "/images/courses/Digital-Business-Operations-and-No-Code-Automation-with-AI.png",
     blurb:
       "Automate forms, sheets, reports and follow-ups with AI and no-code tools.",
     detail: {
@@ -938,7 +938,7 @@ export const COURSES: Course[] = [
   },
    {
     slug: "ux-ui-design-business-product",
-    brochureUrl: "/New Courses/UI-UX/UX-UI Design for Business and Product Careers with Figma.pdf",
+    brochureUrl: "/New-Courses/UI-UX/UX-UI-Design-for-Business-and-Product-Careers-with-Figma.pdf",
     brochureSizeMB: 16.77,
     cat: "AI & Tech for Non-Tech Careers",
     title: "UX/UI Design for Business and Product Careers with Figma",
@@ -1160,7 +1160,7 @@ export const COURSES: Course[] = [
   //Cyber Security Courses
   {
     slug: "ethical-hacking-for-beginners",
-    brochureUrl: "/Old Course/Cyber Security/Ethical Hacking For Beginners.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Ethical-Hacking-For-Beginners.pdf",
     brochureSizeMB: 15.3,
     cat: "Cyber Security",
     title: "Ethical Hacking for Beginners 45 Days Hand on Course",
@@ -1277,7 +1277,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "bug-bounty",
-    brochureUrl: "/Old Course/Cyber Security/Start Bug Bounty Hunting.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Start-Bug-Bounty-Hunting.pdf",
     brochureSizeMB: 10.14,
     cat: "Cyber Security",
     title: "Start Bug Bounty Hunting 50 Days Hands-On Training",
@@ -1385,7 +1385,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "forensics",
-    brochureUrl: "/Old Course/Cyber Security/Digital Forensics.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Digital-Forensics.pdf",
     brochureSizeMB: 11.76,
     cat: "Cyber Security",
     title: "Digital Forensics 90 Days Hands-On Training",
@@ -1491,7 +1491,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "android-pentest",
-    brochureUrl: "/Old Course/Cyber Security/Android Application Penetration Testing 30.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Android-Application-Penetration-Testing-30.pdf",
     brochureSizeMB: 9.91,
     cat: "Cyber Security",
     title: "Android App Penetration Testing - Basics (30 Days Hands-On Course)",
@@ -1593,7 +1593,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "android-pentest-advanced",
-    brochureUrl: "/Old Course/Cyber Security/Android Application Penetration Testing 45.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Android-Application-Penetration-Testing-45.pdf",
     brochureSizeMB: 7.47,
     cat: "Cyber Security",
     title:
@@ -1702,7 +1702,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "adv-pentest",
-    brochureUrl: "/Old Course/Cyber Security/Network Penetration Testing.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Network-Penetration-Testing.pdf",
     brochureSizeMB: 14.3,
     cat: "Cyber Security",
     title: "Network Pentesting 45 Days Hands-On Course",
@@ -1811,7 +1811,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "cybersecurity-advanced-red-blue-team",
-    brochureUrl: "/Old Course/Cyber Security/Cybersecurity Advanced.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Cybersecurity-Advanced.pdf",
     brochureSizeMB: 7.9,
     cat: "Cyber Security",
     title: "Cybersecurity Advanced Red Team/Blue Team Career Track",
@@ -1930,7 +1930,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "soc-analyst",
-    brochureUrl: "/Old Course/Cyber Security/SOC Analyst.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/SOC-Analyst.pdf",
     brochureSizeMB: 13.3,
     cat: "Cyber Security",
     title: "SOC Analyst 60 Days Hands-On Training",
@@ -2033,7 +2033,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "cloud-security",
-    brochureUrl: "/Old Course/Cyber Security/Cloud Security.pdf",
+    brochureUrl: "/Old-Course/Cyber-Security/Cloud-Security.pdf",
     brochureSizeMB: 11.52,
     cat: "Cyber Security",
     title: "Cloud Security 60 Days Hands-On Training",
@@ -2152,7 +2152,7 @@ export const COURSES: Course[] = [
   //Artificial Intelligence Courses
   {
     slug: "genai-prompt-engineering",
-    brochureUrl: "/Old Course/AI/Generative AI & Prompt Engineering.pdf",
+    brochureUrl: "/Old-Course/AI/Generative-AI-Prompt-Engineering.pdf",
     brochureSizeMB: 11.6,
     cat: "Artificial Intelligence",
     title: "Generative AI & Prompt Engineering 45 Days Hand on Course",
@@ -2162,7 +2162,7 @@ export const COURSES: Course[] = [
     projects: "6 Projects",
     mode: "Hybrid",
     tag: "New",
-    img: "/images/courses/Generative AI & Prompt Engineering.avif",
+    img: "/images/courses/Generative-AI-Prompt-Engineering.avif",
     blurb:
       "Master the future of AI by learning how to talk to it hands-on with GPT-4, Claude, Gemini and other LLMs.",
     detail: {
@@ -2260,7 +2260,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "deep-learning-tensorflow-keras",
-    brochureUrl: "/Old Course/AI/Deep Learning & Neural Networks with TensorFlow & Keras.pdf",
+    brochureUrl: "/Old-Course/AI/Deep-Learning-Neural-Networks-with-TensorFlow-Keras.pdf",
     brochureSizeMB: 10.85,
     cat: "Artificial Intelligence",
     title: "Deep Learning & Neural Networks with TensorFlow & Keras",
@@ -2374,7 +2374,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "applied-ai-healthcare-finance-marketing",
-    brochureUrl: "/Old Course/AI/Applied AI in Healthcare, Finance & Marketing.pdf",
+    brochureUrl: "/Old-Course/AI/Applied-AI-in-Healthcare-Finance-Marketing.pdf",
     brochureSizeMB: 7.56,
     cat: "Artificial Intelligence",
     title: "Applied AI in Healthcare, Finance & Marketing 45 Days Industry Focused Course",
@@ -2473,7 +2473,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "nlp-llms-hugging-face",
-    brochureUrl: "/Old Course/AI/Natural Language Processing (NLP).pdf",
+    brochureUrl: "/Old-Course/AI/Natural-Language-Processing-NLP.pdf",
     brochureSizeMB: 6.76,
     cat: "Artificial Intelligence",
     title: "Natural Language Processing (NLP) & LLMs with Hugging Face 60 Days Hands-On Course",
@@ -2595,7 +2595,7 @@ export const COURSES: Course[] = [
   //Machine Learning Courses
   {
     slug: "ml-bootcamp",
-    brochureUrl: "/Old Course/Machine Learning/AI & Machine Learning with Python.pdf",
+    brochureUrl: "/Old-Course/Machine-Learning/AI-Machine-Learning-with-Python.pdf",
     brochureSizeMB: 11.5,
     cat: "Machine Learning",
     title: "AI & Machine Learning with Python 90 Days Job-Ready Career Track",
@@ -2711,7 +2711,7 @@ export const COURSES: Course[] = [
   //Data Science Courses
   {
     slug: "data-science",
-    brochureUrl: "/Old Course/Data Science/Data Science.pdf",
+    brochureUrl: "/Old-Course/Data-Science/Data-Science.pdf",
     brochureSizeMB: 6.75,
     cat: "Data Science",
     title:
@@ -2822,7 +2822,7 @@ export const COURSES: Course[] = [
   //Programming Courses
   {
     slug: "python-programming-gateway-ai-ml",
-    brochureUrl: "/Old Course/Programming/Python Programming.pdf",
+    brochureUrl: "/Old-Course/Programming/Python-Programming.pdf",
     brochureSizeMB: 11.67,
     cat: "Programming",
     title: "Python Programming – Gateway to AI & Machine Learning",
@@ -2935,7 +2935,7 @@ export const COURSES: Course[] = [
 
   {
     slug: "shell-scripting",
-    brochureUrl: "/Old Course/Programming/Shell Scripting.pdf",
+    brochureUrl: "/Old-Course/Programming/Shell-Scripting.pdf",
     brochureSizeMB: 11.61,
     cat: "Programming",
     title: "Shell Scripting - 30 Days Hands-On Training",
@@ -3044,7 +3044,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "python-offensive-pentest",
-    brochureUrl: "/Old Course/Programming/Python for Offensive PenTest 45.pdf",
+    brochureUrl: "/Old-Course/Programming/Python-for-Offensive-PenTest-45.pdf",
     brochureSizeMB: 11.41,
     cat: "Programming",
     title: "Python for Offensive PenTest - 45 Days Hands-On Training",
@@ -3148,7 +3148,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "web-development-basics",
-    brochureUrl: "/Old Course/Programming/Web Development Basics.pdf",
+    brochureUrl: "/Old-Course/Programming/Web-Development-Basics.pdf",
     brochureSizeMB: 9.28,
     cat: "Programming",
     title: "Web Development Basics - 45 Days Hands-On Course",
@@ -3250,7 +3250,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "wordpress-mastery",
-    brochureUrl: "/Old Course/Programming/WordPress Mastery.pdf",
+    brochureUrl: "/Old-Course/Programming/WordPress-Mastery.pdf",
     brochureSizeMB: 8.63,
     cat: "Programming",
     title: "WordPress Mastery: Build, Design & Sell",
@@ -3362,7 +3362,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "js-react-nextjs-mastery",
-    brochureUrl: "/Old Course/Programming/JavaScript, React & Next Mastery.pdf",
+    brochureUrl: "/Old-Course/Programming/JavaScript-React-Next-Mastery.pdf",
     brochureSizeMB: 10.28,
     cat: "Programming",
     title: "JavaScript, React & Next.js Mastery - 90 Days Career Track",
@@ -3469,7 +3469,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "backend-django",
-    brochureUrl: "/Old Course/Programming/Backend Development with Django.pdf",
+    brochureUrl: "/Old-Course/Programming/Backend-Development-with-Django.pdf",
     brochureSizeMB: 10.77,
     cat: "Programming",
     title: "Backend Development with Django - 60 Days Hands-On Training",
@@ -3576,7 +3576,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "backend-nodejs",
-    brochureUrl: "/Old Course/Programming/Backend Development with Node.pdf",
+    brochureUrl: "/Old-Course/Programming/Backend-Development-with-Node.pdf",
     brochureSizeMB: 10.98,
     cat: "Programming",
     title: "Backend Development with Node.js - 60 Days Hands-On Training",
@@ -3683,7 +3683,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "database-mastery-sql-nosql",
-    brochureUrl: "/Old Course/Programming/Database Mastery.pdf",
+    brochureUrl: "/Old-Course/Programming/Database-Mastery.pdf",
     brochureSizeMB: 7.6,
     cat: "Programming",
     title:
@@ -3787,7 +3787,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "mern-stack-developer",
-    brochureUrl: "/Old Course/Programming/MERN Stack Developer.pdf",
+    brochureUrl: "/Old-Course/Programming/MERN-Stack-Developer.pdf",
     brochureSizeMB: 8.78,
     cat: "Programming",
     title: "MERN Stack Developer - 6 Months Hands-On Training",
@@ -3895,7 +3895,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "diploma-full-stack-programming",
-    brochureUrl: "/Old Course/Programming/Diploma in Full Stack Programming.pdf",
+    brochureUrl: "/Old-Course/Programming/Diploma-in-Full-Stack-Programming.pdf",
     brochureSizeMB: 6.05,
     cat: "Programming",
     title: "Diploma in Full Stack Programming - 9 Months Career Track",
@@ -4003,7 +4003,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "web3-dapp-development",
-    brochureUrl: "/Old Course/Programming/Web3 & dApp Development.pdf",
+    brochureUrl: "/Old-Course/Programming/Web3-dApp-Development.pdf",
     brochureSizeMB: 11.46,
     cat: "Programming",
     title: "Web3 & dApp Development – Full Stack Blockchain in 60 Days",
@@ -4118,7 +4118,7 @@ export const COURSES: Course[] = [
   //Cloud Computing Courses
   {
     slug: "aws-cloud",
-    brochureUrl: "/Old Course/Cloud Computing/Cloud Computing with AWS.pdf",
+    brochureUrl: "/Old-Course/Cloud-Computing/Cloud-Computing-with-AWS.pdf",
     brochureSizeMB: 9.29,
     cat: "Cloud Computing",
     title:
@@ -4227,7 +4227,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "aws-cloud-architect",
-    brochureUrl: "/Old Course/Cloud Computing/Cloud Computing Architect with AWS.pdf",
+    brochureUrl: "/Old-Course/Cloud-Computing/Cloud-Computing-Architect-with-AWS.pdf",
     brochureSizeMB: 9.78,
     cat: "Cloud Computing",
     title: "Cloud Computing Architect with AWS - 90 Days Career Track",
@@ -4331,7 +4331,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "azure-cloud",
-    brochureUrl: "/Old Course/Cloud Computing/Cloud Computing with Azure.pdf",
+    brochureUrl: "/Old-Course/Cloud-Computing/Cloud-Computing-with-Azure.pdf",
     brochureSizeMB: 12.23,
     cat: "Cloud Computing",
     title: "Cloud Computing with Azure - 45 Days Fundamentals + Projects",
@@ -4444,7 +4444,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "cloudops-pro",
-    brochureUrl: "/Old Course/Cloud Computing/CloudOps Pro.pdf",
+    brochureUrl: "/Old-Course/Cloud-Computing/CloudOps-Pro.pdf",
     brochureSizeMB: 8.74,
     cat: "Cloud Computing",
     title: "CloudOps Pro – DevOps + Cloud Engineering Training (AWS + Azure)",
@@ -4566,7 +4566,7 @@ export const COURSES: Course[] = [
   //Devops
   {
     slug: "devops",
-    brochureUrl: "/Old Course/Devops/DevOps for Beginners.pdf",
+    brochureUrl: "/Old-Course/Devops/DevOps-for-Beginners.pdf",
     brochureSizeMB: 13.01,
     cat: "DevOps",
     title: "DevOps for Beginners – Foundation Track",
@@ -4669,7 +4669,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "devops-mastery-advanced",
-    brochureUrl: "/Old Course/Devops/DevOps Mastery.pdf",
+    brochureUrl: "/Old-Course/Devops/DevOps-Mastery.pdf",
     brochureSizeMB: 9.09,
     cat: "DevOps",
     title: "DevOps Mastery – 90 Days Advanced Career Track",
@@ -4796,7 +4796,7 @@ export const COURSES: Course[] = [
   //Application Development
   {
     slug: "flutter-app-development",
-    brochureUrl: "/Old Course/App Development/Flutter App Development.pdf",
+    brochureUrl: "/Old-Course/App-Development/Flutter-App-Development.pdf",
     brochureSizeMB: 5.94,
     cat: "Application Development",
     title: "Flutter App Development - 60 days Hands-On Training",
@@ -4899,7 +4899,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "react-native-app-development",
-    brochureUrl: "/Old Course/App Development/Mobile App Development with React Native.pdf",
+    brochureUrl: "/Old-Course/App-Development/Mobile-App-Development-with-React-Native.pdf",
     brochureSizeMB: 10.34,
     cat: "Application Development",
     title:
@@ -5003,7 +5003,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "ios-app-development-swift",
-    brochureUrl: "/Old Course/App Development/iOS App Development with Swift.pdf",
+    brochureUrl: "/Old-Course/App-Development/iOS-App-Development-with-Swift.pdf",
     brochureSizeMB: 5.53,
     cat: "Application Development",
     title: "iOS App Development with Swift - 60 days Hands-On Training",
@@ -5097,7 +5097,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "fullstack-mobile-flutter-django",
-    brochureUrl: "/Old Course/App Development/Full Stack Mobile App Development.pdf",
+    brochureUrl: "/Old-Course/App-Development/Full-Stack-Mobile-App-Development.pdf",
     brochureSizeMB: 8.37,
     cat: "Application Development",
     title:
@@ -5203,7 +5203,7 @@ export const COURSES: Course[] = [
   //Big data
   {
     slug: "big-data-engineering",
-    brochureUrl: "/Old Course/Big Data/Big Data Engineering.pdf",
+    brochureUrl: "/Old-Course/Big-Data/Big-Data-Engineering.pdf",
     brochureSizeMB: 13.49,
     cat: "Big Data",
     title: "Big Data Engineering – Hadoop, Spark, Kafka Career Track",
@@ -5323,7 +5323,7 @@ export const COURSES: Course[] = [
   //Linux
   {
     slug: "linux-admin",
-    brochureUrl: "/Old Course/Linux/Linux Essentials.pdf",
+    brochureUrl: "/Old-Course/Linux/Linux-Essentials.pdf",
     brochureSizeMB: 5.97,
     cat: "Linux",
     title: "Linux Essentials – RHCE-Based Fundamentals",
@@ -5431,7 +5431,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "linux-pro-advanced-server-admin",
-    brochureUrl: "/Old Course/Linux/Linux Pro.pdf",
+    brochureUrl: "/Old-Course/Linux/Linux-Pro.pdf",
     brochureSizeMB: 7.62,
     cat: "Linux",
     title: "Linux Pro – Advanced Server Admin & Automation (RHCE Focused)",
@@ -5546,7 +5546,7 @@ export const COURSES: Course[] = [
   //Graphichs Design
   {
     slug: "graphics",
-    brochureUrl: "/Old Course/Graphic Design/Graphic Designing and Visual Communication.pdf",
+    brochureUrl: "/Old-Course/Graphic-Design/Graphic-Designing-and-Visual-Communication.pdf",
     brochureSizeMB: 22.73,
     cat: "Graphics Design",
     title: "Graphic Designing and Visual Communication",
@@ -5653,7 +5653,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "ui-ux-design",
-    brochureUrl: "/Old Course/Graphic Design/UI UX Design Industry Ready Hands On Course.pdf",
+    brochureUrl: "/Old-Course/Graphic-Design/UI-UX-Design-Industry-Ready-Hands-On-Course.pdf",
     brochureSizeMB: 14.2,
     cat: "Graphics Design",
     title: "UI/UX Design – Industry-Ready Hands-On Course",
@@ -5871,7 +5871,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "seo-mastery",
-    brochureUrl: "/Old Course/Digital Marketing/SEO Mastery – 30 Days Hands-On Training.pdf",
+    brochureUrl: "/Old-Course/Digital-Marketing/SEO-Mastery-30-Days-Hands-On-Training.pdf",
     brochureSizeMB: 16.34,
     cat: "Digital Marketing",
     title: "SEO Mastery - 30 Days Hands-On Training",
@@ -5980,7 +5980,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "advanced-digital-marketing-seo",
-    brochureUrl: "/Old Course/Digital Marketing/Advanced Digital Marketing + SEO – 90 Days Hands-On Training.pdf",
+    brochureUrl: "/Old-Course/Digital-Marketing/Advanced-Digital-Marketing-SEO-90-Days-Hands-On-Training.pdf",
     brochureSizeMB: 10.49,
     cat: "Digital Marketing",
     title: "Advanced Digital Marketing + SEO - 90 Days Hands-On Training",
@@ -6098,7 +6098,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "ai-powered-digital-marketing",
-    brochureUrl: "/Old Course/Digital Marketing/AI-Powered Digital Marketing – Hands-On in 60 Days.pdf",
+    brochureUrl: "/Old-Course/Digital-Marketing/AI-Powered-Digital-Marketing-Hands-On-in-60-Days.pdf",
     brochureSizeMB: 13.24,
     cat: "Digital Marketing",
     title: "AI-Powered Digital Marketing - On in 60 Days",
@@ -6218,7 +6218,7 @@ export const COURSES: Course[] = [
   //BlockChain
   {
     slug: "blockchain",
-    brochureUrl: "/Old Course/Blockchain/Blockchain.pdf",
+    brochureUrl: "/Old-Course/Blockchain/Blockchain.pdf",
     brochureSizeMB: 6.6,
     cat: "Blockchain",
     title: "Blockchain Essentials – Learn & Build Decentralized Systems",
@@ -6328,7 +6328,7 @@ export const COURSES: Course[] = [
   //Iot
   {
     slug: "iot",
-    brochureUrl: "/Old Course/IOT/IoT Foundations.pdf",
+    brochureUrl: "/Old-Course/IOT/IoT-Foundations.pdf",
     brochureSizeMB: 19.5,
     cat: "IoT",
     title: "IoT Foundations - 30 Days Hands-On Learning Training",
@@ -6438,7 +6438,7 @@ export const COURSES: Course[] = [
   //Networking
   {
     slug: "networking",
-    brochureUrl: "/Old Course/Networking/Networking Zero – Foundation Course (Based on CCNA Syllabus).pdf",
+    brochureUrl: "/Old-Course/Networking/Networking-Zero-Foundation-Course-Based-on-CCNA-Syllabus.pdf",
     brochureSizeMB: 14.09,
     cat: "Networking",
     title: "Networking Zero – Foundation Course (Based on CCNA Syllabus)",
@@ -6546,7 +6546,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "networking-advanced-routing-mastery",
-    brochureUrl: "/Old Course/Networking/Networking Advanced – Routing Mastery (CCNP + CCIE Syllabus Based).pdf",
+    brochureUrl: "/Old-Course/Networking/Networking-Advanced-Routing-Mastery-CCNP-CCIE-Syllabus-Based.pdf",
     brochureSizeMB: 10.35,
     cat: "Networking",
     title: "Networking Advanced – Routing Mastery (CCNP + CCIE Syllabus Based)",
@@ -6659,7 +6659,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "networking-advanced-switching-mastery",
-    brochureUrl: "/Old Course/Networking/Networking Advanced – Switching Mastery (CCNP-CCIE Based).pdf",
+    brochureUrl: "/Old-Course/Networking/Networking-Advanced-Switching-Mastery-CCNP-CCIE-Based.pdf",
     brochureSizeMB: 12.83,
     cat: "Networking",
     title: "Networking Advanced – Switching Mastery (CCNP/CCIE Based)",
